@@ -4,6 +4,7 @@ import { SITE } from "../lib/constants";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import Reveal from "../components/ui/Reveal";
 import FaqSection from "../components/blog/FaqSection";
+import { Link } from "../lib/router";
 
 const contactFaq = [
   { q: "How far in advance should we book?", a: "4–8 weeks is comfortable. Golden-hour weekend slots in April–June and September–October fill first — for those, aim for 10–12 weeks." },
@@ -104,9 +105,9 @@ export default function ContactPage() {
                 <strong className="font-semibold text-ink">{form.email}</strong> within 48 hours.
                 Meanwhile, the 30-pose guide is a lovely way to wait.
               </p>
-              <a href="#/blog/30-engagement-photo-poses-couples" className="link-draw mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-rose-deep">
+              <Link to="/blog/30-engagement-photo-poses-couples" className="link-draw mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-rose-deep">
                 Read the pose guide →
-              </a>
+              </Link>
             </div>
           ) : (
             <form onSubmit={submit} noValidate className="rounded-xl border border-line bg-paper p-7 sm:p-9">

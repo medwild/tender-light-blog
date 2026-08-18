@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Link, useHashRoute } from "../../lib/router";
+import { Link, usePathRoute } from "../../lib/router";
 import { NAV_LINKS, SITE } from "../../lib/constants";
 
 /** Custom aperture wordmark — drawn inline, no icon library. */
@@ -18,7 +18,7 @@ function ApertureMark({ className = "h-9 w-9" }: { className?: string }) {
 }
 
 export default function Header() {
-  const route = useHashRoute();
+  const route = usePathRoute();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [progress, setProgress] = useState(0);

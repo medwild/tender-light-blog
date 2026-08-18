@@ -1,27 +1,49 @@
 import { useEffect, useState, type AnchorHTMLAttributes, type ReactNode } from "react";
 
 /**
- * Tiny hash router — the SPA stand-in for Next.js App Router routes.
- * Routes:  /  ·  /blog  ·  /blog/:slug  ·  /category/:slug  ·  /about  ·  /contact
+ * History-API router with clean, crawlable URLs (/blog/:slug — no hashes).
+ * Every route is ALSO pre-rendered as a real static HTML file in public/
+ * (see README — "shadow SSG"), so crawlers & social scrapers receive full
+ * content + meta without executing any JavaScript; hydrate.js then boots
+ * this SPA on top for interactive visitors.
  */
-export function useHashRoute(): string {
-  const [route, setRoute] = useState(() => normalize(window.location.hash));
+export function normalizePath(pathname: string): string {
+  let p = pathname.replace(/\/+$/, "");
+  if (!p) return "/";
+  return p;
+}
+
+function currentPath(): string {
+  // Back-compat: translate legacy hash routes (#/blog/x) to clean paths once.
+  if (window.location.hash.startsWith("#/")) {
+    const clean = normalizePath(window.location.hash.slice(1));
+    window.history.replaceState(null, "", clean === "/" ? "/" : clean + "/");
+  }
+  return normalizePath(window.location.pathname);
+}
+
+export function usePathRoute(): string {
+  const [route, setRoute] = useState(currentPath);
   useEffect(() => {
-    const onChange = () => setRoute(normalize(window.location.hash));
-    window.addEventListener("hashchange", onChange);
-    return () => window.removeEventListener("hashchange", onChange);
+    const onChange = () => setRoute(normalizePath(window.location.pathname));
+    window.addEventListener("popstate", onChange);
+    window.addEventListener("tl:nav", onChange);
+    return () => {
+      window.removeEventListener("popstate", onChange);
+      window.removeEventListener("tl:nav", onChange);
+    };
   }, []);
   return route;
 }
 
-function normalize(hash: string): string {
-  const clean = hash.replace(/^#/, "");
-  if (!clean || clean === "/") return "/";
-  return clean.endsWith("/") ? clean.slice(0, -1) : clean;
-}
-
+/** Programmatic navigation (pushState + scroll reset + re-render signal). */
 export function navigate(to: string) {
-  window.location.hash = to;
+  const target = to === "/" ? "/" : to.replace(/\/+$/, "") + "/";
+  if (normalizePath(window.location.pathname) !== normalizePath(target)) {
+    window.history.pushState(null, "", target);
+    window.dispatchEvent(new Event("tl:nav"));
+  }
+  window.scrollTo({ top: 0, behavior: "auto" });
 }
 
 interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -29,10 +51,23 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   children: ReactNode;
 }
 
-/** Anchor-based link (native hash navigation, fully crawlable). */
-export function Link({ to, children, ...rest }: LinkProps) {
+/**
+ * Real-anchor link: href carries the clean path (crawlable, right-clickable,
+ * copyable); clicks are intercepted for SPA-speed navigation.
+ */
+export function Link({ to, children, onClick, ...rest }: LinkProps) {
+  const href = to === "/" ? "/" : to + "/";
   return (
-    <a href={`#${to}`} {...rest}>
+    <a
+      href={href}
+      onClick={(e) => {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        e.preventDefault();
+        navigate(to);
+        onClick?.(e);
+      }}
+      {...rest}
+    >
       {children}
     </a>
   );

@@ -25,7 +25,8 @@ function upsertMeta(attr: "name" | "property", key: string, content: string) {
 }
 
 export function applySeo({ title, description, path, image, type = "website", jsonLd = [] }: SeoInput) {
-  const url = `${SITE.url}${path}`;
+  // Canonical URLs match the pre-rendered static paths (clean dirs, trailing slash).
+  const url = `${SITE.url}${path === "/" ? "/" : path.replace(/\/+$/, "") + "/"}`;
   const img = image ?? "";
 
   document.title = title;
@@ -94,7 +95,7 @@ export const breadcrumbSchema = (items: { name: string; path: string }[]) => ({
     "@type": "ListItem",
     position: i + 1,
     name: item.name,
-    item: `${SITE.url}${item.path}`,
+    item: `${SITE.url}${item.path === "/" ? "/" : item.path + "/"}`,
   })),
 });
 
@@ -113,7 +114,7 @@ export const articleSchema = (post: {
   image: post.image,
   datePublished: post.date,
   dateModified: post.date,
-  mainEntityOfPage: `${SITE.url}/blog/${post.slug}`,
+  mainEntityOfPage: `${SITE.url}/blog/${post.slug}/`,
   author: { "@type": "Person", name: post.author.name, jobTitle: post.author.role },
   publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
 });

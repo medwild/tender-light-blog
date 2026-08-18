@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link, parseRoute, useHashRoute } from "./lib/router";
+import { Link, parseRoute, usePathRoute } from "./lib/router";
 import { SITE } from "./lib/constants";
 import {
   applySeo,
@@ -138,7 +138,7 @@ function useSeo(path: string) {
 }
 
 export default function App() {
-  const path = useHashRoute();
+  const path = usePathRoute();
   const route = parseRoute(path);
   useSeo(path);
 
