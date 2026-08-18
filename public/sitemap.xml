@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Tender Light sitemap. In the Next.js 14 build this is produced dynamically
+  by src/app/sitemap.ts from the MDX collection (generateStaticParams output).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tenderlight.journal/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tenderlight.journal/blog</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tenderlight.journal/blog/30-engagement-photo-poses-couples</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/blog/best-outfits-engagement-photos</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/blog/top-engagement-photo-locations-oklahoma</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/blog/golden-hour-photography-tips-couples</loc><priority>0.7</priority></url>
+  <url><loc>https://tenderlight.journal/blog/engagement-photo-checklist</loc><priority>0.7</priority></url>
+  <url><loc>https://tenderlight.journal/blog/how-to-feel-natural-in-front-of-camera</loc><priority>0.7</priority></url>
+  <url><loc>https://tenderlight.journal/category/poses</loc><priority>0.6</priority></url>
+  <url><loc>https://tenderlight.journal/category/outfits</loc><priority>0.6</priority></url>
+  <url><loc>https://tenderlight.journal/category/locations</loc><priority>0.6</priority></url>
+  <url><loc>https://tenderlight.journal/category/tips</loc><priority>0.6</priority></url>
+  <url><loc>https://tenderlight.journal/about</loc><priority>0.5</priority></url>
+  <url><loc>https://tenderlight.journal/contact</loc><priority>0.5</priority></url>
+</urlset>

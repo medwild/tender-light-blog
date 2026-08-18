@@ -1,0 +1,678 @@
+import { IMAGES } from "../lib/constants";
+import type { Category, Post } from "./types";
+
+/* ————————————————————— Categories ————————————————————— */
+
+export const CATEGORIES: Category[] = [
+  {
+    slug: "poses",
+    name: "Poses & Direction",
+    description: "Classic, fun and romantic poses that flatter every couple.",
+    longDescription:
+      "The pose library: standing frames, sitting frames, movement prompts and the small adjustments that turn stiff photos into keeper frames. Every pose includes the exact direction we give couples on session.",
+    accent: "rose",
+  },
+  {
+    slug: "outfits",
+    name: "Outfits & Styling",
+    description: "What to wear so your photos look timeless, not trendy.",
+    longDescription:
+      "Color palettes, fabrics, layers and the small styling details that photograph beautifully — plus the pieces that consistently date an engagement photo. Seasonal guides included.",
+    accent: "gold",
+  },
+  {
+    slug: "locations",
+    name: "Locations & Guides",
+    description: "Scouted spots with light notes, permits and timing.",
+    longDescription:
+      "Field-tested engagement photo locations with honest notes on golden-hour light, crowds, parking and permits — so your session starts relaxed instead of rushed.",
+    accent: "sage",
+  },
+  {
+    slug: "tips",
+    name: "Tips & Mindset",
+    description: "Feel natural, plan smart, keep every frame timeless.",
+    longDescription:
+      "The unglamorous details that make sessions feel easy: timing the light, beating camera nerves, checklists and the mindset shifts that produce the most natural photographs.",
+    accent: "blush",
+  },
+];
+
+export const getCategory = (slug: string) => CATEGORIES.find((c) => c.slug === slug);
+
+/* ————————————————————— Authors ————————————————————— */
+
+const clara = {
+  name: "Clara Bennett",
+  role: "Photographer & Founder",
+  bio: "Clara has photographed 400+ engagements across the South since 2019. She shoots natural light, film-inspired frames and believes the best pose is the one you forget you're holding.",
+  avatar: IMAGES.about,
+  instagram: "@tenderlight.journal",
+};
+
+const mia = {
+  name: "Mia Delacroix",
+  role: "Session Stylist",
+  bio: "Mia styles engagement and wedding couples for camera — color-first, comfort-always. Her rule of thumb: if you'd wear it to a nice dinner, it will photograph beautifully.",
+  instagram: "@miastyles.couples",
+};
+
+/* ————————————————————— Posts (MDX-equivalent) ————————————————————— */
+
+export const POSTS: Post[] = [
+  {
+    slug: "30-engagement-photo-poses-couples",
+    title: "30 Engagement Photo Poses Every Couple Should Try",
+    seoTitle: "30 Engagement Photo Poses for Couples (2026 Guide)",
+    seoDescription:
+      "30 engagement photo poses for couples — classic, fun and romantic frames with the exact direction photographers use. Save this pose list for your session.",
+    excerpt:
+      "Classic, fun and romantic — 30 tested engagement poses with the exact words we use to direct couples who swear they're awkward in front of a camera.",
+    category: "poses",
+    date: "2026-01-12",
+    featuredImage: IMAGES.posesCover,
+    featuredAlt:
+      "Couple posing forehead to forehead during a golden hour engagement photo session",
+    tags: ["poses", "couples", "direction", "posing guide"],
+    author: clara,
+    blocks: [
+      {
+        type: "p",
+        text: "Every couple says the same thing at the start of a session: “We're not models — we don't know what to do with our hands.” Good news: you don't need to. A pose is just a starting position, and the photographs you'll love are the two seconds *after* the pose settles. This guide is the exact library we pull from on every engagement session, organized by mood so you can build a shot list the night before.",
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "How to use this pose list",
+        text: "Pick 3 classics, 3 fun, 3 romantic. That's nine starting positions — enough variety for a 60-minute session with room to walk, talk and forget the camera exists.",
+      },
+      { type: "h2", id: "classic-poses", text: "Classic Poses" },
+      {
+        type: "p",
+        text: "Classic frames are your anchors: clean lines, timeless geometry, and the photos your parents will frame. They work in any outfit and any location, which is why every session starts here.",
+      },
+      { type: "h3", id: "the-forehead-touch", text: "1. The forehead touch" },
+      {
+        type: "p",
+        text: "Stand close, close your eyes, rest foreheads together. Direction we give: “Breathe in sync for three breaths.” The closed eyes remove all camera anxiety and the synced breathing relaxes both shoulders at once.",
+      },
+      { type: "h3", id: "the-waist-hold", text: "2. The waist hold, mid-laugh" },
+      {
+        type: "p",
+        text: "His hands on her waist, her hands on his chest, someone says something ridiculous. The hold gives the frame structure; the laugh gives it life. Never skip the laugh — a silent waist hold reads as a mannequin photo.",
+      },
+      { type: "h3", id: "the-walking-away", text: "3. Walking away, hand in hand" },
+      {
+        type: "p",
+        text: "Walk away from the camera at conversation pace, swing your hands slightly. This is the most universally flattering engagement pose because nobody has to 'perform' — you're literally just walking together.",
+      },
+      {
+        type: "list",
+        items: [
+          "4. The dip — one slow second down, hold, slow second up (the in-between frames win).",
+          "5. Back-to-back with crossed arms, both looking at camera with a smirk.",
+          "6. Her head on his shoulder, both profiles to camera, eyes closed.",
+          "7. The blanket sit: sit close, her legs to the side, his arm behind her.",
+          "8. Foreheads apart by an inch, eyes open — the 'almost kiss'.",
+          "9. His chin over her head, her arms wrapped around his waist.",
+          "10. The spin: he lifts her hand, she turns once under the arm. Motion hides nerves.",
+        ],
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.posesCover, alt: "Classic forehead-touch engagement pose in soft light" },
+          { src: IMAGES.galleryLaugh, alt: "Couple laughing during a waist-hold engagement pose" },
+        ],
+      },
+      { type: "h2", id: "fun-poses", text: "Fun Poses" },
+      {
+        type: "p",
+        text: "Fun frames are where personality lives. The trick is giving yourselves a task instead of a pose — tasks produce micro-expressions that posed smiles never do.",
+      },
+      { type: "h3", id: "the-piggyback", text: "11. The piggyback, mid-giggle" },
+      {
+        type: "p",
+        text: "It doesn't have to be graceful. Half the best piggyback frames are her shoe falling off or both of you wobbling. Ask your photographer to shoot the whole sequence, not just the setup.",
+      },
+      {
+        type: "list",
+        items: [
+          "12. The whisper: he 'tells' her the worst pickup line he knows. Real reactions guaranteed.",
+          "13. Race to a tree or lamppost — winner gets to pick the restaurant. Loser carries the tripod.",
+          "14. The dramatic movie kiss, over-acted on purpose. Comedy relaxes both of you.",
+          "15. Lift her like a toddler and let her legs kick. Pure joy reads on camera instantly.",
+          "16. Coffee toast: clink cups to the lens like it's a champagne flute.",
+          "17. The twirl with a jacket: he spins her by the hand while the jacket flies.",
+          "18. Sit on a curb or tailgate, forearms on knees, roast each other gently.",
+          "19. Sunglasses on, walk in slow motion, absolutely commit to the bit.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Director's note",
+        text: "If a fun pose feels silly, lean into the silliness. The couples who get the best fun frames are the ones who fully commit for ten seconds and then collapse laughing.",
+      },
+      { type: "h2", id: "romantic-poses", text: "Romantic Poses" },
+      {
+        type: "p",
+        text: "Romantic frames slow everything down. Longer holds, softer light, closer distance. These are the images that end up above the fireplace — shoot them during the last fifteen minutes when you've completely forgotten the camera.",
+      },
+      { type: "h3", id: "the-back-hug", text: "20. The back hug at golden hour" },
+      {
+        type: "p",
+        text: "He wraps his arms around her waist from behind, she covers his hands with hers. Position the low sun behind you so the edges of your silhouettes glow. Hold for a full ten seconds — the first three are stiff, the last seven are gold.",
+      },
+      {
+        type: "list",
+        items: [
+          "21. The veil-or-scarf frame: drape fabric over both heads, foreheads touching underneath.",
+          "22. Hands-only close-up: interlaced fingers, ring catching the light.",
+          "23. Slow dance with no music — hum badly on purpose.",
+          "24. Kiss on the temple while she laughs at something off-camera.",
+          "25. Sit facing each other, knees touching, just talk. Your photographer will shoot quietly.",
+          "26. The lifted-hem walk through tall grass at sunset.",
+          "27. Foreheads together under an umbrella (no rain required).",
+          "28. His hand on her cheek, her hand over his — the 'quiet vow'.",
+          "29. Silhouette kiss against the last minute of light.",
+          "30. Walking back to the car, her head on his shoulder, not posing at all. Often the best frame of the day.",
+        ],
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.gallerySilhouette, alt: "Couple silhouette lifted at sunset — romantic engagement pose" },
+          { src: IMAGES.galleryRing, alt: "Close-up of interlaced hands with an engagement ring" },
+          { src: IMAGES.galleryTwirl, alt: "Fiancée twirling in a champagne dress during golden hour" },
+        ],
+      },
+      {
+        type: "quote",
+        text: "The best engagement photo is the one where you can hear the laughter just looking at it.",
+        cite: "Clara, after 400+ sessions",
+      },
+      { type: "h2", id: "poses-faq", text: "Engagement Pose Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How many poses can we realistically do in one hour?",
+            a: "Plan for 8–12 starting positions. Each one produces 3–5 keeper frames once you add movement and in-between moments. More than 15 and the session starts to feel like a checklist.",
+          },
+          {
+            q: "We're camera-shy. Which poses should we start with?",
+            a: "Walking-away frames and the forehead touch with eyes closed. Both remove the pressure of 'performing' for the lens and usually unlock the rest of the session.",
+          },
+          {
+            q: "What do we do with our hands?",
+            a: "Give them a job: a lapel, a waist, interlaced fingers, a coffee cup, a bouquet. Empty hands look awkward; busy hands look natural. Your photographer should direct this explicitly.",
+          },
+          {
+            q: "Should we practice poses before the session?",
+            a: "Browse together and save 5–10 references you both like — but don't rehearse in a mirror. Rehearsed poses look rehearsed. Bring the references; let your photographer adapt them to your bodies and your light.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "best-outfits-engagement-photos",
+    title: "Best Outfits for Engagement Photos: A Stylist's Complete Guide",
+    seoTitle: "Best Outfits for Engagement Photos (2026 Styling Guide)",
+    seoDescription:
+      "What to wear for engagement photos: the colors that flatter on camera, what to avoid, and a seasonal outfit guide from a session stylist.",
+    excerpt:
+      "Colors that flatter on camera, the pieces that date a photo, and a season-by-season outfit formula — from a stylist who dresses couples for the lens.",
+    category: "outfits",
+    date: "2025-12-28",
+    featuredImage: IMAGES.outfitsCover,
+    featuredAlt: "Couple in coordinated champagne and sage outfits walking toward the camera",
+    tags: ["outfits", "styling", "what to wear", "color palette"],
+    author: mia,
+    blocks: [
+      {
+        type: "p",
+        text: "Outfit questions outnumber pose questions in my inbox three to one — and honestly, that's smart planning. Your pose can be directed on the day; your outfit is decided before you arrive. The goal is not to match. The goal is to look like you belong in the same photograph, in the same season, in the same light.",
+      },
+      { type: "h2", id: "colors-to-wear", text: "Colors to Wear" },
+      {
+        type: "p",
+        text: "Camera-friendly colors share one trait: they're softened versions of real colors. If a color looks slightly 'dusty' in person, it usually looks rich on camera.",
+      },
+      {
+        type: "list",
+        items: [
+          "Cream, oat and warm ivory — the universal base that flatters every skin tone.",
+          "Powder rose and blush — romantic without shouting 'wedding'.",
+          "Sage and olive green — grounded, organic, gorgeous against golden light.",
+          "Champagne and camel — read as 'expensive' on camera without logos.",
+          "Dusty blue and slate — the best alternative if you want something cooler.",
+          "Rust and terracotta — specifically for autumn sessions in fields or brick settings.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "The 70/20/10 rule",
+        text: "70% shared neutral base (cream, camel, oat), 20% one partner's accent color (sage, rose), 10% texture or pattern (lace, knit, subtle plaid). It's the fastest way to look coordinated without matching.",
+      },
+      { type: "h2", id: "what-to-avoid", text: "What to Avoid" },
+      {
+        type: "list",
+        items: [
+          "Large logos and graphic tees — they date a photo faster than anything else.",
+          "Neon anything — it color-casts onto skin in open shade.",
+          "Identical matching outfits (white shirt + jeans twins) — a 2014 artifact.",
+          "Tiny, tight patterns like micro-checks — they moiré on digital sensors.",
+          "Brand-new uncomfortable shoes — you'll stand differently and it shows.",
+          "All-black in a golden-hour field — you'll read as a silhouette before the sun even sets.",
+        ],
+      },
+      {
+        type: "p",
+        text: "One honest exception: if all-black is genuinely your style, keep it — just add texture (a leather jacket, a ribbed knit) and let your photographer expose for skin, not fabric.",
+      },
+      { type: "h2", id: "seasonal-guide", text: "The Seasonal Guide" },
+      { type: "h3", id: "spring-summer", text: "Spring & Summer" },
+      {
+        type: "p",
+        text: "Light layers in breathable fabrics: linen trousers, slip dresses, open-weave knits for evening. Pastels and cream dominate; add one floral or gingham piece if it feels like you. For summer, schedule after 6pm — midday sun is the real outfit enemy, melting makeup and squinting eyes regardless of what you wear.",
+      },
+      { type: "h3", id: "fall-winter", text: "Fall & Winter" },
+      {
+        type: "p",
+        text: "This is the most photogenic season, full stop. Camel coats, chunky knits, rust and olive layers, leather boots. Texture is the whole game in low light — cable knits and wool photograph with depth that flat fabrics can't. Winter tip: keep hand warmers in pockets between frames; cold hands look tense in close-ups.",
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.outfitsCover, alt: "Couple in coordinated champagne and sage engagement outfits" },
+          { src: IMAGES.galleryTwirl, alt: "Flowing champagne dress catching golden light in a meadow" },
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Second-outfit math",
+        text: "Two outfits double your photo variety but cost ~15 session minutes. Worth it for 90-minute sessions; skip it for 45-minute minis and instead bring one layering piece (a jacket, a scarf) that changes the silhouette.",
+      },
+      { type: "h2", id: "outfits-faq", text: "Styling Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Should our outfits match our wedding colors?",
+            a: "Echo them, don't replicate them. If your wedding palette is sage and cream, wearing dusty blue and oat for engagement photos gives you range across both galleries instead of one repeated look.",
+          },
+          {
+            q: "Dress or jeans for her?",
+            a: "Whatever you'd wear to a nice dinner. A midi dress or good denim with a silk top both photograph beautifully — the difference is fit, not formality. Avoid anything you'll be tugging at all session.",
+          },
+          {
+            q: "When should outfits be finalized?",
+            a: "Two weeks before the session, with a mirror photo test in similar light (golden hour outdoors). Send the mirror shots to your photographer — most will happily veto a piece that fights the location.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "top-engagement-photo-locations-oklahoma",
+    title: "10 Best Engagement Photo Locations in Oklahoma",
+    seoTitle: "10 Best Engagement Photo Locations in Oklahoma (2026)",
+    seoDescription:
+      "The 10 best engagement photo locations in Oklahoma — lakes, bridges, prairies and historic districts, with golden-hour timing and permit notes.",
+    excerpt:
+      "Lakes, limestone bridges, brick districts and open prairie — ten scouted Oklahoma engagement spots with honest notes on light, crowds and permits.",
+    category: "locations",
+    date: "2026-01-25",
+    featuredImage: IMAGES.locationsCover,
+    featuredAlt: "Historic stone bridge over an Oklahoma creek at golden hour",
+    tags: ["locations", "oklahoma", "scouting", "golden hour"],
+    author: clara,
+    blocks: [
+      {
+        type: "p",
+        text: "Oklahoma is quietly one of the best engagement-photo states in the country: wide skies, golden prairies, limestone creeks and brick districts that turn soft pink at sunset. After years of scouting within two hours of Oklahoma City, these are the ten locations we book again and again — ranked by how reliably they deliver.",
+      },
+      { type: "h2", id: "how-we-scout", text: "How We Chose These Spots" },
+      {
+        type: "p",
+        text: "Every location below earned its place on three criteria: quality of late-afternoon light, variety of backdrops within a short walk, and logistics (parking, crowds, permits). A gorgeous spot that's packed with tourists at golden hour is not a gorgeous spot — it's a stress test.",
+      },
+      { type: "h2", id: "the-ten-locations", text: "The 10 Locations" },
+      { type: "h3", id: "l1-guthrie", text: "1. Guthrie Historic District" },
+      {
+        type: "p",
+        text: "Territorial-era brick streets that glow amber in the last hour. Shoot the murals early, the limestone facades mid-session, and end on the wide avenue as street lamps flicker on. Arrive 90 minutes before sunset. Parking is easy; no permit needed for couples.",
+      },
+      { type: "h3", id: "l2-lake-hefner", text: "2. Lake Hefner Sailing Point" },
+      {
+        type: "p",
+        text: "Sailboats drifting behind you with zero effort. The east shore gives clean water reflections at sunset; the limestone breakwall is the backup when wind picks up. Free parking, always busy on summer weekends — weekday sessions are a different world.",
+      },
+      { type: "h3", id: "l3-tallgrass", text: "3. Tallgrass Prairie Preserve" },
+      {
+        type: "p",
+        text: "The most romantic hour of light you will ever stand in: six-foot bluestem grass, bison on the horizon, and a sky that goes rose → amber → violet. It's a drive, but it's the location clients cry about. Book the last slot of the day and stay for blue hour.",
+      },
+      { type: "h3", id: "l4-bricktown", text: "4. Bricktown Canal, Oklahoma City" },
+      {
+        type: "p",
+        text: "For couples who want an urban frame: water taxis, string lights, red brick. Shoot the canal bridges first, then the warehouse alleys where evening light bounces warm off brick. Weeknights only — weekends are crowded.",
+      },
+      { type: "h3", id: "l5-woolaver", text: "5. Woolaver Hollow limestone creek" },
+      {
+        type: "p",
+        text: "A shallow limestone creek with a natural stone shelf — the classic 'sitting on the rocks, feet near water' frame. Mid-session light is best here (the hollow goes into shade early). Water shoes hidden under a dress are not a joke; bring them.",
+      },
+      { type: "h3", id: "l6-medical-museum", text: "6. The White Pillar Courtyard (Oklahoma City)" },
+      {
+        type: "p",
+        text: "Neoclassical columns, marble steps, soft bounce light all afternoon. This is the 'elegant' option — it flatters formal outfits and reads timeless. Small courtesy fee; worth it for ten minutes of column frames.",
+      },
+      { type: "h3", id: "l7-route66", text: "7. A vintage Route 66 roadside" },
+      {
+        type: "p",
+        text: "A rusted gas sign, an old sedan, two coffees on the hood. Route 66 Americana gives you the fun, editorial frames that break up a gallery of field photos. Any quiet stretch west of El Reno works; scout for a clean sightline first.",
+      },
+      { type: "h3", id: "l8-turner-falls", text: "8. Turner Falls overlook" },
+      {
+        type: "p",
+        text: "Oklahoma's tallest waterfall, shot from the upper overlook so you get falls + canyon without the swimming-hole crowds. Entry fee applies; the overlook trail is short. Best May–June when water volume peaks.",
+      },
+      { type: "h3", id: "l9-wheat-field", text: "9. A private wheat field (yes, ask a farmer)" },
+      {
+        type: "p",
+        text: "The simplest, most romantic backdrop in the state. In June the wheat is golden and waist-high; farmers almost always say yes if you ask politely and park on the gravel. Offer $20, leave the gate exactly as you found it.",
+      },
+      { type: "h3", id: "l10-harn-homestead", text: "10. Harn Homestead white house" },
+      {
+        type: "p",
+        text: "A white 1900s farmhouse with a wraparound porch and pecan trees — the 'home' feeling some couples want in their gallery. Donation requested; the porch swings, the gravel path and the pecan shade each give a different frame within thirty steps.",
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.locationsCover, alt: "Stone bridge over a creek at golden hour in Oklahoma" },
+          { src: IMAGES.hero, alt: "Couple embracing in a golden wildflower meadow" },
+          { src: IMAGES.gallerySilhouette, alt: "Couple silhouetted on a prairie hill at sunset" },
+        ],
+      },
+      { type: "h2", id: "permits-timing", text: "Permits, Fees & Timing" },
+      {
+        type: "list",
+        items: [
+          "Golden hour = the last 60–90 minutes of sun. Be at the spot, styled, 15 minutes early.",
+          "City parks and historic districts: usually free for couples, verify if you bring a tripod or assistant.",
+          "State parks (Turner Falls, Tallgrass): per-vehicle entry fee, no photo permit for couples.",
+          "Private land: always ask. A polite knock with cash in hand works 9 times out of 10.",
+          "Weekday sessions get you empty locations from May through October. Guard them.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Weather backup plan",
+        text: "Oklahoma weather changes its mind fast. Pick a location with a covered fallback (Guthrie's awnings, Bricktown's overhangs, the Harn porch) so a grey sky becomes a feature, not a cancellation.",
+      },
+    ],
+  },
+  {
+    slug: "golden-hour-photography-tips-couples",
+    title: "Golden Hour Photography Tips for Couples (No Camera Knowledge Needed)",
+    seoTitle: "Golden Hour Photo Tips for Couples — Tender Light",
+    seoDescription:
+      "Golden hour photography tips for couples: how to time the light, backlit vs frontlit frames, and what to do when the sky turns grey.",
+    excerpt:
+      "You don't need to own a camera to use golden hour well — you need timing. Here's how to plan the light, stand in it, and salvage a grey sky.",
+    category: "tips",
+    date: "2025-12-10",
+    featuredImage: IMAGES.hero,
+    featuredAlt: "Couple embracing in a wildflower meadow during golden hour",
+    tags: ["golden hour", "light", "planning", "tips"],
+    author: clara,
+    blocks: [
+      {
+        type: "p",
+        text: "Golden hour gets blamed for a lot of mediocre photos — because it's treated as a filter instead of a schedule. It lasts about sixty usable minutes, the light moves the whole time, and the best frames happen in a fifteen-minute window most couples spend walking from the parking lot. Here's how to actually use it.",
+      },
+      { type: "h2", id: "what-golden-hour-is", text: "What Golden Hour Actually Is" },
+      {
+        type: "p",
+        text: "The last hour before sunset (and first hour after sunrise), when the sun sits low enough to turn warm and soft. Shadows stretch, skin glows, and backgrounds fall off into a creamy blur. Sunrise golden hour is softer and emptier; sunset is warmer and more dramatic. For engagement photos, sunset wins unless you hate early alarms.",
+      },
+      { type: "h2", id: "timing-your-session", text: "Timing Your Session" },
+      {
+        type: "list",
+        items: [
+          "Look up the exact sunset time for your date and location — not an approximation.",
+          "Arrive 60–75 minutes before sunset: the first frames use soft 'pre-golden' light.",
+          "Reserve the open, dramatic frames (silhouettes, backlit fields) for the final 20 minutes.",
+          "Stay 10 minutes after sunset: blue hour gives the quiet, moody frames everyone forgets to ask for.",
+          "Cloudy day? 'Golden hour' simply becomes 'the brightest hour' — still the best light of the day.",
+        ],
+      },
+      { type: "h2", id: "backlit-vs-frontlit", text: "Backlit vs Frontlit: Stand on Purpose" },
+      {
+        type: "p",
+        text: "Backlit means the sun is behind you: glowing hair edges, soft faces, dreamy haze — but your photographer must expose for skin or you'll go dark. Frontlit means the sun is on your face: sharper, more saturated color, but squinting risk in the last minutes. The best sessions use both — frontlit while the sun is still high, backlit as it drops.",
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "The squint test",
+        text: "If you're facing the sun and squinting, close your eyes and open them on the count of three for the photo. Open-eyes-from-closed reads softer than half-squint every single time.",
+      },
+      { type: "h2", id: "grey-sky-plan", text: "When the Sky Goes Grey" },
+      {
+        type: "p",
+        text: "Overcast is not bad light — it's a giant softbox. Colors saturate, skin evens out, and you can face any direction without squinting. Lean into mood: dark greens, stone bridges, brick walls, close frames. Some of the most timeless engagement galleries in our archive were shot under flat grey skies.",
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.hero, alt: "Backlit couple in a golden meadow just before sunset" },
+          { src: IMAGES.gallerySilhouette, alt: "Silhouette frames shot in the final minutes of golden hour" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "engagement-photo-checklist",
+    title: "The Complete Engagement Photo Checklist: 3 Months to 1 Hour Before",
+    seoTitle: "Engagement Photo Checklist (Timeline That Works) — Tender Light",
+    seoDescription:
+      "A complete engagement photo checklist from 3 months out to 1 hour before your session — outfits, scouting, timing and day-of details.",
+    excerpt:
+      "Everything handled in order: what to book 3 months out, what to confirm the week before, and the 10 items that save the day of your session.",
+    category: "tips",
+    date: "2026-02-02",
+    featuredImage: IMAGES.galleryLaugh,
+    featuredAlt: "Couple laughing together during an engagement photo session in a field",
+    tags: ["checklist", "planning", "timeline", "preparation"],
+    author: clara,
+    blocks: [
+      {
+        type: "p",
+        text: "The couples who have the most relaxed sessions aren't the most photogenic — they're the most prepared. This is the exact checklist we send every client, in the order things actually need to happen.",
+      },
+      { type: "h2", id: "three-months-out", text: "3 Months Before" },
+      {
+        type: "list",
+        items: [
+          "Book your photographer — golden-hour weekend slots in spring and fall go 8–12 weeks out.",
+          "Pick 2–3 candidate locations and check permit/fee requirements.",
+          "Decide: 1 or 2 outfits? (See the 90-minute rule in our outfit guide.)",
+          "Schedule hair/makeup trial if you want a styled look — trial now, not the week of.",
+          "Set a rain-date policy in writing with your photographer.",
+        ],
+      },
+      { type: "h2", id: "one-month-out", text: "1 Month Before" },
+      {
+        type: "list",
+        items: [
+          "Finalize outfits and photograph them in a mirror at home — send to your photographer for a veto pass.",
+          "Confirm exact sunset time for your session date.",
+          "Break in shoes. Seriously. Blisters change how you stand.",
+          "Build a small inspiration board (5–10 images, not 60) and share it.",
+          "Book the day after as a rest day if you're doing hair/makeup — you'll want to be fresh, not rushed.",
+        ],
+      },
+      { type: "h2", id: "week-of", text: "The Week Of" },
+      {
+        type: "list",
+        items: [
+          "Check the forecast daily — decide on the rain call 48 hours out, not the morning of.",
+          "Steam or iron outfits; wrinkles photograph louder than you think.",
+          "Trim, file, and moisturize hands if ring close-ups are on the shot list.",
+          "Charge your phone (for the behind-the-scenes shots your friends will beg for).",
+          "Send your photographer any last-minute location changes.",
+        ],
+      },
+      { type: "h2", id: "day-of", text: "Day Of: The 10 Things in the Car" },
+      {
+        type: "list",
+        items: [
+          "Water and a snack (low-blood-sugar faces are real).",
+          "Lint roller and a small mirror.",
+          "Backup flat shoes for walking between spots.",
+          "Hand warmers in fall/winter.",
+          "Tissues and blotting papers in summer.",
+          "The ring box (clean the ring the night before — Windex and a soft brush).",
+          "A blanket for sitting frames on grass or stone.",
+          "Bug spray for field and creek locations, May–September.",
+          "A portable speaker — music drops awkwardness faster than anything.",
+          "Ten minutes of buffer. Arriving flustered is the only unfixable lighting problem.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "The night-before rule",
+        text: "No new skincare, no drastic haircuts, no salt-heavy dinners. Boring is beautiful the night before a session.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-feel-natural-in-front-of-camera",
+    title: "How to Feel Natural in Front of the Camera (Even If You're Camera-Shy)",
+    seoTitle: "How to Look Natural in Engagement Photos — Tender Light",
+    seoDescription:
+      "Camera-shy? These prompts, breathing tricks and movement cues are what photographers actually use to make couples look natural.",
+    excerpt:
+      "The secret isn't 'being photogenic' — it's prompts, movement and one breathing trick. Here's how photographers make camera-shy couples glow.",
+    category: "tips",
+    date: "2026-01-05",
+    featuredImage: IMAGES.galleryRing,
+    featuredAlt: "Close-up of a couple's hands with an engagement ring in soft light",
+    tags: ["camera-shy", "natural", "mindset", "prompts"],
+    author: clara,
+    blocks: [
+      {
+        type: "p",
+        text: "Nobody is 'bad at photos.' There are only people who haven't been directed yet. After 400+ sessions, the pattern is unshakeable: the couples who think they're the most awkward produce the most tender galleries — because they stop performing sooner. Here's the toolkit.",
+      },
+      { type: "h2", id: "prompts-not-poses", text: "Prompts, Not Poses" },
+      {
+        type: "p",
+        text: "A pose tells your body where to go; a prompt tells your mind what to do. Your mind is the problem, so prompts win. 'Whisper the name of your first pet' produces a better frame than 'laugh naturally' ever will — because you're actually doing something instead of performing an impression of it.",
+      },
+      {
+        type: "list",
+        items: [
+          "Walk toward me and argue about where to eat tonight. (Real bickering = real connection.)",
+          "Tell her the story of the moment you knew. She listens. That's the whole photo.",
+          "Spin her once, badly. Then apologize like a Victorian gentleman.",
+          "Foreheads together — now hum the worst song you both know.",
+          "Look at each other like the other one just said something incredible.",
+        ],
+      },
+      { type: "h2", id: "the-breathing-trick", text: "The One Breathing Trick" },
+      {
+        type: "p",
+        text: "Tension lives in the shoulders and the jaw. Before any close frame: drop your shoulders one full inch, unstick your tongue from the roof of your mouth, and exhale slowly through your nose. Do this every time you reset — your photographer will notice within two frames.",
+      },
+      { type: "h2", id: "movement-is-medicine", text: "Movement Is Medicine" },
+      {
+        type: "p",
+        text: "Stillness magnifies self-consciousness; movement dissolves it. Every stiff couple I've met loosened up the moment they started walking. Ask your photographer to shoot you arriving, walking between spots, fumbling with the ring box — the 'unofficial' frames are where natural lives.",
+      },
+      {
+        type: "quote",
+        text: "You're not being photographed. You're being witnessed doing the thing you already do — loving each other.",
+        cite: "Note to every camera-shy couple",
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Pick your photographer last, on purpose",
+        text: "Choose someone whose galleries make you feel calm, not envious. Your best frames depend more on feeling safe with the human behind the lens than on any technique in this article.",
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.galleryLaugh, alt: "Couple laughing mid-session — natural, unposed moment" },
+          { src: IMAGES.galleryRing, alt: "Quiet hands-and-ring frame from a camera-shy couple's session" },
+        ],
+      },
+    ],
+  },
+];
+
+export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);
+
+export const getPostsByCategory = (category: string) =>
+  POSTS.filter((p) => p.category === category);
+
+export const getRelatedPosts = (post: Post, count = 3) => {
+  const same = POSTS.filter((p) => p.slug !== post.slug && p.category === post.category);
+  const others = POSTS.filter((p) => p.slug !== post.slug && p.category !== post.category);
+  return [...same, ...others].slice(0, count);
+};
+
+export const sortedPosts = () =>
+  [...POSTS].sort((a, b) => (a.date < b.date ? 1 : -1));
+
+/** Reading time from word count (~200 wpm). */
+export const readingTime = (post: Post) => {
+  const blockText = (b: Post["blocks"][number]): string => {
+    switch (b.type) {
+      case "p":
+      case "callout":
+      case "quote":
+        return b.text;
+      case "list":
+        return b.items.join(" ");
+      case "faq":
+        return b.items.map((i) => i.q + i.a).join(" ");
+      case "h2":
+      case "h3":
+        return b.text;
+      case "gallery":
+        return "";
+      default:
+        return "";
+    }
+  };
+  const words = post.blocks.map(blockText).join(" ").split(/\s+/).length;
+  return Math.max(2, Math.round(words / 200));
+};
+
+/** Table of contents extracted from H2/H3 blocks (SSG-style static extraction). */
+export const extractToc = (post: Post) =>
+  post.blocks
+    .filter((b): b is Extract<typeof b, { type: "h2" | "h3" }> => b.type === "h2" || b.type === "h3")
+    .map((b) => ({
+      id: b.id,
+      text: b.text,
+      depth: b.type === "h2" ? (2 as const) : (3 as const),
+    }));
+
+export const formatDate = (iso: string) =>
+  new Date(iso + "T12:00:00").toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
