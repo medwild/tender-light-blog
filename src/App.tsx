@@ -22,6 +22,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HubPage from "./pages/HubPage";
 import HubIndexPage from "./pages/HubIndexPage";
+import PosesPillarPage from "./pages/PosesPillarPage";
 import IdeasPillarPage from "./pages/IdeasPillarPage";
 import LegalPage from "./pages/LegalPage";
 import AuthorPage from "./pages/AuthorPage";
@@ -108,6 +109,21 @@ function useSeo(path: string) {
         if (!hub) break;
         crumbs.push({ name: "Guides", path: "/guides" }, { name: hub.name, path: `/${hub.slug}` });
         schemas.push(breadcrumbSchema(crumbs), collectionSchema(hub.name, `/${hub.slug}`, hub.lede));
+        const hubSpokes = hub.spokes.map(getPost).filter((p): p is NonNullable<typeof p> => Boolean(p));
+        if (hubSpokes.length) {
+          schemas.push({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: `${hub.name} — guides`,
+            numberOfItems: hubSpokes.length,
+            itemListElement: hubSpokes.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `${SITE.url}${postPath(p.slug)}/`,
+              name: p.title,
+            })),
+          });
+        }
         if (hub.faq.length) schemas.push(faqSchema(hub.faq));
         applySeo({
           title: hub.metaTitle,
@@ -213,7 +229,14 @@ export default function App() {
       break;
     case "hub": {
       const hub = getHub(route.slug);
-      page = hub?.pillar ? <IdeasPillarPage key={route.slug} /> : <HubPage key={route.slug} slug={route.slug} />;
+      page =
+        route.slug === "engagement-photo-ideas" ? (
+          <IdeasPillarPage key={route.slug} />
+        ) : route.slug === "engagement-photo-poses" ? (
+          <PosesPillarPage key={route.slug} />
+        ) : (
+          <HubPage key={route.slug} slug={route.slug} />
+        );
       break;
     }
     case "legal":

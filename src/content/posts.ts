@@ -2444,6 +2444,652 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Hub 2 · Poses cluster ———— */
+
+  {
+    slug: "natural-engagement-photo-poses",
+    title: "22 Natural Engagement Photo Poses That Never Feel Forced",
+    seoTitle: "22 Natural Engagement Photo Poses That Never Feel Forced",
+    seoDescription:
+      "Natural engagement photo poses built on prompts, not positions — relaxed, unposed frames with the exact direction that makes them happen.",
+    excerpt:
+      "Unposed doesn't mean unplanned. 22 natural engagement photo poses built from walking prompts, sit-down sets and movement cues.",
+    category: "poses",
+    date: "2026-03-20",
+    featuredImage: IMAGES.galleryLaugh,
+    featuredAlt: "Couple laughing naturally during an unposed engagement photo walk",
+    tags: ["natural", "unposed", "candid", "prompts", "relaxed"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Here's what nobody tells you: the most natural engagement photo poses aren't poses at all — they're situations with a camera pointed at them. Of the 400+ sessions I've photographed, the galleries couples call “so us” are the ones where I stopped saying “pose” entirely and started assigning tiny jobs: walk to that tree, fix his collar, whisper the worst joke you know. The body relaxes when the mind is busy. Below are 22 natural engagement photo poses organized that way — prompts first, positions second — plus the walking frames, sit-down sets and movement cues that keep them feeling unposed from the first minute to the last.",
+      },
+      { type: "h2", id: "prompts-not-poses", text: "Prompts, Not Poses: The Core Switch" },
+      {
+        type: "p",
+        text: "A prompt gives your mind something to do; a pose gives your body somewhere to freeze. Your mind is the problem, so prompts win every time. In eight of ten sessions, couples who start with prompts instead of positions are relaxed by minute ten — and never notice the switch.",
+      },
+      {
+        type: "list",
+        items: [
+          "“Walk to that lamppost arguing about dinner” — real bickering, real connection.",
+          "“Tell her the story of your first date, badly” — her reactions are the photos.",
+          "“Whisper what you'd order if money were no object.”",
+          "“Spin her once, then apologize like a Victorian gentleman.”",
+          "“Look at each other like one of you just won the lottery.”",
+        ],
+      },
+      {
+        type: "quote",
+        text: "The best natural photos don't look unposed. They look like someone caught you being in love.",
+        cite: "Harper, session №318 notes",
+      },
+      { type: "h2", id: "walking-frames", text: "The Walking Frames" },
+      {
+        type: "p",
+        text: "Walking is the universal unlock for natural engagement photo poses because nobody has to perform while moving. Seven of ten couples produce their best frames on a walk — and almost every one of them is surprised by it.",
+      },
+      {
+        type: "list",
+        items: [
+          "Walk toward the camera at conversation pace, hands swinging slightly.",
+          "Walk away, one of you glances back on the count of three.",
+          "Her hand in his back pocket, mid-sentence about nothing.",
+          "Cross a bridge slowly — stop in the middle only if it feels right.",
+          "The “race you there” jog that turns into a catch-and-laugh.",
+          "Walk with forearms linked, heads tilted toward each other.",
+          "The slow-motion walk — over-acted, then collapsing into real laughter.",
+        ],
+      },
+      { type: "h2", id: "sit-down-sets", text: "The Sit-Down Sets" },
+      {
+        type: "list",
+        items: [
+          "Tailgate sit: legs dangling, forearms on knees, real conversation.",
+          "Park bench lean: her shoulder on his, his arm along the backrest.",
+          "Curb coffee: two cups, one debate, photographer shoots from across the street.",
+          "Picnic blanket sprawl: heads together, looking at the same cloud.",
+          "Steps sit: her a step below, his hand on the rail, both profiles to camera.",
+        ],
+      },
+      { type: "h2", id: "movement-cures-stiffness", text: "Movement Cures Stiffness" },
+      {
+        type: "p",
+        text: "If a couple freezes, I add motion before I add direction — it works faster than any verbal cue I've found in eight years. These movement cues reset a stiff frame in seconds.",
+      },
+      {
+        type: "list",
+        items: [
+          "The twirl: he lifts her hand, she turns once under the arm.",
+          "The dip-and-recover: one slow second down, hold, slow second up.",
+          "Forehead touch, then three synced breaths — shoulders drop on the exhale.",
+          "The slow dance with no music; hum badly on purpose.",
+          "Shake it out: literally shake your arms for five seconds, then resume.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Harper's tip",
+        text: "Ask your photographer for the “in-between” frames — the walk to the spot, the laugh after the pose breaks. Those are the natural ones, and most photographers shoot them anyway if you ask them to keep them.",
+      },
+      { type: "h2", id: "natural-poses-faq", text: "Natural Pose Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How do we ask a photographer for natural poses?",
+            a: "Say “we want prompts, not poses” and share one thing you two actually do together — a walk you take, a joke you repeat. Specifics let the photographer build situations instead of guessing.",
+          },
+          {
+            q: "Do natural poses work for formal outfits?",
+            a: "Yes — movement and formal wear are not opposites. A slow walk in a suit and dress reads elegant precisely because it's unhurried. The key is slower movement, not less of it.",
+          },
+          {
+            q: "What if we go stiff the moment shooting starts?",
+            a: "Start with ten minutes of real life — actually drink the coffee, actually walk the block — before any directed frame. By the time shooting “begins,” your body has already forgotten the camera.",
+          },
+          {
+            q: "How many natural frames should we expect in a gallery?",
+            a: "Plan for roughly a third of the gallery to be natural and unposed, two thirds lightly directed. That balance gives the set structure and a pulse at the same time.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "Engagement Poses for Camera-Shy Couples", to: "/engagement-photo-poses/camera-shy-engagement-poses", note: "Poses · when “relaxed” still feels impossible" },
+          { label: "22 Couple Engagement Poses for Every Body Type", to: "/engagement-photo-poses/couple-engagement-poses", note: "Poses · standing, sitting and movement frames" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ring-engagement-photo-poses",
+    title: "14 Ring Engagement Photo Poses & Detail Shots Worth Framing",
+    seoTitle: "14 Ring Engagement Photo Poses & Detail Shots (2026)",
+    seoDescription:
+      "Ring engagement photo poses and detail shots — the reveal, the hand frames and the light tricks that make the ring the co-star.",
+    excerpt:
+      "The ring deserves its close-ups. 14 ring engagement photo poses — reveal frames, hand studies and the light tricks that make it glow.",
+    category: "poses",
+    date: "2026-03-22",
+    featuredImage: IMAGES.galleryRing,
+    featuredAlt: "Close-up of interlaced hands with an engagement ring catching golden light",
+    tags: ["ring", "detail shots", "ring reveal", "hands", "macro"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "The ring is the one prop you didn't have to bring — and the one detail guests will zoom into first. Ring engagement photo poses work best when the ring is a co-star, not the subject: it lives inside a gesture — a hand on a chest, interlaced fingers, a hair-tuck — instead of floating in front of a lens. These 14 poses cover the reveal, the quiet hand studies and the light setups that make the stone do its own showing off. (And yes — clean the ring the night before. It sounds obvious. It's the mistake I see most.)",
+      },
+      { type: "h2", id: "the-setup", text: "Hands First: The Setup That Flatters" },
+      {
+        type: "p",
+        text: "Relaxed hands photograph the ring; tense hands hide it. Drop your shoulders, unstick your tongue, and let the fingers rest instead of grip. I shot one bride whose ring photos improved instantly when she simply exhaled before each frame — the whole hand softened.",
+      },
+      {
+        type: "list",
+        items: [
+          "Interlaced fingers at waist height, ring hand slightly forward.",
+          "Her hand over his on his chest, ring catching the light.",
+          "The hair-tuck: ring hand brushing hair back, caught mid-gesture.",
+          "Chin-rest: her hand under her chin, elbow on his shoulder.",
+          "Both hands on one warm mug, ring facing the camera.",
+        ],
+      },
+      { type: "h2", id: "the-reveal-frames", text: "The Reveal Frames" },
+      {
+        type: "list",
+        items: [
+          "The classic: her hand on his chest, eyes down at the ring, both smiling.",
+          "Ring to the sky at golden hour — backlight makes the stone flare beautifully.",
+          "The “did you see this?” — her showing him her hand, his reaction is the photo.",
+          "Ring over her shoulder: hand up by her face, him blurred behind laughing.",
+          "The slow slide: he slides it on (again, on purpose) — shoot the whole sequence.",
+        ],
+      },
+      { type: "h2", id: "ring-plus-face", text: "Ring + Face Combinations" },
+      {
+        type: "p",
+        text: "The frames that age best combine the ring with a real expression — a laugh, a glance, an eye-roll at how cheesy this all is. A ring alone is jewelry; a ring plus your face is a story.",
+      },
+      {
+        type: "list",
+        items: [
+          "Forehead touch, ring hands clasped between you.",
+          "Her laughing with her hand half-covering her mouth, ring out front.",
+          "The over-the-shoulder glance, ring hand resting on his arm.",
+          "Kiss on the temple, her ring hand on his cheek.",
+        ],
+      },
+      { type: "h2", id: "light-and-lens-notes", text: "Light & Lens Notes for Detail Shots" },
+      {
+        type: "p",
+        text: "Detail shots live or die on light direction. The single most useful trick: position the ring so the sun (or a window) sits behind and slightly to the left of your hands. That back-and-side light wraps the metal and gives the stone a catchlight instead of a glare. Photographers will shoot these around f/2.8 or wider to blur everything but the stone — which is also why a clean, simple background matters more than you'd think.",
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Harper's tip",
+        text: "Book two or three minutes, not twenty. Ring details are a garnish — five to eight strong frames is plenty, and the best ones happen while you're laughing at something else entirely.",
+      },
+      { type: "h2", id: "ring-poses-faq", text: "Ring Pose Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How do I keep my hands from looking stiff in ring photos?",
+            a: "Give the hand a job and let the fingers rest instead of grip. Hold a mug, tuck your hair, rest your hand on his chest. Tension lives in the knuckles; a task melts it.",
+          },
+          {
+            q: "What light is best for engagement ring photos?",
+            a: "Soft, directional light from behind and slightly to the side of the ring. Golden hour outdoors or window light indoors both wrap the metal beautifully and give the stone a catchlight instead of a glare.",
+          },
+          {
+            q: "Should the ring be the main focus of our engagement photos?",
+            a: "It's the co-star, not the lead. A gallery built mostly on ring shots feels like an advertisement; five to eight ring frames inside a gallery of connection frames makes both better.",
+          },
+          {
+            q: "My nails aren't done — will it show?",
+            a: "Macro detail shots are unforgiving, and yes, it shows. The night-before manicure is the cheapest upgrade in engagement photography. If that's not possible, keep ring shots to mid-distance gestures.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "The Complete Engagement Photo Checklist", to: "/engagement-photo-ideas/engagement-photo-checklist", note: "Tips · includes the night-before ring clean" },
+          { label: "12 Proposal Poses for the Moment & After", to: "/engagement-photo-poses/proposal-poses", note: "Poses · where the ring story begins" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "outdoor-engagement-photo-poses",
+    title: "18 Outdoor Engagement Photo Poses for Fields, Parks & Golden Hour",
+    seoTitle: "18 Outdoor Engagement Photo Poses for Golden Hour (2026)",
+    seoDescription:
+      "Outdoor engagement photo poses for open fields, tree lines, water's edge and city streets — with the light notes that make each one work.",
+    excerpt:
+      "Outside changes everything. 18 outdoor engagement photo poses built for fields, paths, water and brick — timed to the light that flatters them.",
+    category: "poses",
+    date: "2026-03-24",
+    featuredImage: IMAGES.hero,
+    featuredAlt: "Couple posing backlit in a golden outdoor meadow at sunset",
+    tags: ["outdoor", "golden hour", "fields", "backlit", "park"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Outdoor engagement photo poses have one advantage over every other kind: the setting does half the directing. A field gives you space to move, a path gives you somewhere to go, water gives you reflections, and a brick wall gives you warm bounce light at 6pm. The pose just finishes the sentence the location started. These 18 poses are organized by terrain — field, tree line, water, street — because the best outdoor pose is always the one that belongs where you're standing.",
+      },
+      { type: "h2", id: "open-field-poses", text: "Open-Field Poses" },
+      {
+        type: "p",
+        text: "Open fields reward distance and movement — stand close together and let the landscape breathe around you. The classic field silhouette only works in the last two minutes of sun, so save it for the very end.",
+      },
+      {
+        type: "list",
+        items: [
+          "The waist-high walk: wade through tall grass holding hands, camera low behind you.",
+          "The open-field twirl, dress or jacket hem catching wind.",
+          "Back hug at golden hour, low sun rimming both silhouettes.",
+          "Lying in the grass, heads together, shot from directly above.",
+          "The horizon silhouette — him lifting her slightly, saved for last light.",
+        ],
+      },
+      { type: "h2", id: "tree-line-poses", text: "Tree-Line & Path Poses" },
+      {
+        type: "list",
+        items: [
+          "The trunk corridor: a row of trees framing you both, camera shooting down the line.",
+          "Hand-in-hand walking away down the path, canopy doing the lighting.",
+          "Peeking through leaves — green blur up front, sharp faces behind.",
+          "Forehead touch against a wide trunk, both in dappled shade.",
+          "Sit on a fallen log, shoulders touching, boots forward.",
+        ],
+      },
+      { type: "h2", id: "waters-edge-poses", text: "Water's-Edge Poses" },
+      {
+        type: "list",
+        items: [
+          "Creek rocks sit: feet near the water, foreheads touching.",
+          "Dock walk away from camera, reflection doubling the frame.",
+          "The reflection kiss — you kiss, the camera shoots the water.",
+          "Skip a stone; keep the mid-throw frame and the splash frame.",
+          "Barefoot at the shoreline in summer, trousers rolled.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Timing note",
+        text: "Creeks and lakes lose their light 30–45 minutes before open fields do. Shoot water poses mid-session, not last, or the field behind you will still glow while the water goes flat.",
+      },
+      { type: "h2", id: "urban-outdoor-poses", text: "Urban-Outdoor Poses" },
+      {
+        type: "list",
+        items: [
+          "Brick-wall lean at golden hour — the wall turns the last sun into a warm reflector.",
+          "Mid-crosswalk conversation, city moving around you.",
+          "Steps sit: one step apart, one hand clasped, looking slightly off-camera.",
+        ],
+      },
+      { type: "h2", id: "outdoor-poses-faq", text: "Outdoor Pose Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What's the best outdoor pose for golden hour?",
+            a: "The back hug or the backlit walk, with the low sun behind you. Backlight wraps your edges in gold and turns busy backgrounds into soft bokeh — it's the most flattering outdoor light there is.",
+          },
+          {
+            q: "How do we pose outdoors without looking lost in a big space?",
+            a: "Stay within arm's reach of each other and let the landscape fill the rest. Couples who spread apart in a field read as strangers; couples who stay close read as the subject.",
+          },
+          {
+            q: "What if it's windy during our outdoor session?",
+            a: "Use it. Wind is free movement — hair, hems and grass all become part of the frame. Lean into twirls and walking poses, and keep one hand on a hat or hair for the calm frames.",
+          },
+          {
+            q: "Do outdoor poses work for camera-shy couples?",
+            a: "Especially well. Walking poses on a path remove the pressure of performing, and distance from the camera means you forget it faster. Wide frames are the shy couple's best friend.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "21 Engagement Photo Ideas Outside for Every Season", to: "/engagement-photo-locations/engagement-photo-ideas-outside", note: "Locations · the terrain behind these poses" },
+          { label: "Golden Hour Photography Tips for Couples", to: "/engagement-photo-ideas/golden-hour-photography-tips-couples", note: "Tips · timing the light these poses need" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "couple-engagement-poses",
+    title: "20 Couple Engagement Poses That Flatter Every Body Type",
+    seoTitle: "20 Couple Engagement Poses That Flatter Every Body Type",
+    seoDescription:
+      "Engagement poses for couples of every body type — standing, sitting and movement frames with the adjustments that make them flattering.",
+    excerpt:
+      "Every couple photographs beautifully with the right adjustments. 20 couple engagement poses — standing, sitting, moving — built to flatter.",
+    category: "poses",
+    date: "2026-03-26",
+    featuredImage: IMAGES.posesCover,
+    featuredAlt: "Couple in a flattering forehead-touch engagement pose at golden hour",
+    tags: ["couple poses", "flattering", "body types", "standing", "sitting"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "There's no such thing as an unphotogenic couple — only poses that haven't been adjusted for them yet. After 400+ sessions I can tell you the flattering adjustments are small and consistent: close the gap, angle the body slightly away from camera, give hands a job, and let the shorter person lead the eye line. These 20 couple engagement poses carry those adjustments built in, organized by standing, sitting and movement frames, so you can hand the list to any photographer and get frames that look like the best version of you — not the best version of a template.",
+      },
+      { type: "h2", id: "standing-classics", text: "The Standing Classics" },
+      {
+        type: "list",
+        items: [
+          "The forehead touch — close the gap completely; no daylight between you.",
+          "The waist hold, both angled 15° from camera, mid-laugh.",
+          "Her back to his chest, his chin over her head, hands clasped at her waist.",
+          "The lapel hold: her hands on his lapels, his hands on her waist.",
+          "Shoulder-to-shoulder, both profiles to camera, eyes closed.",
+          "The almost-kiss: foreheads an inch apart, eyes open.",
+          "His hand on her cheek, her hand over his — the “quiet vow”.",
+        ],
+      },
+      { type: "h2", id: "sitting-frames", text: "The Sitting Frames" },
+      {
+        type: "list",
+        items: [
+          "The blanket sit: her legs to the side, his arm behind her.",
+          "Steps sit: her a step below, both leaning slightly into each other.",
+          "Curb sit facing each other, knees touching, mid-conversation.",
+          "Tailgate lean: backs against the truck, legs out, one arm around.",
+          "The chair pair: two chairs angled together, forearms on knees.",
+        ],
+      },
+      { type: "h2", id: "movement-frames", text: "The Movement Frames" },
+      {
+        type: "list",
+        items: [
+          "Walk toward camera, her hand in his back pocket.",
+          "The spin: he lifts her hand, she turns under the arm.",
+          "The dip — one slow second down, hold, one slow second up.",
+          "The lifted-hem walk through tall grass at sunset.",
+          "Run-toward-camera, caught three steps before the collision.",
+        ],
+      },
+      { type: "h2", id: "height-differences", text: "Poses for Height Differences" },
+      {
+        type: "p",
+        text: "Big height gaps are an asset, not a problem — they give you built-in geometry. The trick is to change the plane: sit, lean, or use a step so the difference becomes composition instead of neck strain. I photographed a couple with a fourteen-inch difference at a Guthrie stoop; every step-shot was a keeper because the height told a story instead of fighting the frame.",
+      },
+      {
+        type: "list",
+        items: [
+          "The step trick: shorter partner one step up, foreheads finally level.",
+          "Her seated, him behind — height becomes framing.",
+          "The lift: he lifts her by the waist, her feet off the ground.",
+          "Lean-in: him bending from the waist, her meeting him halfway.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Harper's tip",
+        text: "Whatever the pose, close the gap. Couples who stand a polite foot apart photograph as friends; couples who eliminate the daylight between them photograph as engaged.",
+      },
+      { type: "h2", id: "couple-poses-faq", text: "Couple Pose Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What are the most flattering poses for a couple?",
+            a: "The ones that close the gap and angle your bodies slightly from camera: the forehead touch, the waist hold and the lapel hold. Add a task for your hands and you've covered the three things that make any pose flattering.",
+          },
+          {
+            q: "We have a big height difference — what poses work?",
+            a: "Change the plane instead of fighting the gap: sit together, use a step, or lean in from the waist. Height differences create composition when you stop trying to hide them.",
+          },
+          {
+            q: "How do we make poses feel romantic instead of stiff?",
+            a: "Slow everything down and close your eyes for the holds. A ten-second forehead touch with synced breathing reads romantic; the same pose rushed reads like a mugshot.",
+          },
+          {
+            q: "Should the taller person always stand behind?",
+            a: "No — vary the arrangement. Behind-stands are one option, but side-by-side, seated and step-adjusted frames give the gallery range. A good photographer rotates you through several.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "27 Classic Engagement Photos That Never Go Out of Style", to: "/engagement-photo-poses/classic-engagement-photos", note: "Poses · the timeless half of this library" },
+          { label: "22 Natural Engagement Photo Poses", to: "/engagement-photo-poses/natural-engagement-photo-poses", note: "Poses · the unposed half" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "camera-shy-engagement-poses",
+    title: "16 Engagement Poses for Camera-Shy Couples (No Smiling Required)",
+    seoTitle: "16 Engagement Poses for Camera-Shy Couples (2026)",
+    seoDescription:
+      "Engagement poses for camera-shy couples — no-eye-contact frames, task poses and a 10-minute warm-up that dissolves the awkwardness.",
+    excerpt:
+      "Awkward in front of a camera? Good — you're the normal ones. 16 engagement poses for camera-shy couples that never ask you to perform.",
+    category: "poses",
+    date: "2026-03-28",
+    featuredImage: IMAGES.gallerySilhouette,
+    featuredAlt: "Couple silhouetted together at dusk — a comfortable pose for camera-shy couples",
+    tags: ["camera-shy", "awkward", "no eye contact", "comfort", "warm-up"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Let's be real — “just relax” is the least useful direction ever given through a lens. If you're camera-shy, you don't need relaxation advice; you need poses that don't require you to perform. These 16 engagement poses for camera-shy couples share one rule: none of them ask you to look at the camera and smile. You'll be looking at each other, at the horizon, or at your own hands — and the camera will just be the thing that noticed. About 70% of couples freeze in the first five minutes of a session. By minute ten, they've forgotten the camera exists. This list is the bridge between those two minutes.",
+      },
+      { type: "h2", id: "why-movement-beats-instruction", text: "Why Movement Beats Instruction" },
+      {
+        type: "p",
+        text: "Stillness magnifies self-consciousness; movement dissolves it. Every stiff couple I've met loosened up the moment they started walking — not because they were told to relax, but because their attention had somewhere else to go. Ask your photographer to start the session walking, and everything after it gets easier.",
+      },
+      { type: "h2", id: "no-eye-contact-poses", text: "The No-Eye-Contact Poses" },
+      {
+        type: "p",
+        text: "These frames never ask you to face the lens. Your eyes go somewhere comfortable — each other, the ground, the sky — and the photos take care of themselves.",
+      },
+      {
+        type: "list",
+        items: [
+          "The forehead touch, eyes closed, three synced breaths.",
+          "Her head on his shoulder, both profiles to camera, eyes shut.",
+          "Walking away, hand in hand — the camera is behind you entirely.",
+          "His chin over the crown of her head, both looking at the horizon.",
+          "The back hug at golden hour — you face the sunset, not the shooter.",
+          "Silhouette kiss against the last light; faces never matter at all.",
+        ],
+      },
+      { type: "h2", id: "task-poses", text: "The Task Poses" },
+      {
+        type: "p",
+        text: "A task gives your face something honest to do. These are the prompts I reach for when a couple tells me, up front, that they hate photos.",
+      },
+      {
+        type: "list",
+        items: [
+          "Fix each other's collar or hair — the fussy, tender gesture.",
+          "Whisper the name of your first pet. Real reactions, zero posing.",
+          "Hold one coffee, both hands on it, argue about who gets the last sip.",
+          "Read the same page of a book, one of you pointing at a line.",
+          "Count backward from ten out loud, together, badly.",
+          "Slow dance with no music — hum something terrible on purpose.",
+        ],
+      },
+      { type: "h2", id: "the-ten-minute-warmup", text: "The 10-Minute Warm-Up" },
+      {
+        type: "p",
+        text: "Early in my career I started sessions with my best pose and wondered why couples looked terrified. Now I do the opposite: the first ten minutes are real life — walk the block, drink the coffee, let the photographer trail behind with a long lens. By the time I “start shooting,” they've already given me a gallery's worth of frames without knowing it.",
+      },
+      {
+        type: "list",
+        items: [
+          "Minutes 0–3: arrive, walk, talk — camera stays down or far away.",
+          "Minutes 3–6: one easy task pose (the coffee hold).",
+          "Minutes 6–10: a walking frame with a glance-back.",
+          "Minute 10+: you've forgotten the camera. That's when the real session begins.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Real talk",
+        text: "Camera-shy couples almost always produce the most tender galleries — because they stop performing sooner. Your awkwardness is not a flaw in this process. It's the raw material.",
+      },
+      { type: "h2", id: "camera-shy-faq", text: "Camera-Shy Pose Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How do we pose if we hate being photographed?",
+            a: "Choose poses that don't require eye contact with the lens: walking frames, the forehead touch, task prompts like fixing a collar. You never perform — you just do a small thing while the camera notices.",
+          },
+          {
+            q: "How long until we stop feeling awkward?",
+            a: "About ten minutes for most couples, if the session starts with movement instead of posed frames. Ask your photographer for a walking warm-up and the clock runs faster.",
+          },
+          {
+            q: "Do we have to smile in engagement photos?",
+            a: "No. Closed eyes, soft glances and mid-laugh candids all read warmer than a forced smile. Tell your photographer you'd rather have real expressions than posed ones.",
+          },
+          {
+            q: "Should we tell the photographer we're camera-shy?",
+            a: "Yes — before the session, not during it. A photographer who knows will pace the warm-up, shoot long-lens candids and skip anything that feels like a performance.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "How to Feel Natural in Front of the Camera", to: "/engagement-photo-ideas/how-to-feel-natural-in-front-of-camera", note: "Tips · the mindset half of this toolkit" },
+          { label: "22 Natural Engagement Photo Poses", to: "/engagement-photo-poses/natural-engagement-photo-poses", note: "Poses · prompts first, positions second" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "proposal-poses",
+    title: "12 Proposal Poses for the Moment Itself — and the Ten Minutes After",
+    seoTitle: "12 Proposal Poses for the Moment & After (2026)",
+    seoDescription:
+      "Proposal poses for the kneel, the reaction and the aftermath — plus the shooter-angle plan that catches the moment you can't repeat.",
+    excerpt:
+      "The kneel lasts four seconds. These 12 proposal poses — plus the shooter's angle plan — make sure none of them are missed.",
+    category: "poses",
+    date: "2026-03-30",
+    featuredImage: IMAGES.classicDip,
+    featuredAlt: "Romantic couple moment in golden light, the calm after a proposal",
+    tags: ["proposal", "the kneel", "reaction", "surprise", "aftermath"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "A proposal gives you roughly four unrepeatable seconds: the kneel, the gasp, the yes, and the hug that follows. Proposal poses, then, are really a plan for those seconds — what you do, where you do it, and where the camera needs to be before it starts. I've photographed 40+ proposals across eight years, and the ones that delivered the best frames all did the same three things: chose light first, rehearsed the angle, and stayed in the embrace for a full ten seconds after the ring went on. Here are the 12 poses and moments worth planning for — the kneel itself, the reaction frames nobody can fake, and the quiet aftermath where the real photographs live.",
+      },
+      { type: "h2", id: "the-kneel-done-right", text: "The Kneel (Done Right)" },
+      {
+        type: "p",
+        text: "The kneel is the one genuinely posed moment of a proposal — so slow it down. One knee, box at chest height, and hold. The four-second kneel produces one frame; the ten-second kneel produces twenty.",
+      },
+      {
+        type: "list",
+        items: [
+          "Classic single-knee kneel, box held at her eye line, not your chest.",
+          "The slow kneel: descend over two full seconds; speed is the frame-killer.",
+          "Both hands on the box, head up — let her see your face, not just the ring.",
+          "The bench kneel: one knee on a low wall or bench for stability outdoors.",
+        ],
+      },
+      { type: "h2", id: "the-reaction-frames", text: "The Reaction Frames" },
+      {
+        type: "p",
+        text: "You cannot pose a reaction — but you can stay in the moment long enough for the camera to collect it. Keep your eyes on each other, not the lens, for the full first minute. In nine of ten proposals, the single best frame is the half-second after “yes” — the exhale, the hands to the face, the laugh that breaks through.",
+      },
+      {
+        type: "list",
+        items: [
+          "The hands-to-face gasp — stay there a full three seconds.",
+          "The tackle-hug: momentum is the photo; don't brake.",
+          "Her looking at the ring, then back at him — twice, slowly.",
+          "The cry-laugh: the ugly-honest one. Keep it. It's the best frame.",
+        ],
+      },
+      { type: "h2", id: "the-aftermath-poses", text: "The Aftermath Poses" },
+      {
+        type: "p",
+        text: "The ten minutes after the proposal are the most under-photographed minutes in any engagement — and the most tender. The shock has worn off, the ring is on, and you're just two people who are now engaged. These frames age better than the kneel.",
+      },
+      {
+        type: "list",
+        items: [
+          "The ring-to-the-chest hold: her hand on his chest, both looking down at it.",
+          "Forehead touch, ring hand up between you, eyes closed.",
+          "Walking away hand-in-hand, her left hand swinging forward for the light.",
+          "The sit-down: same spot, ten minutes later, just talking, photographer trailing.",
+        ],
+      },
+      { type: "h2", id: "planning-the-shooters-angle", text: "Planning the Shooter's Angle" },
+      {
+        type: "p",
+        text: "A proposal photographer works from one rule: position for the reaction, not the kneel. That means upwind, backlit if possible, and close enough that a 70–200mm lens can stay tight on her face while you kneel. Scout the exact spot the day before, mark the kneel point, and agree on a signal — I've had proposers use “look at that bird,” which is as good a cue as any.",
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Harper's tip",
+        text: "Tell your photographer the ring box opens toward the camera side of her left hand. It sounds tiny. It's the difference between the ring catching light in the frame or disappearing into shadow.",
+      },
+      { type: "h2", id: "proposal-poses-faq", text: "Proposal Pose Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How long should the kneel last for good photos?",
+            a: "Ten full seconds feels like forever and looks like poetry. The four-second kneel gives the photographer one frame; holding gives them twenty, including the slow box-open.",
+          },
+          {
+            q: "Can we plan poses during a surprise proposal?",
+            a: "You plan the geometry, not the moments: the kneel point, the light direction, the photographer's angle. Everything emotional stays unscripted — that's the whole point.",
+          },
+          {
+            q: "What should we do right after she says yes?",
+            a: "Stay in the embrace and keep looking at each other for a full minute. The reaction frames — the gasp, the ring look, the laugh — are unrepeatable and they're the best photos of the day.",
+          },
+          {
+            q: "Do we need a hidden photographer for the proposal?",
+            a: "If you want the moment documented, yes — a long lens from 30+ feet keeps the surprise intact. Scout the spot together with the photographer beforehand and agree on a signal to begin.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "14 Ring Engagement Photo Poses & Detail Shots", to: "/engagement-photo-poses/ring-engagement-photo-poses", note: "Poses · chapter two of the ring story" },
+          { label: "Save the Date & Proposal Hub", to: "/save-the-date-photos", note: "Hub · what happens after the yes" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => {
@@ -2476,6 +3122,12 @@ export const POST_HUB: Record<string, string> = {
   "golden-hour-photography-tips-couples": "engagement-photo-ideas",
   "engagement-photo-checklist": "engagement-photo-ideas",
   "how-to-feel-natural-in-front-of-camera": "engagement-photo-ideas",
+  "natural-engagement-photo-poses": "engagement-photo-poses",
+  "ring-engagement-photo-poses": "engagement-photo-poses",
+  "outdoor-engagement-photo-poses": "engagement-photo-poses",
+  "couple-engagement-poses": "engagement-photo-poses",
+  "camera-shy-engagement-poses": "engagement-photo-poses",
+  "proposal-poses": "engagement-photo-poses",
 };
 
 export const hubFor = (slug: string) => POST_HUB[slug] ?? "engagement-photo-ideas";
@@ -2494,7 +3146,7 @@ interface PostMeta {
   primaryKeyword: string;
   secondaryKeywords: string[];
   lsiKeywords: string[];
-  searchIntent: "informational" | "commercial" | "navigational";
+  searchIntent?: "informational" | "commercial" | "navigational";
   pinImages?: PinImage[];
   citations?: string[];
   internalLinks?: { url: string; anchor: string }[];
@@ -2819,6 +3471,78 @@ export const POST_META: Record<string, PostMeta> = {
       { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
     ],
     relatedPosts: ["casual-engagement-photo-ideas", "engagement-photo-checklist", "golden-hour-photography-tips-couples"],
+    monetization: M_ON,
+  },
+  "natural-engagement-photo-poses": {
+    primaryKeyword: "natural engagement photo poses",
+    secondaryKeywords: ["unposed engagement photos", "relaxed poses", "candid engagement poses"],
+    lsiKeywords: ["prompts", "walking frames", "movement cues", "sit-down sets", "golden hour"],
+    internalLinks: [
+      { url: "/engagement-photo-poses/camera-shy-engagement-poses", anchor: "engagement poses for camera shy couples" },
+      { url: "/engagement-photo-ideas/candid-engagement-photo-ideas", anchor: "candid engagement photo ideas" },
+      { url: "/engagement-photo-poses/couple-engagement-poses", anchor: "engagement poses for couples" },
+    ],
+    relatedPosts: ["camera-shy-engagement-poses", "couple-engagement-poses", "candid-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "ring-engagement-photo-poses": {
+    primaryKeyword: "ring engagement photo poses",
+    secondaryKeywords: ["engagement ring photos", "ring detail shots", "ring reveal poses"],
+    lsiKeywords: ["hands", "macro", "backlight", "save the date", "jewelry"],
+    internalLinks: [
+      { url: "/engagement-photo-poses/proposal-poses", anchor: "proposal poses" },
+      { url: "/engagement-photo-ideas/engagement-photo-checklist", anchor: "engagement photo checklist" },
+      { url: "/save-the-date-photos", anchor: "save the date photoshoot ideas" },
+    ],
+    relatedPosts: ["proposal-poses", "engagement-photo-checklist", "classic-engagement-photos"],
+    monetization: M_ON,
+  },
+  "outdoor-engagement-photo-poses": {
+    primaryKeyword: "outdoor engagement photo poses",
+    secondaryKeywords: ["outside engagement poses", "park engagement poses", "golden hour poses"],
+    lsiKeywords: ["backlit", "tree line", "meadow", "reflection", "silhouette"],
+    internalLinks: [
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
+      { url: "/engagement-photo-locations/top-engagement-photo-locations-oklahoma", anchor: "Oklahoma engagement locations" },
+    ],
+    relatedPosts: ["engagement-photo-ideas-outside", "golden-hour-photography-tips-couples", "couple-engagement-poses"],
+    monetization: M_ON,
+  },
+  "couple-engagement-poses": {
+    primaryKeyword: "engagement poses for couples",
+    secondaryKeywords: ["couple engagement poses", "romantic couple poses", "relaxed couple pictures"],
+    lsiKeywords: ["standing frames", "sitting frames", "movement", "height difference", "flattering"],
+    internalLinks: [
+      { url: "/engagement-photo-poses/natural-engagement-photo-poses", anchor: "natural engagement photo poses" },
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "30 engagement photo poses" },
+      { url: "/engagement-photo-poses/classic-engagement-photos", anchor: "classic engagement photos" },
+    ],
+    relatedPosts: ["natural-engagement-photo-poses", "classic-engagement-photos", "romantic-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "camera-shy-engagement-poses": {
+    primaryKeyword: "engagement poses for camera shy couples",
+    secondaryKeywords: ["awkward engagement photos", "how to pose for engagement photos", "relaxed posing"],
+    lsiKeywords: ["no eye contact", "task poses", "warm-up", "long lens", "comfort"],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/how-to-feel-natural-in-front-of-camera", anchor: "how to look natural in engagement photos" },
+      { url: "/engagement-photo-poses/natural-engagement-photo-poses", anchor: "natural engagement photo poses" },
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+    ],
+    relatedPosts: ["how-to-feel-natural-in-front-of-camera", "natural-engagement-photo-poses", "casual-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "proposal-poses": {
+    primaryKeyword: "proposal poses",
+    secondaryKeywords: ["proposal photo poses", "surprise proposal pictures", "proposal shoot ideas"],
+    lsiKeywords: ["the kneel", "reaction", "long lens", "scouting", "aftermath"],
+    internalLinks: [
+      { url: "/engagement-photo-poses/ring-engagement-photo-poses", anchor: "ring engagement photo poses" },
+      { url: "/save-the-date-photos", anchor: "save the date photoshoot ideas" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
+    ],
+    relatedPosts: ["ring-engagement-photo-poses", "romantic-engagement-photo-ideas", "classic-engagement-photos"],
     monetization: M_ON,
   },
 };
