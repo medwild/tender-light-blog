@@ -65,13 +65,31 @@ npm run build   # production build → dist/ (copies public/ pre-renders as-is)
 npm run typecheck
 ```
 
+## Writing in the Harper Ellis voice
+
+Every article is written as **Harper Ellis** — former engagement photographer
+(8 years, 400+ sessions), Austin TX, warm / expert / slightly witty. The full
+operating manual lives in `src/content/persona.ts`:
+
+- `SYSTEM_PROMPT` — paste-ready prompt for any AI content session.
+- `ARTICLE_SPEC` — title ≤ 60 chars, intro 100–150 words, paragraphs ≤ 4
+  sentences, `[AD PLACEMENT]` every 300–400 words, FAQ 4–6 questions.
+- `FORBIDDEN_PHRASES` — the AI-sounding phrases to never use.
+- `PIN_ANGLES` + `MARKERS` — the 3 Pinterest angles and the ad / affiliate /
+  lead-magnet / image markers.
+
+Per-article checklist (from the manual): keyword in H1, intro, one H2 and the
+conclusion · ≥ 5 image alts · ≥ 3 ad slots · ≥ 1 affiliate link · FAQ + JSON-LD ·
+3 Pinterest pins · one "Pro Tip" + one "Real Talk" callout · CTA ending.
+
 ## Adding a new article
 
 1. Push a new object into `POSTS` in `src/content/posts.ts`: `slug`, `title`,
    `seoTitle` (≤ 60 chars), `seoDescription` (≤ 155 chars), `excerpt`,
    `category`, `date`, `featuredImage`, `author`, `blocks` (`p`, `h2`/`h3` with
    `id` — feeds the sticky TOC —, `list`, `callout`, `quote`, `gallery`, `faq`
-   which auto-emits FAQPage JSON-LD).
+   which auto-emits FAQPage JSON-LD, `ad`, `shop` (affiliate), `leadMagnet`,
+   `pinKit` (3-pin Pinterest kit + boards), `pinCta`, `keepReading`).
 2. Create the matching pre-render `public/blog/<slug>/index.html` (copy an
    existing article page, swap head meta + body HTML).
 3. Add the URL to `public/sitemap.xml`.

@@ -28,7 +28,7 @@ function Ticker() {
   const items = [
     "30 tested poses",
     "golden-hour timing",
-    "Oklahoma locations",
+    "scouted locations",
     "outfit formulas",
     "camera-shy friendly",
     "ring close-ups",
@@ -103,7 +103,7 @@ export default function HomePage() {
               <Reveal delay={350} className="mt-7 max-w-lg">
                 <p className="text-[1.06rem] leading-relaxed text-ink-soft">
                   Field notes from <strong className="font-semibold text-ink">400+ real sessions</strong>: the poses
-                  that flatter every couple, the outfits that never date, and the Oklahoma light
+                  that flatter every couple, the outfits that never date, and the golden-hour light
                   we drive hours for. Written for couples, not models.
                 </p>
               </Reveal>
@@ -268,7 +268,7 @@ export default function HomePage() {
               “The photos you'll love in twenty years are the ones where you
               <em className="text-rose"> forgot we were there.</em>”
             </blockquote>
-            <p className="mt-5 font-script text-3xl text-gold">— Clara, every single session</p>
+            <p className="mt-5 font-script text-3xl text-gold">— Harper, every single session</p>
           </Reveal>
           <Reveal delay={150} className="mt-14 grid grid-cols-2 gap-8 border-t border-cream/15 pt-10 sm:grid-cols-4">
             {[
@@ -293,13 +293,13 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-xl border border-line">
               <img
                 src={IMAGES.about}
-                alt="Clara Bennett holding a vintage film camera in her cream-toned studio"
+                alt="Harper Ellis, founder of Tender Light, holding a vintage film camera in her cream-toned studio"
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover transition-transform duration-[1.2s] hover:scale-[1.04]"
               />
             </div>
             <p className="animate-floaty absolute -right-3 -top-6 rotate-3 rounded-md bg-paper px-4 py-2 font-script text-xl text-rose-deep shadow-lg" style={{ "--tilt": "3deg" } as React.CSSProperties}>
-              hi, I'm Clara ✳
+              hi, I'm Harper ✳
             </p>
           </Reveal>
           <div className="lg:col-span-7 lg:pl-8">

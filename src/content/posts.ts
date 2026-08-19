@@ -649,6 +649,12 @@ export const POSTS: Post[] = [
         type: "p",
         text: "Because everyday engagement photos do more jobs than formal ones. They're the images your save-the-date cards actually want — warm, un stiff, instantly recognizable as you. They slot perfectly into minimalist wedding websites, guest-book prints and the “how we got engaged” slideshow. And they're simply easier to make: less styling stress, shorter sessions, locations five minutes from home. If your wedding day will be the one formal chapter of this season, let your engagement photos be the exhale before it.",
       },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Real talk",
+        text: "Nobody looks natural being told to “just relax” by a stranger with a camera. That's exactly why every idea in this guide is an action, not an instruction — you can't be stiff while you're busy laughing at his terrible joke or reaching for the last fry.",
+      },
       { type: "ad", slot: "in-article" },
       { type: "h2", id: "what-to-wear", text: "What to Wear: Casual Engagement Outfit Ideas" },
       {
@@ -679,6 +685,12 @@ export const POSTS: Post[] = [
       {
         type: "p",
         text: "Matching outfits photograph like a team uniform; coordinating outfits photograph like a life together. Pick one shared palette — earth tones (camel, olive, rust, cream) or soft neutrals (oat, ivory, grey, dusty blue) — then let each of you interpret it differently. We use the 70/20/10 rule from our full outfit guide: 70% shared neutral base, 20% one accent color between you, 10% texture or pattern. You'll look like you belong in the same photograph without ever looking twinned.",
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Pro tip",
+        text: "Lay both outfits on the bed and photograph them together in daylight before the session. If the flat-lay looks like a Pinterest board you'd save — you're ready. If it reads like laundry, swap exactly one piece and shoot it again. Thirty seconds now saves a gallery you'll second-guess later.",
       },
       {
         type: "shop",
@@ -773,26 +785,61 @@ export const POSTS: Post[] = [
             q: "Can you wear jeans for engagement pictures?",
             a: "Absolutely! Jeans are a staple for casual engagement photos. Choose a well-fitted pair without heavy distressing or loud logos. Pair them with a nice blouse, a blazer, or a quality sweater to elevate the look from 'running errands' to 'smart-casual date night'.",
           },
+          {
+            q: "Do casual engagement photos work for save-the-dates?",
+            a: "They're honestly the best format for save-the-dates. The warm, unstiff frames fit card layouts beautifully, and guests instantly recognize the two of you. Ask your photographer for a horizontal crop for cards and a square crop for your wedding website.",
+          },
         ],
+      },
+      {
+        type: "leadMagnet",
+        title: "Free: The Relaxed-Pose Cheat Sheet",
+        subtitle:
+          "All 10 action prompts from this guide, plus the outfit 70/20/10 rule — on one printable page to hand your photographer (or tuck in your back pocket).",
+        bullets: [
+          "10 natural poses written as read-aloud prompts",
+          "The coordinate-don't-match color formula",
+          "A 45-minute casual session timeline",
+        ],
+        cta: "Send me the cheat sheet",
       },
       {
         type: "pinKit",
         pins: [
           {
+            angle: "Outfit/Style",
             image: IMAGES.outfitsCover,
-            overlay: "What to Wear: Casual Engagement Photos (Do's & Don'ts)",
-            note: "Pin 1 — Outfit Guide · collage of 3 looks, her & him · 1000 × 1500 px",
+            overlay: "What to Wear: Do's & Don'ts",
+            pinTitle: "Casual Engagement Photo Outfits — What to Wear (Do's & Don'ts)",
+            pinDescription:
+              "Jeans? Yes — with these three guardrails. The 70/20/10 color rule, her effortless formulas, his smart-casual staples. Save this before you plan your shoot.",
+            note: "Collage of 3 coordinated looks (her & him) on a cream backdrop · 1000 × 1500 px",
           },
           {
+            angle: "How-To/List",
             image: IMAGES.galleryLaugh,
-            overlay: "10 Relaxed Engagement Poses for Couples Who Hate the Camera",
-            note: "Pin 2 — Pose Cheat Sheet · 4 natural-pose frames · 1000 × 1500 px",
+            overlay: "10 Relaxed Poses, Zero Awkward",
+            pinTitle: "10 Relaxed Engagement Poses for Couples Who Hate the Camera",
+            pinDescription:
+              "Action prompts, not statues — the exact direction photographers use so you forget the lens exists. Pin the cheat sheet for your session day.",
+            note: "2×2 grid of four natural-pose frames with big numbered labels · 1000 × 1500 px",
           },
           {
+            angle: "Aesthetic/Mood",
             image: IMAGES.casualCafe,
-            overlay: "15 Casual Engagement Photo Ideas for an Authentic Vibe",
-            note: "Pin 3 — Aesthetic / Vibe · bright outdoor coffee-walk frame · 1000 × 1500 px",
+            overlay: "15 Casual Engagement Photo Ideas",
+            pinTitle: "15 Casual Engagement Photo Ideas for an Authentic Vibe",
+            pinDescription:
+              "Coffee shops, backyard bonfires, slow dances with no music — a relaxed shoot that feels like your real life, photographed beautifully. Tap for the full guide.",
+            note: "One bright outdoor coffee-walk frame, golden light, aspirational · 1000 × 1500 px",
           },
+        ],
+        boards: [
+          "Engagement Photo Ideas",
+          "Engagement Outfits & Style",
+          "Wedding Inspiration",
+          "Save the Date Ideas",
+          "Couple Photography Poses",
         ],
       },
       {

@@ -100,12 +100,12 @@ function useSeo(path: string) {
       }
 
       case "about":
-        crumbs.push({ name: "About Clara", path: "/about" });
+        crumbs.push({ name: "About Harper", path: "/about" });
         schemas.push(breadcrumbSchema(crumbs));
         applySeo({
-          title: "About Clara Bennett — Engagement Photographer | Tender Light",
+          title: "About Harper Ellis — Engagement Photo Blogger | Tender Light",
           description:
-            "Meet Clara Bennett, the photographer behind Tender Light: 400+ engagement sessions, natural light only, and a journal written for camera-shy couples.",
+            "Meet Harper Ellis: former engagement photographer (400+ sessions, 8 years behind the lens) and founder of Tender Light — warm, practical guides for camera-shy couples.",
           path: "/about",
           jsonLd: schemas,
         });
@@ -117,7 +117,7 @@ function useSeo(path: string) {
         applySeo({
           title: "Book an Engagement Photo Session | Tender Light",
           description:
-            "Book a golden-hour engagement session in Oklahoma City or ask anything about poses, outfits and locations. Replies within 48 hours.",
+            "Plan your engagement shoot with Harper: photographer shortlists, poses, outfits and scouted locations. Replies within 48 hours.",
           path: "/contact",
           jsonLd: schemas,
         });

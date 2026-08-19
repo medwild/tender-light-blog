@@ -25,10 +25,23 @@ export type Block =
   | { type: "ad"; slot: "in-article" | "end-of-section" }
   /** Affiliate-ready product links (rel="sponsored"). */
   | { type: "shop"; items: { label: string; store: string; href: string }[] }
-  /** Pinterest production kit: the pin variants planned for this article. */
-  | { type: "pinKit"; pins: { image: string; overlay: string; note: string }[] }
+  /** Pinterest production kit (STEP 2 spec): 3 angle variants + boards. */
+  | {
+      type: "pinKit";
+      pins: {
+        angle: "Outfit/Style" | "How-To/List" | "Aesthetic/Mood";
+        image: string;
+        overlay: string; // on-image text, max 8 words
+        pinTitle: string; // SEO title, max 100 chars
+        pinDescription: string; // 2–3 keyword sentences + CTA
+        note: string; // visual description for the designer
+      }[];
+      boards: string[];
+    }
   /** "Pin this guide" call to action. */
   | { type: "pinCta"; url: string; image: string }
+  /** [LEAD MAGNET] — free-download opt-in (cheat sheet / PDF guide). */
+  | { type: "leadMagnet"; title: string; subtitle: string; bullets: string[]; cta: string }
   /** Editorial internal links. */
   | { type: "keepReading"; items: { label: string; to: string; note: string }[] };
 
