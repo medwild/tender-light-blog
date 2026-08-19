@@ -91,6 +91,8 @@ export type Route =
   | { name: "blog"; page: number }
   | { name: "post"; slug: string }
   | { name: "category"; slug: string }
+  | { name: "guides" }
+  | { name: "hub"; slug: string }
   | { name: "about" }
   | { name: "contact" }
   | { name: "notfound"; path: string };
@@ -103,6 +105,8 @@ export function parseRoute(path: string): Route {
     return { name: "blog", page: Math.max(1, parseInt(parts[2] ?? "1", 10) || 1) };
   if (parts[0] === "blog" && parts.length === 2) return { name: "post", slug: parts[1] };
   if (parts[0] === "category" && parts.length === 2) return { name: "category", slug: parts[1] };
+  if (parts[0] === "guides" && parts.length === 1) return { name: "guides" };
+  if (parts[0] === "hub" && parts.length === 2) return { name: "hub", slug: parts[1] };
   if (parts[0] === "about") return { name: "about" };
   if (parts[0] === "contact") return { name: "contact" };
   return { name: "notfound", path };

@@ -11,6 +11,7 @@ import {
   websiteSchema,
 } from "./lib/seo";
 import { getCategory, getPost } from "./lib/content";
+import { getHub } from "./content/hubs";
 import type { Block } from "./content/types";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
@@ -20,6 +21,8 @@ import ArticlePage from "./pages/ArticlePage";
 import CategoryPage from "./pages/CategoryPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import HubPage from "./pages/HubPage";
+import HubIndexPage from "./pages/HubIndexPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 /** Central SEO effect — the SPA mirror of Next.js route-level `generateMetadata`. */
@@ -99,6 +102,33 @@ function useSeo(path: string) {
         return;
       }
 
+      case "guides":
+        crumbs.push({ name: "Guides", path: "/guides" });
+        schemas.push(breadcrumbSchema(crumbs), collectionSchema("Engagement Photo Guides", "/guides", "Six topic hubs covering ideas, poses, locations, outfits, save-the-dates and prints."));
+        applySeo({
+          title: "Engagement Photo Guides — Start Here | Tender Light",
+          description:
+            "The engagement photo map: six topic hubs covering ideas, poses, locations, outfits, save-the-dates and print ideas, curated by a working photographer.",
+          path: "/guides",
+          jsonLd: schemas,
+        });
+        return;
+
+      case "hub": {
+        const hub = getHub(route.slug);
+        if (!hub) break;
+        crumbs.push({ name: "Guides", path: "/guides" }, { name: hub.name, path: `/hub/${hub.slug}` });
+        schemas.push(breadcrumbSchema(crumbs), collectionSchema(hub.name, `/hub/${hub.slug}`, hub.lede));
+        if (hub.faq.length) schemas.push(faqSchema(hub.faq));
+        applySeo({
+          title: hub.metaTitle,
+          description: hub.metaDescription,
+          path: `/hub/${hub.slug}`,
+          jsonLd: schemas,
+        });
+        return;
+      }
+
       case "about":
         crumbs.push({ name: "About Harper", path: "/about" });
         schemas.push(breadcrumbSchema(crumbs));
@@ -160,6 +190,12 @@ export default function App() {
       break;
     case "category":
       page = <CategoryPage key={route.slug} slug={route.slug} />;
+      break;
+    case "guides":
+      page = <HubIndexPage />;
+      break;
+    case "hub":
+      page = <HubPage key={route.slug} slug={route.slug} />;
       break;
     case "about":
       page = <AboutPage />;

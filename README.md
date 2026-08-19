@@ -92,6 +92,25 @@ chars · JSON-LD `@graph` with all 7 types · scene-not-instruction close.
 > (answer-first sentences, standalone quotable expert lines, first-person
 > attribution). The static pre-render carries the full `@graph` JSON-LD.
 
+## Topical authority — hubs & spokes
+
+The silo layer lives in `src/content/hubs.ts`. Six hubs, each targeting ONE
+primary keyword (`engagement photo ideas`, `engagement photo poses`, `outdoor
+engagement photo ideas`, `what to wear…`, `save the date…`, `engagement photo
+print ideas`). Each hub curates its spoke articles in priority order, carries
+its own answer-first content (never thin), and cross-links to sibling hubs.
+
+- `/guides` — topical map listing all six hubs (the "start here" page).
+- `/hub/:slug` — the keyword-optimized landing page for a silo.
+- Maillage interne: every page links to `/guides` via the header; each hub
+  links down to its spokes and across to related hubs; spokes link back via
+  the persistent nav. This reinforces topical authority without cannibalizing
+  the head keyword (`engagement photos`), which is only used as semantic
+  support.
+
+To add a hub: push an object into `HUBS`, then create the matching
+`public/hub/<slug>/index.html` and add the URL to `public/sitemap.xml`.
+
 ## Adding a new article
 
 1. Push a new object into `POSTS` in `src/content/posts.ts`: `slug`, `title`,

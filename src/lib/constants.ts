@@ -17,6 +17,7 @@ export const SITE = {
 } as const;
 
 export const NAV_LINKS = [
+  { label: "Guides", to: "/guides" },
   { label: "Journal", to: "/blog" },
   { label: "Poses", to: "/category/poses" },
   { label: "Outfits", to: "/category/outfits" },
