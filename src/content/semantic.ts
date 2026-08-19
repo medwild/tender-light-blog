@@ -265,11 +265,104 @@ export const CLUSTER_LOCATIONS: ClusterSemantic = {
   },
 };
 
-/** Registry — add clusters 4–7 here as their semantic fields arrive. */
+/* ————— Cluster 4 · Engagement Photo Outfits ————— */
+export const CLUSTER_OUTFITS: ClusterSemantic = {
+  cluster: "engagement-photo-outfits",
+  name: "Engagement Photo Outfits",
+  primaryKeywords: [
+    "what to wear for engagement photos",
+    "engagement photo outfits",
+    "engagement picture outfit ideas",
+    "casual engagement photo outfits",
+    "fall engagement photo outfits",
+    "summer engagement photo outfits",
+    "spring engagement photo outfits",
+  ],
+  lsi: [
+    "outfit coordination",
+    "matching outfits",
+    "complementary colors",
+    "neutral tones",
+    "earth tones",
+    "soft colors",
+    "pastel colors",
+    "avoid loud patterns",
+    "avoid logos",
+    "flowy dress",
+    "midi dress",
+    "maxi dress",
+    "jeans",
+    "white jeans",
+    "knit sweater",
+    "blazer",
+    "button down shirt",
+    "clean sneakers",
+    "ankle boots",
+    "heels",
+    "sandals",
+    "accessories",
+    "hat",
+    "scarf",
+    "jewelry",
+    "seasonal outfits",
+    "layering",
+    "comfortable clothing",
+    "movement friendly outfits",
+    "fabric texture",
+    "timeless outfits",
+    "dressy casual",
+    "smart casual",
+  ],
+  linkOverrides: {
+    // color & coordination vocabulary → the palette guide
+    "neutral tones": "/engagement-photo-outfits/engagement-photo-color-palette",
+    "earth tones": "/engagement-photo-outfits/engagement-photo-color-palette",
+    "soft colors": "/engagement-photo-outfits/engagement-photo-color-palette",
+    "complementary colors": "/engagement-photo-outfits/engagement-photo-color-palette",
+    "fabric texture": "/engagement-photo-outfits/engagement-photo-color-palette",
+    // the "coordinate, don't match" concept → casual guide
+    "outfit coordination": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    "matching outfits": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    // casual garments & comfort → casual outfits
+    jeans: "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    "white jeans": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    "clean sneakers": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    "comfortable clothing": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    "movement friendly outfits": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    "dressy casual": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    "smart casual": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+    // cool-weather layering → fall outfits
+    "knit sweater": "/engagement-photo-outfits/fall-engagement-photo-outfits",
+    layering: "/engagement-photo-outfits/fall-engagement-photo-outfits",
+    scarf: "/engagement-photo-outfits/fall-engagement-photo-outfits",
+    // warm-weather pieces → summer outfits
+    "flowy dress": "/engagement-photo-outfits/summer-engagement-photo-outfits",
+    "midi dress": "/engagement-photo-outfits/summer-engagement-photo-outfits",
+    sandals: "/engagement-photo-outfits/summer-engagement-photo-outfits",
+    hat: "/engagement-photo-outfits/summer-engagement-photo-outfits",
+    // spring palette → spring outfits
+    "pastel colors": "/engagement-photo-outfits/spring-engagement-photo-outfits",
+    // avoid-rules, timeless pieces & accessories → the main stylist guide
+    "avoid loud patterns": "/engagement-photo-outfits/best-outfits-engagement-photos",
+    "avoid logos": "/engagement-photo-outfits/best-outfits-engagement-photos",
+    "timeless outfits": "/engagement-photo-outfits/best-outfits-engagement-photos",
+    "maxi dress": "/engagement-photo-outfits/best-outfits-engagement-photos",
+    blazer: "/engagement-photo-outfits/best-outfits-engagement-photos",
+    "button down shirt": "/engagement-photo-outfits/best-outfits-engagement-photos",
+    "ankle boots": "/engagement-photo-outfits/best-outfits-engagement-photos",
+    heels: "/engagement-photo-outfits/best-outfits-engagement-photos",
+    accessories: "/engagement-photo-outfits/best-outfits-engagement-photos",
+    jewelry: "/engagement-photo-outfits/best-outfits-engagement-photos",
+    "seasonal outfits": "/engagement-photo-outfits/best-outfits-engagement-photos",
+  },
+};
+
+/** Registry — add clusters 5–7 here as their semantic fields arrive. */
 export const SEMANTIC_FIELDS: Record<string, ClusterSemantic> = {
   [CLUSTER_IDEAS.cluster]: CLUSTER_IDEAS,
   [CLUSTER_POSES.cluster]: CLUSTER_POSES,
   [CLUSTER_LOCATIONS.cluster]: CLUSTER_LOCATIONS,
+  [CLUSTER_OUTFITS.cluster]: CLUSTER_OUTFITS,
 };
 
 export const getSemanticField = (cluster: string): ClusterSemantic | undefined =>

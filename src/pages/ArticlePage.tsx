@@ -134,7 +134,8 @@ export default function ArticlePage({ slug }: { slug: string }) {
                 <p className="mt-2.5 flex flex-wrap gap-2">
                   {topicalTerms.map((k) => {
                     const target = resolveTermLink(k, { field, ownHub, hubSlugs });
-                    if (!target) {
+                    // Never self-link: if the resolved URL is this very page, show a chip.
+                    if (!target || target.url === postPath(post.slug)) {
                       return (
                         <span key={k} className="rounded-full bg-cream px-3 py-1 text-[12px] font-medium text-ink-soft">
                           {k}
