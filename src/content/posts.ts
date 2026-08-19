@@ -4593,6 +4593,500 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Hub 6 · Prints, Display & Gifts cluster ———— */
+
+  {
+    slug: "locket-photo-print-guide",
+    title: "The Locket Photo Print Guide: Tiny Prints That Become Heirlooms",
+    seoTitle: "The Locket Photo Print Guide: Tiny Prints, Heirloom Gifts",
+    seoDescription:
+      "How to print photos for a locket — sizing, crops, finishes and the framing choices that turn one engagement photo into a keepsake gift.",
+    excerpt:
+      "One engagement photo, shrunk to a thumbnail, becomes the most personal gift you can give. Here's how to print it right.",
+    category: "tips",
+    date: "2026-04-02",
+    featuredImage: IMAGES.galleryRing,
+    featuredAlt: "Close-up of an engagement ring and hands, ideal for a locket print crop",
+    tags: ["locket", "prints", "gifts", "heirloom", "small prints"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "A locket turns one engagement photo into the most personal object you can give a parent or grandparent. The trick is treating it like its own tiny photograph, not a shrunken copy of the big one. Crop tightly on the two faces — or just the ring and your hands — because at thumbnail size, detail is the whole point. Below is the full process: which frame to choose, how to crop it, and where to print so it survives decades of opening and closing.",
+      },
+      { type: "h2", id: "choosing-the-frame", text: "Choosing the Right Frame" },
+      {
+        type: "p",
+        text: "The best locket frames are close, high-contrast and simple. A forehead touch with eyes closed, a ring-and-hands detail, or a laughing profile all survive the tiny crop. Avoid wide landscapes or full-body frames — they lose all their subject at locket scale.",
+      },
+      {
+        type: "list",
+        items: [
+          "The ring-and-hands close-up — the most-requested locket image we've seen.",
+          "A forehead touch, cropped to just the two faces.",
+          "A laughing profile, cropped tight on one cheek and smile.",
+          "A silhouette kiss, which holds its shape even very small.",
+        ],
+      },
+      { type: "h2", id: "crop-and-sizing", text: "Crop & Sizing for Tiny Prints" },
+      {
+        type: "p",
+        text: "Locket inserts are usually 18mm (about 0.7 inches) round or oval. Ask for a high-resolution crop with a square or circular safe zone, and leave a little breathing room around the subject so the locket's bezel doesn't clip a face. Most print services offer wallet-size (2.5x3.5) sheets you can trim down — that's the easiest route.",
+      },
+      { type: "h2", id: "finish-that-lasts", text: "A Finish That Lasts" },
+      {
+        type: "p",
+        text: "Choose lustre or matte over glossy for lockets — a locket is handled constantly, and glossy shows every fingerprint and scratches faster. If the locket came with a plastic cover, keep it; it's the difference between a crisp image in ten years and a faded one.",
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Harper's tip",
+        text: "Order two locket prints from different frames — one of each of you with your parents, or the ring detail as a spare. People always ask for a second one once they see the first.",
+      },
+      { type: "h2", id: "locket-faq", text: "Locket Print Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What size photo do I need for a locket?",
+            a: "Locket inserts are usually 18mm round or oval. Order a high-res crop and print at wallet size, then trim to fit — or use a print service that cuts circular inserts directly.",
+          },
+          {
+            q: "Which engagement photo works best in a locket?",
+            a: "A tight close-up: the ring and your hands, a forehead touch cropped to the faces, or a laughing profile. Wide shots lose their subject at locket scale.",
+          },
+          {
+            q: "Is a locket print a good gift for parents?",
+            a: "It's one of the best engagement gifts there is — personal, small, and something they'll open daily. Grandparents especially love the ring-and-hands detail.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "15 Mini Photo Print Ideas", to: "/engagement-photo-prints/mini-photo-print-ideas", note: "Prints · small formats beyond the locket" },
+          { label: "14 Ring Engagement Photo Poses", to: "/engagement-photo-poses/ring-engagement-photo-poses", note: "Poses · the shots that make great locket crops" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "photo-booth-strip-ideas",
+    title: "12 Photo Booth Strip Ideas That Make Your Session Playful",
+    seoTitle: "12 Photo Booth Strip Ideas for Engagement Photos (2026)",
+    seoDescription:
+      "Photo booth strip ideas for engagement photos — how to create photobooth-style prints, what to pose for, and where to use the strips.",
+    excerpt:
+      "Four frames, one vertical strip, zero formality. Photo booth strips are the most fun artifact you can make from an engagement session.",
+    category: "tips",
+    date: "2026-04-04",
+    featuredImage: IMAGES.galleryLaugh,
+    featuredAlt: "Couple laughing candidly, perfect frames for a photobooth strip",
+    tags: ["photo booth", "photo strip", "prints", "playful", "keepsake"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "A photo booth strip distills your whole session into four frames and one vertical strip — and it's the artifact guests actually pocket. You don't need a booth to make one: any photographer can shoot a four-frame sequence, and any print service can lay it out as a strip. Here's how to pose for it, what the four frames should be, and where the finished strips earn their keep.",
+      },
+      { type: "h2", id: "the-four-frame-recipe", text: "The Four-Frame Recipe" },
+      {
+        type: "p",
+        text: "The best strips tell a tiny story in four beats. Our go-to sequence: a straight-to-camera hello, a kiss, a laugh, and a silly face. The contrast between the sweet frames and the goofy one is what makes people smile every time they look at it.",
+      },
+      {
+        type: "list",
+        items: [
+          "Frame 1 — the classic: faces together, smiling at camera.",
+          "Frame 2 — the kiss.",
+          "Frame 3 — the laugh, caught mid-motion.",
+          "Frame 4 — the silly face or the dramatic dip.",
+        ],
+      },
+      { type: "h2", id: "posing-for-the-strip", text: "Posing for the Strip" },
+      {
+        type: "p",
+        text: "Keep all four frames head-and-shoulders tight — booth crops are close, and full-body poses disappear in the narrow format. Face the camera squarely, stay in the center, and treat each frame like a one-second beat rather than a held pose.",
+      },
+      { type: "h2", id: "where-strips-earn-their-keep", text: "Where Strips Earn Their Keep" },
+      {
+        type: "list",
+        items: [
+          "Tucked into save-the-date envelopes as a surprise insert.",
+          "Guest favors at the engagement party or wedding.",
+          "A set for each pair of parents, dated on the back.",
+          "Framed in a slim vertical frame for a bedside table.",
+          "A spare strip for your wallet or planner cover.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Harper's tip",
+        text: "Ask for the strip in both color and black-and-white. The B&W version looks timeless in a frame; the color version feels like the day. Most people end up wanting both.",
+      },
+      { type: "h2", id: "strip-faq", text: "Photo Strip Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Can I make a photo booth strip without an actual booth?",
+            a: "Yes — any photographer can shoot a four-frame sequence, and most print services will lay it out as a booth-style strip with the white border and captions.",
+          },
+          {
+            q: "How many frames fit on a photo strip?",
+            a: "The classic strip is four vertical frames, about 2x6 inches. Some services offer three- or six-frame versions, but four is the recognizable booth format.",
+          },
+          {
+            q: "What should we wear for a photobooth-style strip?",
+            a: "Solid, medium-toned tops photograph cleanest in the tight booth crop. Avoid busy patterns — at that size, they become visual noise.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "10 Polaroid-Style Engagement Prints", to: "/engagement-photo-prints/polaroid-style-engagement-prints", note: "Prints · another retro format" },
+          { label: "17 Fun Engagement Photo Ideas", to: "/engagement-photo-ideas/fun-engagement-photo-ideas", note: "Ideas · the silly-face inspiration" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "engagement-photo-display-ideas",
+    title: "16 Engagement Photo Display Ideas for a Wall You'll Love",
+    seoTitle: "16 Engagement Photo Display Ideas for Your Home (2026)",
+    seoDescription:
+      "Engagement photo display ideas — gallery walls, ledges, oversized hero prints and frame groupings that show your session without clutter.",
+    excerpt:
+      "From one oversized hero print to a curated gallery ledge — 16 ways to display your engagement photos so they feel collected, not cluttered.",
+    category: "tips",
+    date: "2026-04-06",
+    featuredImage: IMAGES.classicDip,
+    featuredAlt: "Elegant couple portrait suited to an oversized hero print",
+    tags: ["display", "gallery wall", "frames", "home", "prints"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Displaying engagement photos well comes down to one rule: lead with one strong frame and let the rest support it. A single oversized hero print above the sofa reads as intentional; twenty same-size frames reads as clutter. Here are sixteen display ideas organized by how much wall you're willing to give the session — from one big statement to a full gallery wall.",
+      },
+      { type: "h2", id: "the-single-hero-print", text: "The Single Hero Print" },
+      {
+        type: "list",
+        items: [
+          "A 24x36 matte print above the sofa — the classic statement.",
+          "A 20x30 over the bed, at eye level when you're standing.",
+          "A canvas wrap of your favorite landscape frame for the entry.",
+          "A framed 16x20 in the hallway where you'll see it daily.",
+        ],
+      },
+      { type: "h2", id: "gallery-ledge-and-shelf", text: "Gallery Ledge & Shelf Displays" },
+      {
+        type: "list",
+        items: [
+          "A picture ledge with three layered 8x10s — swap them seasonally.",
+          "A shelf grouping: one 11x14, one 8x10, one 5x7, odd-numbered.",
+          "Leaning frames on a mantel with the hero print centered.",
+          "A desk trio of small candids you'll see while working.",
+        ],
+      },
+      { type: "h2", id: "the-full-gallery-wall", text: "The Full Gallery Wall" },
+      {
+        type: "p",
+        text: "If you want a gallery wall, mix sizes and orientations deliberately — one large, two medium, several small — and keep the frames consistent (all black, all oak, or all white). Lay the arrangement on the floor first, and leave 2-3 inches between frames. Adding non-photo objects (a small mirror, a piece of art) keeps it from feeling like a shrine.",
+      },
+      {
+        type: "list",
+        items: [
+          "Grid arrangement: six same-size frames, evenly spaced.",
+          "Organic cluster: varied sizes around a central hero.",
+          "Staircase run: frames stepping up with the stairs.",
+          "Mixed media: prints plus one mirror and one text piece.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Harper's tip",
+        text: "Print on matte or lustre for anything behind glass in a bright room — glossy picks up glare from windows and lamps. And hang art so the center sits around 57-60 inches from the floor.",
+      },
+      { type: "h2", id: "display-faq", text: "Display Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How big should my main engagement print be?",
+            a: "Above a sofa or bed, 20x30 to 24x36 works as a hero piece. The hero should be the largest element on that wall, with smaller prints supporting it.",
+          },
+          {
+            q: "How do I hang a gallery wall without it looking messy?",
+            a: "Keep frames consistent, mix sizes deliberately around one hero, leave 2-3 inches between frames, and lay the whole arrangement on the floor before putting a single nail in the wall.",
+          },
+          {
+            q: "Should engagement photos be framed or on canvas?",
+            a: "Framed prints behind glass look sharper and are easier to swap; canvas suits large landscape frames and casual spaces. For a hero portrait, a quality frame usually wins.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "15 Mini Photo Print Ideas", to: "/engagement-photo-prints/mini-photo-print-ideas", note: "Prints · the small frames for shelves" },
+          { label: "27 Classic Engagement Photos", to: "/engagement-photo-poses/classic-engagement-photos", note: "Poses · frames built for a hero print" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "mini-photo-print-ideas",
+    title: "15 Mini Photo Print Ideas: Small Prints, Big Uses",
+    seoTitle: "15 Mini Photo Print Ideas: Wallet, Tiny & Mini Prints",
+    seoDescription:
+      "Mini photo print ideas — wallet-size prints, tiny picture sets and small-format uses for engagement photos, from favors to fridge galleries.",
+    excerpt:
+      "Tiny prints are the most versatile thing you can order. Fifteen ways to use wallet-size and mini engagement prints.",
+    category: "tips",
+    date: "2026-04-08",
+    featuredImage: IMAGES.galleryTwirl,
+    featuredAlt: "Joyful twirling frame that crops well into mini prints",
+    tags: ["mini prints", "wallet size", "small prints", "favors", "gifts"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Mini prints — wallet-size and smaller — are the cheapest, most versatile thing you can order from your engagement session, and couples consistently tell me they wish they'd ordered more. They're favors, gifts, bookmarks and fridge art all at once. Here are fifteen uses, grouped by who they're for.",
+      },
+      { type: "h2", id: "for-yourselves", text: "For Yourselves" },
+      {
+        type: "list",
+        items: [
+          "A wallet print for each of you — the classic.",
+          "A tiny print tucked behind your phone case.",
+          "A fridge mini-gallery of three candid frames.",
+          "A bookmark print for the book you're both reading.",
+          "A set of 2x2 prints for a planner or journal spread.",
+        ],
+      },
+      { type: "h2", id: "for-family-and-friends", text: "For Family & Friends" },
+      {
+        type: "list",
+        items: [
+          "Save-the-date envelope inserts for close family.",
+          "A framed 4x6 for each set of parents.",
+          "Mini prints as engagement party favors.",
+          "A tiny print mailed to a far-away grandparent.",
+        ],
+      },
+      { type: "h2", id: "creative-small-formats", text: "Creative Small Formats" },
+      {
+        type: "list",
+        items: [
+          "Mini prints clipped to a string-light display.",
+          "A set of 2x3 prints tucked into holiday cards.",
+          "Tiny prints laminated as luggage tags for the honeymoon.",
+          "A 2x2 grid print of the four best candids.",
+          "Mini prints as gift tags on wedding-party presents.",
+          "A pocket album of twelve 2.5x3.5 prints.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Harper's tip",
+        text: "Order mini prints from your full-resolution files, not phone screenshots of the gallery — the difference in sharpness at small sizes is obvious. Most labs print wallet sheets for a few dollars.",
+      },
+      { type: "h2", id: "mini-faq", text: "Mini Print Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What size are wallet-size photo prints?",
+            a: "Standard wallet size is 2.5 x 3.5 inches. Mini prints run smaller, from 2x2 up to 2x3, and most photo labs print them in inexpensive sheets.",
+          },
+          {
+            q: "Are mini prints good quality from an engagement session?",
+            a: "Yes, as long as you print from the high-resolution files your photographer delivers — not from screenshots. At small sizes, sharp source files make a visible difference.",
+          },
+          {
+            q: "How many mini prints should we order?",
+            a: "More than you think. Order at least two dozen — they become favors, gifts and inserts, and couples always run out before the wedding.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "The Locket Photo Print Guide", to: "/engagement-photo-prints/locket-photo-print-guide", note: "Prints · the smallest format of all" },
+          { label: "12 Photo Booth Strip Ideas", to: "/engagement-photo-prints/photo-booth-strip-ideas", note: "Prints · strips from your candids" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "polaroid-style-engagement-prints",
+    title: "10 Polaroid-Style Engagement Print Ideas for a Retro Feel",
+    seoTitle: "10 Polaroid-Style Engagement Prints for a Retro Feel",
+    seoDescription:
+      "Polaroid-style engagement print ideas — retro bordered prints, vintage layouts and how to get the instant-film look from a digital session.",
+    excerpt:
+      "The white border, the handwritten caption, the slightly faded color — polaroid-style prints make a digital session feel like found film.",
+    category: "tips",
+    date: "2026-04-10",
+    featuredImage: IMAGES.about,
+    featuredAlt: "Film camera portrait evoking the polaroid aesthetic",
+    tags: ["polaroid", "retro", "vintage", "prints", "film look"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Polaroid-style prints give a digital engagement session the warmth of found film — the thick white border, the slightly faded color, the handwritten caption. You don't need a real instant camera to get there; any lab can print your digital frames with a classic border and a film-grain finish. Here's how to pull off the look and where it shines.",
+      },
+      { type: "h2", id: "getting-the-look", text: "Getting the Look from Digital Files" },
+      {
+        type: "p",
+        text: "Ask your photographer for a film-emulation edit — lifted blacks, warm highlights, muted color and fine grain — then print with a white border. The border is what sells it: the classic square-frame-with-bottom-margin shape reads as instant film immediately, even from a digital file.",
+      },
+      { type: "h2", id: "caption-it-by-hand", text: "Caption It by Hand" },
+      {
+        type: "p",
+        text: "The white bottom margin is begging for a caption in handwriting: the date, the location, or a private joke. This single step is what separates a polaroid-style print from a framed photo, and it's the reason these become keepsakes people keep on a desk rather than a wall.",
+      },
+      { type: "h2", id: "where-polaroid-styles-shine", text: "Where Polaroid Styles Shine" },
+      {
+        type: "list",
+        items: [
+          "A string of clipped polaroids above a desk or bed.",
+          "Scattered flat-lay style in a shadowbox frame.",
+          "Save-the-date inserts with a handwritten date.",
+          "Guest-book alternates: guests sign the border.",
+          "A stack in a small wooden crate for the entry table.",
+          "Magnets on the fridge, captioned with the day's jokes.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Harper's tip",
+        text: "Order one real instant-film frame if your photographer carries a pack — even one genuine polaroid in a stack of polaroid-style prints anchors the whole display.",
+      },
+      { type: "h2", id: "polaroid-faq", text: "Polaroid Print Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Can I get polaroid-style prints from a digital engagement session?",
+            a: "Yes — any print lab can add the classic white border, and a film-emulation edit (lifted blacks, warm grain) completes the look. No instant camera required.",
+          },
+          {
+            q: "What size should polaroid-style prints be?",
+            a: "The classic shape is roughly square, 3x3 to 4x4 inches including the border. Most labs offer a 'polaroid' or 'with border' print option at these sizes.",
+          },
+          {
+            q: "Do polaroid-style prints work for save-the-dates?",
+            a: "Beautifully — a bordered print with the date handwritten in the margin is one of the most charming save-the-date formats, and guests tend to keep it.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "14 Vintage Engagement Photo Ideas", to: "/engagement-photo-ideas/vintage-engagement-photo-ideas", note: "Ideas · the retro session to match" },
+          { label: "12 Photo Booth Strip Ideas", to: "/engagement-photo-prints/photo-booth-strip-ideas", note: "Prints · another retro format" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "flip-book-engagement-photo-ideas",
+    title: "Flip Book Engagement Photo Ideas: Your Session in Motion",
+    seoTitle: "Flip Book Engagement Photo Ideas: Animated Keepsakes",
+    seoDescription:
+      "Flip book engagement photo ideas — how to turn a burst of frames into an animated flip book keepsake, and which moments work best.",
+    excerpt:
+      "A flip book turns one burst of frames into a tiny animated memory. Here's which moments to shoot and how to make one.",
+    category: "tips",
+    date: "2026-04-12",
+    featuredImage: IMAGES.gallerySilhouette,
+    featuredAlt: "Couple in motion at dusk, ideal frames for an animated flip book",
+    tags: ["flip book", "animation", "keepsake", "motion", "gifts"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "A flip book is the one print format that moves — thumb through it and your engagement session plays back as a tiny animation. It's made from a burst of frames, so it rewards exactly the kind of candid, in-motion shooting that already makes for great photos. Here's which moments to capture on purpose and how to turn them into a keepsake.",
+      },
+      { type: "h2", id: "moments-that-flip-well", text: "Moments That Flip Well" },
+      {
+        type: "p",
+        text: "Flip books need continuous motion, so the best source is a burst shot of a single action. The spin, the dip, the jump, the run-toward-camera — anything with a clear beginning, middle and end. A laugh that builds also works beautifully, because the sequence reads as emotion rather than movement.",
+      },
+      {
+        type: "list",
+        items: [
+          "The twirl — dress catching, a full 360.",
+          "The dip, from standing to kiss and back.",
+          "A jump, caught from crouch to airborne to landing.",
+          "Running toward each other, ending in the hug.",
+          "A slow-motion-style walk where one of you turns back.",
+        ],
+      },
+      { type: "h2", id: "how-its-made", text: "How a Flip Book Is Made" },
+      {
+        type: "p",
+        text: "Your photographer shoots in high-speed burst, you pick the sequence (usually 20-40 frames), and a flip-book service prints each frame on a page and binds it into a small block. Some services add a custom cover with your names and date. The whole thing costs less than most couples expect.",
+      },
+      { type: "h2", id: "who-to-give-it-to", text: "Who to Give It To" },
+      {
+        type: "list",
+        items: [
+          "An anniversary keepsake for yourselves — the most common use.",
+          "A surprise for parents, who love watching it loop.",
+          "A wedding-day gift for each other, opened before the ceremony.",
+          "A guest-book companion on the welcome table.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Harper's tip",
+        text: "Tell your photographer you want a flip book before the session — they'll shoot longer bursts and slower motion on purpose, and you'll get far better source frames than retrofitting after the fact.",
+      },
+      { type: "h2", id: "flipbook-faq", text: "Flip Book Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How many frames does a flip book need?",
+            a: "A satisfying flip book runs 20-40 pages, which is one short burst from a modern camera. Your photographer can capture that in two or three seconds of shooting.",
+          },
+          {
+            q: "What moment works best for a flip book?",
+            a: "Any single continuous action with a beginning, middle and end — a twirl, a dip, a jump or a hug. Continuous motion reads as animation; static poses don't flip.",
+          },
+          {
+            q: "Do we need to plan a flip book ahead of the session?",
+            a: "Yes, tell your photographer in advance. They'll shoot longer bursts and slower, deliberate motion so you have clean source frames to choose from.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "16 Engagement Photo Display Ideas", to: "/engagement-photo-prints/engagement-photo-display-ideas", note: "Prints · where the book lives" },
+          { label: "17 Fun Engagement Photo Ideas", to: "/engagement-photo-ideas/fun-engagement-photo-ideas", note: "Ideas · motion worth flipping" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => {
@@ -4641,6 +5135,12 @@ export const POST_HUB: Record<string, string> = {
   "couple-engagement-poses": "engagement-photo-poses",
   "camera-shy-engagement-poses": "engagement-photo-poses",
   "proposal-poses": "engagement-photo-poses",
+  "locket-photo-print-guide": "engagement-photo-prints",
+  "photo-booth-strip-ideas": "engagement-photo-prints",
+  "engagement-photo-display-ideas": "engagement-photo-prints",
+  "mini-photo-print-ideas": "engagement-photo-prints",
+  "polaroid-style-engagement-prints": "engagement-photo-prints",
+  "flip-book-engagement-photo-ideas": "engagement-photo-prints",
 };
 
 export const hubFor = (slug: string) => POST_HUB[slug] ?? "engagement-photo-ideas";
@@ -5248,6 +5748,78 @@ export const POST_META: Record<string, PostMeta> = {
       { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour photography tips" },
     ],
     relatedPosts: ["proposal-poses", "engagement-announcement-photo-ideas", "romantic-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "locket-photo-print-guide": {
+    primaryKeyword: "locket photo prints",
+    secondaryKeywords: ["how to print photos for a locket", "small locket pictures", "heirloom locket prints"],
+    lsiKeywords: ["18mm insert", "wallet size", "lustre finish", "tight crop", "keepsake"],
+    internalLinks: [
+      { url: "/engagement-photo-prints/mini-photo-print-ideas", anchor: "mini photo print ideas" },
+      { url: "/engagement-photo-poses/ring-engagement-photo-poses", anchor: "ring engagement photo poses" },
+      { url: "/save-the-date-photos", anchor: "save the date photoshoot ideas" },
+    ],
+    relatedPosts: ["mini-photo-print-ideas", "ring-engagement-photo-poses", "polaroid-style-engagement-prints"],
+    monetization: M_ON,
+  },
+  "photo-booth-strip-ideas": {
+    primaryKeyword: "photo booth strip ideas",
+    secondaryKeywords: ["photo strip", "strip photo prints", "photobooth style pictures"],
+    lsiKeywords: ["four frames", "2x6 strip", "guest favors", "silly face", "black and white"],
+    internalLinks: [
+      { url: "/engagement-photo-prints/polaroid-style-engagement-prints", anchor: "polaroid style prints" },
+      { url: "/engagement-photo-ideas/fun-engagement-photo-ideas", anchor: "fun engagement photo ideas" },
+      { url: "/save-the-date-photos/save-the-date-photo-ideas", anchor: "save the date photo ideas" },
+    ],
+    relatedPosts: ["polaroid-style-engagement-prints", "fun-engagement-photo-ideas", "mini-photo-print-ideas"],
+    monetization: M_ON,
+  },
+  "engagement-photo-display-ideas": {
+    primaryKeyword: "engagement photo display ideas",
+    secondaryKeywords: ["wedding picture display ideas", "photo wall collage", "frame display ideas"],
+    lsiKeywords: ["gallery wall", "picture ledge", "hero print", "24x36", "odd numbers"],
+    internalLinks: [
+      { url: "/engagement-photo-prints/mini-photo-print-ideas", anchor: "mini photo print ideas" },
+      { url: "/engagement-photo-poses/classic-engagement-photos", anchor: "classic engagement photos" },
+      { url: "/engagement-photo-prints", anchor: "engagement photo print ideas" },
+    ],
+    relatedPosts: ["mini-photo-print-ideas", "classic-engagement-photos", "locket-photo-print-guide"],
+    monetization: M_ON,
+  },
+  "mini-photo-print-ideas": {
+    primaryKeyword: "mini photo print ideas",
+    secondaryKeywords: ["small photo prints", "tiny pictures", "wallet size prints"],
+    lsiKeywords: ["wallet size", "2x2", "favors", "fridge gallery", "pocket album"],
+    internalLinks: [
+      { url: "/engagement-photo-prints/locket-photo-print-guide", anchor: "locket photo prints" },
+      { url: "/engagement-photo-prints/photo-booth-strip-ideas", anchor: "photo booth strip ideas" },
+      { url: "/save-the-date-photos/save-the-date-photo-ideas", anchor: "save the date photo ideas" },
+    ],
+    relatedPosts: ["locket-photo-print-guide", "photo-booth-strip-ideas", "engagement-photo-display-ideas"],
+    monetization: M_ON,
+  },
+  "polaroid-style-engagement-prints": {
+    primaryKeyword: "polaroid style prints",
+    secondaryKeywords: ["retro photo prints", "vintage style pictures", "polaroid prints"],
+    lsiKeywords: ["white border", "film emulation", "handwritten caption", "instant film", "flat lay"],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/vintage-engagement-photo-ideas", anchor: "vintage engagement photo ideas" },
+      { url: "/engagement-photo-prints/photo-booth-strip-ideas", anchor: "photo booth strip ideas" },
+      { url: "/engagement-photo-prints/mini-photo-print-ideas", anchor: "mini photo print ideas" },
+    ],
+    relatedPosts: ["vintage-engagement-photo-ideas", "photo-booth-strip-ideas", "mini-photo-print-ideas"],
+    monetization: M_ON,
+  },
+  "flip-book-engagement-photo-ideas": {
+    primaryKeyword: "flip book engagement photo ideas",
+    secondaryKeywords: ["photo flip book", "animated photo book", "couple memory book"],
+    lsiKeywords: ["burst mode", "20-40 frames", "the twirl", "continuous motion", "anniversary keepsake"],
+    internalLinks: [
+      { url: "/engagement-photo-prints/engagement-photo-display-ideas", anchor: "engagement photo display ideas" },
+      { url: "/engagement-photo-ideas/fun-engagement-photo-ideas", anchor: "fun engagement photo ideas" },
+      { url: "/engagement-photo-poses/couple-engagement-poses", anchor: "engagement poses for couples" },
+    ],
+    relatedPosts: ["engagement-photo-display-ideas", "fun-engagement-photo-ideas", "couple-engagement-poses"],
     monetization: M_ON,
   },
 };

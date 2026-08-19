@@ -108,7 +108,7 @@ export default function SaveTheDatePillarPage() {
                     </div>
                     <figcaption className="mt-2.5 flex items-center justify-between px-1">
                       <span className="font-script text-lg text-ink-soft">{card.note}</span>
-                      <Stamp className="h-4 w-4 text-rose-deep/60" aria-hidden />
+                      <Sparkles className="h-4 w-4 text-rose-deep/60" aria-hidden />
                     </figcaption>
                   </figure>
                 </Reveal>

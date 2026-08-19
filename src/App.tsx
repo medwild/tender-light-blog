@@ -27,6 +27,8 @@ import IdeasPillarPage from "./pages/IdeasPillarPage";
 import LegalPage from "./pages/LegalPage";
 import AuthorPage from "./pages/AuthorPage";
 import LocationsPillarPage from "./pages/LocationsPillarPage";
+import SaveTheDatePillarPage from "./pages/SaveTheDatePillarPage";
+import PrintsPillarPage from "./pages/PrintsPillarPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 /** Central SEO effect — the SPA mirror of Next.js route-level `generateMetadata`. */
@@ -237,6 +239,10 @@ export default function App() {
           <PosesPillarPage key={route.slug} />
         ) : route.slug === "engagement-photo-locations" ? (
           <LocationsPillarPage key={route.slug} />
+        ) : route.slug === "save-the-date-photos" ? (
+          <SaveTheDatePillarPage key={route.slug} />
+        ) : route.slug === "engagement-photo-prints" ? (
+          <PrintsPillarPage key={route.slug} />
         ) : (
           <HubPage key={route.slug} slug={route.slug} />
         );

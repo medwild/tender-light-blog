@@ -298,13 +298,31 @@ export const HUBS: Hub[] = [
     keyword: "engagement photo print ideas",
     volume: "TBD",
     kd: "TBD",
-    metaTitle: "Engagement Photo Print Ideas: Display Your Session Beautifully",
+    pillar: true,
+    secondaryKeywords: [
+      "engagement photo prints",
+      "engagement photo display ideas",
+      "engagement photo gifts",
+      "photo wall collage",
+      "locket photo prints",
+      "photo booth strip ideas",
+    ],
+    metaTitle: "Engagement Photo Print Ideas: Displays, Gifts & Keepsakes",
     metaDescription:
-      "Engagement photo print ideas — which frames to print, sizes and finishes that flatter, and easy ways to display your session at home.",
-    lede: "Print the frames you actually live with, not just the formal ones: a large hero print for the wall, mid-size pairings for a gallery ledge, and small candid prints for shelves and desks. Matte or lustre finishes flatter golden-hour light better than glossy, and printing in pairs (one close, one wide) keeps a display from feeling flat.",
+      "Engagement photo print ideas — what to do with your session: prints, wall displays, gifts and keepsakes, from lockets to photo strips to gallery collages.",
+    lede: "Your engagement session deserves more than a camera roll. Print the frames you actually live with — a hero print for the wall, mid-size pairings for a ledge, small candids for shelves — and turn the rest into gifts and keepsakes. Matte or lustre finishes flatter golden-hour light, and odd-numbered groupings keep a display curated, not cluttered.",
     harperNote: "Couples reprint the mid-laugh frames far more often than the formal ones. Print what makes you feel something when you walk past it.",
     accent: "gold",
-    spokes: ["classic-engagement-photos", "casual-engagement-photo-ideas"],
+    spokes: [
+      "locket-photo-print-guide",
+      "photo-booth-strip-ideas",
+      "engagement-photo-display-ideas",
+      "mini-photo-print-ideas",
+      "polaroid-style-engagement-prints",
+      "flip-book-engagement-photo-ideas",
+      "classic-engagement-photos",
+      "casual-engagement-photo-ideas",
+    ],
     related: ["save-the-date-photos", "engagement-photo-ideas"],
     faq: [
       {
@@ -318,6 +336,14 @@ export const HUBS: Hub[] = [
       {
         q: "How do we display engagement photos without it looking cluttered?",
         a: "Group by size: one large hero print, a pair of mid-size prints, and small candids on a ledge or shelf. Odd numbers (3 or 5) and consistent frames keep it curated, not cluttered.",
+      },
+      {
+        q: "What are good engagement photo gifts?",
+        a: "The best gifts use one meaningful frame: a locket for parents, a framed print for the other set, a mini print wallet for close friends, or a flip book as an anniversary keepsake.",
+      },
+      {
+        q: "How big should my main engagement photo print be?",
+        a: "For a wall above a sofa or bed, 20x30 or 24x36 reads as a hero piece. For a gallery ledge, 8x10 to 11x14. The hero print should be the largest thing on that wall.",
       },
     ],
   },
