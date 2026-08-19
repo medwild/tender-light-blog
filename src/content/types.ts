@@ -2,7 +2,7 @@
  * Content model — the Vite/SPA equivalent of MDX + frontmatter.
  * Each post is a typed block tree rendered by <PostBody />.
  */
-export type CategorySlug = "poses" | "outfits" | "locations" | "tips";
+export type CategorySlug = "ideas" | "poses" | "outfits" | "locations" | "tips";
 
 export interface Category {
   slug: CategorySlug;

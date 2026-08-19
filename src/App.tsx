@@ -22,6 +22,7 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HubPage from "./pages/HubPage";
 import HubIndexPage from "./pages/HubIndexPage";
+import IdeasPillarPage from "./pages/IdeasPillarPage";
 import LegalPage from "./pages/LegalPage";
 import AuthorPage from "./pages/AuthorPage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -210,9 +211,11 @@ export default function App() {
     case "guides":
       page = <HubIndexPage />;
       break;
-    case "hub":
-      page = <HubPage key={route.slug} slug={route.slug} />;
+    case "hub": {
+      const hub = getHub(route.slug);
+      page = hub?.pillar ? <IdeasPillarPage key={route.slug} /> : <HubPage key={route.slug} slug={route.slug} />;
       break;
+    }
     case "legal":
       page = <LegalPage key={route.doc} doc={route.doc} />;
       break;

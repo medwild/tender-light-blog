@@ -21,6 +21,9 @@ export interface Hub {
   spokes: string[]; // post slugs, in priority order
   related: string[]; // sibling hub slugs
   faq: { q: string; a: string }[];
+  /** Pillar hubs render the full long-form pillar template (Part 5 of the plan). */
+  pillar?: boolean;
+  secondaryKeywords?: string[];
 }
 
 export const HUBS: Hub[] = [
@@ -30,18 +33,38 @@ export const HUBS: Hub[] = [
     keyword: "engagement photo ideas",
     volume: "3,600/mo",
     kd: "11",
-    metaTitle: "Engagement Photo Ideas: 60+ Poses, Outfits & Themes (2026)",
+    pillar: true,
+    secondaryKeywords: [
+      "engagement photos ideas",
+      "ideas for engagement pics",
+      "engagement picture ideas",
+      "ideas for engagement photo shoot",
+      "engagement photoshoot ideas",
+      "engagement photo inspiration",
+    ],
+    metaTitle: "Engagement Photo Ideas: 100+ Poses, Locations & Themes (2026)",
     metaDescription:
-      "The best engagement photo ideas for 2026 — classic, casual, outdoor and seasonal concepts, with outfits, poses and themes couples actually recreate.",
+      "100+ engagement photo ideas for couples — by style, location, season and mood, with the poses, outfits and themes couples actually recreate.",
     lede: "The best engagement photo ideas share one thing: they look like you on a good day, not like a catalogue. Start with a mood — classic, casual or outdoor — then let the pose, outfit and location follow from that. Below, every idea we've tested across 400+ sessions, organized so you can build a full shot list in ten minutes.",
     harperNote: "Couples who pick a mood first and poses second always end up with a gallery that feels like one story, not a pile of random shots.",
     accent: "rose",
     spokes: [
-      "30-engagement-photo-poses-couples",
       "casual-engagement-photo-ideas",
+      "unique-engagement-photo-ideas",
+      "cute-engagement-photo-ideas",
+      "romantic-engagement-photo-ideas",
+      "fun-engagement-photo-ideas",
+      "classic-engagement-photo-ideas",
+      "candid-engagement-photo-ideas",
+      "elegant-engagement-photo-ideas",
+      "vintage-engagement-photo-ideas",
+      "night-engagement-photo-ideas",
+      "diy-engagement-photo-ideas",
       "engagement-photo-ideas-outside",
-      "classic-engagement-photos",
-      "unique-engagement-pics",
+      "golden-hour-photography-tips-couples",
+      "engagement-photo-checklist",
+      "how-to-feel-natural-in-front-of-camera",
+      "30-engagement-photo-poses-couples",
     ],
     related: ["engagement-photo-poses", "engagement-photo-locations", "engagement-photo-outfits"],
     faq: [

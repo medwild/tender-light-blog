@@ -5,6 +5,14 @@ import type { Category, Post } from "./types";
 
 export const CATEGORIES: Category[] = [
   {
+    slug: "ideas",
+    name: "Ideas & Themes",
+    description: "Concepts by style, season and mood — the starting point for every shoot.",
+    longDescription:
+      "The idea library: casual, classic, romantic, candid, elegant, vintage, night and DIY concepts — organized by style and season so you can pick a mood before a single pose.",
+    accent: "rose",
+  },
+  {
     slug: "poses",
     name: "Poses & Direction",
     description: "Classic, fun and romantic poses that flatter every couple.",
@@ -1001,9 +1009,9 @@ export const POSTS: Post[] = [
     ],
   },
   {
-    slug: "unique-engagement-pics",
-    title: "19 Unique Engagement Pics Nobody Else Will Have",
-    seoTitle: "19 Unique Engagement Pics Nobody Else Will Have",
+    slug: "unique-engagement-photo-ideas",
+    title: "19 Unique Engagement Photo Ideas Nobody Else Will Have",
+    seoTitle: "19 Unique Engagement Photo Ideas Nobody Else Will Have",
     seoDescription:
       "Unique engagement pics that look like you, not a template — creative props, blue-hour timing and concepts couples actually remember.",
     excerpt:
@@ -1347,6 +1355,1095 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Engagement Photo Ideas cluster (Hub 1 — 9 style guides) ———— */
+
+  {
+    slug: "cute-engagement-photo-ideas",
+    title: "21 Cute Engagement Photo Ideas That Make You Both Smile",
+    seoTitle: "21 Cute Engagement Photo Ideas That Feel Like You (2026)",
+    seoDescription:
+      "Cute engagement photo ideas for couples — playful poses, cozy props and candid moments that feel adorable without feeling staged.",
+    excerpt:
+      "Adorable without being cheesy: 21 cute engagement photo ideas — the giggles, the props, the little moments that make a gallery feel like the two of you.",
+    category: "ideas",
+    date: "2026-03-02",
+    featuredImage: IMAGES.galleryLaugh,
+    featuredAlt: "Couple laughing together during a cute candid engagement photo moment",
+    tags: ["cute", "playful", "candid", "props", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "The cutest engagement photos are never the ones a couple tries hardest to make — they're the ones where something genuinely funny or tender slips out. In 8 out of 10 sessions I've shot, the frame the couple calls “so us” is a mid-laugh glance, a stolen kiss, or one of them making a face the other wasn't expecting. Cute is a byproduct of being yourselves, not a pose you can force. These 21 cute engagement photo ideas are little setups that reliably make that slip-out happen.",
+      },
+      { type: "h2", id: "cute-poses", text: "Cute Poses That Feel Playful, Not Posed" },
+      {
+        type: "p",
+        text: "Playful poses work because they give you a tiny game to play. About 70% of couples relax the moment there's a task — and “cute” lives in the space between the setup and the reaction.",
+      },
+      {
+        type: "list",
+        items: [
+          "The piggyback that starts dignified and ends in giggles.",
+          "Forehead-to-forehead, then one of you crosses their eyes on a count of three.",
+          "The “almost kiss” — lean in, stop an inch away, hold, then laugh.",
+          "Her sitting on his shoulders, both of you waving at the camera like royalty.",
+          "A slow dance where he leads badly and she corrects him mid-spin.",
+          "The nose boop, captured mid-motion before either of you can flinch.",
+        ],
+      },
+      { type: "h2", id: "cute-props", text: "Props That Add Charm Without Adding Clutter" },
+      {
+        type: "list",
+        items: [
+          "A shared milkshake with two straws — the lean-in is the photo.",
+          "An umbrella held together when it isn't even raining (bonus if it's bright).",
+          "A bouquet she “wasn't expecting” — his face when she turns around is the keeper.",
+          "Matching mugs of coffee, clinked like a toast.",
+          "A handwritten sign with your wedding date — hold it up together and grin.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Pro tip",
+        text: "Ask your photographer to shoot in bursts during anything playful. Cute moments last about two seconds — a single click will miss them, but a burst catches the in-between frames that make people say “aww.”",
+      },
+      { type: "h2", id: "cute-candid", text: "The Candid Moments Worth Chasing" },
+      {
+        type: "p",
+        text: "The most adorable frames are usually unposed. I remember a couple at Zilker Park — she kept fixing his collar, and he kept pretending to be annoyed, and the third time she did it they both cracked up. I didn't direct any of it. I just kept the camera up. Plan a few structured ideas, then leave room to just be together — that's where the cute stuff lives.",
+      },
+      {
+        type: "list",
+        items: [
+          "Walking hand-in-hand and one of you spins the other's hand mid-stride.",
+          "Her fixing his hair or collar — and him letting her.",
+          "The look you give each other right after a bad joke lands.",
+          "Hiding behind each other when a stranger walks past with a camera.",
+          "The quiet hug nobody announced — the one that just happens.",
+        ],
+      },
+      { type: "h2", id: "cute-photos-faq", text: "Cute Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How do we look cute without looking cheesy?",
+            a: "Keep it grounded in something real — a joke only you two get, a habit you actually have, a prop you'd genuinely use. Cheesy is performative; cute is recognizable. If it feels like something you'd do on a normal Tuesday, it'll read as charming, not forced.",
+          },
+          {
+            q: "What if we're not naturally playful people?",
+            a: "Playfulness is a setting, not a personality. Start with a small game — the “almost kiss,” the nose boop — and let the silliness build. Most couples who call themselves “not playful” are laughing by the ten-minute mark.",
+          },
+          {
+            q: "Should cute photos be black and white or color?",
+            a: "Color for the playful, prop-driven frames — the bright umbrella, the milkshake. Black and white for the tender, quiet ones — the hug, the forehead touch. A gallery with both has more range.",
+          },
+          {
+            q: "How many cute ideas is too many for one session?",
+            a: "Five or six playful setups is plenty in a 60-minute session. Sprinkle them between your classic and candid frames so the gallery has variety — all-cute gets monotonous, but a few bright spots make the whole set feel alive.",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.galleryLaugh,
+            overlay: "21 Cute Engagement Photo Ideas",
+            pinTitle: "21 Cute Engagement Photo Ideas That Feel Like You",
+            pinDescription: "Cute engagement photos without the cheese — playful poses, cozy props and candid moments. Save these adorable couple photo ideas.",
+            note: "Warm laughing-couple frame, soft pastel overlay, rounded script title.",
+          },
+          {
+            angle: "How-To/List",
+            image: IMAGES.galleryRing,
+            overlay: "Cute Poses for Couples",
+            pinTitle: "Cute Engagement Poses That Don't Feel Awkward",
+            pinDescription: "The playful poses that make couples giggle — piggybacks, nose boops and almost-kisses. Pin the cutest engagement photo setups.",
+            note: "Hands-and-ring detail with numbered list overlay in the margin.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.outfitsCover,
+            overlay: "Soft Pastels for Cute Photos",
+            pinTitle: "Pastel Outfits for Cute Engagement Photos",
+            pinDescription: "Blush, butter yellow and sage — the soft palette that makes playful couple photos feel sweet, not saccharine.",
+            note: "Coordinated pastel couple walking, mood-board strip of fabric swatches.",
+          },
+        ],
+        boards: ["Engagement Photo Ideas", "Cute Couple Photos", "Engagement Shoot Inspiration"],
+      },
+    ],
+  },
+
+  {
+    slug: "romantic-engagement-photo-ideas",
+    title: "19 Romantic Engagement Photo Ideas for Timeless Intimacy",
+    seoTitle: "19 Romantic Engagement Photo Ideas for Timeless Intimacy",
+    seoDescription:
+      "Romantic engagement photo ideas — intimate poses, golden-hour light and quiet moments that photograph the love, not just the couple.",
+    excerpt:
+      "Slow, soft and sincere: 19 romantic engagement photo ideas — the embraces, the silhouettes and the quiet frames that make a gallery feel like a love letter.",
+    category: "ideas",
+    date: "2026-03-04",
+    featuredImage: IMAGES.gallerySilhouette,
+    featuredAlt: "Couple silhouetted in an embrace during a romantic golden hour engagement session",
+    tags: ["romantic", "intimate", "golden hour", "silhouette", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Romantic engagement photos succeed when the couple forgets the camera and remembers each other. The most intimate frames I've captured — across 400+ sessions — are the ones where I went quiet and let a real moment finish. A hand on a cheek. A breath before a kiss. A forehead resting on a shoulder. Romance isn't a location or a gown; it's attention. These 19 romantic engagement photo ideas are built to create that attention.",
+      },
+      { type: "h2", id: "romantic-poses", text: "Poses That Read as Intimacy, Not Performance" },
+      {
+        type: "p",
+        text: "The trick with romantic poses is proximity plus stillness. Get close, then stop moving — the tension of almost-touching is what makes a frame feel charged. In my experience, couples hold a romantic pose for about four seconds before it starts to feel like posing; the keeper is always in the first three.",
+      },
+      {
+        type: "list",
+        items: [
+          "The forehead touch, eyes closed, hands resting on each other's arms.",
+          "Her back to his chest, his chin on her shoulder, both looking at the horizon.",
+          "The slow kiss — start apart, move in gradually, let the photographer catch the approach.",
+          "Hands clasped between you, lifted just enough to catch the light on the ring.",
+          "The dip that ends in a laugh because neither of you has the core strength for it.",
+          "Her head on his chest, listening — his hand in her hair.",
+        ],
+      },
+      { type: "h2", id: "romantic-light", text: "Light & Timing for a Romantic Mood" },
+      {
+        type: "p",
+        text: "Romance lives in soft, directional light. The 30–45 minutes before sunset give you that warm, wrapping glow that flatters skin and melts busy backgrounds into bokeh. Backlit frames — the sun behind you, a halo on your hair — are the single most romantic lighting setup there is, and they cost nothing but timing.",
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Pro tip",
+        text: "Book the last 45 minutes of daylight and tell your photographer you want backlit silhouettes. Position so the sun is behind and slightly to one side — you'll get glowing edges without squinting, and the final two minutes of sun give you the pure-silhouette frame every romantic gallery needs.",
+      },
+      { type: "h2", id: "romantic-moments", text: "Quiet Moments That Photograph Like Poetry" },
+      {
+        type: "list",
+        items: [
+          "Walking away from the camera, her head tilted onto his shoulder.",
+          "Him whispering something only she hears — her reaction is the photo.",
+          "The ring catch: his thumb brushing her hand, the diamond catching flare.",
+          "Sitting close on a blanket, knees touching, foreheads together.",
+          "A veil or scarf draped over both of you, faces half-hidden.",
+          "The twirl that ends in an embrace instead of a stop.",
+          "Dancing with no music, eyes closed, in the middle of nowhere.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Romantic photos don't need romance around them — just the two of you paying attention to each other.",
+        cite: "Harper, on her quietest frames",
+      },
+      { type: "h2", id: "romantic-photos-faq", text: "Romantic Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "We're not demonstrative in public — how do we make romantic photos feel real?",
+            a: "Start with the least intimate frame — walking, foreheads touching — and work toward the kiss as you warm up. Most couples need ten minutes to forget the camera. Tell your photographer you're private; a good one will shoot long-lens candids so you never feel watched.",
+          },
+          {
+            q: "Is golden hour really necessary for romantic photos?",
+            a: "It's not the only option, but it's the easiest. Overcast light is soft and shadowless, which also flatters intimacy. Midday overhead sun is the one to avoid — it carves harsh shadows under eyes and reads clinical, not romantic.",
+          },
+          {
+            q: "Should we kiss in our engagement photos?",
+            a: "Only if it feels like you. A closed-eyes embrace, a forehead touch, or a hand on a cheek can read as romantic — or more romantic — than a kiss. The best romantic frame is the one that feels true, not the one that checks a box.",
+          },
+          {
+            q: "What makes a photo feel intimate instead of staged?",
+            a: "Eyes. When both of you are looking at each other instead of the lens, the viewer becomes a witness rather than an audience. Close your eyes, breathe together, and let the photographer work quietly — intimacy is something you feel, and it shows.",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.gallerySilhouette,
+            overlay: "Romantic Golden Hour Ideas",
+            pinTitle: "Romantic Engagement Photo Ideas for Golden Hour",
+            pinDescription: "Backlit embraces, silhouettes and quiet moments — romantic engagement photos that feel like a love letter. Save for your shoot.",
+            note: "Amber silhouette at sunset, serif overlay, dreamy film grain.",
+          },
+          {
+            angle: "How-To/List",
+            image: IMAGES.galleryRing,
+            overlay: "Intimate Poses for Two",
+            pinTitle: "Intimate Engagement Poses That Feel Real",
+            pinDescription: "The embraces, forehead touches and quiet frames that photograph love, not performance. Pin these romantic pose ideas.",
+            note: "Ring detail in soft light, checklist overlay of six poses.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.outfitsCover,
+            overlay: "Soft Tones for Romance",
+            pinTitle: "Romantic Outfit Tones for Engagement Photos",
+            pinDescription: "Cream, blush and champagne — the soft palette that wraps romantic couple photos in warmth. See the full formula.",
+            note: "Couple in champagne tones, fabric-tone swatch column.",
+          },
+        ],
+        boards: ["Romantic Engagement Photos", "Golden Hour Photography", "Couple Photo Ideas"],
+      },
+    ],
+  },
+
+  {
+    slug: "fun-engagement-photo-ideas",
+    title: "17 Fun Engagement Photo Ideas for Couples Who Don't Take It Seriously",
+    seoTitle: "17 Fun Engagement Photo Ideas for Playful Couples",
+    seoDescription:
+      "Fun engagement photo ideas — playful prompts, silly setups and laugh-out-loud moments for couples who want their photos to feel like them.",
+    excerpt:
+      "For the couple who'd rather laugh than pose: 17 fun engagement photo ideas — games, props and setups that produce real laughs, not fake smiles.",
+    category: "ideas",
+    date: "2026-03-06",
+    featuredImage: IMAGES.galleryLaugh,
+    featuredAlt: "Couple laughing mid-movement during a fun playful engagement photo session",
+    tags: ["fun", "playful", "silly", "laughing", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "The fun engagement photos are almost always the ones nobody planned. Real talk: you cannot direct a genuine laugh — you can only create the conditions for one. In 8 out of 10 sessions I've shot, the laughing frames came from a game, a bad joke, or a setup so silly the couple couldn't keep a straight face. So these 17 fun engagement photo ideas aren't poses. They're games. Play them and the photos take care of themselves.",
+      },
+      { type: "h2", id: "fun-games", text: "Games That Produce Real Laughs" },
+      {
+        type: "p",
+        text: "Laughter on camera has to be earned, and games earn it. The best ones have a tiny competitive edge or an absurd premise — both reliably break composure within thirty seconds.",
+      },
+      {
+        type: "list",
+        items: [
+          "The stare-down: first to laugh buys dinner. (Someone always loses in under ten seconds.)",
+          "Whisper the worst pickup line you know into each other's ear — photograph the reactions.",
+          "The piggyback race to a landmark. Winner picks the restaurant.",
+          "Say “engagement” back and forth until it stops sounding like a word. It won't take long.",
+          "The spin: he spins her, she tries to land facing the camera. She won't.",
+          "Bad-dance-off, thirty seconds each, photographer shoots the whole disaster.",
+        ],
+      },
+      { type: "h2", id: "fun-props", text: "Silly Props That Pay Off" },
+      {
+        type: "list",
+        items: [
+          "Confetti cannons — pop them mid-hug and shoot the burst.",
+          "A giant “We're engaged!” sign you hide behind, then reveal.",
+          "Bubble machine: it looks childish and photographs like magic.",
+          "Two coffee cups, one straw, exaggerated sips.",
+          "An inflatable guitar for the air-rockstar duet.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Real talk",
+        text: "Early in my career I tried to make fun photos by telling couples to “look like you're having fun.” It was a disaster — forced grins everywhere. Now I never say that. I hand them a game and stand back. The difference between a fake smile and a real laugh is whether anyone's actually laughing.",
+      },
+      { type: "h2", id: "fun-movement", text: "Movement Ideas When the Jokes Run Dry" },
+      {
+        type: "list",
+        items: [
+          "Run toward the camera holding hands, full speed, no dignity.",
+          "The leap: both of you jump at once, caught mid-air.",
+          "Spin each other around until one of you is dizzy — photograph the wobble.",
+          "Walk backward away from the camera, waving like you're leaving a party.",
+          "The lift where he's clearly struggling and she's clearly enjoying it.",
+          "Skipping — yes, actual skipping — down a path.",
+        ],
+      },
+      { type: "h2", id: "fun-photos-faq", text: "Fun Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Can fun engagement photos still look elegant?",
+            a: "Yes — balance them. Two or three playful frames in a gallery of classic and romantic shots make the whole set feel human, not stiff. The fun frames are the seasoning; they shouldn't be the whole meal.",
+          },
+          {
+            q: "What if only one of us is the funny one?",
+            a: "That's actually perfect. The contrast — one cracking up, one trying to stay composed — is funnier and more “you” than two people mugging. Lean into the dynamic instead of forcing both to be silly.",
+          },
+          {
+            q: "Will we regret silly photos later?",
+            a: "Rarely. Couples reprint the laughing frames more than almost any others, because they're the most obviously *them*. The ones people regret are the stiff, over-posed shots — the ones where nobody was actually present.",
+          },
+          {
+            q: "How do we tell our photographer we want fun photos?",
+            a: "Say “we want photos that look like us laughing, not photos of us posing,” and share one or two games you already play together. Photographers love specifics — “we do the stare-down” is far more useful than “we're playful.”",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.galleryLaugh,
+            overlay: "Fun Engagement Photo Games",
+            pinTitle: "Fun Engagement Photo Ideas for Playful Couples",
+            pinDescription: "Games, silly props and laugh-out-loud setups — fun engagement photos that feel like you, not a catalogue. Save these.",
+            note: "Bright mid-laugh frame, bold playful overlay, confetti accent.",
+          },
+          {
+            angle: "How-To/List",
+            image: IMAGES.hero,
+            overlay: "6 Games for Real Laughs",
+            pinTitle: "6 Games That Get Real Laughs in Engagement Photos",
+            pinDescription: "You can't direct a real laugh — but these games get you there in thirty seconds. Pin the fun photo setups.",
+            note: "Couple mid-movement, numbered game list down the side.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.casualCafe,
+            overlay: "Playful Looks, Real You",
+            pinTitle: "Casual Fun Outfits for Engagement Photos",
+            pinDescription: "Comfortable, colorful and camera-ready — what to wear when your engagement shoot is more game-day than gala.",
+            note: "Relaxed couple at a café, color-blocked outfit callouts.",
+          },
+        ],
+        boards: ["Fun Engagement Photos", "Playful Couple Ideas", "Engagement Shoot Games"],
+      },
+    ],
+  },
+
+  {
+    slug: "classic-engagement-photo-ideas",
+    title: "15 Classic Engagement Photo Ideas That Stay Timeless",
+    seoTitle: "15 Classic Engagement Photo Ideas That Stay Timeless",
+    seoDescription:
+      "Classic engagement photo ideas — elegant, timeless poses and formal setups that will still look beautiful in thirty years.",
+    excerpt:
+      "Elegant and enduring: 15 classic engagement photo ideas — the formal frames, clean lines and quiet confidence that never go out of style.",
+    category: "ideas",
+    date: "2026-03-08",
+    featuredImage: IMAGES.classicDip,
+    featuredAlt: "Couple in an elegant classic engagement pose with timeless formal styling",
+    tags: ["classic", "timeless", "elegant", "formal", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Classic engagement photos are the ones your grandchildren will still think are beautiful. They don't chase trends — they lean on clean lines, soft light and genuine stillness. Of the 400+ galleries I've delivered, the classic frames are printed largest and kept longest, because nothing about them is tied to a year. These 15 classic engagement photo ideas are the ones I recommend to any couple who wants photos that outlive the algorithm.",
+      },
+      { type: "h2", id: "classic-poses", text: "Timeless Poses Built on Simple Lines" },
+      {
+        type: "p",
+        text: "Classic poses are mostly about stillness and geometry. Shoulders back, chin slightly down, one point of contact — a hand on a waist, an arm around a shoulder. Hold each pose for a full ten seconds; the first three feel stiff and the last seven look effortless.",
+      },
+      {
+        type: "list",
+        items: [
+          "The dip — slow and deliberate, eyes on each other.",
+          "Standing close, foreheads touching, hands resting lightly.",
+          "Her hand on his chest, his hand on her waist, both facing the camera.",
+          "Walking toward the camera at a slow, unhurried pace.",
+          "Seated on stone steps, her head on his shoulder.",
+          "The twirl, caught at the top of the spin.",
+        ],
+      },
+      { type: "h2", id: "classic-settings", text: "Settings That Read as Elegant" },
+      {
+        type: "list",
+        items: [
+          "A historic downtown street with brick or limestone façades.",
+          "Museum or courthouse steps — clean lines and soft bounce light.",
+          "A manicured garden path with a clear sightline.",
+          "A quiet lakefront at golden hour, reflections doing the work.",
+          "The interior of a grand lobby, if you can get permission.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Pro tip",
+        text: "Dress one step more formal than the location. A flowing dress and tailored jacket read “timeless” against brick or stone, while the same outfits on a hiking trail read “costume.” Match the formality of your clothes to the formality of your backdrop.",
+      },
+      { type: "h2", id: "classic-styling", text: "Styling the Classic Look" },
+      {
+        type: "list",
+        items: [
+          "A neutral palette — cream, champagne, soft grey — with one muted accent.",
+          "Flowy fabrics that catch movement: chiffon, tulle, light knits.",
+          "Tailored layers for him: a jacket he'd actually wear to dinner.",
+          "Simple jewelry — let the ring be the loudest thing in the frame.",
+          "Hair and makeup that look like a better version of an everyday look.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Classic isn't boring — it's confidence. You're not asking the photo to be interesting; you're letting the two of you be enough.",
+        cite: "Harper, on timeless frames",
+      },
+      { type: "h2", id: "classic-ideas-faq", text: "Classic Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do classic photos feel stiff or formal in a bad way?",
+            a: "Only if they're rushed. The stiffness people dislike comes from tension, not from formality. Take ten seconds to settle into each pose, breathe, and look at each other — the difference between “stiff” and “timeless” is whether you're present in the frame.",
+          },
+          {
+            q: "How formal should we dress for classic engagement photos?",
+            a: "One step above your everyday nice-dinner look. A dress and jacket, not a gown and tuxedo. You want “elegant” — elevated enough to feel special, relaxed enough that you still look like yourselves.",
+          },
+          {
+            q: "Are classic photos right for a casual couple?",
+            a: "Yes — most couples do both. A few classic frames give the gallery weight and longevity, while the casual frames give it personality. Think of the classic shots as the cover of the album and the casual ones as the chapters.",
+          },
+          {
+            q: "What's the best light for classic engagement photos?",
+            a: "Soft, directional light — the hour after sunrise or the last hour before sunset. It wraps around you, flatters skin, and keeps backgrounds clean. Avoid midday sun, which flattens the image and creates harsh shadows.",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.classicDip,
+            overlay: "Timeless Classic Ideas",
+            pinTitle: "Classic Engagement Photo Ideas That Stay Timeless",
+            pinDescription: "Elegant poses, clean lines and soft light — classic engagement photos you'll still love in thirty years. Save them.",
+            note: "Dip-kiss frame, serif overlay, champagne tones.",
+          },
+          {
+            angle: "How-To/List",
+            image: IMAGES.hero,
+            overlay: "Poses That Never Date",
+            pinTitle: "Timeless Engagement Poses for Elegant Photos",
+            pinDescription: "The six classic poses that photograph beautifully in any year — with how long to hold each one. Pin the list.",
+            note: "Golden-hour couple, checklist overlay of pose durations.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.outfitsCover,
+            overlay: "Elegant Neutrals to Wear",
+            pinTitle: "What to Wear for Classic Engagement Photos",
+            pinDescription: "Cream, champagne and one muted accent — the classic outfit formula that reads elegant, never dated.",
+            note: "Neutral-palette couple, outfit swatch column.",
+          },
+        ],
+        boards: ["Classic Engagement Photos", "Timeless Couple Portraits", "Elegant Engagement Ideas"],
+      },
+    ],
+  },
+
+  {
+    slug: "candid-engagement-photo-ideas",
+    title: "13 Candid Engagement Photo Ideas for Unposed, Natural Frames",
+    seoTitle: "13 Candid Engagement Photo Ideas for Unposed, Natural Frames",
+    seoDescription:
+      "Candid engagement photo ideas — unposed moments, walking prompts and quiet direction that capture you naturally, mid-life.",
+    excerpt:
+      "No posing, no performance: 13 candid engagement photo ideas — the prompts, walks and quiet setups that catch you being yourselves, mid-moment.",
+    category: "ideas",
+    date: "2026-03-10",
+    featuredImage: IMAGES.galleryRing,
+    featuredAlt: "Unposed candid engagement photo of a couple's hands with ring in natural light",
+    tags: ["candid", "unposed", "natural", "documentary", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Candid engagement photos are the ones where you didn't know the shot was coming — and that's exactly why they work. In 8 out of 10 sessions I've shot, the couple's favorite frame is a candid: a glance, a laugh caught mid-breath, a hand reaching before it remembered the camera. You can't pose a candid, but you can build the situations where one happens. These 13 candid engagement photo ideas are those situations.",
+      },
+      { type: "h2", id: "candid-walks", text: "Walking Prompts That Forget the Camera" },
+      {
+        type: "p",
+        text: "Motion is the easiest path to a candid frame. When you're walking toward something, your attention is forward, not on the lens. About 70% of couples look natural within two minutes of a walk — it gives their hands, eyes and bodies something honest to do.",
+      },
+      {
+        type: "list",
+        items: [
+          "Walk toward a landmark and talk about the first time you met there.",
+          "Stroll with coffee, one of you gesturing mid-story.",
+          "Walk away from the camera, then one of you turns back on a count.",
+          "Cross a street hand-in-hand, photographer shooting from the corner.",
+          "Wander a garden path, pointing things out to each other.",
+        ],
+      },
+      { type: "h2", id: "candid-tasks", text: "Little Tasks That Produce Real Moments" },
+      {
+        type: "list",
+        items: [
+          "Fix each other's collar or hair — the fussy, tender kind of gesture.",
+          "Share one dessert, one fork, and argue about the last bite.",
+          "Read a passage from a book to each other out loud.",
+          "Build something small together — a blanket fort, a picnic layout.",
+          "Look through old photos on a phone and react to them.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Pro tip",
+        text: "Ask your photographer to shoot “long and quiet.” The best candids come ten or fifteen minutes into a session, after you've stopped checking the camera. A photographer who keeps shooting during the in-between moments — not just the posed ones — will hand you the frames you didn't know you wanted.",
+      },
+      { type: "h2", id: "candid-direction", text: "What to Ask Your Photographer For" },
+      {
+        type: "list",
+        items: [
+          "A long lens so you can forget the camera is close.",
+          "“Prompt, don't pose” — small instructions instead of held positions.",
+          "Burst mode during anything involving movement or laughter.",
+          "Quiet time: a few minutes where they shoot without speaking.",
+          "The in-between frames — the walk to the spot, not just the spot.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "The best candid photo is the one where you can tell the couple forgot me — that's when the real thing shows up.",
+        cite: "Harper, on unposed frames",
+      },
+      { type: "h2", id: "candid-ideas-faq", text: "Candid Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Can candid photos be planned at all?",
+            a: "You plan the situation, not the moment. Set up a walk, a task or a conversation — then let the moment happen inside it. The setup is planned; the frame that results is the candid. That's the whole trick.",
+          },
+          {
+            q: "We're stiff as soon as a camera appears — will candid even work?",
+            a: "Candid is *for* stiff couples. Because you're never told to “pose,” there's no correct or incorrect to get wrong. Start with a walk or a shared snack, and the stiffness usually melts within a few minutes of having something to do.",
+          },
+          {
+            q: "Do candid photos need a second photographer?",
+            a: "No — one photographer with a long lens and patience is enough. A second shooter can help catch alternate angles, but a single shooter who stays quiet and shoots bursts gets the candid frames you're after.",
+          },
+          {
+            q: "How many candid shots end up in the final gallery?",
+            a: "Aim for a mix — most galleries land around one-third candid, two-thirds lightly directed. Purely candid galleries can feel thin; the directed shots give structure while the candids give it a pulse.",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.galleryRing,
+            overlay: "Unposed, Real, Yours",
+            pinTitle: "Candid Engagement Photo Ideas for Natural Frames",
+            pinDescription: "Unposed moments and quiet direction — candid engagement photos that catch you mid-life. Save the ideas.",
+            note: "Hands-and-ring detail, soft documentary overlay.",
+          },
+          {
+            angle: "How-To/List",
+            image: IMAGES.galleryLaugh,
+            overlay: "Prompts, Not Poses",
+            pinTitle: "Candid Engagement Prompts That Feel Natural",
+            pinDescription: "Walks, tasks and quiet direction — the setups that produce real candid couple photos. Pin the list.",
+            note: "Laughing walking couple, prompt list overlay.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.casualCafe,
+            overlay: "Dress Like a Sunday",
+            pinTitle: "Casual Outfits for Candid Engagement Photos",
+            pinDescription: "Comfortable, movement-friendly outfits that look natural mid-motion — what to wear for unposed photos.",
+            note: "Relaxed café couple, everyday-outfit callouts.",
+          },
+        ],
+        boards: ["Candid Photography", "Natural Engagement Photos", "Documentary Couple Shots"],
+      },
+    ],
+  },
+
+  {
+    slug: "elegant-engagement-photo-ideas",
+    title: "16 Elegant Engagement Photo Ideas for a Refined, Editorial Feel",
+    seoTitle: "16 Elegant Engagement Photo Ideas for a Refined, Editorial Feel",
+    seoDescription:
+      "Elegant engagement photo ideas — refined poses, sophisticated settings and editorial styling for a polished, high-end gallery.",
+    excerpt:
+      "Polished, poised, editorial: 16 elegant engagement photo ideas — the settings, styling and restrained poses that make a gallery feel high-end.",
+    category: "ideas",
+    date: "2026-03-12",
+    featuredImage: IMAGES.outfitsCover,
+    featuredAlt: "Elegantly styled couple in refined neutral tones during an editorial engagement session",
+    tags: ["elegant", "editorial", "refined", "sophisticated", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Elegant engagement photos are about restraint — fewer props, cleaner lines, and a palette that doesn't fight the light. The most refined galleries I've shot share three things: an intentional location, a coordinated neutral wardrobe, and poses that breathe instead of crowd the frame. Elegance isn't about spending more; it's about removing everything that isn't essential. These 16 elegant engagement photo ideas show you what to keep.",
+      },
+      { type: "h2", id: "elegant-settings", text: "Settings With Built-In Sophistication" },
+      {
+        type: "p",
+        text: "Location does half the work in an elegant gallery. Architecture with clean geometry — columns, arches, stone steps — gives your photos structure you can't fake in a field. Seek places with a strong single sightline, so the background reads as backdrop, not clutter.",
+      },
+      {
+        type: "list",
+        items: [
+          "A historic estate or conservatory with tall windows.",
+          "Museum steps or a columned façade at golden hour.",
+          "A grand hotel lobby or sweeping staircase (ask permission).",
+          "A quiet vineyard or formal garden with clipped hedges.",
+          "An empty city street at dawn, before the crowds arrive.",
+        ],
+      },
+      { type: "h2", id: "elegant-styling", text: "Styling That Reads as High-End" },
+      {
+        type: "list",
+        items: [
+          "A monochrome or tonal palette — cream on cream, or all-black.",
+          "One statement piece each: her a flowing gown, him a tailored overcoat.",
+          "Minimal jewelry; let the ring be the only obvious sparkle.",
+          "Hair and makeup that photograph matte, not shiny — no flash-hotspot skin.",
+          "A single bouquet in muted tones, or none at all.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Pro tip",
+        text: "Elegance reads in the negative space. Ask your photographer to “shoot wide and give us room” — frames where you occupy a third of the image, with architecture or sky doing the rest, look far more editorial than tightly-cropped portraits. It's the difference between a photo and a cover.",
+      },
+      { type: "h2", id: "elegant-poses", text: "Restrained Poses With Poise" },
+      {
+        type: "list",
+        items: [
+          "Standing a step apart, one hand clasped, looking slightly off-camera.",
+          "Her seated on a step, him standing behind, one hand on the banister.",
+          "Walking slowly, mid-stride, coats catching a little movement.",
+          "The over-the-shoulder glance — composed, unhurried.",
+          "Foreheads touching against a stone column, framed by the arch.",
+          "Seated on a bench, legs crossed, ankles together — the “editorial sit.”",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Elegance is subtraction. Every prop you remove, every color you calm, every inch of space you leave — that's where the refinement lives.",
+        cite: "Harper, on editorial restraint",
+      },
+      { type: "h2", id: "elegant-ideas-faq", text: "Elegant Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do elegant photos require an expensive location?",
+            a: "No. A quiet public building with good architecture — a courthouse, a library, a university quad — photographs as elegant as any estate. What matters is clean geometry and soft light, not the price tag. Scout at the same hour you'll shoot.",
+          },
+          {
+            q: "Is black too harsh for engagement photos?",
+            a: "Not if it's intentional. An all-black or black-and-cream palette reads as chic and editorial, especially against stone or greenery. The key is texture — wool, velvet, silk — so the black has depth instead of looking flat.",
+          },
+          {
+            q: "How do we look elegant and not stiff?",
+            a: "Posture with a soft exhale. Stand tall, then breathe out and drop your shoulders a fraction — that's poise without tension. And keep moving slowly between shots; elegant photos are calm, not frozen.",
+          },
+          {
+            q: "Should elegant photos be color or black and white?",
+            a: "Both, weighted toward black and white. Editorial galleries often deliver the elegant frames in monochrome — it strips color distraction and emphasizes line and light. Ask for the classic frames in B&W and the candid color frames for warmth.",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.outfitsCover,
+            overlay: "Refined, Editorial, Yours",
+            pinTitle: "Elegant Engagement Photo Ideas for a Refined Gallery",
+            pinDescription: "Architecture, neutral palettes and restrained poses — elegant engagement photos with an editorial feel. Save them.",
+            note: "Neutral-toned couple before columns, minimal serif overlay.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.classicDip,
+            overlay: "The Monochrome Formula",
+            pinTitle: "Elegant Engagement Outfits in Monochrome",
+            pinDescription: "Cream-on-cream and all-black palettes that photograph high-end — the styling formula for refined couple photos.",
+            note: "Tonal couple, outfit swatch strip in the margin.",
+          },
+          {
+            angle: "How-To/List",
+            image: IMAGES.hero,
+            overlay: "Poised Poses to Try",
+            pinTitle: "Elegant Engagement Poses With Poise",
+            pinDescription: "Restrained, editorial poses that read refined — not stiff. Pin the six composed setups.",
+            note: "Wide architectural frame, pose list overlay.",
+          },
+        ],
+        boards: ["Elegant Engagement Photos", "Editorial Couple Portraits", "Luxury Engagement Ideas"],
+      },
+    ],
+  },
+
+  {
+    slug: "vintage-engagement-photo-ideas",
+    title: "14 Vintage Engagement Photo Ideas for a Nostalgic, Film-Forward Look",
+    seoTitle: "14 Vintage Engagement Photo Ideas for a Nostalgic, Film Look",
+    seoDescription:
+      "Vintage engagement photo ideas — retro styling, film-inspired editing and nostalgic settings for a timeless, throwback gallery.",
+    excerpt:
+      "Grain, glow and nostalgia: 14 vintage engagement photo ideas — the retro looks, film tones and throwback settings that make a gallery feel like a memory.",
+    category: "ideas",
+    date: "2026-03-14",
+    featuredImage: IMAGES.about,
+    featuredAlt: "Photographer holding a vintage film camera, evoking a nostalgic retro engagement aesthetic",
+    tags: ["vintage", "retro", "film", "nostalgic", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Vintage engagement photos feel like a memory you haven't made yet — soft grain, warm fade, and styling that could belong to any decade. The look comes from three layers: styling that nods to an era, settings with patina, and an edit that adds grain and lifts the blacks. You don't need an actual film camera to get it, though one certainly helps. These 14 vintage engagement photo ideas cover all three layers.",
+      },
+      { type: "h2", id: "vintage-styling", text: "Styling That Nods to Another Decade" },
+      {
+        type: "list",
+        items: [
+          "A tea-length or fit-and-flare dress — 50s silhouette, modern fabric.",
+          "High-waisted trousers and a tucked shirt for him.",
+          "A wide-brim hat, cat-eye sunglasses, or a silk scarf as one accent.",
+          "Saddle shoes, loafers, or simple heels — no chunky modern sneakers.",
+          "Muted, slightly desaturated colors: mustard, dusty teal, brick red.",
+        ],
+      },
+      { type: "h2", id: "vintage-settings", text: "Settings With Patina" },
+      {
+        type: "list",
+        items: [
+          "A main street with original storefronts and hand-painted signs.",
+          "An old diner, theater marquee, or vintage gas station.",
+          "A classic car — borrowed, borrowed well, and parked somewhere scenic.",
+          "A weathered barn door or corrugated-metal wall for texture.",
+          "A train platform or depot with period architecture.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Pro tip",
+        text: "The film look is 80% in the edit. Ask your photographer for “lifted blacks, warm highlights and a fine grain” — that's the recipe for authentic vintage. If they shoot actual film for even part of the session, those frames will be the ones you print, because real grain has a randomness no preset fully copies.",
+      },
+      { type: "h2", id: "vintage-moments", text: "Moments That Feel Like Stills From an Old Film" },
+      {
+        type: "list",
+        items: [
+          "Leaning against a car, her in sunglasses, him mid-laugh.",
+          "A slow dance on an empty street, caught from across the road.",
+          "Sharing a milkshake at a diner counter, two straws.",
+          "Running under a marquee as it lights up at dusk.",
+          "The “Hollywood goodbye” — one foot popped, mid-turn-back.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Film teaches you to be economical with a moment — every frame costs something, so you make it mean something.",
+        cite: "Harper, on shooting vintage",
+      },
+      { type: "h2", id: "vintage-ideas-faq", text: "Vintage Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do we need a real film camera for vintage engagement photos?",
+            a: "No — a digital camera with a film-forward edit gets you 90% of the look. But if your photographer offers a roll or two of real film, take it. The handful of true film frames in a gallery have a texture that presets approximate but never quite match.",
+          },
+          {
+            q: "Will vintage styling look costumey?",
+            a: "Only if you commit fully to one decade head-to-toe. The trick is a nod, not a reenactment — one or two period pieces mixed with modern basics. A 50s dress with bare feet, or high-waisted trousers with a plain tee, reads vintage-inspired rather than costume.",
+          },
+          {
+            q: "What edit should I ask for?",
+            a: "Ask for lifted blacks, warm highlights, muted mids and a fine grain. Show your photographer one or two reference frames you love. “Film emulation” is a phrase most editors know — it signals exactly the fade-and-grain aesthetic you're after.",
+          },
+          {
+            q: "Does the vintage look work in any season?",
+            a: "Yes, and fall is especially forgiving — the warm foliage flatters the same amber tones the edit adds. In bright summer light, shoot in shade to keep the softness; vintage reads best when the light isn't harsh.",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.about,
+            overlay: "A Gallery Like a Memory",
+            pinTitle: "Vintage Engagement Photo Ideas for a Film-Forward Look",
+            pinDescription: "Grain, glow and nostalgia — vintage engagement photos that feel like a memory you haven't made yet. Save them.",
+            note: "Film-camera detail, warm faded overlay, retro serif type.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.outfitsCover,
+            overlay: "Retro Styling, Modern You",
+            pinTitle: "Vintage Engagement Outfits That Don't Look Costumey",
+            pinDescription: "Tea-length dresses, high-waisted trousers and one period accent — how to nod to a decade without a full costume.",
+            note: "Muted-palette couple, era-piece callouts.",
+          },
+          {
+            angle: "How-To/List",
+            image: IMAGES.hero,
+            overlay: "The Film Edit Recipe",
+            pinTitle: "How to Get the Film Look in Engagement Photos",
+            pinDescription: "Lifted blacks, warm highlights, fine grain — the exact edit to ask for to make your photos feel vintage.",
+            note: "Golden-hour couple with grain texture, edit-note overlay.",
+          },
+        ],
+        boards: ["Vintage Engagement Photos", "Film Photography", "Retro Couple Style"],
+      },
+    ],
+  },
+
+  {
+    slug: "night-engagement-photo-ideas",
+    title: "12 Night Engagement Photo Ideas That Glow After Dark",
+    seoTitle: "12 Night Engagement Photo Ideas That Glow After Dark",
+    seoDescription:
+      "Night engagement photo ideas — city lights, string lights and blue-hour setups for a moody, glowing after-dark gallery.",
+    excerpt:
+      "After the sun goes down: 12 night engagement photo ideas — neon, string lights and blue-hour frames that make a gallery glow.",
+    category: "ideas",
+    date: "2026-03-16",
+    featuredImage: IMAGES.hero,
+    featuredAlt: "Couple glowing under warm lights during an evening engagement photo session",
+    tags: ["night", "evening", "city lights", "blue hour", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Night engagement photos trade golden-hour warmth for something moodier — pools of light, city glow and the blue hour's soft wash. They're less common, which is exactly why they stand out in a feed. Shooting after dark isn't harder; it just has different rules, and the biggest one is to stay near your light source. These 12 night engagement photo ideas put you in the glow, not the dark.",
+      },
+      { type: "h2", id: "night-timing", text: "Timing: The Blue Hour Is Your Window" },
+      {
+        type: "p",
+        text: "The best night photos happen in the 20–30 minutes right after sunset, when the sky still holds color — that's the blue hour. Pure black-sky shots flatten the image; a dusky blue sky behind city lights gives depth. Plan to be on location fifteen minutes before sunset and shoot as the light fades.",
+      },
+      { type: "h2", id: "night-setups", text: "Setups That Glow" },
+      {
+        type: "list",
+        items: [
+          "Under a canopy of string lights — the single most flattering night setup.",
+          "A diner or café window, lit from within, you framed in the glass.",
+          "City lights as bokeh behind you, both of you lit by a nearby lamppost.",
+          "A car at dusk, headlights on, sitting on the hood or leaning on the door.",
+          "Sparklers, if allowed — crossed together, faces lit by the sparks.",
+          "A bridge at blue hour, city reflected in the water below.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Pro tip",
+        text: "Stay within a few feet of your light source. Night photography is about falling into pools of light — a lamppost, a window, a string of bulbs. Step out of the pool and you disappear; step into it and you glow. Your photographer will position you, but knowing the rule helps you hold the frame.",
+      },
+      { type: "h2", id: "night-tips", text: "Practical Tips for a Smooth Night Shoot" },
+      {
+        type: "list",
+        items: [
+          "Dress warmer than you think — you'll be still, after dark.",
+          "Scout in daylight so nobody's wandering after dark looking for the spot.",
+          "Ask your photographer to bring a small LED panel for fill light on faces.",
+          "Keep exposure time short enough to avoid blur — you'll need to hold steady.",
+          "Bring a thermos; warm hands hold poses better than cold ones.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Night photos are intimate by default — it's just the two of you in a pool of light, and the rest of the world falls away.",
+        cite: "Harper, on after-dark sessions",
+      },
+      { type: "h2", id: "night-ideas-faq", text: "Night Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Is it too dark to take good engagement photos at night?",
+            a: "No — as long as you're near a light source. Street lamps, shop windows, string lights and car headlights all give photographers enough to work with. The blue hour right after sunset is the sweet spot, with enough ambient light to keep the sky from going flat black.",
+          },
+          {
+            q: "Will night photos look grainy?",
+            a: "A little grain is normal and even adds mood, but a skilled photographer keeps it controlled with the right aperture and ISO. Ask to see their night portfolio before booking — night work separates photographers who can handle low light from those who can't.",
+          },
+          {
+            q: "How long does a night engagement session take?",
+            a: "Shorter than a daytime one — about 45 minutes. The usable light window after sunset is narrow, so you'll shoot efficiently. Many couples add a night session onto the tail end of a golden-hour shoot for variety.",
+          },
+          {
+            q: "What should we wear for night engagement photos?",
+            a: "Rich, saturated colors photograph beautifully against dark backgrounds — deep green, burgundy, navy. Bring layers for warmth, and consider one reflective or light-catching detail like a satin jacket that picks up the glow.",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.hero,
+            overlay: "Glow After Dark",
+            pinTitle: "Night Engagement Photo Ideas That Glow",
+            pinDescription: "String lights, city glow and blue-hour frames — night engagement photos for a moody, luminous gallery. Save them.",
+            note: "Warm-lit couple at dusk, glowing serif overlay.",
+          },
+          {
+            angle: "How-To/List",
+            image: IMAGES.gallerySilhouette,
+            overlay: "Shoot the Blue Hour",
+            pinTitle: "How to Nail Blue Hour Engagement Photos",
+            pinDescription: "The 20-minute window after sunset is the best night light you'll get — here's how to use it. Pin the timing guide.",
+            note: "Silhouette against a dusky sky, timeline overlay.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.outfitsCover,
+            overlay: "Rich Tones for Night",
+            pinTitle: "What to Wear for Night Engagement Photos",
+            pinDescription: "Deep green, burgundy and navy — the saturated tones that photograph best against city lights.",
+            note: "Evening-toned couple, color-swatch column.",
+          },
+        ],
+        boards: ["Night Photography", "Blue Hour Engagement", "City Couple Photos"],
+      },
+    ],
+  },
+
+  {
+    slug: "diy-engagement-photo-ideas",
+    title: "15 DIY Engagement Photo Ideas for a Beautiful Budget Shoot",
+    seoTitle: "15 DIY Engagement Photo Ideas for a Beautiful Budget Shoot",
+    seoDescription:
+      "DIY engagement photo ideas — tripod setups, self-timer prompts and budget locations for beautiful photos without a photographer.",
+    excerpt:
+      "Beautiful without a big budget: 15 DIY engagement photo ideas — tripod tricks, self-timer setups and free locations that still look intentional.",
+    category: "ideas",
+    date: "2026-03-18",
+    featuredImage: IMAGES.casualCafe,
+    featuredAlt: "Couple planning a relaxed DIY engagement photo session at a café",
+    tags: ["diy", "budget", "self-taken", "tripod", "ideas"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "DIY engagement photos can look genuinely good — if you trade spontaneity for a little planning. The couples who pull it off treat it like a real shoot: a scouted location, a tripod, and a short list of setups they walk through together. What you give up is a director; what you keep is everything else. These 15 DIY engagement photo ideas and setups will get you a gallery you're proud of, for the price of gas.",
+      },
+      { type: "h2", id: "diy-gear", text: "The Minimal Setup That Works" },
+      {
+        type: "p",
+        text: "You need less than you think: a tripod (or a steady ledge), a camera or phone with a self-timer, and a way to trigger it remotely. About 70% of successful DIY shoots use a phone — modern phone cameras in good light are more than enough. The limiting factor is almost never the camera; it's the light.",
+      },
+      {
+        type: "list",
+        items: [
+          "A tripod, or a stable surface at chest-to-eye height.",
+          "A 10-second self-timer or a Bluetooth remote shutter.",
+          "A phone with portrait mode — or any camera you can set on a timer.",
+          "A friend with a steady hand, if you'd rather not run back and forth.",
+        ],
+      },
+      { type: "h2", id: "diy-locations", text: "Free Locations That Look Intentional" },
+      {
+        type: "list",
+        items: [
+          "A quiet park path an hour before sunset.",
+          "A downtown street with brick walls and morning light.",
+          "A lakefront or riverbank with a clear horizon.",
+          "Your own porch or stoop — home reads as honest, not cheap.",
+          "A field or meadow — open sky is the best free backdrop there is.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Pro tip",
+        text: "Shoot on a 10-second timer and take five frames of each setup. The first frame is you running into position; the fifth is you settled. Walking back and forth feels tedious, but the difference between frame one and frame five is the difference between a snapshot and a photo. Pace yourselves — you've got time.",
+      },
+      { type: "h2", id: "diy-setups", text: "Setups That Don't Need a Director" },
+      {
+        type: "list",
+        items: [
+          "Walking toward the camera — start the timer, then just walk.",
+          "Seated on a ledge or blanket, foreheads together.",
+          "Leaning against a wall, one ankle crossed, relaxed.",
+          "The twirl — timer on, spin once, let the camera catch it.",
+          "Holding the ring up together, both of you looking at it.",
+          "A wide shot from far away — tiny couple, big landscape.",
+        ],
+      },
+      { type: "h2", id: "diy-mistakes", text: "The Mistakes That Make DIY Look Amateur" },
+      {
+        type: "list",
+        items: [
+          "Midday overhead sun — it flattens everything. Shoot an hour before sunset.",
+          "The tripod visible in every frame — recompose so it's out of shot or cropped out.",
+          "Only wide shots — get close-ups of hands, the ring, your faces.",
+          "Stiff, held smiles between timer runs — move, reset, breathe.",
+          "Skipping the outfit plan — DIY still deserves coordinated colors.",
+        ],
+      },
+      { type: "h2", id: "diy-ideas-faq", text: "DIY Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Can a phone really take good engagement photos?",
+            a: "Yes — in good light, modern phone cameras are more than capable, and portrait mode gives you the soft background people associate with “real” cameras. The phone's weakness is low light and big prints, so shoot in daylight and keep files organized if you plan to print large.",
+          },
+          {
+            q: "How do we take photos of just the two of us, together?",
+            a: "Use the self-timer or a Bluetooth remote, then walk into your spot before it fires. Set a 10-second delay, frame the shot slightly wider than you think you need, and take several frames. A friend as a temporary tripod-holder also works and lets you adjust between shots.",
+          },
+          {
+            q: "How long should a DIY engagement shoot take?",
+            a: "Plan for 60–90 minutes including setup and walking between spots. DIY moves slower because you're also the photographer — you'll spend time framing, timing and reviewing. Don't rush it; a relaxed pace shows in the photos.",
+          },
+          {
+            q: "Should we still hire a photographer later?",
+            a: "Many couples do a DIY shoot now and a professional session closer to the wedding, or use the DIY set for save-the-dates and the pro set for the formal album. They serve different purposes, and there's no rule that says you only get one.",
+          },
+        ],
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "How-To/List",
+            image: IMAGES.casualCafe,
+            overlay: "DIY on a Budget",
+            pinTitle: "DIY Engagement Photo Ideas That Still Look Beautiful",
+            pinDescription: "Tripod setups, self-timer tricks and free locations — how to take your own engagement photos on a budget. Save the guide.",
+            note: "Relaxed planning couple, checklist overlay.",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.outfitsCover,
+            overlay: "Look Intentional, Spend Less",
+            pinTitle: "Budget Engagement Outfits That Look Intentional",
+            pinDescription: "Coordinated colors and simple fabrics — what to wear for DIY engagement photos that don't look DIY.",
+            note: "Everyday-styled couple, affordable outfit callouts.",
+          },
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.hero,
+            overlay: "Free Golden Hour",
+            pinTitle: "Golden Hour DIY Engagement Photos",
+            pinDescription: "The best light is free — how to time a DIY shoot for golden hour and get glowing results. Pin the timing tips.",
+            note: "Warm meadow couple, sunset-timing overlay.",
+          },
+        ],
+        boards: ["Budget Wedding Ideas", "DIY Engagement Photos", "Save the Date DIY"],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => {
@@ -1366,7 +2463,16 @@ export const POST_HUB: Record<string, string> = {
   "top-engagement-photo-locations-oklahoma": "engagement-photo-locations",
   "engagement-photo-ideas-outside": "engagement-photo-locations",
   "casual-engagement-photo-ideas": "engagement-photo-ideas",
-  "unique-engagement-pics": "engagement-photo-ideas",
+  "unique-engagement-photo-ideas": "engagement-photo-ideas",
+  "cute-engagement-photo-ideas": "engagement-photo-ideas",
+  "romantic-engagement-photo-ideas": "engagement-photo-ideas",
+  "fun-engagement-photo-ideas": "engagement-photo-ideas",
+  "classic-engagement-photo-ideas": "engagement-photo-ideas",
+  "candid-engagement-photo-ideas": "engagement-photo-ideas",
+  "elegant-engagement-photo-ideas": "engagement-photo-ideas",
+  "vintage-engagement-photo-ideas": "engagement-photo-ideas",
+  "night-engagement-photo-ideas": "engagement-photo-ideas",
+  "diy-engagement-photo-ideas": "engagement-photo-ideas",
   "golden-hour-photography-tips-couples": "engagement-photo-ideas",
   "engagement-photo-checklist": "engagement-photo-ideas",
   "how-to-feel-natural-in-front-of-camera": "engagement-photo-ideas",
@@ -1389,9 +2495,9 @@ interface PostMeta {
   secondaryKeywords: string[];
   lsiKeywords: string[];
   searchIntent: "informational" | "commercial" | "navigational";
-  pinImages: PinImage[];
-  citations: string[];
-  internalLinks: { url: string; anchor: string }[];
+  pinImages?: PinImage[];
+  citations?: string[];
+  internalLinks?: { url: string; anchor: string }[];
   relatedPosts?: string[];
   monetization: Monetization;
 }
@@ -1513,16 +2619,16 @@ export const POST_META: Record<string, PostMeta> = {
     ],
     citations: [],
     internalLinks: [
-      { url: "/engagement-photo-ideas/unique-engagement-pics", anchor: "unique engagement pics" },
+      { url: "/engagement-photo-ideas/unique-engagement-photo-ideas", anchor: "unique engagement photo ideas" },
       { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
       { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
     ],
-    relatedPosts: ["unique-engagement-pics", "engagement-photo-ideas-outside", "best-outfits-engagement-photos"],
+    relatedPosts: ["unique-engagement-photo-ideas", "engagement-photo-ideas-outside", "best-outfits-engagement-photos"],
     monetization: { adsense: true, affiliate: true, leadMagnet: true },
   },
-  "unique-engagement-pics": {
-    primaryKeyword: "unique engagement pics",
-    secondaryKeywords: ["unique engagement photos", "creative engagement photos", "fun engagement photo ideas"],
+  "unique-engagement-photo-ideas": {
+    primaryKeyword: "unique engagement photo ideas",
+    secondaryKeywords: ["unique engagement pics", "creative engagement photos", "different engagement photo ideas"],
     lsiKeywords: ["props", "blue hour", "concept shoot", "personality", "neon"],
     searchIntent: "informational",
     pinImages: [
@@ -1591,9 +2697,128 @@ export const POST_META: Record<string, PostMeta> = {
     internalLinks: [
       { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
       { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
-      { url: "/engagement-photo-ideas/unique-engagement-pics", anchor: "unique engagement pics" },
+      { url: "/engagement-photo-ideas/unique-engagement-photo-ideas", anchor: "unique engagement photo ideas" },
     ],
-    relatedPosts: ["30-engagement-photo-poses-couples", "casual-engagement-photo-ideas", "unique-engagement-pics"],
+    relatedPosts: ["30-engagement-photo-poses-couples", "casual-engagement-photo-ideas", "unique-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+
+  /* ———— Engagement Photo Ideas cluster (9 style guides) ———— */
+  "cute-engagement-photo-ideas": {
+    primaryKeyword: "cute engagement photo ideas",
+    secondaryKeywords: ["cute engagement pictures", "adorable engagement photos", "cute engagement poses"],
+    lsiKeywords: ["playful couple photos", "giggling", "props", "candid laughter", "sweet moments"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-ideas/fun-engagement-photo-ideas", anchor: "fun engagement photo ideas" },
+      { url: "/engagement-photo-ideas/romantic-engagement-photo-ideas", anchor: "romantic engagement photo ideas" },
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
+    ],
+    relatedPosts: ["fun-engagement-photo-ideas", "romantic-engagement-photo-ideas", "candid-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "romantic-engagement-photo-ideas": {
+    primaryKeyword: "romantic engagement photo ideas",
+    secondaryKeywords: ["romantic engagement photos", "intimate couple photos", "romantic poses"],
+    lsiKeywords: ["golden hour", "silhouette", "embrace", "forehead touch", "backlit"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-ideas/elegant-engagement-photo-ideas", anchor: "elegant engagement photo ideas" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "romantic engagement poses" },
+    ],
+    relatedPosts: ["elegant-engagement-photo-ideas", "golden-hour-photography-tips-couples", "classic-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "fun-engagement-photo-ideas": {
+    primaryKeyword: "fun engagement photo ideas",
+    secondaryKeywords: ["playful engagement photos", "funny engagement pictures", "fun poses"],
+    lsiKeywords: ["laughing", "games", "confetti", "silly props", "movement"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-ideas/cute-engagement-photo-ideas", anchor: "cute engagement photo ideas" },
+      { url: "/engagement-photo-ideas/candid-engagement-photo-ideas", anchor: "candid engagement photo ideas" },
+      { url: "/engagement-photo-ideas/how-to-feel-natural-in-front-of-camera", anchor: "feel natural in front of the camera" },
+    ],
+    relatedPosts: ["cute-engagement-photo-ideas", "candid-engagement-photo-ideas", "how-to-feel-natural-in-front-of-camera"],
+    monetization: M_ON,
+  },
+  "classic-engagement-photo-ideas": {
+    primaryKeyword: "classic engagement photo ideas",
+    secondaryKeywords: ["timeless engagement pictures", "elegant engagement photos", "formal engagement ideas"],
+    lsiKeywords: ["the dip", "clean lines", "stillness", "neutral palette", "historic setting"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-poses/classic-engagement-photos", anchor: "classic engagement photos" },
+      { url: "/engagement-photo-ideas/elegant-engagement-photo-ideas", anchor: "elegant engagement photo ideas" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+    ],
+    relatedPosts: ["classic-engagement-photos", "elegant-engagement-photo-ideas", "romantic-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "candid-engagement-photo-ideas": {
+    primaryKeyword: "candid engagement photo ideas",
+    secondaryKeywords: ["unposed engagement photos", "natural engagement pictures", "candid couple photography"],
+    lsiKeywords: ["documentary", "walking prompts", "in-between moments", "long lens", "quiet direction"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-ideas/how-to-feel-natural-in-front-of-camera", anchor: "feel natural in front of the camera" },
+      { url: "/engagement-photo-ideas/fun-engagement-photo-ideas", anchor: "fun engagement photo ideas" },
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+    ],
+    relatedPosts: ["how-to-feel-natural-in-front-of-camera", "fun-engagement-photo-ideas", "casual-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "elegant-engagement-photo-ideas": {
+    primaryKeyword: "elegant engagement photo ideas",
+    secondaryKeywords: ["classy engagement photos", "sophisticated engagement pictures", "formal couple poses"],
+    lsiKeywords: ["editorial", "architecture", "monochrome", "negative space", "restraint"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-ideas/classic-engagement-photo-ideas", anchor: "classic engagement photo ideas" },
+      { url: "/engagement-photo-ideas/romantic-engagement-photo-ideas", anchor: "romantic engagement photo ideas" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "elegant engagement outfits" },
+    ],
+    relatedPosts: ["classic-engagement-photo-ideas", "romantic-engagement-photo-ideas", "classic-engagement-photos"],
+    monetization: M_ON,
+  },
+  "vintage-engagement-photo-ideas": {
+    primaryKeyword: "vintage engagement photo ideas",
+    secondaryKeywords: ["retro engagement photos", "vintage couple poses", "nostalgic engagement session"],
+    lsiKeywords: ["film grain", "lifted blacks", "period styling", "main street", "throwback"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-ideas/classic-engagement-photo-ideas", anchor: "classic engagement photo ideas" },
+      { url: "/engagement-photo-ideas/elegant-engagement-photo-ideas", anchor: "elegant engagement photo ideas" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "vintage engagement outfits" },
+    ],
+    relatedPosts: ["classic-engagement-photo-ideas", "elegant-engagement-photo-ideas", "classic-engagement-photos"],
+    monetization: M_ON,
+  },
+  "night-engagement-photo-ideas": {
+    primaryKeyword: "night engagement photo ideas",
+    secondaryKeywords: ["evening engagement session", "low light couple photos", "city night engagement photos"],
+    lsiKeywords: ["blue hour", "string lights", "neon", "city glow", "sparklers"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-ideas/unique-engagement-photo-ideas", anchor: "unique engagement photo ideas" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
+    ],
+    relatedPosts: ["unique-engagement-photo-ideas", "golden-hour-photography-tips-couples", "elegant-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "diy-engagement-photo-ideas": {
+    primaryKeyword: "diy engagement photo ideas",
+    secondaryKeywords: ["budget engagement photos", "self-taken engagement pictures", "at home engagement shoot"],
+    lsiKeywords: ["tripod", "self-timer", "phone camera", "free locations", "remote shutter"],
+    searchIntent: "informational",
+    internalLinks: [
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+      { url: "/engagement-photo-ideas/engagement-photo-checklist", anchor: "engagement photo checklist" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
+    ],
+    relatedPosts: ["casual-engagement-photo-ideas", "engagement-photo-checklist", "golden-hour-photography-tips-couples"],
     monetization: M_ON,
   },
 };

@@ -27,6 +27,7 @@ const LEGACY_HUBS: Record<string, string> = {
 /** Old article slug → current slug (301). */
 const LEGACY_SLUGS: Record<string, string> = {
   "casual-engagement-photos": "casual-engagement-photo-ideas",
+  "unique-engagement-pics": "unique-engagement-photo-ideas",
 };
 
 /** Flat /category/ taxonomy → silo hub (301). */
