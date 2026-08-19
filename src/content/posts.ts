@@ -619,6 +619,353 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Tier 1 SEO targets (KD ≤ 8) ———— */
+
+  {
+    slug: "casual-engagement-photos",
+    title: "25 Casual Engagement Photos That Feel Like a Sunday Morning",
+    seoTitle: "25 Casual Engagement Photos That Feel Like You (2026)",
+    seoDescription:
+      "Casual engagement photos that feel like a Sunday, not a shoot — relaxed poses, jeans-friendly outfits and around-town ideas for posing-hating couples.",
+    excerpt:
+      "Jeans, coffee, the car you actually drive — 25 relaxed engagement photo ideas for couples who want pictures that feel like their real life.",
+    category: "poses",
+    date: "2026-02-20",
+    featuredImage: IMAGES.casualCafe,
+    featuredAlt: "Casual engagement photos of a couple laughing over coffee at a café window",
+    tags: ["casual", "relaxed", "candid", "everyday", "jeans"],
+    author: clara,
+    blocks: [
+      {
+        type: "p",
+        text: "“Casual engagement photos” is one of the most-searched phrases in our niche, and it's easy to see why: most couples don't want to look like they're auditioning for a fragrance ad. They want to look like themselves on a good day. Here's the definition we work with — casual doesn't mean careless. It means your real life, lit a little better: the coffee run, the tailgate, the couch argument about what to watch. This guide gives you 25 ideas across poses, outfits and locations that photograph effortless instead of stiff.",
+      },
+      { type: "h2", id: "what-makes-a-photo-feel-casual", text: "What Makes a Photo Feel Casual (It's Not the Jeans)" },
+      {
+        type: "p",
+        text: "You can wear a ballgown and look casual, or wear jeans and look like a mannequin. Four markers actually create the relaxed feeling — and only one of them is clothing.",
+      },
+      {
+        type: "list",
+        items: [
+          "Movement over stillness — walking, stirring, reaching. Motion reads as life.",
+          "A task for your hands — coffee cups, a book, his collar, the steering wheel.",
+          "Real environment — places you'd actually be on a Saturday, not a blank field.",
+          "Slightly imperfect framing — a laugh mid-word, hair across a face, the frame that 'almost missed it'.",
+        ],
+      },
+      { type: "h2", id: "casual-poses-that-dont-look-posed", text: "Casual Poses That Don't Look Posed" },
+      {
+        type: "p",
+        text: "These are the directions we give couples who asked for “nothing formal.” Each one is a situation, not a statue — start it, let it run for twenty seconds, and the keeper frames appear on their own.",
+      },
+      { type: "h3", id: "the-coffee-walk", text: "1. The coffee walk" },
+      {
+        type: "p",
+        text: "Two to-go cups, walk at conversation pace, one of you talking with your free hand. The cup solves the empty-hands problem and the walk solves the awkwardness problem in one move.",
+      },
+      {
+        type: "list",
+        items: [
+          "2. Sitting on the tailgate or car hood, legs dangling, heads leaning together.",
+          "3. The bench lean: her shoulder on his, his arm along the backrest, people-watching.",
+          "4. Browsing a bookstore — each of you pulls a book the other would hate. Genuine reactions.",
+          "5. Mid-crosswalk conversation, city moving around you (shoot from the corner, safely).",
+          "6. The grocery-store bit: she sits in the cart, he pushes, both fully committed.",
+          "7. Foreheads together on your own front porch — home counts as a location.",
+          "8. Her fixing his collar while laughing at how bad he is at standing still.",
+          "9. Curb sitting, forearms on knees, debating where to eat. (The debate is the photo.)",
+          "10. Kitchen counter at home: he lifts her onto it, coffee abandoned nearby.",
+          "11. The window-table frame: café glass between you and the camera, city behind.",
+          "12. Walking the dog — the dog is the director; just follow its chaotic energy.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "The 10-minute rule",
+        text: "Start every casual session with ten minutes of real life — actually drink the coffee, actually walk the block — before any directed frame. By the time the camera 'starts', you've already forgotten it's there.",
+      },
+      { type: "h2", id: "casual-outfits-jeans-yes-jeans", text: "Casual Outfits: Jeans, Yes, Jeans" },
+      {
+        type: "p",
+        text: "The question we get most: “Is it okay to wear jeans?” Yes — with three guardrails. Dark or mid wash over acid wash, straight or wide leg over spray-tight, and zero visible logos. Everything else follows the same rule as formal styling: soft colors, real fabrics, one accent between you.",
+      },
+      {
+        type: "list",
+        items: [
+          "Formula 1: straight jeans + oat-colored knit + clean white sneakers (her) / olive overshirt + tan chinos (him).",
+          "Formula 2: slip dress + denim jacket + ankle boots — dressed up on top, casual on the bottom.",
+          "Formula 3: linen trousers + simple tee + one gold layer of jewelry that catches light.",
+          "Coordinate tones, not outfits: cream + sage, or oat + dusty blue across the two of you.",
+          "Texture over branding: ribbed knits, corduroy, denim, linen all read rich; logos read cheap.",
+          "One 'elevated' piece each — a silk scarf, a leather jacket, nice boots — lifts casual to intentional.",
+        ],
+      },
+      { type: "h2", id: "casual-locations-around-town", text: "Casual Locations Around Town" },
+      {
+        type: "p",
+        text: "Casual photos want places with a pulse. Skip the empty field for this one — you want texture, glass, brick and the hint of a story around the edges.",
+      },
+      {
+        type: "list",
+        items: [
+          "A café with big windows — morning light through glass is the softest light in town.",
+          "An indie bookstore or record shop — endless micro-scenes between the shelves.",
+          "A mural alley — color behind you, shade on your faces, art in the frame.",
+          "Your actual car, windows down, golden light on the dashboard.",
+          "Your front porch or stoop — the 'home' frame that ages the best of all.",
+          "A laundromat with good neon — the sleeper hit of quirky casual galleries.",
+          "The farmers market, mid-bite of something you shouldn't have bought yet.",
+        ],
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.casualCafe, alt: "Relaxed couple laughing over coffee — casual engagement photo at a café" },
+          { src: IMAGES.galleryLaugh, alt: "Candid laughing frame from a casual outdoor engagement session" },
+        ],
+      },
+      { type: "h2", id: "casual-engagement-photos-faq", text: "Casual Engagement Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Are jeans really okay for engagement photos?",
+            a: "Yes — dark or mid wash, straight or wide leg, no rips at awkward heights and no logos. Paired with a good knit or silk top and one elevated piece, jeans photograph as 'effortless', not 'gave up'.",
+          },
+          {
+            q: "Will casual photos look cheap next to our formal wedding gallery?",
+            a: "The opposite — the contrast makes both better. The wedding gallery is the heirloom set; the casual set is the personality archive. Couples reprint the casual frames for their home far more often than the formal ones.",
+          },
+          {
+            q: "How long should a casual session last?",
+            a: "45–60 minutes maximum. Casual energy is spontaneous; stretch it past an hour and it starts to feel like work. Two locations, ten situations, done while it still feels fun.",
+          },
+          {
+            q: "Can we do both casual and dressed-up in one session?",
+            a: "Absolutely — two outfits, casual first. The relaxed set warms you up for the camera, so the dressed-up frames at golden hour come out looser than they ever would cold.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "engagement-photo-ideas-outside",
+    title: "21 Engagement Photo Ideas Outside for Every Season",
+    seoTitle: "21 Engagement Photo Ideas Outside for Every Season",
+    seoDescription:
+      "Outdoor engagement photo ideas for every season — meadows, creeks, tree lines and city steps, with the timing tricks that make them glow.",
+    excerpt:
+      "Meadows, creeks, tree lines and city steps — 21 outdoor engagement photo ideas with the light and weather tricks that make each one work.",
+    category: "locations",
+    date: "2026-02-15",
+    featuredImage: IMAGES.hero,
+    featuredAlt: "Outdoor engagement photo of a couple embracing in a golden wildflower meadow",
+    tags: ["outside", "outdoor", "nature", "seasonal", "golden hour"],
+    author: clara,
+    blocks: [
+      {
+        type: "p",
+        text: "Outdoor engagement photos remain the most requested format for a simple reason: outside solves everything at once. Space to move, free golden-hour light, natural variety in a single walk — and zero venue fees. These 21 ideas are grouped by terrain so you can build a session around what's near you: fields, water, trees, city stone, and the weather itself.",
+      },
+      { type: "h2", id: "fields-and-meadows", text: "Fields & Meadows" },
+      {
+        type: "p",
+        text: "Open grass is the blank canvas of outdoor engagement photography. The trick is never to just stand in it — move through it.",
+      },
+      {
+        type: "list",
+        items: [
+          "1. The waist-high walk: hold hands and wade through tall grass, camera low behind you.",
+          "2. A real picnic — actual snacks, real laughing, one blanket slightly crooked.",
+          "3. Lying in the grass shot from directly above, heads together, sky behind the photographer.",
+          "4. The open-field twirl where the dress (or jacket hem) catches the wind.",
+          "5. Horizon silhouette in the last two minutes of sun — the frame every gallery needs.",
+        ],
+      },
+      { type: "h2", id: "water-edges", text: "Water Edges: Creeks, Lakes & Docks" },
+      {
+        type: "list",
+        items: [
+          "6. Sitting on creek rocks, feet near the water, foreheads touching.",
+          "7. Walking a wooden dock away from camera, reflections doubling the frame.",
+          "8. Mid-throw stone skipping — shoot the whole sequence, keep the splash frame.",
+          "9. The reflection kiss: you kiss, the photographer shoots the water, not you.",
+          "10. Barefoot at the water's edge in summer — roll the trousers, commit to it.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Water timing",
+        text: "Creeks and lakes go into shade 30–45 minutes before open fields do. Shoot water frames mid-session, not last, or you'll lose the light on the water while the field behind you still glows.",
+      },
+      { type: "h2", id: "tree-lines-and-forest", text: "Tree Lines & Forest Paths" },
+      {
+        type: "list",
+        items: [
+          "11. The trunk corridor: a row of trees framing you both, camera shooting down the line.",
+          "12. Peeking through leaves — soft green blur in front of the lens, sharp faces behind it.",
+          "13. Hand-in-hand walking away down a forest path, canopy doing the lighting design.",
+          "14. Dappled-light portrait in open shade: the forest's answer to a studio softbox.",
+        ],
+      },
+      { type: "h2", id: "urban-outdoors", text: "Urban Outdoors: Steps, Alleys & Bridges" },
+      {
+        type: "list",
+        items: [
+          "15. Museum or courthouse steps — classic geometry, always in evening shade-then-glow.",
+          "16. Brick alley with bounce light: walls turn the last sun into a warm reflector.",
+          "17. Bridge silhouette over water or road, city lights starting to wake up.",
+          "18. Low wall sit, mid-laugh, street life softly blurred behind you.",
+        ],
+      },
+      { type: "h2", id: "weather-is-a-prop", text: "When Weather Joins the Session" },
+      {
+        type: "list",
+        items: [
+          "19. October fog: the dreamiest light of the year — book it the moment the forecast shows it.",
+          "20. First snow: matching knits, one shared scarf, breath visible in the cold air.",
+          "21. After-rain puddle reflections — the street becomes a mirror for exactly one evening.",
+        ],
+      },
+      {
+        type: "quote",
+        text: "Grey sky is not bad light. It's the biggest softbox you will ever stand under.",
+        cite: "Clara, on every overcast forecast",
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.hero, alt: "Couple in a golden meadow — outdoor engagement photo at sunset" },
+          { src: IMAGES.locationsCover, alt: "Stone bridge over an Oklahoma creek during golden hour" },
+          { src: IMAGES.gallerySilhouette, alt: "Couple silhouette on a hill — outdoor engagement idea at dusk" },
+        ],
+      },
+      { type: "h2", id: "outdoor-engagement-photos-faq", text: "Outdoor Session Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What happens if it rains on our outdoor session?",
+            a: "Two options, both good: reschedule (most photographers hold a rain date), or lean in — umbrella frames and after-rain reflections are keeper material. Overcast beats canceled every time.",
+          },
+          {
+            q: "What's the best time of day for outdoor engagement photos?",
+            a: "The last 60–90 minutes before sunset for warm, dramatic light. Sunrise gives softer tones and empty locations — worth the alarm if you hate crowds.",
+          },
+          {
+            q: "Do we need permits for parks or public land?",
+            a: "For a couple and one photographer: almost never. Tripods, assistants or commercial styling can trigger permits in city parks, and state parks charge per-vehicle entry. Always verify the specific spot a week ahead.",
+          },
+          {
+            q: "What should we bring to an outdoor session?",
+            a: "Water, flat walking shoes for between spots, bug spray May–September, a blanket for sitting frames, and hand warmers in cold months. Ten items, all listed in our full checklist.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "unique-engagement-pics",
+    title: "19 Unique Engagement Pics Nobody Else Will Have",
+    seoTitle: "19 Unique Engagement Pics Nobody Else Will Have",
+    seoDescription:
+      "Unique engagement pics that look like you, not a template — creative props, blue-hour timing and concepts couples actually remember.",
+    excerpt:
+      "Props with a story, blue-hour timing and 'how we met' recreations — 19 unique engagement pic ideas that look like you, not a template.",
+    category: "tips",
+    date: "2026-02-10",
+    featuredImage: IMAGES.gallerySilhouette,
+    featuredAlt: "Unique engagement pic of a couple silhouetted together on a hill at dusk",
+    tags: ["unique", "creative", "props", "concepts", "blue hour"],
+    author: clara,
+    blocks: [
+      {
+        type: "p",
+        text: "Every couple wants their photos to feel unique — and most advice answers with gimmicks: smoke bombs, rented vintage vans, coordinated jumpsuits. Here's the filter we use instead: unique doesn't mean unusual for its own sake. It means *specific to the two of you*. The ideas below are levers — props with a real story, timing nobody books, and concepts drawn from your actual life. Take the ones that are true about you and discard the rest.",
+      },
+      { type: "h2", id: "props-that-tell-your-story", text: "Props That Tell Your Story" },
+      {
+        type: "p",
+        text: "A prop earns its frame only if you'd recognize it with your eyes closed. If it needs explaining to strangers but not to your friends, it's perfect.",
+      },
+      {
+        type: "list",
+        items: [
+          "1. The record you both love, on a portable turntable in the middle of a field.",
+          "2. The book you keep passing back and forth — photographed mid-exchange, margin notes visible.",
+          "3. Your dog, unscripted, as ring bearer and chaos director.",
+          "4. The motorcycle or old car you actually own — grease stains included.",
+          "5. Instruments you really play: a badly-sung duet makes the best action shot.",
+        ],
+      },
+      { type: "h2", id: "timing-nobody-books", text: "Timing Nobody Books" },
+      {
+        type: "list",
+        items: [
+          "6. Blue hour with string lights: twenty minutes after sunset, when the sky turns slate and fairy lights start to glow.",
+          "7. True night against a neon storefront — one colored light source, two silhouettes.",
+          "8. The first fog morning of October: shoot at 7am and feel like the only people on earth.",
+          "9. First snowfall of the year — book the photographer on speed dial for this one.",
+          "10. Sunrise from a rooftop or overlook, thermos of coffee steaming between you.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "The fridge test",
+        text: "Before committing to any unique idea, ask: will this still feel like us in twenty years, on the fridge, with grandkids asking about it? If the answer is a fast yes, do it. If you hesitate, simplify.",
+      },
+      { type: "h2", id: "concepts-not-poses", text: "Concepts, Not Poses" },
+      {
+        type: "list",
+        items: [
+          "11. Recreate how you met — same café, same order, same terrible first joke, retold on purpose.",
+          "12. Movie-still framing: 2.35:1 crop, you both looking away from camera, mid-scene.",
+          "13. 'One year later': the exact spot of your first photo, same angle, ring now visible.",
+          "14. Grocery-store romance: produce aisle, cart, her on his shoulders reaching the top shelf.",
+          "15. Tailgate cinema: a bedsheet, a projector, your first movie together on a hillside.",
+          "16. The airport pickup reenactment — running, sign held badly, hug that lifts feet.",
+          "17. Cook the meal from your first date, shot documentary-style in your kitchen.",
+          "18. Match your outfits to a single painting you both love, then find its colors outside.",
+          "19. Two chairs facing each other in an empty field, just talking — the quietest unique frame of all.",
+        ],
+      },
+      { type: "h2", id: "keep-it-you-not-gimmicky", text: "Keeping It 'You', Not Gimmicky" },
+      {
+        type: "p",
+        text: "Three rules keep a creative session from tipping into costume: pick one concept, not five — a session with five ideas is a session with zero identities. Keep 80% of the gallery timeless so the 20% conceptual frames get to be the spice. And never rent a version of your life — if you've never owned a vintage camper, don't borrow one for photos. The camera can't tell what's real, but you'll always know.",
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: IMAGES.gallerySilhouette, alt: "Silhouetted couple on a hill at dusk — unique engagement idea" },
+          { src: IMAGES.casualCafe, alt: "Recreating a first-date coffee moment — concept engagement photo" },
+        ],
+      },
+      { type: "h2", id: "unique-engagement-pics-faq", text: "Unique Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do unique engagement photos age well?",
+            a: "The ones rooted in your real life — your dog, your record, your first-date café — age beautifully. Trend-copied props (anything lifted from a viral video) date within a season. Authenticity is the anti-aging ingredient.",
+          },
+          {
+            q: "How many 'unique' frames should be in the gallery?",
+            a: "Five to eight of a forty-frame gallery. The timeless frames make the gallery livable; the conceptual ones make it yours. More than a third unique and the whole set starts to feel like a production.",
+          },
+          {
+            q: "Our photographer has never shot our idea — is that a problem?",
+            a: "Send the concept two weeks ahead. Good photographers love a brief: it lets them plan light, location and timing around it. If the idea needs night shooting or off-camera light, that's exactly the lead time they need.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);

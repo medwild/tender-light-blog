@@ -13,6 +13,7 @@ export default function AuthorBox({ author }: { author: Author }) {
             src={author.avatar}
             alt={`Portrait of ${author.name}`}
             loading="lazy"
+            decoding="async"
             className="h-24 w-24 shrink-0 rounded-full border-2 border-rose/60 object-cover shadow-[0_10px_25px_-12px_rgba(157,90,103,0.5)]"
           />
         ) : (

@@ -96,6 +96,7 @@ export default function PostBody({ blocks }: { blocks: Block[] }) {
                         src={img.src}
                         alt={img.alt}
                         loading="lazy"
+                        decoding="async"
                         className="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                       />
                     </div>

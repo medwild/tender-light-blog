@@ -32,6 +32,7 @@ export default function ArticleCard({
               src={post.featuredImage}
               alt={post.featuredAlt}
               loading="lazy"
+              decoding="async"
               className="aspect-[3/2] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
             />
           </div>

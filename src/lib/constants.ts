@@ -43,6 +43,8 @@ export const IMAGES = {
     "https://image.qwenlm.ai/generated-images/1aaf0416-a71a-4b6d-bbc7-53f8e7e3bd5b/_result.png",
   galleryTwirl:
     "https://image.qwenlm.ai/generated-images/f379d658-207e-4cdd-9dbe-2adf819cce63/_result.png",
+  casualCafe:
+    "https://image.qwenlm.ai/generated-images/13c3b7f9-328a-4d89-acf2-9c9c9de74c7d/_result.png",
 } as const;
 
 /** Social share intent builders (no SDK, no tracking). */
