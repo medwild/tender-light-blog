@@ -13,13 +13,25 @@ export function normalizePath(pathname: string): string {
   return p;
 }
 
+/** Slug renames — old URL keeps resolving, canonical URL wins (301-equivalent). */
+const LEGACY_SLUGS: Record<string, string> = {
+  "casual-engagement-photos": "casual-engagement-photo-ideas",
+};
+
 function currentPath(): string {
   // Back-compat: translate legacy hash routes (#/blog/x) to clean paths once.
   if (window.location.hash.startsWith("#/")) {
     const clean = normalizePath(window.location.hash.slice(1));
     window.history.replaceState(null, "", clean === "/" ? "/" : clean + "/");
   }
-  return normalizePath(window.location.pathname);
+  let path = normalizePath(window.location.pathname);
+  // Legacy slug redirect → canonical URL in the address bar.
+  const match = path.match(/^\/blog\/([^/]+)$/);
+  if (match && LEGACY_SLUGS[match[1]]) {
+    path = `/blog/${LEGACY_SLUGS[match[1]]}`;
+    window.history.replaceState(null, "", path + "/");
+  }
+  return path;
 }
 
 export function usePathRoute(): string {
