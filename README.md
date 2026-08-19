@@ -68,19 +68,29 @@ npm run typecheck
 ## Writing in the Harper Ellis voice
 
 Every article is written as **Harper Ellis** — former engagement photographer
-(8 years, 400+ sessions), Austin TX, warm / expert / slightly witty. The full
-operating manual lives in `src/content/persona.ts`:
+(8 yrs, 400+ sessions), Austin TX, warm / expert / slightly witty. The full
+operating manual is **Mega-Skill v2.0** in `src/content/persona.ts`:
 
-- `SYSTEM_PROMPT` — paste-ready prompt for any AI content session.
-- `ARTICLE_SPEC` — title ≤ 60 chars, intro 100–150 words, paragraphs ≤ 4
-  sentences, `[AD PLACEMENT]` every 300–400 words, FAQ 4–6 questions.
-- `FORBIDDEN_PHRASES` — the AI-sounding phrases to never use.
-- `PIN_ANGLES` + `MARKERS` — the 3 Pinterest angles and the ad / affiliate /
-  lead-magnet / image markers.
+- `SYSTEM_PROMPT_V2` — paste-ready prompt for any AI content session.
+- `PERSONA_BIO_LOCK` — the fixed brand facts (never invent new ones).
+- `BANNED_WORDS` / `BANNED_PHRASES` / `SERP_LANGUAGE_BAN` — never use.
+- `HARPER_PATTERNS` — the 7 voice patterns (use ≥ 5 per article).
+- `EEAT_MARKERS` — "I was there" moments, mistake admissions, technical detail.
+- `GEO_RULES` — answer-first H2s, quotable statements, stat-backed claims,
+  snippet formats, modular ideas, attribution (for AI Overviews / ChatGPT /
+  Perplexity citations).
+- `READABILITY` — Flesch 60–70, no sentence over 40 words, paragraphs ≤ 4.
+- `QUALITY_GATE` — the pre-output checklist (validate before emitting).
+- `IDEA_SCHEMA` / `JSON_LD_GRAPH_TYPES` — the dual-output JSON contract.
 
-Per-article checklist (from the manual): keyword in H1, intro, one H2 and the
-conclusion · ≥ 5 image alts · ≥ 3 ad slots · ≥ 1 affiliate link · FAQ + JSON-LD ·
-3 Pinterest pins · one "Pro Tip" + one "Real Talk" callout · CTA ending.
+Per-article checklist: keyword in H1, intro, one H2, conclusion · every H2
+answer-first · ≥ 3 quotable statements · ≥ 4 stat-backed claims · E-E-A-T
+markers · FAQ 5–8 in spoken language · 3 Pinterest pins · meta ≤ 60 / 150–160
+chars · JSON-LD `@graph` with all 7 types · scene-not-instruction close.
+
+> **GEO note:** articles are written to be *cited* by generative engines
+> (answer-first sentences, standalone quotable expert lines, first-person
+> attribution). The static pre-render carries the full `@graph` JSON-LD.
 
 ## Adding a new article
 
