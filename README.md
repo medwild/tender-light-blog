@@ -77,6 +77,15 @@ The full priority keyword map (Phase 1 quick wins, Phase 2 pillars, Phase 3
 monetization) lives in `src/content/keywords.ts` and powers the interactive
 "publishing ledger" on the `/guides` map — volume, KD and intent per page.
 
+## LSI / semantic field per cluster
+
+`src/content/semantic.ts` is the vocabulary bank (§13). Each cluster carries its
+head keywords + LSI/entity terms; Cluster 1 (Ideas) is fully populated. The
+ArticlePage blends an article's own keywords with its cluster's LSI field into
+the "In this guide" topical chips, and any term that stem-matches a hub (e.g.
+"outfits", "location", "save the date") is rendered as a real internal link via
+`hubForTerm` — automated maillage driven purely by the data.
+
 ## Writing in the Harper Ellis voice
 
 Every article is written as **Harper Ellis** — former engagement photographer

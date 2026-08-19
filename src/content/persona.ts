@@ -148,6 +148,20 @@ export const MARKERS = {
 } as const;
 
 /**
+ * LSI / semantic field bank (§13). The single source of vocabulary lives in
+ * `src/content/semantic.ts`. When writing a cluster-N article, pull terms from
+ * that cluster's `lsi` list and weave them in naturally — this covers the full
+ * entity universe around the primary keyword (GEO/AI-SEO §6d) and gives the
+ * on-page "In this guide" field its terms. Terms that map to another hub are
+ * rendered as internal links automatically (see `hubForTerm`).
+ */
+export const VOCABULARY_BANK = {
+  module: "src/content/semantic.ts",
+  accessor: "getSemanticField(cluster).lsi",
+  linkingHelper: "hubForTerm(term, hubSlugs)",
+} as const;
+
+/**
  * Paste-ready Mega-Skill v2.0 system prompt (condensed for context, full
  * fidelity — paste this at the start of every AI content session).
  */

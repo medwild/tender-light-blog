@@ -1,7 +1,8 @@
 import { CalendarDays, Clock, Tag } from "lucide-react";
 import { Link } from "../lib/router";
 import { extractToc, formatDate, getPost, hubFor, hubPath, postPath, readingTime, relatedPosts } from "../lib/content";
-import { getHub } from "../content/hubs";
+import { getHub, HUBS } from "../content/hubs";
+import { getSemanticField, hubForTerm } from "../content/semantic";
 import AuthorBox from "../components/blog/AuthorBox";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import CommentSection from "../components/blog/CommentSection";
@@ -21,6 +22,19 @@ export default function ArticlePage({ slug }: { slug: string }) {
   const toc = extractToc(post);
   const related = relatedPosts(post, 3);
   const shareImage = post.pinImages?.[0]?.image ?? post.featuredImage;
+
+  // Blend the article's own keywords with its cluster's LSI field (§13),
+  // then turn any term that maps to a hub into a real internal link.
+  const hubSlugs = HUBS.map((h) => h.slug);
+  const ownTerms = [...(post.secondaryKeywords ?? []), ...(post.lsiKeywords ?? [])];
+  const seen = new Set(ownTerms.map((t) => t.toLowerCase()));
+  const clusterAdds = (getSemanticField(hubFor(post.slug))?.lsi ?? []).filter((t) => {
+    const k = t.toLowerCase();
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+  const topicalTerms = [...ownTerms, ...clusterAdds].slice(0, 16);
 
   return (
     <article className="pt-28 md:pt-32">
@@ -105,13 +119,33 @@ export default function ArticlePage({ slug }: { slug: string }) {
             </div>
 
             {/* Keyword targeting (frontmatter) — visible topical signals */}
-            {(post.secondaryKeywords?.length || post.lsiKeywords?.length) ? (
+            {topicalTerms.length ? (
               <Reveal className="mt-6 rounded-xl border border-line bg-paper p-5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-faint">In this guide</p>
+                <p className="flex items-center justify-between">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-faint">In this guide</span>
+                  {clusterAdds.length > 0 && (
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-deep/70">
+                      cluster field
+                    </span>
+                  )}
+                </p>
                 <p className="mt-2.5 flex flex-wrap gap-2">
-                  {[...(post.secondaryKeywords ?? []), ...(post.lsiKeywords ?? [])].map((k) => (
-                    <span key={k} className="rounded-full bg-cream px-3 py-1 text-[12px] font-medium text-ink-soft">{k}</span>
-                  ))}
+                  {topicalTerms.map((k) => {
+                    const target = hubForTerm(k, hubSlugs);
+                    return target ? (
+                      <Link
+                        key={k}
+                        to={`/${target}`}
+                        className="rounded-full bg-cream px-3 py-1 text-[12px] font-medium text-ink-soft ring-1 ring-line transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose/25 hover:text-rose-deep hover:ring-rose-deep/40"
+                      >
+                        {k} ↗
+                      </Link>
+                    ) : (
+                      <span key={k} className="rounded-full bg-cream px-3 py-1 text-[12px] font-medium text-ink-soft">
+                        {k}
+                      </span>
+                    );
+                  })}
                 </p>
               </Reveal>
             ) : null}
