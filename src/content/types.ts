@@ -46,11 +46,26 @@ export type Block =
   | { type: "keepReading"; items: { label: string; to: string; note: string }[] };
 
 export interface Author {
+  handle: string; // "/author/{handle}" page
   name: string;
   role: string;
   bio: string;
   avatar?: string;
   instagram: string;
+}
+
+/** Pinterest pin asset attached to the article frontmatter. */
+export interface PinImage {
+  image: string;
+  pinTitle: string; // ≤ 100 chars, keyword-first
+  pinDescription: string; // ≤ 500 chars, keyword-rich + soft CTA
+}
+
+/** Per-article monetization switches (gate ad / affiliate / lead-magnet blocks). */
+export interface Monetization {
+  adsense: boolean;
+  affiliate: boolean;
+  leadMagnet: boolean;
 }
 
 export interface Post {
@@ -60,12 +75,26 @@ export interface Post {
   seoDescription: string;
   excerpt: string;
   category: CategorySlug;
-  date: string; // ISO
+  date: string; // ISO datePublished
+  dateModified?: string;
   featuredImage: string;
   featuredAlt: string;
   tags: string[];
   author: Author;
   blocks: Block[];
+
+  /* ——— Frontmatter §3 (plan SEO) — cluster = silo hub, derived via POST_HUB ——— */
+  cluster?: string;
+  pillar?: boolean;
+  primaryKeyword?: string;
+  secondaryKeywords?: string[];
+  lsiKeywords?: string[];
+  searchIntent?: "informational" | "commercial" | "navigational";
+  pinImages?: PinImage[];
+  citations?: string[];
+  internalLinks?: { url: string; anchor: string }[];
+  relatedPosts?: string[]; // explicit override; falls back to same-category
+  monetization?: Monetization;
 }
 
 export interface TocItem {

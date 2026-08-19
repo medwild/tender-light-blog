@@ -1,7 +1,7 @@
 import { ArrowRight, Compass, Feather } from "lucide-react";
 import { Link } from "../lib/router";
 import { getHub, HUB_ACCENTS, HUBS } from "../content/hubs";
-import { formatDate, getCategory, getPost, readingTime } from "../lib/content";
+import { formatDate, getCategory, getPost, hubPath, postPath, readingTime } from "../lib/content";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import FaqSection from "../components/blog/FaqSection";
 import NewsletterForm from "../components/ui/NewsletterForm";
@@ -22,7 +22,7 @@ export default function HubPage({ slug }: { slug: string }) {
   return (
     <div className="pt-28 md:pt-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Guides", path: "/guides" }, { name: hub.name, path: `/hub/${hub.slug}` }]} />
+        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "Guides", path: "/guides" }, { name: hub.name, path: hubPath(hub.slug) }]} />
 
         {/* Editorial opener — keyword as the statement */}
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
@@ -76,7 +76,7 @@ export default function HubPage({ slug }: { slug: string }) {
               return (
                 <Reveal as="li" key={post.slug} delay={i * 70}>
                   <Link
-                    to={`/blog/${post.slug}`}
+                    to={postPath(post.slug)}
                     className="group grid gap-4 py-7 transition-colors duration-300 hover:bg-paper sm:grid-cols-[70px_1fr_auto] sm:items-center sm:gap-8 sm:px-4"
                   >
                     <span className={`font-display text-4xl font-bold italic ${accent.text} transition-transform duration-300 group-hover:-translate-y-1`}>
@@ -87,6 +87,11 @@ export default function HubPage({ slug }: { slug: string }) {
                         <span className={`rounded-full px-3 py-0.5 text-[11px] font-bold uppercase tracking-[0.12em] ${accent.chip} ${accent.text}`}>
                           {cat?.name}
                         </span>
+                        {post.pillar && (
+                          <span className="rounded-full bg-gold/25 px-3 py-0.5 text-[11px] font-bold uppercase tracking-[0.12em] text-gold-deep">
+                            ★ Pillar
+                          </span>
+                        )}
                         <span className="text-xs text-ink-faint">{formatDate(post.date)} · {readingTime(post)} min</span>
                       </span>
                       <span className="mt-2 block font-display text-xl font-bold leading-snug text-ink transition-colors duration-300 group-hover:text-rose-deep sm:text-2xl">
@@ -117,7 +122,7 @@ export default function HubPage({ slug }: { slug: string }) {
               return (
                 <Link
                   key={rel.slug}
-                  to={`/hub/${rel.slug}`}
+                  to={hubPath(rel.slug)}
                   className="group inline-flex items-center gap-2.5 rounded-full border border-line bg-paper px-5 py-3 text-sm font-semibold text-ink-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-rose-deep hover:text-rose-deep"
                 >
                   <Compass className="h-4 w-4 text-gold-deep transition-transform duration-300 group-hover:rotate-45" aria-hidden />

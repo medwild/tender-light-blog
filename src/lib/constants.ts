@@ -18,10 +18,10 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { label: "Guides", to: "/guides" },
-  { label: "Journal", to: "/blog" },
-  { label: "Poses", to: "/category/poses" },
-  { label: "Outfits", to: "/category/outfits" },
-  { label: "Locations", to: "/category/locations" },
+  { label: "Ideas", to: "/engagement-photo-ideas" },
+  { label: "Poses", to: "/engagement-photo-poses" },
+  { label: "Outfits", to: "/engagement-photo-outfits" },
+  { label: "Locations", to: "/engagement-photo-locations" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ] as const;

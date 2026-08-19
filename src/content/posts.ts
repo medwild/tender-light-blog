@@ -44,6 +44,7 @@ export const getCategory = (slug: string) => CATEGORIES.find((c) => c.slug === s
 
 /** Lead writer — see src/content/persona.ts for the full voice system. */
 const harper = {
+  handle: "harper-ellis",
   name: "Harper Ellis",
   role: "Founder & Engagement Photo Editor",
   bio: "Harper spent 8 years behind the lens shooting 400+ engagement sessions across the US before trading her camera for a keyboard. Based in Austin and married to her high school sweetheart, she writes the warm, practical guides she wishes every couple had before their shoot.",
@@ -54,6 +55,7 @@ const harper = {
 const clara = harper;
 
 const mia = {
+  handle: "mia-delacroix",
   name: "Mia Delacroix",
   role: "Session Stylist",
   bio: "Mia styles engagement and wedding couples for camera — color-first, comfort-always. Her rule of thumb: if you'd wear it to a nice dinner, it will photograph beautifully.",
@@ -1347,7 +1349,10 @@ export const POSTS: Post[] = [
   },
 ];
 
-export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);
+export const getPost = (slug: string) => {
+  const p = POSTS.find((x) => x.slug === slug);
+  return p ? withMeta(p) : undefined;
+};
 
 /**
  * Silo (hub) assignment per article — one post lives in exactly one hub.
@@ -1369,6 +1374,248 @@ export const POST_HUB: Record<string, string> = {
 
 export const hubFor = (slug: string) => POST_HUB[slug] ?? "engagement-photo-ideas";
 
+/**
+ * Frontmatter (§3 of the SEO plan) that sits alongside each article body:
+ * keyword targeting, Pinterest pin assets, internal links, related-post
+ * overrides and monetization switches. Merged into posts by `withMeta`.
+ */
+import type { Monetization, PinImage } from "./types";
+
+const M_ON: Monetization = { adsense: true, affiliate: true, leadMagnet: false };
+
+interface PostMeta {
+  pillar?: boolean;
+  primaryKeyword: string;
+  secondaryKeywords: string[];
+  lsiKeywords: string[];
+  searchIntent: "informational" | "commercial" | "navigational";
+  pinImages: PinImage[];
+  citations: string[];
+  internalLinks: { url: string; anchor: string }[];
+  relatedPosts?: string[];
+  monetization: Monetization;
+}
+
+const pin = (image: string, pinTitle: string, pinDescription: string): PinImage => ({
+  image,
+  pinTitle,
+  pinDescription,
+});
+
+export const POST_META: Record<string, PostMeta> = {
+  "30-engagement-photo-poses-couples": {
+    pillar: true,
+    primaryKeyword: "engagement photo poses",
+    secondaryKeywords: ["engagement poses for couples", "romantic engagement poses", "fun engagement poses"],
+    lsiKeywords: ["forehead touch", "walking away pose", "hand placement", "golden hour", "candid frames"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.posesCover, "30 Engagement Photo Poses (2026)", "Classic, fun and romantic engagement photo poses for couples — with the exact direction photographers use. Save this pose list for your session."),
+      pin(IMAGES.galleryLaugh, "Poses for Couples Who Hate Posing", "Camera-shy? These relaxed engagement poses feel natural, not stiff. Save them before your shoot."),
+      pin(IMAGES.gallerySilhouette, "Romantic Engagement Poses at Sunset", "Golden-hour engagement poses that look timeless. Pin the frames you want to recreate."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-poses/classic-engagement-photos", anchor: "classic engagement photos" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+      { url: "/engagement-photo-ideas/how-to-feel-natural-in-front-of-camera", anchor: "feel natural in front of the camera" },
+    ],
+    relatedPosts: ["classic-engagement-photos", "casual-engagement-photo-ideas", "best-outfits-engagement-photos"],
+    monetization: M_ON,
+  },
+  "classic-engagement-photos": {
+    primaryKeyword: "classic engagement photos",
+    secondaryKeywords: ["timeless engagement photos", "classic engagement poses", "traditional engagement pictures"],
+    lsiKeywords: ["forehead touch", "the dip", "temple kiss", "black and white", "film grain"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.classicDip, "27 Classic Engagement Photos", "Timeless engagement poses that never go out of style — from 400+ real sessions. Save the ones you love."),
+      pin(IMAGES.posesCover, "Classic Poses for Engagement Photos", "The engagement poses that still look beautiful in 20 years. Pin this cheat sheet."),
+      pin(IMAGES.galleryRing, "Timeless Engagement Photo Ideas", "Classic, film-inspired engagement frames couples reprint for decades. Save for your shoot."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "30 engagement photo poses" },
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photo ideas" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "best outfits for engagement photos" },
+    ],
+    relatedPosts: ["30-engagement-photo-poses-couples", "casual-engagement-photo-ideas", "golden-hour-photography-tips-couples"],
+    monetization: M_ON,
+  },
+  "best-outfits-engagement-photos": {
+    pillar: true,
+    primaryKeyword: "what to wear for engagement photos",
+    secondaryKeywords: ["engagement photo outfits", "what to wear engagement shoot", "couple photo outfits"],
+    lsiKeywords: ["color palette", "coordinated outfits", "muted tones", "70/20/10 rule", "seasonal outfits"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.outfitsCover, "What to Wear: Engagement Photos", "Colors, fabrics and formulas that flatter on camera — plus what to avoid. Save this outfit guide."),
+      pin(IMAGES.galleryTwirl, "Engagement Outfit Ideas (Do's & Don'ts)", "Coordinate, don't match. The 70/20/10 rule for engagement outfits that look timeless."),
+      pin(IMAGES.casualCafe, "Casual Engagement Outfits", "Jeans, knits and clean sneakers — styled on purpose. Pin the looks you'd wear."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photo ideas" },
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
+    ],
+    relatedPosts: ["casual-engagement-photo-ideas", "30-engagement-photo-poses-couples", "engagement-photo-checklist"],
+    monetization: M_ON,
+  },
+  "top-engagement-photo-locations-oklahoma": {
+    primaryKeyword: "engagement photo locations oklahoma",
+    secondaryKeywords: ["oklahoma engagement photos", "okc engagement photographer spots", "engagement shoot oklahoma"],
+    lsiKeywords: ["golden hour", "guthrie", "tallgrass prairie", "bricktown", "permits"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.locationsCover, "10 Engagement Photo Locations in Oklahoma", "Lakes, bridges, prairies and brick districts — scouted with light and permit notes. Save for your OK shoot."),
+      pin(IMAGES.hero, "Oklahoma Engagement Photo Spots", "Golden-hour engagement locations near OKC that deliver every time. Pin this list."),
+      pin(IMAGES.gallerySilhouette, "Prairie Engagement Photo Ideas", "Wide skies and tallgrass — the most romantic Oklahoma engagement backdrop. Save it."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour photography tips" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear" },
+    ],
+    relatedPosts: ["engagement-photo-ideas-outside", "golden-hour-photography-tips-couples", "engagement-photo-checklist"],
+    monetization: M_ON,
+  },
+  "engagement-photo-ideas-outside": {
+    primaryKeyword: "outdoor engagement photo ideas",
+    secondaryKeywords: ["outside engagement photos", "nature engagement photos", "engagement photos in a field"],
+    lsiKeywords: ["meadow", "creek", "tree line", "weather", "golden hour"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.hero, "21 Outdoor Engagement Photo Ideas", "Meadows, creeks, tree lines and city steps — outdoor engagement ideas for every season. Save them."),
+      pin(IMAGES.locationsCover, "Outdoor Engagement Poses & Spots", "Outside solves lighting, variety and cost. Pin these 21 outdoor engagement ideas."),
+      pin(IMAGES.gallerySilhouette, "Sunset Engagement Photo Ideas", "Golden-hour silhouettes and backlit fields — the outdoor frames every gallery needs."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-locations/top-engagement-photo-locations-oklahoma", anchor: "engagement photo locations in Oklahoma" },
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
+    ],
+    relatedPosts: ["top-engagement-photo-locations-oklahoma", "golden-hour-photography-tips-couples", "classic-engagement-photos"],
+    monetization: M_ON,
+  },
+  "casual-engagement-photo-ideas": {
+    pillar: true,
+    primaryKeyword: "casual engagement photos",
+    secondaryKeywords: ["casual engagement photo ideas", "relaxed engagement photos", "everyday engagement photos"],
+    lsiKeywords: ["natural poses", "candid moments", "comfortable outfits", "golden hour", "at home session"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.casualCafe, "15 Casual Engagement Photo Ideas", "Casual engagement photos that feel like your real life — outfits, poses and locations. Save this guide."),
+      pin(IMAGES.galleryLaugh, "Relaxed Engagement Poses", "Natural poses for couples who hate the camera. Pin these before your casual session."),
+      pin(IMAGES.outfitsCover, "Casual Engagement Outfits", "Jeans, yes — styled on purpose. The outfits that make casual photos look intentional."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/unique-engagement-pics", anchor: "unique engagement pics" },
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
+    ],
+    relatedPosts: ["unique-engagement-pics", "engagement-photo-ideas-outside", "best-outfits-engagement-photos"],
+    monetization: { adsense: true, affiliate: true, leadMagnet: true },
+  },
+  "unique-engagement-pics": {
+    primaryKeyword: "unique engagement pics",
+    secondaryKeywords: ["unique engagement photos", "creative engagement photos", "fun engagement photo ideas"],
+    lsiKeywords: ["props", "blue hour", "concept shoot", "personality", "neon"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.gallerySilhouette, "19 Unique Engagement Pics", "Creative engagement ideas that look like you, not a template. Save the ones that fit your story."),
+      pin(IMAGES.casualCafe, "Unique Engagement Photo Ideas", "Props with a story and blue-hour timing — engagement pics nobody else will have."),
+      pin(IMAGES.galleryTwirl, "Creative Couple Photo Ideas", "Concepts, not poses: 19 ways to make your engagement gallery one of a kind."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+      { url: "/engagement-photo-ideas/how-to-feel-natural-in-front-of-camera", anchor: "feel natural in front of the camera" },
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement ideas" },
+    ],
+    relatedPosts: ["casual-engagement-photo-ideas", "engagement-photo-ideas-outside", "how-to-feel-natural-in-front-of-camera"],
+    monetization: M_ON,
+  },
+  "golden-hour-photography-tips-couples": {
+    primaryKeyword: "golden hour engagement photos",
+    secondaryKeywords: ["golden hour photography tips", "best light for engagement photos", "sunset engagement photos"],
+    lsiKeywords: ["backlit", "frontlit", "blue hour", "overcast", "sun flare"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.hero, "Golden Hour Photo Tips for Couples", "Time the light like a pro — no camera knowledge needed. Save these golden-hour tips."),
+      pin(IMAGES.gallerySilhouette, "Sunset Engagement Photo Tips", "Backlit vs frontlit, and what to do when the sky goes grey. Pin this light guide."),
+      pin(IMAGES.galleryTwirl, "Best Light for Engagement Photos", "The 60 minutes that make or break your gallery — and how to use them."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
+      { url: "/engagement-photo-locations/top-engagement-photo-locations-oklahoma", anchor: "Oklahoma engagement locations" },
+      { url: "/engagement-photo-ideas/engagement-photo-checklist", anchor: "engagement photo checklist" },
+    ],
+    relatedPosts: ["engagement-photo-ideas-outside", "top-engagement-photo-locations-oklahoma", "engagement-photo-checklist"],
+    monetization: M_ON,
+  },
+  "engagement-photo-checklist": {
+    primaryKeyword: "engagement photo checklist",
+    secondaryKeywords: ["engagement shoot preparation", "what to bring engagement photos", "engagement photo planning"],
+    lsiKeywords: ["timeline", "outfits", "rain date", "golden hour", "day-of kit"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.galleryLaugh, "Engagement Photo Checklist", "Everything to plan from 3 months out to 1 hour before — in order. Save this checklist."),
+      pin(IMAGES.outfitsCover, "Engagement Shoot Prep Guide", "Outfits, scouting, timing and the 10 things to pack. Pin it for your session."),
+      pin(IMAGES.hero, "Plan Your Engagement Photos", "The timeline that makes sessions feel relaxed, not rushed. Save for later."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
+    ],
+    relatedPosts: ["best-outfits-engagement-photos", "golden-hour-photography-tips-couples", "how-to-feel-natural-in-front-of-camera"],
+    monetization: M_ON,
+  },
+  "how-to-feel-natural-in-front-of-camera": {
+    primaryKeyword: "how to look natural in engagement photos",
+    secondaryKeywords: ["camera shy engagement photos", "natural engagement poses", "relaxed couple photos"],
+    lsiKeywords: ["prompts", "movement", "breathing", "candid", "comfort"],
+    searchIntent: "informational",
+    pinImages: [
+      pin(IMAGES.galleryRing, "Look Natural in Engagement Photos", "Prompts, movement and one breathing trick for camera-shy couples. Save these."),
+      pin(IMAGES.galleryLaugh, "Poses for Camera-Shy Couples", "Stop performing, start doing — the prompts that make natural engagement photos."),
+      pin(IMAGES.hero, "Natural Engagement Photo Tips", "How photographers make awkward couples glow. Pin the toolkit."),
+    ],
+    citations: [],
+    internalLinks: [
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+      { url: "/engagement-photo-ideas/unique-engagement-pics", anchor: "unique engagement pics" },
+    ],
+    relatedPosts: ["30-engagement-photo-poses-couples", "casual-engagement-photo-ideas", "unique-engagement-pics"],
+    monetization: M_ON,
+  },
+};
+
+const DEFAULT_META: PostMeta = {
+  primaryKeyword: "engagement photos",
+  secondaryKeywords: [],
+  lsiKeywords: [],
+  searchIntent: "informational",
+  pinImages: [],
+  citations: [],
+  internalLinks: [],
+  monetization: M_ON,
+};
+
+/** Merge §3 frontmatter into a post object (cluster is derived via POST_HUB). */
+export const withMeta = (p: Post): Post => ({
+  ...p,
+  ...(POST_META[p.slug] ?? DEFAULT_META),
+  cluster: hubFor(p.slug),
+} as Post & { cluster: string });
+
 /** Canonical silo path for an article: `/{hub}/{slug}` (no trailing slash). */
 export const postPath = (slug: string) => `/${hubFor(slug)}/${slug}`;
 
@@ -1376,19 +1623,26 @@ export const postPath = (slug: string) => `/${hubFor(slug)}/${slug}`;
 export const hubPath = (hubSlug: string) => `/${hubSlug}`;
 
 export const getPostsByHub = (hubSlug: string) =>
-  POSTS.filter((p) => hubFor(p.slug) === hubSlug);
+  POSTS.filter((p) => hubFor(p.slug) === hubSlug).map(withMeta);
 
 export const getPostsByCategory = (category: string) =>
-  POSTS.filter((p) => p.category === category);
+  POSTS.filter((p) => p.category === category).map(withMeta);
 
-export const getRelatedPosts = (post: Post, count = 3) => {
+/** Related posts — honors an explicit frontmatter override, else same-category first. */
+export const getRelatedPosts = (post: Post, count = 3): Post[] => {
+  if (post.relatedPosts?.length) {
+    const picked = post.relatedPosts
+      .map((slug) => getPost(slug))
+      .filter((p): p is Post => Boolean(p));
+    if (picked.length >= count) return picked.slice(0, count);
+  }
   const same = POSTS.filter((p) => p.slug !== post.slug && p.category === post.category);
   const others = POSTS.filter((p) => p.slug !== post.slug && p.category !== post.category);
-  return [...same, ...others].slice(0, count);
+  return [...same, ...others].slice(0, count).map(withMeta);
 };
 
 export const sortedPosts = () =>
-  [...POSTS].sort((a, b) => (a.date < b.date ? 1 : -1));
+  [...POSTS].sort((a, b) => (a.date < b.date ? 1 : -1)).map(withMeta);
 
 /** Reading time from word count (~200 wpm). */
 export const readingTime = (post: Post) => {

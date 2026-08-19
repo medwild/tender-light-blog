@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Aperture, ArrowRight, Check, MapPin, ShoppingBag, Sparkles, Sun } from "lucide-react";
-import type { Block } from "../../content/types";
+import type { Block, Monetization } from "../../content/types";
 import { Link } from "../../lib/router";
 import Reveal from "../ui/Reveal";
 import FaqSection from "./FaqSection";
+
+const DEFAULT_MONETIZATION: Monetization = { adsense: true, affiliate: true, leadMagnet: true };
 
 const calloutTones = {
   rose: "border-rose/70 bg-rose/12 text-rose-deep",
@@ -18,10 +20,23 @@ const calloutIcons = {
 };
 
 /** Renders the typed block tree (the MDX equivalent) with scroll reveals. */
-export default function PostBody({ blocks }: { blocks: Block[] }) {
+export default function PostBody({
+  blocks,
+  monetization,
+}: {
+  blocks: Block[];
+  monetization?: Monetization;
+}) {
+  const m = monetization ?? DEFAULT_MONETIZATION;
+  const visible = blocks.filter((b) => {
+    if (b.type === "ad" && !m.adsense) return false;
+    if (b.type === "shop" && !m.affiliate) return false;
+    if (b.type === "leadMagnet" && !m.leadMagnet) return false;
+    return true;
+  });
   return (
     <div className="prose-tender">
-      {blocks.map((block, i) => {
+      {visible.map((block, i) => {
         switch (block.type) {
           case "p":
             return <Reveal key={i}><p>{renderInline(block.text)}</p></Reveal>;

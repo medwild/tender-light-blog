@@ -1,7 +1,8 @@
 import { ArrowDown, ArrowRight, Camera, Heart, MapPin, Sparkles } from "lucide-react";
 import { Link } from "../lib/router";
 import { IMAGES, SITE } from "../lib/constants";
-import { categories, sortedPosts } from "../lib/content";
+import { postsByHub, sortedPosts } from "../lib/content";
+import { HUBS } from "../content/hubs";
 import ArticleCard from "../components/blog/ArticleCard";
 import NewsletterForm from "../components/ui/NewsletterForm";
 import Reveal from "../components/ui/Reveal";
@@ -186,44 +187,47 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-24">
           <Reveal className="mb-12 grid gap-6 md:grid-cols-12 md:items-end">
             <div className="md:col-span-7">
-              <p className="font-script text-3xl text-gold-deep">pick a lane</p>
+              <p className="font-script text-3xl text-gold-deep">the topical map</p>
               <h2 id="categories-heading" className="mt-1 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-                Four shelves, one <em className="italic text-rose-deep">season</em>
+                Six hubs, one <em className="italic text-rose-deep">season</em>
               </h2>
             </div>
             <p className="max-w-md text-[15px] leading-relaxed text-ink-soft md:col-span-5">
-              Every guide lives on one shelf. Start where the stress is — poses if you're
+              Every guide lives in one hub. Start where the stress is — poses if you're
               camera-shy, outfits if the closet is the problem, locations if you're still deciding where.
             </p>
           </Reveal>
 
           <ul className="divide-y divide-line border-y border-line">
-            {categories.map((cat, i) => (
-              <Reveal as="li" key={cat.slug} delay={i * 70}>
-                <Link
-                  to={`/category/${cat.slug}`}
-                  className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 py-7 transition-colors duration-300 hover:bg-cream sm:gap-8 sm:py-8"
-                >
-                  <span className="font-script text-3xl text-ink-faint transition-colors duration-300 group-hover:text-rose-deep sm:text-4xl">
-                    0{i + 1}
-                  </span>
-                  <span>
-                    <span className="block font-display text-2xl font-bold transition-transform duration-300 group-hover:translate-x-2 sm:text-[2rem]">
-                      {cat.name}
+            {HUBS.map((hub, i) => {
+              const count = postsByHub(hub.slug).length;
+              return (
+                <Reveal as="li" key={hub.slug} delay={i * 70}>
+                  <Link
+                    to={`/${hub.slug}`}
+                    className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 py-7 transition-colors duration-300 hover:bg-cream sm:gap-8 sm:py-8"
+                  >
+                    <span className="font-script text-3xl text-ink-faint transition-colors duration-300 group-hover:text-rose-deep sm:text-4xl">
+                      0{i + 1}
                     </span>
-                    <span className="mt-1 block max-w-xl text-[15px] text-ink-soft">{cat.description}</span>
-                  </span>
-                  <span className="flex items-center gap-4">
-                    <span className="hidden text-[12px] font-semibold uppercase tracking-[0.18em] text-ink-faint sm:block">
-                      {i + 1 === 1 ? "1 guide" : i + 1 === 4 ? "3 guides" : "1 guide"}
+                    <span>
+                      <span className="block font-display text-2xl font-bold transition-transform duration-300 group-hover:translate-x-2 sm:text-[2rem]">
+                        {hub.name}
+                      </span>
+                      <span className="mt-1 block max-w-xl text-[15px] text-ink-soft">{hub.lede}</span>
                     </span>
-                    <span className="grid h-12 w-12 place-items-center rounded-full border border-line transition-all duration-300 group-hover:rotate-45 group-hover:border-rose-deep group-hover:bg-rose-deep group-hover:text-cream">
-                      <ArrowRight className="h-5 w-5" aria-hidden />
+                    <span className="flex items-center gap-4">
+                      <span className="hidden text-[12px] font-semibold uppercase tracking-[0.18em] text-ink-faint sm:block">
+                        {count} {count === 1 ? "guide" : "guides"} · KD {hub.kd}
+                      </span>
+                      <span className="grid h-12 w-12 place-items-center rounded-full border border-line transition-all duration-300 group-hover:rotate-45 group-hover:border-rose-deep group-hover:bg-rose-deep group-hover:text-cream">
+                        <ArrowRight className="h-5 w-5" aria-hidden />
+                      </span>
                     </span>
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
+                  </Link>
+                </Reveal>
+              );
+            })}
           </ul>
         </div>
       </section>

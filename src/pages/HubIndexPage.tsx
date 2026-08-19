@@ -30,7 +30,7 @@ export default function HubIndexPage() {
             return (
               <Reveal as="li" key={hub.slug} delay={i * 60}>
                 <Link
-                  to={`/hub/${hub.slug}`}
+                  to={`/${hub.slug}`}
                   className="group grid gap-4 py-8 transition-colors duration-300 hover:bg-paper sm:grid-cols-[80px_1fr_auto] sm:items-center sm:gap-8 sm:px-4"
                 >
                   <span className={`font-display text-5xl font-bold italic ${accent.text} transition-transform duration-300 group-hover:-translate-y-1`}>
@@ -68,7 +68,7 @@ export default function HubIndexPage() {
               Most couples start with <em className="italic text-rose">engagement photo ideas</em> — it's the biggest hub.
             </h2>
             <Link
-              to="/hub/engagement-photo-ideas"
+              to="/engagement-photo-ideas"
               className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-rose"
             >
               Open the ideas hub

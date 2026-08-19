@@ -1,5 +1,6 @@
 import { Link } from "../../lib/router";
-import { CATEGORIES, sortedPosts } from "../../content/posts";
+import { postPath, sortedPosts } from "../../content/posts";
+import { HUBS } from "../../content/hubs";
 import { SITE } from "../../lib/constants";
 import NewsletterForm from "../ui/NewsletterForm";
 import { Heart, Instagram, Mail, MapPin } from "lucide-react";
@@ -47,6 +48,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Explore</h3>
             <ul className="mt-4 space-y-2.5 text-sm">
+              <li><Link to="/guides" className="link-draw hover:text-cream">All Guides</Link></li>
               <li><Link to="/blog" className="link-draw hover:text-cream">The Journal</Link></li>
               <li><Link to="/about" className="link-draw hover:text-cream">About Harper</Link></li>
               <li><Link to="/contact" className="link-draw hover:text-cream">Book a session</Link></li>
@@ -54,12 +56,12 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Categories</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Topic Hubs</h3>
             <ul className="mt-4 space-y-2.5 text-sm">
-              {CATEGORIES.map((c) => (
-                <li key={c.slug}>
-                  <Link to={`/category/${c.slug}`} className="link-draw hover:text-cream">
-                    {c.name}
+              {HUBS.map((h) => (
+                <li key={h.slug}>
+                  <Link to={`/${h.slug}`} className="link-draw hover:text-cream">
+                    {h.name}
                   </Link>
                 </li>
               ))}
@@ -78,12 +80,15 @@ export default function Footer() {
             © {new Date().getFullYear()} {SITE.name} · Made with
             <Heart className="h-3.5 w-3.5 fill-rose text-rose" aria-label="love" /> in Austin
           </p>
-          <p className="flex items-center gap-4">
+          <p className="flex flex-wrap items-center gap-4">
             {latest.map((p) => (
-              <Link key={p.slug} to={`/blog/${p.slug}`} className="link-draw hidden truncate hover:text-cream md:inline">
+              <Link key={p.slug} to={postPath(p.slug)} className="link-draw hidden truncate hover:text-cream md:inline">
                 {p.title.split(":")[0]}
               </Link>
             ))}
+            <Link to="/privacy-policy" className="link-draw hover:text-cream">Privacy</Link>
+            <Link to="/affiliate-disclosure" className="link-draw hover:text-cream">Affiliate Disclosure</Link>
+            <Link to="/editorial-policy" className="link-draw hover:text-cream">Editorial Policy</Link>
             <span className="flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5" aria-hidden /> {SITE.location}
             </span>

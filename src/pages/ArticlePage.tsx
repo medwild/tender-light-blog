@@ -1,6 +1,7 @@
 import { CalendarDays, Clock, Tag } from "lucide-react";
 import { Link } from "../lib/router";
-import { extractToc, formatDate, getCategory, getPost, readingTime, relatedPosts } from "../lib/content";
+import { extractToc, formatDate, getPost, hubFor, hubPath, postPath, readingTime, relatedPosts } from "../lib/content";
+import { getHub } from "../content/hubs";
 import AuthorBox from "../components/blog/AuthorBox";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import CommentSection from "../components/blog/CommentSection";
@@ -16,9 +17,10 @@ export default function ArticlePage({ slug }: { slug: string }) {
   const post = getPost(slug);
   if (!post) return <NotFoundPage />;
 
-  const category = getCategory(post.category);
+  const hub = getHub(hubFor(post.slug));
   const toc = extractToc(post);
   const related = relatedPosts(post, 3);
+  const shareImage = post.pinImages?.[0]?.image ?? post.featuredImage;
 
   return (
     <article className="pt-28 md:pt-32">
@@ -26,9 +28,8 @@ export default function ArticlePage({ slug }: { slug: string }) {
         <Breadcrumbs
           items={[
             { name: "Home", path: "/" },
-            { name: "The Journal", path: "/blog" },
-            { name: category?.name ?? "Article", path: `/category/${post.category}` },
-            { name: post.title, path: `/blog/${post.slug}` },
+            { name: hub?.name ?? "Guides", path: hub ? hubPath(hub.slug) : "/guides" },
+            { name: post.title, path: postPath(post.slug) },
           ]}
         />
 
@@ -36,10 +37,11 @@ export default function ArticlePage({ slug }: { slug: string }) {
         <header className="mx-auto max-w-3xl text-center">
           <Reveal>
             <Link
-              to={`/category/${post.category}`}
+              to={hub ? hubPath(hub.slug) : "/guides"}
               className="inline-block rounded-full bg-rose/25 px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.16em] text-rose-deep transition-all duration-300 hover:-translate-y-0.5 hover:bg-rose/45"
             >
-              {category?.name}
+              {hub?.name ?? "Guides"}
+              {post.pillar && <span className="ml-1.5 text-gold-deep">★ pillar</span>}
             </Link>
             <h1 className="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.4rem]">
               {post.title}
@@ -52,7 +54,7 @@ export default function ArticlePage({ slug }: { slug: string }) {
             <span>By <strong className="font-semibold text-ink">{post.author.name}</strong></span>
           </Reveal>
           <Reveal delay={200} className="mt-7 flex justify-center">
-            <ShareButtons title={post.title} path={`/blog/${post.slug}`} image={post.featuredImage} />
+            <ShareButtons title={post.title} path={postPath(post.slug)} image={shareImage} />
           </Reveal>
         </header>
 
@@ -73,13 +75,12 @@ export default function ArticlePage({ slug }: { slug: string }) {
           <ul className="mt-3 space-y-2">
             {toc.map((t) => (
               <li key={t.id} className={t.depth === 3 ? "pl-4" : ""}>
-                <a href={`#/${`blog/${post.slug}`}`} onClick={(e) => {
-                  e.preventDefault();
+                <button type="button" onClick={() => {
                   const el = document.getElementById(t.id);
                   if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 110, behavior: "smooth" });
-                }} className="link-draw text-sm text-ink-soft">
+                }} className="link-draw text-left text-sm text-ink-soft">
                   {t.text}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
@@ -91,7 +92,7 @@ export default function ArticlePage({ slug }: { slug: string }) {
             <TableOfContents items={toc} />
           </aside>
           <div className="lg:col-span-8">
-            <PostBody blocks={post.blocks} />
+            <PostBody blocks={post.blocks} monetization={post.monetization} />
 
             {/* Tags */}
             <div className="mt-12 flex flex-wrap items-center gap-2.5 border-t border-line pt-8">
@@ -102,6 +103,44 @@ export default function ArticlePage({ slug }: { slug: string }) {
                 </span>
               ))}
             </div>
+
+            {/* Keyword targeting (frontmatter) — visible topical signals */}
+            {(post.secondaryKeywords?.length || post.lsiKeywords?.length) ? (
+              <Reveal className="mt-6 rounded-xl border border-line bg-paper p-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-faint">In this guide</p>
+                <p className="mt-2.5 flex flex-wrap gap-2">
+                  {[...(post.secondaryKeywords ?? []), ...(post.lsiKeywords ?? [])].map((k) => (
+                    <span key={k} className="rounded-full bg-cream px-3 py-1 text-[12px] font-medium text-ink-soft">{k}</span>
+                  ))}
+                </p>
+              </Reveal>
+            ) : null}
+
+            {/* Editorial internal links (frontmatter) */}
+            {post.internalLinks?.length ? (
+              <Reveal className="mt-6 rounded-xl border border-line bg-paper p-5">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-faint">Keep exploring</p>
+                <ul className="mt-2.5 space-y-1.5">
+                  {post.internalLinks.map((l) => (
+                    <li key={l.url}>
+                      <Link to={l.url} className="link-draw text-sm font-medium text-rose-deep">
+                        {l.anchor} →
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            ) : null}
+
+            {/* Citations / sources (E-E-A-T) */}
+            {post.citations?.length ? (
+              <Reveal className="mt-6">
+                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-faint">Sources</p>
+                <ul className="mt-2 space-y-1 text-[13px] text-ink-soft">
+                  {post.citations.map((c) => <li key={c}>• {c}</li>)}
+                </ul>
+              </Reveal>
+            ) : null}
 
             <AuthorBox author={post.author} />
             <CommentSection />
@@ -121,7 +160,7 @@ export default function ArticlePage({ slug }: { slug: string }) {
                 <p className="font-script text-2xl text-gold">up next on your reading list</p>
                 <h2 className="mt-2 font-display text-3xl font-bold leading-snug">{related[0].title}</h2>
                 <Link
-                  to={`/blog/${related[0].slug}`}
+                  to={postPath(related[0].slug)}
                   className="group mt-6 inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:bg-rose"
                 >
                   Read it now
