@@ -48,7 +48,7 @@ export default function Footer() {
             <h3 className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Explore</h3>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li><Link to="/blog" className="link-draw hover:text-cream">The Journal</Link></li>
-              <li><Link to="/about" className="link-draw hover:text-cream">About Clara</Link></li>
+              <li><Link to="/about" className="link-draw hover:text-cream">About Harper</Link></li>
               <li><Link to="/contact" className="link-draw hover:text-cream">Book a session</Link></li>
             </ul>
           </div>
@@ -76,7 +76,7 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-3 border-t border-cream/10 pt-6 text-xs text-cream/40 sm:flex-row sm:items-center sm:justify-between">
           <p className="flex items-center gap-1.5">
             © {new Date().getFullYear()} {SITE.name} · Made with
-            <Heart className="h-3.5 w-3.5 fill-rose text-rose" aria-label="love" /> in Oklahoma
+            <Heart className="h-3.5 w-3.5 fill-rose text-rose" aria-label="love" /> in Austin
           </p>
           <p className="flex items-center gap-4">
             {latest.map((p) => (

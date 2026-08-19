@@ -40,7 +40,7 @@ export default function AboutPage() {
   return (
     <div className="pt-28 md:pt-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "About Clara", path: "/about" }]} />
+        <Breadcrumbs items={[{ name: "Home", path: "/" }, { name: "About Harper", path: "/about" }]} />
 
         {/* Split intro */}
         <div className="grid items-center gap-12 pb-20 lg:grid-cols-12">
@@ -48,7 +48,7 @@ export default function AboutPage() {
             <div className="overflow-hidden rounded-xl border border-line shadow-[0_40px_80px_-45px_rgba(44,44,44,0.5)]">
               <img
                 src={IMAGES.about}
-                alt="Clara Bennett, engagement photographer, holding a vintage film camera"
+                alt="Harper Ellis, founder and engagement photo editor of Tender Light, holding a vintage film camera"
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>
@@ -62,24 +62,29 @@ export default function AboutPage() {
             <Reveal>
               <p className="font-script text-3xl text-rose-deep">nice to meet you</p>
               <h1 className="mt-2 font-display text-5xl font-bold leading-[1.03] tracking-tight sm:text-6xl">
-                I photograph the season <em className="italic text-rose-deep">between yes and I do</em>
+                I traded the camera <em className="italic text-rose-deep">for the keyboard</em>
               </h1>
             </Reveal>
             <Reveal delay={120} className="mt-7 max-w-xl space-y-5 text-[1.04rem] leading-relaxed text-ink-soft">
               <p>
-                I'm Clara Bennett — photographer, writer of this journal, and the person who will
-                make you laugh at something genuinely stupid thirty seconds before the best photo
-                of your engagement.
+                I'm Harper Ellis — engagement photographer for eight years, 400+ sessions in the
+                rearview, now the writer behind this journal. I'm the friend who'll tell you your
+                golden-hour idea is perfect, then quietly steer you away from the spot with the
+                porta-potty. You deserve photos that feel like you — and you don't need to be
+                “good at photos” to get them.
               </p>
               <p>
                 Tender Light started in {SITE.founded} with my sister's engagement photos. She kept
                 apologizing for being “awkward,” and I kept thinking: <em className="font-display italic text-ink">it's not you — nobody
-                told you what to do.</em> This journal is that telling, written down: every pose I direct,
-                every outfit rule I enforce, every location I trust with someone's golden hour.
+                told you what to do.</em> This journal is that telling, written down: every pose I
+                directed, every outfit rule I enforced, every location I trusted with someone's
+                golden hour.
               </p>
               <p>
-                When I'm not shooting, I'm scouting gravel roads for stone bridges, arguing that
-                grey skies are a feature, and printing other people's memories because paper still matters.
+                These days I live in {SITE.location.split(",")[0]} with my high school sweetheart,
+                writing the guides I wish every couple had. I still scout gravel roads for stone
+                bridges, still argue that grey skies are a feature — I just hand you the words
+                instead of the negatives.
               </p>
             </Reveal>
             <Reveal delay={220} className="mt-8 flex flex-wrap gap-4">
@@ -134,14 +139,15 @@ export default function AboutPage() {
             ))}
           </ul>
           <div className="mt-9 rounded-xl border border-line bg-paper p-6">
-            <p className="font-display text-lg font-bold">Sessions & availability</p>
+            <p className="font-display text-lg font-bold">Work with me</p>
             <p className="mt-2 text-[15px] leading-relaxed text-ink-soft">
-              Based in {SITE.location}, traveling anywhere the light is good. Engagement sessions
-              run 60–90 minutes, always timed to golden hour. Currently booking{" "}
+              Based in {SITE.location}. I consult with couples on their engagement shoot (poses,
+              outfits, locations, photographer shortlists) and partner with wedding brands on
+              honest, tested recommendations. Currently booking{" "}
               <strong className="font-semibold text-ink">spring &amp; summer 2026</strong>.
             </p>
             <Link to="/contact" className="link-draw mt-4 inline-block text-sm font-semibold uppercase tracking-[0.14em] text-rose-deep">
-              Check a date →
+              Say hello →
             </Link>
           </div>
         </Reveal>
@@ -156,7 +162,7 @@ export default function AboutPage() {
           </div>
           <blockquote className="mt-10 border-l-2 border-gold pl-5">
             <p className="font-display text-xl font-medium italic leading-snug">
-              “Clara made two camera-hating introverts look like they'd been modeling for years.”
+              “Harper made two camera-hating introverts look like they'd been modeling for years — then talked us off the ledge about outfits over tacos.”
             </p>
             <cite className="mt-2 block font-script text-xl not-italic text-rose-deep">— Dana & Marcus, October session</cite>
           </blockquote>

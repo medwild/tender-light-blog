@@ -42,13 +42,16 @@ export const getCategory = (slug: string) => CATEGORIES.find((c) => c.slug === s
 
 /* ————————————————————— Authors ————————————————————— */
 
-const clara = {
-  name: "Clara Bennett",
-  role: "Photographer & Founder",
-  bio: "Clara has photographed 400+ engagements across the South since 2019. She shoots natural light, film-inspired frames and believes the best pose is the one you forget you're holding.",
+/** Lead writer — see src/content/persona.ts for the full voice system. */
+const harper = {
+  name: "Harper Ellis",
+  role: "Founder & Engagement Photo Editor",
+  bio: "Harper spent 8 years behind the lens shooting 400+ engagement sessions across the US before trading her camera for a keyboard. Based in Austin and married to her high school sweetheart, she writes the warm, practical guides she wishes every couple had before their shoot.",
   avatar: IMAGES.about,
   instagram: "@tenderlight.journal",
 };
+/** Alias kept so existing post references read naturally. */
+const clara = harper;
 
 const mia = {
   name: "Mia Delacroix",
@@ -639,7 +642,7 @@ export const POSTS: Post[] = [
     blocks: [
       {
         type: "p",
-        text: "Ask any photographer which frames a couple reprints ten years later, and the answer is rarely the formal ones. It's the mid-laugh glance, the coffee cup caught halfway to a mouth, the walk where nobody remembered the camera existed. That's the whole promise of a casual engagement photoshoot: no gown, no pressure, no two-hour pose marathon — just the two of you, doing the things you already do, photographed a little more beautifully. In this guide you'll find 15 ideas across outfits, locations and relaxed engagement poses, plus the small decisions (yes, including jeans) that make simple engagement pictures look intentional instead of accidental.",
+        text: "When I shot a session in Zilker Park last October, the couple showed up in jeans and a slightly-too-big denim jacket, already laughing about a parking ticket. Twenty minutes in, she did this thing where she tucked her hair back and snorted at something he said — and it's the frame they've since printed twice. Not the stiff, posed one. The snort. That's the whole promise of a casual engagement photoshoot: no gown, no pressure, no two-hour pose marathon — just the two of you, doing the things you already do, photographed a little more beautifully. Here you'll find 15 ideas across outfits, locations and relaxed engagement poses, plus the small decisions (yes, including jeans) that make simple engagement pictures look intentional instead of accidental.",
       },
       { type: "h2", id: "why-choose-casual", text: "Why Choose a Casual Engagement Session?" },
       {

@@ -12,7 +12,7 @@ export const SITE = {
     "Engagement photo ideas & poses for 2026 — couple poses, outfit guides, golden-hour tips and the best fiancé photo locations.",
   email: "hello@tenderlight.studio",
   instagram: "@tenderlight.journal",
-  location: "Oklahoma City, OK",
+  location: "Austin, TX",
   founded: 2019,
 } as const;
 
