@@ -2,7 +2,7 @@ import { CalendarDays, Clock, Tag } from "lucide-react";
 import { Link } from "../lib/router";
 import { extractToc, formatDate, getPost, hubFor, hubPath, postPath, readingTime, relatedPosts } from "../lib/content";
 import { getHub, HUBS } from "../content/hubs";
-import { getSemanticField, hubForTerm } from "../content/semantic";
+import { getSemanticField, resolveTermLink } from "../content/semantic";
 import AuthorBox from "../components/blog/AuthorBox";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import CommentSection from "../components/blog/CommentSection";
@@ -24,17 +24,19 @@ export default function ArticlePage({ slug }: { slug: string }) {
   const shareImage = post.pinImages?.[0]?.image ?? post.featuredImage;
 
   // Blend the article's own keywords with its cluster's LSI field (§13),
-  // then turn any term that maps to a hub into a real internal link.
+  // then resolve each term to its strongest internal link (entity → hub).
+  const ownHub = hubFor(post.slug);
+  const field = getSemanticField(ownHub);
   const hubSlugs = HUBS.map((h) => h.slug);
   const ownTerms = [...(post.secondaryKeywords ?? []), ...(post.lsiKeywords ?? [])];
   const seen = new Set(ownTerms.map((t) => t.toLowerCase()));
-  const clusterAdds = (getSemanticField(hubFor(post.slug))?.lsi ?? []).filter((t) => {
+  const clusterAdds = (field?.lsi ?? []).filter((t) => {
     const k = t.toLowerCase();
     if (seen.has(k)) return false;
     seen.add(k);
     return true;
   });
-  const topicalTerms = [...ownTerms, ...clusterAdds].slice(0, 16);
+  const topicalTerms = [...ownTerms, ...clusterAdds].slice(0, 18);
 
   return (
     <article className="pt-28 md:pt-32">
@@ -131,19 +133,28 @@ export default function ArticlePage({ slug }: { slug: string }) {
                 </p>
                 <p className="mt-2.5 flex flex-wrap gap-2">
                   {topicalTerms.map((k) => {
-                    const target = hubForTerm(k, hubSlugs);
-                    return target ? (
+                    const target = resolveTermLink(k, { field, ownHub, hubSlugs });
+                    if (!target) {
+                      return (
+                        <span key={k} className="rounded-full bg-cream px-3 py-1 text-[12px] font-medium text-ink-soft">
+                          {k}
+                        </span>
+                      );
+                    }
+                    // Entity links (spoke cross-links) lead; hub links support.
+                    const entity = target.kind === "entity";
+                    return (
                       <Link
                         key={k}
-                        to={`/${target}`}
-                        className="rounded-full bg-cream px-3 py-1 text-[12px] font-medium text-ink-soft ring-1 ring-line transition-all duration-200 hover:-translate-y-0.5 hover:bg-rose/25 hover:text-rose-deep hover:ring-rose-deep/40"
+                        to={target.url}
+                        className={`rounded-full px-3 py-1 text-[12px] font-medium ring-1 transition-all duration-200 hover:-translate-y-0.5 ${
+                          entity
+                            ? "bg-rose/15 text-rose-deep ring-rose-deep/30 hover:bg-rose/30 hover:ring-rose-deep/60"
+                            : "bg-cream text-ink-soft ring-line hover:bg-gold/15 hover:text-gold-deep hover:ring-gold-deep/40"
+                        }`}
                       >
                         {k} ↗
                       </Link>
-                    ) : (
-                      <span key={k} className="rounded-full bg-cream px-3 py-1 text-[12px] font-medium text-ink-soft">
-                        {k}
-                      </span>
                     );
                   })}
                 </p>

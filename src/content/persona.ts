@@ -158,7 +158,8 @@ export const MARKERS = {
 export const VOCABULARY_BANK = {
   module: "src/content/semantic.ts",
   accessor: "getSemanticField(cluster).lsi",
-  linkingHelper: "hubForTerm(term, hubSlugs)",
+  linkingHelper: "resolveTermLink(term, { field, ownHub, hubSlugs })",
+  note: "Entity overrides (linkOverrides) map a term to a spoke article; hub stem-matching is the fallback. Never self-link an article's own hub.",
 } as const;
 
 /**
