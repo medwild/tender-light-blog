@@ -347,6 +347,57 @@ export const HUBS: Hub[] = [
       },
     ],
   },
+  {
+    slug: "oklahoma-wedding-locations",
+    name: "Oklahoma Wedding & Proposal Locations",
+    keyword: "Oklahoma wedding and proposal locations",
+    volume: "local cluster",
+    kd: "0–19",
+    pillar: true,
+    secondaryKeywords: [
+      "best places to propose in Oklahoma",
+      "places to propose in Oklahoma",
+      "small wedding venues Oklahoma",
+      "cheap wedding venues OKC",
+      "how to elope in Oklahoma",
+    ],
+    metaTitle: "Oklahoma Wedding & Proposal Locations — A Local Field Guide",
+    metaDescription:
+      "Oklahoma wedding and proposal locations scouted in person — Guthrie, Scissortail Park, the Wichita Mountains, prairie elopements and budget OKC venues, with permit and light notes.",
+    lede: "Red-dirt roads, limestone creeks, brick streets that turn honey-colored at sunset — Oklahoma is quietly one of the best states in the country to propose, elope or marry small. Every spot below was scouted on a real session: light notes, parking, crowds and permits included, so the only surprise of the day is the ring.",
+    harperNote: "I've shot from the Wichita Mountains to the Tallgrass preserve, and the rule never changes: the best Oklahoma light happens in the last hour, and the best Oklahoma venues are the ones where nobody asks you to leave.",
+    accent: "sage",
+    spokes: [
+      "best-places-to-propose-in-oklahoma",
+      "places-to-propose-in-oklahoma",
+      "small-wedding-venues-oklahoma",
+      "cheap-wedding-venues-okc",
+      "how-to-elope-in-oklahoma",
+    ],
+    related: ["engagement-photo-locations", "save-the-date-photos"],
+    faq: [
+      {
+        q: "What's the most romantic place to propose in Oklahoma?",
+        a: "For drama, the Tallgrass Prairie at sunset or the Mt. Scott overlook in the Wichita Mountains. For a city proposal, Scissortail Park's Lower Grove at golden hour. For something quiet and local, a limestone creek you already picnic at — the best proposals happen where the two of you already live your life.",
+      },
+      {
+        q: "How much do small wedding venues cost in Oklahoma?",
+        a: "It ranges widely: a city park permit can run under $100, a Guthrie historic space or rentable garden typically $500–$2,500, and a working ranch or barn $1,000–$4,000. Always confirm current fees with the venue directly, and ask what's included — tables, chairs and rain plans change the real price.",
+      },
+      {
+        q: "Can you elope in an Oklahoma state park?",
+        a: "Generally yes, with the standard per-vehicle entry fee and — for anything beyond the two of you plus an officiant and photographer — a check with the park office first. Turner Falls and the Wichita Mountains Wildlife Refuge are the two most-eloped corners of the state; call ahead on fees and group limits.",
+      },
+      {
+        q: "Is there a waiting period for an Oklahoma marriage license?",
+        a: "Oklahoma has a 72-hour waiting period that can be waived with qualifying premarital counseling — rules can change, so verify the current process with the county clerk where you'll apply. Licenses are valid statewide once issued.",
+      },
+      {
+        q: "What season is best for an Oklahoma proposal or elopement?",
+        a: "Late March–May and October–early November: mild temperatures, golden prairie grass in fall, wildflowers in spring, and comfortable golden-hour light. Summer works if you shoot after 6pm; winter skies are dramatic but plan for wind and cold hands.",
+      },
+    ],
+  },
 ];
 
 export const getHub = (slug: string) => HUBS.find((h) => h.slug === slug);

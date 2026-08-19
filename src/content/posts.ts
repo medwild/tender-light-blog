@@ -5087,6 +5087,432 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Local cluster · Oklahoma wedding & proposal locations ———— */
+
+  {
+    slug: "best-places-to-propose-in-oklahoma",
+    title: "The 9 Best Places to Propose in Oklahoma, Scouted in Person",
+    seoTitle: "9 Best Places to Propose in Oklahoma (Scouted) — Tender Light",
+    seoDescription:
+      "The best places to propose in Oklahoma — Guthrie brick streets, Scissortail Park, Tallgrass prairie sunsets and Wichita Mountain overlooks, with light and crowd notes.",
+    excerpt:
+      "Brick streets, prairie sunsets, mountain overlooks. 9 Oklahoma proposal spots scouted on real sessions — with the light and crowd notes that matter.",
+    category: "locations",
+    date: "2026-04-14",
+    featuredImage: IMAGES.locationsCover,
+    featuredAlt: "Historic Guthrie stone bridge at golden hour — a classic Oklahoma proposal spot",
+    tags: ["oklahoma", "proposal", "scissortail", "guthrie", "tallgrass"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "The best places to propose in Oklahoma split into two families: the ones with scale — open prairie, mountain overlooks, a sky that goes violet over 40,000 acres — and the ones with texture — Guthrie's brick streets, Scissortail's gardens, a limestone bridge older than the state. I've shot proposals in both, and the spot that wins is always the one that sounds like the two of you. These nine are the ones I'd stake a ring on, each scouted with the hour of light and the crowd situation noted honestly.",
+      },
+      { type: "h2", id: "the-landmark-proposals", text: "The Landmark Proposals" },
+      {
+        type: "list",
+        items: [
+          "Scissortail Park, Lower Grove — the gardens go soft gold an hour before sunset; the Great Lawn is the fallback when the grove is busy (check current hours at scissortailpark.org).",
+          "Guthrie Historic District — the brick turns honey-colored at golden hour; the old stone bridge over the creek is the frame every Guthrie proposal ends on.",
+          "Myriad Gardens, Crystal Bridge — glass and tropical green, rentable corners available; the waterfall side is quieter than the lawn (see myriadgardens.org for event rules).",
+          "The Blue Whale of Catoosa at dawn — kitsch, iconic, and yours alone at 7am. For the couple that laughs first and cries second.",
+        ],
+      },
+      { type: "h2", id: "the-scale-proposals", text: "The Scale Proposals" },
+      {
+        type: "list",
+        items: [
+          "Tallgrass Prairie Preserve at sunset — six-foot bluestem, bison on the horizon, a sky that does the proposing for you. Stay for blue hour; the drive home is worth it.",
+          "Mt. Scott overlook, Wichita Mountains — red granite, wide plains below, golden light from every direction. Wind is the only heckler.",
+          "Turner Falls overlook — the falls in frame, canyon light in the afternoon. Entry fee applies; go May–June when the water runs high.",
+          "A working wheat field at harvest-gold — ask a farmer, bring cash, leave the gate as you found it. Nine times out of ten, you'll hear yes before the dust settles.",
+        ],
+      },
+      { type: "h2", id: "the-one-with-story", text: "The One With Story" },
+      {
+        type: "p",
+        text: "Here's the honest ranking: the most romantic place to propose in Oklahoma is wherever your story already lives. The diner from your first road trip, the lake you drive to when things get loud, the porch where you said the thing before the Thing. Landmarks photograph better; your place means more. The couples whose proposal galleries make me tear up are the ones who split the difference — their spot, shot in the last hour of light.",
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Scout note",
+        text: "For any hidden-photographer setup, stand on your kneel point the day before at the exact proposal hour. Light moves; so do crowds. Ten minutes of scouting beats a blown moment.",
+      },
+      { type: "h2", id: "oklahoma-propose-faq", text: "Oklahoma Proposal Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do I need a permit to propose in an Oklahoma park?",
+            a: "For just the two of you (plus a hidden photographer at distance), no — public parks welcome that. If you're setting up decor, a tripod-heavy crew or a group, check with the specific park office; Scissortail and Myriad Gardens both have event policies worth a quick email.",
+          },
+          {
+            q: "What's the best time of day to propose outdoors in Oklahoma?",
+            a: "The last 60–90 minutes before sunset for golden light, or the first hour after sunrise if you want the spot to yourself. Summer midday is a heat risk, not just a light one — plan around both.",
+          },
+          {
+            q: "Can I hire a photographer for a surprise proposal in Oklahoma?",
+            a: "Yes — many local photographers shoot hidden proposals with long lenses from 30+ feet away. Book the scout-and-signal plan together beforehand: kneel point, light direction, and a start cue.",
+          },
+          {
+            q: "What if the weather turns on proposal day?",
+            a: "Oklahoma skies change their minds fast. Have a covered fallback — a Guthrie awning, a Crystal Bridge interior, the porch you'd end up on anyway — and a rain date agreed with your photographer in advance.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "8 Quiet Places to Propose in Oklahoma", to: "/oklahoma-wedding-locations/places-to-propose-in-oklahoma", note: "Oklahoma · the intimate corners" },
+          { label: "How to Elope in Oklahoma", to: "/oklahoma-wedding-locations/how-to-elope-in-oklahoma", note: "Oklahoma · from kneel to married" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "places-to-propose-in-oklahoma",
+    title: "8 Quiet Places to Propose in Oklahoma (No Crowds, All Heart)",
+    seoTitle: "8 Quiet Places to Propose in Oklahoma — Tender Light",
+    seoDescription:
+      "Places to propose in Oklahoma that stay private — lakeside docks at sunrise, creekside benches, prairie overlooks and the spots only locals know.",
+    excerpt:
+      "You don't need a landmark to drop to one knee. 8 quiet Oklahoma proposal spots where the only audience is the light.",
+    category: "locations",
+    date: "2026-04-16",
+    featuredImage: IMAGES.hero,
+    featuredAlt: "Quiet Oklahoma prairie at golden hour — an intimate proposal setting",
+    tags: ["oklahoma", "proposal", "private", "intimate", "sunrise"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Not every proposal wants an audience — some want the opposite: a place so private the only witness is the light. These places to propose in Oklahoma are the quiet corners I've scouted between the landmarks: a lakeside dock at sunrise, a creek bench nobody fights over, a prairie overlook you reach by gravel road. Each one shares three traits — easy parking, soft light at a predictable hour, and room for a photographer to hide at distance without trespassing.",
+      },
+      { type: "h2", id: "waterside", text: "Waterside, Before the Boats Wake Up" },
+      {
+        type: "list",
+        items: [
+          "Lake Hefner's east shore at sunrise — glass-calm water, sailboats still asleep, the sky pink over the skyline.",
+          "Lake Thunderbird's quieter east coves — gravel pull-offs, heron traffic, morning fog in October.",
+          "A limestone creek bench in the Osage Hills — water over stone, oak shade, and a silence you can hear.",
+        ],
+      },
+      { type: "h2", id: "overlooks-and-edges", text: "Overlooks & Field Edges" },
+      {
+        type: "list",
+        items: [
+          "An Osage Hills overlook at golden hour — rolling green, one gravel road, zero ticket windows.",
+          "The edge of a cut wheat field at dusk — permission from the farmer, gold to the horizon.",
+          "A pecan-shaded stretch of riverbank — dappled light at 6pm, fireflies in June if the year is kind.",
+          "The back fence line of a family property you already love — sometimes the quietest spot is the one you own.",
+        ],
+      },
+      { type: "h2", id: "the-local-corner", text: "The Corner That's Already Yours" },
+      {
+        type: "p",
+        text: "The strongest quiet proposal I ever photographed happened on a curb. A curb outside the apartment where they'd had their first fight and their first makeup — she said yes before he finished the sentence, and the neighbor's sprinkler timed it like a special effect. Your quiet place doesn't need a name on a map. It needs a name in your story. Bring the photographer to your spot a week early, and let the spot do what it's always done — hold you.",
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Privacy check",
+        text: "Quiet spots are often private land. If a gate, a fence or a driveway is involved, knock first. A farmer's yes costs nothing and makes the whole thing legal.",
+      },
+      { type: "h2", id: "quiet-propose-faq", text: "Quiet Proposal Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How do we keep an outdoor proposal truly private?",
+            a: "Choose sunrise over sunset — crowds are asleep — and scout at the same hour the day before. Weekdays double the privacy at any spot that's popular on weekends.",
+          },
+          {
+            q: "Can a photographer hide at a quiet spot without being seen?",
+            a: "Yes, with a long lens (70–200mm or longer) from 30–80 feet, ideally with terrain between you — a rise, a tree line, a parked car. Quiet landscapes make hiding easier, not harder.",
+          },
+          {
+            q: "What if someone wanders by mid-proposal?",
+            a: "It happens, and it's usually charming — an Oklahoman will most likely cheer, not intrude. Keep the moment going; the interruption becomes part of the story you'll tell.",
+          },
+          {
+            q: "Are sunrise proposals worth the alarm?",
+            a: "For a private proposal, sunrise is the best-kept trade in the business: soft light, still water, empty spots, and the rest of the day still ahead of you to celebrate.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "9 Best Places to Propose in Oklahoma", to: "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma", note: "Oklahoma · the landmark list" },
+          { label: "12 Proposal Poses for the Moment & After", to: "/engagement-photo-poses/proposal-poses", note: "Poses · the four seconds, planned" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "small-wedding-venues-oklahoma",
+    title: "Small Wedding Venues in Oklahoma: 7 Setups, Real Cost Ranges",
+    seoTitle: "Small Wedding Venues Oklahoma: 7 Setups & Cost Ranges",
+    seoDescription:
+      "Small wedding venues in Oklahoma — garden spaces, historic Guthrie corners, ranch ceremonies and city park permits, with realistic cost ranges and questions to ask.",
+    excerpt:
+      "Fifty guests or five, Oklahoma does small weddings beautifully. 7 venue setups with honest cost ranges and the questions to ask before you book.",
+    category: "locations",
+    date: "2026-04-18",
+    featuredImage: IMAGES.gallerySilhouette,
+    featuredAlt: "Small ceremony silhouettes at dusk in an Oklahoma field",
+    tags: ["oklahoma", "small wedding", "venues", "costs", "elopement-adjacent"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Small wedding venues in Oklahoma run the gamut from a $75 city park permit to a working ranch with a view that costs what a ballroom charges for a wall. What makes Oklahoma genuinely good at small: the light is free, the land is generous, and almost every town has something historic, green or strange worth marrying in front of. Below are seven setups I've photographed, with realistic cost ranges — treat them as starting points and confirm current fees directly, since venue pricing moves year to year.",
+      },
+      { type: "h2", id: "garden-and-park", text: "Garden & Park Ceremonies" },
+      {
+        type: "list",
+        items: [
+          "A city park pavilion or garden room — permit-based, often under $100 for residents; the ceremony is 30 minutes, the photos take the golden hour after.",
+          "A botanical garden's rentable corner — typically $500–$2,500 depending on day and guest count; gardens photograph themselves.",
+          "Scissortail Park's bookable spaces in OKC — urban skyline behind the vows; ask about current rates and capacity.",
+        ],
+      },
+      { type: "h2", id: "historic-and-town", text: "Historic & Small-Town Corners" },
+      {
+        type: "list",
+        items: [
+          "A Guthrie historic space — Victorian facades and brick streets do the decorating; small venues there commonly run $500–$2,000 for an afternoon.",
+          "A small-town main street ceremony at closing time — a few storefronts, one block, string lights; permits are usually simple and cheap.",
+          "A country church or chapel you already belong to — the original small venue; donation-based more often than not.",
+        ],
+      },
+      { type: "h2", id: "land-and-ranch", text: "Land, Ranch & Backyard" },
+      {
+        type: "list",
+        items: [
+          "A working ranch or barn ceremony — $1,000–$4,000 is a common band; prairie sky included at no charge.",
+          "A family backyard with a rented sailcloth tent — the budget king for 30 guests; spend the savings on food and a real photographer.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Before you sign",
+        text: "Contracts, deposits and cancellation terms are venue-specific and can carry real financial weight — that's worth asking a professional about, not guessing from a blog. Always get the rain plan, the end-time and what tables/chairs include, in writing.",
+      },
+      { type: "h2", id: "small-venue-faq", text: "Small Venue Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How much does a small wedding venue cost in Oklahoma?",
+            a: "Anywhere from under $100 for a city park permit to $1,000–$4,000 for a ranch or barn, with gardens and historic spaces in between. The range is wide — confirm current fees with each venue, and ask what's included before comparing.",
+          },
+          {
+            q: "How far in advance should we book a small Oklahoma venue?",
+            a: "For in-demand weekends in April–May and October, book 8–12 months out. Weekdays and off-season dates (November–March) often book in weeks and cost less.",
+          },
+          {
+            q: "What's the smartest way to shrink a venue budget?",
+            a: "Shrink the guest list, not the date — 30 guests fit setups that 100 can't. Then move the ceremony to a cheap beautiful space and spend on food and photos. Couples rarely regret great photos; they often regret a crowded room.",
+          },
+          {
+            q: "Do we need an officiant and witnesses in Oklahoma?",
+            a: "Oklahoma ceremonies require an authorized officiant, and the license carries signature lines for the couple, officiant and witnesses — current requirements can vary by county, so confirm the details with the issuing county clerk.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "shop",
+        items: [
+          { label: "Neutral wrap dress", store: "Amazon", href: "https://www.amazon.com/s?k=neutral+wrap+dress" },
+          { label: "Men's tan chinos", store: "Amazon", href: "https://www.amazon.com/s?k=mens+tan+chinos" },
+          { label: "Ceremony string lights", store: "Amazon", href: "https://www.amazon.com/s?k=outdoor+string+lights+wedding" },
+        ],
+      },
+      {
+        type: "keepReading",
+        items: [
+          { label: "Cheap Wedding Venues in OKC", to: "/oklahoma-wedding-locations/cheap-wedding-venues-okc", note: "Oklahoma · the city budget list" },
+          { label: "How to Elope in Oklahoma", to: "/oklahoma-wedding-locations/how-to-elope-in-oklahoma", note: "Oklahoma · the smallest wedding of all" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "cheap-wedding-venues-okc",
+    title: "Cheap Wedding Venues in OKC: 6 Ways to Marry Under $1,000",
+    seoTitle: "Cheap Wedding Venues OKC: 6 Options Under $1,000",
+    seoDescription:
+      "Cheap wedding venues in OKC — park permits, Scissortail corners, community spaces and weekday buyouts that keep an Oklahoma City wedding under $1,000.",
+    excerpt:
+      "An OKC wedding that doesn't empty the savings. 6 cheap venue setups in Oklahoma City, with the permit math and the golden-hour bonus.",
+    category: "locations",
+    date: "2026-04-20",
+    featuredImage: IMAGES.casualCafe,
+    featuredAlt: "Oklahoma City café window at golden hour — an affordable wedding-day setup",
+    tags: ["okc", "budget", "venues", "permits", "weekday"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Cheap wedding venues in OKC are less about finding a discount and more about knowing where the city already gives you something beautiful for almost nothing. Oklahoma City is unusually generous here: a park system that permits ceremonies for pocket change, a world-class downtown park with rentable nooks, and a food scene that'll host you on a Tuesday for a fraction of Saturday's price. These six setups all keep the venue line under $1,000 — and several under $100.",
+      },
+      { type: "h2", id: "parks-and-permits", text: "Parks & Permits (Under $100)" },
+      {
+        type: "list",
+        items: [
+          "An OKC Parks & Rec ceremony permit — a pavilion, a rose garden corner, a lakeside lawn; resident permits are famously affordable (verify current rates with the city).",
+          "Lake Hefner or Lake Stanley Draper lawns — ceremony at 6pm, the skyline does the backdrop work for free.",
+          "A neighborhood park with character — the one with the good oaks and the empty Saturday morning.",
+        ],
+      },
+      { type: "h2", id: "downtown-nooks", text: "Downtown Nooks (Under $1,000)" },
+      {
+        type: "list",
+        items: [
+          "A Scissortail Park bookable corner — check the park's current event options; the Lower Grove photographs like a destination venue.",
+          "Myriad Gardens' smaller rentable spaces — the waterfall side reads luxe on camera.",
+          "Bricktown's quieter edges at an off hour — brick, canal light, and restaurant buyouts that shrink on weekdays.",
+        ],
+      },
+      { type: "h2", id: "the-weekday-trick", text: "The Weekday Trick" },
+      {
+        type: "p",
+        text: "The single biggest lever on an OKC wedding budget is the day of the week. A Sunday-through-Thursday ceremony can cut venue and catering quotes by a third or more, and photographers often hold weekday rates too. I've shot Tuesday weddings with better light and calmer crowds than most Saturdays — the calendar is the cheapest decorator you'll ever hire.",
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Fee check",
+        text: "Permit fees, capacities and booking rules change — always confirm the current number with the venue or the city before you budget around it. A five-minute call beats a surprise invoice.",
+      },
+      { type: "h2", id: "okc-budget-faq", text: "OKC Budget Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What's the cheapest legal wedding venue option in OKC?",
+            a: "A city park ceremony permit plus the county courthouse for the license is the floor — often well under $100 total for the spaces themselves. Spend the savings on a photographer; the park light is already paid for.",
+          },
+          {
+            q: "Can we take wedding photos in Scissortail Park for free?",
+            a: "Casual couple photography is generally welcome in public park areas; organized events and reserved spaces have their own booking process. Check scissortailpark.org for current rules before planning anything structured.",
+          },
+          {
+            q: "How do we keep an OKC wedding under $1,000 total?",
+            a: "Park permit ceremony, a restaurant lunch reception for 20–30, weekday timing, and one great photographer for two hours. The total lands well under $1,000 if the guest list stays honest.",
+          },
+          {
+            q: "When's the best cheap season to marry in Oklahoma City?",
+            a: "November–March: venues discount, photographers have openings, and Oklahoma winter skies are genuinely dramatic. Golden hour comes early — a 3pm ceremony still gets great light.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "Small Wedding Venues in Oklahoma", to: "/oklahoma-wedding-locations/small-wedding-venues-oklahoma", note: "Oklahoma · the statewide list" },
+          { label: "17 Outdoor Engagement Photo Locations", to: "/engagement-photo-locations/outdoor-engagement-photo-locations", note: "Locations · free backdrops, anywhere" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "how-to-elope-in-oklahoma",
+    title: "How to Elope in Oklahoma: Licenses, Spots & a Same-Week Plan",
+    seoTitle: "How to Elope in Oklahoma: A Same-Week Plan — Tender Light",
+    seoDescription:
+      "How to elope in Oklahoma — the license process, the 72-hour rule, prairie and mountain elopement spots, and a day-of timeline that actually works.",
+    excerpt:
+      "Eloping in Oklahoma is simple if you know the steps: the license, the waiting period, the officiant, the spot. Here's the whole plan.",
+    category: "locations",
+    date: "2026-04-22",
+    featuredImage: IMAGES.gallerySilhouette,
+    featuredAlt: "Couple silhouetted on an Oklahoma ridge — an elopement at golden hour",
+    tags: ["oklahoma", "elope", "elopement", "license", "timeline"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Eloping in Oklahoma takes less paperwork than most people fear and more landscape than most states can offer. The legal side is a county clerk visit, a short waiting period (waivable with qualifying premarital counseling), and an officiant with two signatures to witness. The fun side is picking a ridge in the Wichitas, a prairie sea of grass, or a lake dock at sunrise and keeping the guest list at zero or two. Here's the process in order, then the spots worth the drive.",
+      },
+      { type: "h2", id: "the-paperwork", text: "The Paperwork (In Order)" },
+      {
+        type: "list",
+        items: [
+          "Apply for the marriage license at any Oklahoma county clerk — bring ID; verify current fees and hours on ok.gov or with the clerk's office.",
+          "Note the waiting period — Oklahoma's standard 72-hour wait can be waived with qualifying premarital counseling; rules can change, so confirm at application.",
+          "Choose your officiant — ordained ministers, judges and certain officials can solemnize; many travel for elopements.",
+          "Line up two witnesses — some elopement photographers will happily sign, but ask first.",
+          "Return the signed license to the issuing county clerk after the ceremony — the step people forget.",
+        ],
+      },
+      { type: "h2", id: "the-spots", text: "The Elopement Spots" },
+      {
+        type: "list",
+        items: [
+          "Wichita Mountains Wildlife Refuge — granite, bison, and overlooks that make two people feel enormous (check refuge rules before the drive).",
+          "Tallgrass Prairie Preserve — the horizon does the ceremony; plan for sunset and a long, gorgeous drive home.",
+          "A lake dock at sunrise — Hefner, Thunderbird or Texoma; still water, pink sky, zero crowds.",
+          "Turner Falls canyon — water in frame, afternoon light, entry fee at the gate.",
+          "Your own backyard — the legal requirements are identical; the dog gets front row.",
+        ],
+      },
+      { type: "h2", id: "the-day", text: "A Same-Week Elopement Timeline" },
+      {
+        type: "list",
+        items: [
+          "Day 1: license + counseling (if pursuing the waiver), officiant confirmed.",
+          "Day 2: scout the spot at the exact hour you'll marry; pack for wind and sun.",
+          "Day 3: ceremony at golden hour or sunrise — 20 minutes of vows, 90 minutes of photos.",
+          "Day 3, later: the mail-return of the license, then dinner somewhere with good pie.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Harper's tip",
+        text: "Elope first, celebrate later. The couples who marry on the ridge in October and throw the party in June get both — the private moment and the dance floor — without forcing one day to do two jobs.",
+      },
+      { type: "h2", id: "elope-faq", text: "Elopement Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How fast can you elope in Oklahoma?",
+            a: "With the waiting period waived via qualifying counseling, same-day is possible; without it, plan on the standard wait from application to ceremony. Confirm the current rule with the county clerk when you apply.",
+          },
+          {
+            q: "How much does an Oklahoma elopement cost?",
+            a: "The legal minimum is the license fee plus any officiant travel — a few hundred dollars at most. Add a photographer and a night somewhere, and a full elopement weekend commonly lands under $2,000.",
+          },
+          {
+            q: "Do we need witnesses to elope in Oklahoma?",
+            a: "Oklahoma marriage licenses include witness signature lines, so plan for two — your photographer or officiant's team can often fill in if nobody travels with you.",
+          },
+          {
+            q: "Is eloping legal on public land in Oklahoma?",
+            a: "For the two of you, an officiant and a photographer, generally yes — standard park entry rules apply. Wildlife refuges and state parks may have specific rules for groups or gear; a quick call ahead settles it.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "9 Best Places to Propose in Oklahoma", to: "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma", note: "Oklahoma · where it all starts" },
+          { label: "Small Wedding Venues in Oklahoma", to: "/oklahoma-wedding-locations/small-wedding-venues-oklahoma", note: "Oklahoma · when the guest list grows to 30" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => {
@@ -5141,6 +5567,11 @@ export const POST_HUB: Record<string, string> = {
   "mini-photo-print-ideas": "engagement-photo-prints",
   "polaroid-style-engagement-prints": "engagement-photo-prints",
   "flip-book-engagement-photo-ideas": "engagement-photo-prints",
+  "best-places-to-propose-in-oklahoma": "oklahoma-wedding-locations",
+  "places-to-propose-in-oklahoma": "oklahoma-wedding-locations",
+  "small-wedding-venues-oklahoma": "oklahoma-wedding-locations",
+  "cheap-wedding-venues-okc": "oklahoma-wedding-locations",
+  "how-to-elope-in-oklahoma": "oklahoma-wedding-locations",
 };
 
 export const hubFor = (slug: string) => POST_HUB[slug] ?? "engagement-photo-ideas";
@@ -5820,6 +6251,85 @@ export const POST_META: Record<string, PostMeta> = {
       { url: "/engagement-photo-poses/couple-engagement-poses", anchor: "engagement poses for couples" },
     ],
     relatedPosts: ["engagement-photo-display-ideas", "fun-engagement-photo-ideas", "couple-engagement-poses"],
+    monetization: M_ON,
+  },
+  "best-places-to-propose-in-oklahoma": {
+    primaryKeyword: "best places to propose in Oklahoma",
+    secondaryKeywords: ["oklahoma proposal spots", "where to propose in oklahoma", "romantic oklahoma proposals"],
+    lsiKeywords: ["scissortail park", "guthrie", "tallgrass prairie", "wichita mountains", "golden hour"],
+    citations: [
+      "Scissortail Park — hours, spaces & event rules: scissortailpark.org",
+      "Myriad Botanical Gardens — Crystal Bridge & rentals: myriadgardens.org",
+      "Oklahoma travel & state parks: travelok.com",
+    ],
+    internalLinks: [
+      { url: "/oklahoma-wedding-locations/places-to-propose-in-oklahoma", anchor: "places to propose in Oklahoma" },
+      { url: "/engagement-photo-poses/proposal-poses", anchor: "proposal poses" },
+      { url: "/save-the-date-photos/surprise-proposal-ideas", anchor: "surprise proposal ideas" },
+    ],
+    relatedPosts: ["places-to-propose-in-oklahoma", "proposal-poses", "surprise-proposal-ideas"],
+    monetization: M_ON,
+  },
+  "places-to-propose-in-oklahoma": {
+    primaryKeyword: "places to propose in Oklahoma",
+    secondaryKeywords: ["quiet proposal spots oklahoma", "private places to propose", "oklahoma proposal ideas"],
+    lsiKeywords: ["sunrise", "lake dock", "osage hills", "creekside", "privacy"],
+    citations: ["Oklahoma state parks & recreation: travelok.com"],
+    internalLinks: [
+      { url: "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma", anchor: "best places to propose in Oklahoma" },
+      { url: "/engagement-photo-poses/proposal-poses", anchor: "proposal poses" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour photography tips" },
+    ],
+    relatedPosts: ["best-places-to-propose-in-oklahoma", "proposal-poses", "golden-hour-photography-tips-couples"],
+    monetization: M_ON,
+  },
+  "small-wedding-venues-oklahoma": {
+    primaryKeyword: "small wedding venues Oklahoma",
+    secondaryKeywords: ["oklahoma small wedding", "intimate wedding venues oklahoma", "backyard wedding oklahoma"],
+    lsiKeywords: ["garden ceremony", "guthrie", "ranch wedding", "park permit", "cost ranges"],
+    citations: [
+      "Oklahoma travel, venues & regions: travelok.com",
+      "Scissortail Park bookable spaces: scissortailpark.org",
+    ],
+    internalLinks: [
+      { url: "/oklahoma-wedding-locations/cheap-wedding-venues-okc", anchor: "cheap wedding venues OKC" },
+      { url: "/oklahoma-wedding-locations/how-to-elope-in-oklahoma", anchor: "how to elope in Oklahoma" },
+      { url: "/engagement-photo-prints/engagement-photo-display-ideas", anchor: "engagement photo display ideas" },
+    ],
+    relatedPosts: ["cheap-wedding-venues-okc", "how-to-elope-in-oklahoma", "engagement-photo-display-ideas"],
+    monetization: M_ON,
+  },
+  "cheap-wedding-venues-okc": {
+    primaryKeyword: "cheap wedding venues OKC",
+    secondaryKeywords: ["budget wedding oklahoma city", "affordable okc wedding venues", "okc wedding on a budget"],
+    lsiKeywords: ["park permit", "weekday", "scissortail", "bricktown", "under $1,000"],
+    citations: [
+      "Oklahoma City Parks & Recreation permits: okc.gov",
+      "Scissortail Park spaces: scissortailpark.org",
+    ],
+    internalLinks: [
+      { url: "/oklahoma-wedding-locations/small-wedding-venues-oklahoma", anchor: "small wedding venues Oklahoma" },
+      { url: "/engagement-photo-locations/outdoor-engagement-photo-locations", anchor: "outdoor engagement photo locations" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour photography tips" },
+    ],
+    relatedPosts: ["small-wedding-venues-oklahoma", "outdoor-engagement-photo-locations", "golden-hour-photography-tips-couples"],
+    monetization: M_ON,
+  },
+  "how-to-elope-in-oklahoma": {
+    primaryKeyword: "how to elope in Oklahoma",
+    secondaryKeywords: ["oklahoma elopement", "elope oklahoma", "oklahoma courthouse wedding"],
+    lsiKeywords: ["marriage license", "waiting period", "officiant", "wichita mountains", "timeline"],
+    citations: [
+      "Oklahoma marriage license & state services: ok.gov",
+      "Wichita Mountains Wildlife Refuge: fws.gov/refuge/wichita-mountains",
+      "Oklahoma state parks: travelok.com",
+    ],
+    internalLinks: [
+      { url: "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma", anchor: "best places to propose in Oklahoma" },
+      { url: "/oklahoma-wedding-locations/small-wedding-venues-oklahoma", anchor: "small wedding venues Oklahoma" },
+      { url: "/save-the-date-photos/engagement-announcement-photo-ideas", anchor: "engagement announcement photo ideas" },
+    ],
+    relatedPosts: ["best-places-to-propose-in-oklahoma", "small-wedding-venues-oklahoma", "engagement-announcement-photo-ideas"],
     monetization: M_ON,
   },
 };

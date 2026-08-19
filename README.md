@@ -65,6 +65,18 @@ npm run build   # production build → dist/ (copies public/ pre-renders as-is)
 npm run typecheck
 ```
 
+## Oklahoma local cluster & keyword ledger
+
+A 7th, local pillar — `/oklahoma-wedding-locations/` — targets Oklahoma wedding
+and proposal keywords with stronger E-E-A-T: named real places (Guthrie,
+Scissortail Park, Wichita Mountains, Tallgrass), official-source citations
+(`ok.gov`, `scissortailpark.org`, `myriadgardens.org`, `travelok.com`, `fws.gov`),
+cost ranges flagged as "verify current fees", and no fabricated private venues.
+
+The full priority keyword map (Phase 1 quick wins, Phase 2 pillars, Phase 3
+monetization) lives in `src/content/keywords.ts` and powers the interactive
+"publishing ledger" on the `/guides` map — volume, KD and intent per page.
+
 ## Writing in the Harper Ellis voice
 
 Every article is written as **Harper Ellis** — former engagement photographer
