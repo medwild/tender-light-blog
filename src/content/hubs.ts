@@ -188,17 +188,36 @@ export const HUBS: Hub[] = [
   },
   {
     slug: "engagement-photo-outfits",
-    name: "What to Wear for Engagement Photos",
+    name: "Engagement Photo Outfits",
     keyword: "what to wear for engagement photos",
     volume: "TBD",
     kd: "TBD",
-    metaTitle: "What to Wear for Engagement Photos: Outfit Formulas (2026)",
+    pillar: true,
+    secondaryKeywords: [
+      "engagement photo outfits",
+      "casual engagement photo outfits",
+      "fall engagement photo outfits",
+      "summer engagement photo outfits",
+      "spring engagement photo outfits",
+      "engagement photo color palette",
+      "what to wear for outdoor engagement photos",
+    ],
+    metaTitle: "What to Wear for Engagement Photos: Outfits by Season & Style",
     metaDescription:
-      "What to wear for engagement photos — colors that flatter on camera, what to avoid, seasonal outfit formulas and the 70/20/10 styling rule.",
+      "What to wear for engagement photos — casual, dressy and seasonal outfit ideas, the colors that flatter on camera, and the couple-coordination rule.",
     lede: "Wear what you'd choose for a nice dinner, in soft muted tones that keep the eye on your faces: cream, oat, terracotta, sage. Coordinate palettes rather than matching outfits — the 70/20/10 rule (70% shared neutral, 20% accent, 10% texture) is the fastest way to look put-together without looking twinned.",
     harperNote: "I've never once regretted a couple in muted tones. I've regretted neon, logos and tiny patterns every single time.",
     accent: "blush",
-    spokes: ["best-outfits-engagement-photos", "casual-engagement-photo-ideas"],
+    spokes: [
+      "casual-engagement-photo-outfits",
+      "fall-engagement-photo-outfits",
+      "summer-engagement-photo-outfits",
+      "spring-engagement-photo-outfits",
+      "engagement-photo-color-palette",
+      "what-to-wear-for-outdoor-engagement-photos",
+      "best-outfits-engagement-photos",
+      "casual-engagement-photo-ideas",
+    ],
     related: ["engagement-photo-ideas", "engagement-photo-poses", "engagement-photo-locations"],
     faq: [
       {
@@ -208,6 +227,14 @@ export const HUBS: Hub[] = [
       {
         q: "Should we match outfits for engagement photos?",
         a: "Coordinate, don't match. Share a neutral base and one accent color between you, then add texture. Matching outfits read like a uniform; coordinating outfits read like a life together.",
+      },
+      {
+        q: "Can we wear jeans for engagement photos?",
+        a: "Absolutely — dark or mid wash, straight or wide leg, no heavy distressing or loud logos. Pair them with a knit, blouse or blazer to lift the look from errands to smart-casual.",
+      },
+      {
+        q: "What should we wear for outdoor engagement photos?",
+        a: "Choose colors that complement, not compete with, the setting: earth tones for fields, muted greens for gardens, soft neutrals for the beach. Comfortable shoes matter more than style when you're walking between spots.",
       },
       {
         q: "When should we finalize our engagement outfits?",

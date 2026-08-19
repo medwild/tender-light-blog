@@ -3654,6 +3654,528 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Hub 4 · Outfits cluster ———— */
+
+  {
+    slug: "casual-engagement-photo-outfits",
+    title: "16 Casual Engagement Photo Outfits (Jeans, Yes — Styled on Purpose)",
+    seoTitle: "16 Casual Engagement Photo Outfits That Look Intentional",
+    seoDescription:
+      "Casual engagement photo outfits that don't look like you gave up — jeans, knits and sneakers styled with the 70/20/10 rule.",
+    excerpt:
+      "Casual doesn't mean careless. 16 relaxed couple outfits — jeans, knits, clean sneakers — styled so they photograph effortless, not sloppy.",
+    category: "outfits",
+    date: "2026-04-01",
+    featuredImage: IMAGES.casualCafe,
+    featuredAlt: "Couple in casual coordinated outfits laughing over coffee at a café",
+    tags: ["casual outfits", "jeans", "relaxed", "sneakers", "everyday"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "The most common outfit question I get is some version of “is it okay to wear jeans?” — and the answer is a firm yes, with one condition: the jeans are styled on purpose. Casual engagement photo outfits work when they look like a choice, not a default. That means dark or mid wash over acid, straight or wide leg over spray-tight, and not a single visible logo. Below are 16 casual outfit formulas for her and him, plus the small styling moves — one elevated piece, real texture, a coordinated palette — that lift a relaxed look from “running errands” to “effortless on camera.”",
+      },
+      { type: "h2", id: "the-casual-rule", text: "The One Rule: Intentional, Not Accidental" },
+      {
+        type: "p",
+        text: "A casual outfit photographs well when every piece could have been chosen for a nice Saturday — because it was. The camera reads intention through fit, fabric and coordination. Ill-fitting or wrinkled casual reads as “we didn't try”; well-cut and steamed casual reads as “this is just how we look.”",
+      },
+      { type: "h2", id: "casual-outfits-for-her", text: "8 Casual Outfits for Her" },
+      {
+        type: "list",
+        items: [
+          "Straight-leg dark jeans + oat-colored knit + clean white sneakers.",
+          "Flowy midi skirt + simple fitted tee + ankle boots.",
+          "Linen trousers + silk camisole + one gold layer of jewelry.",
+          "A denim jacket over a slip dress — dressed up on top, casual below.",
+          "High-waisted chinos + tucked striped breton + ballet flats.",
+          "A cozy oversized cardigan + fitted jeans + booties.",
+          "A casual sundress + white sneakers + a straw hat.",
+          "Cropped trousers + a quality white tee + a leather jacket.",
+        ],
+      },
+      { type: "h2", id: "casual-outfits-for-him", text: "8 Casual Outfits for Him" },
+      {
+        type: "list",
+        items: [
+          "Dark jeans + olive overshirt + clean minimal sneakers.",
+          "Tan chinos + quality white tee + open casual blazer.",
+          "A knit polo + straight trousers + leather loafers.",
+          "A henley + dark jeans + suede desert boots.",
+          "A lightweight crewneck + chinos + white sneakers.",
+          "A flannel (muted, not loud) + dark jeans + boots.",
+          "An unstructured blazer + tee + tapered trousers.",
+          "A denim shirt + chinos + brown leather shoes.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "The elevate-one-piece move",
+        text: "Give each of you one piece that's a step above the rest — her a silk scarf, him a nice watch or leather jacket. One intentional detail tells the camera the whole look was chosen, not grabbed.",
+      },
+      { type: "h2", id: "casual-outfits-faq", text: "Casual Outfit Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Are jeans really okay for engagement photos?",
+            a: "Yes — dark or mid wash, straight or wide leg, no heavy distressing or loud logos. Paired with a knit, blouse or blazer and one elevated piece, jeans photograph as effortless, not careless.",
+          },
+          {
+            q: "Can we both wear sneakers?",
+            a: "Absolutely, if they're clean and minimal. Scuffed running shoes are the one casual detail that dates a photo. A fresh pair of simple white or neutral sneakers looks intentional.",
+          },
+          {
+            q: "How do we keep casual outfits from looking sloppy?",
+            a: "Fit and steam. Well-cut pieces with no wrinkles read as a choice; ill-fitting or crumpled ones read as an afterthought. Try everything on together two weeks out and photograph it in daylight.",
+          },
+          {
+            q: "Should our casual outfits still coordinate?",
+            a: "Yes — the 70/20/10 rule still applies. Share a neutral base, split one accent color between you, and add texture. Coordination is what makes two casual outfits read as one couple.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "15 Casual Engagement Photo Ideas", to: "/engagement-photo-ideas/casual-engagement-photo-ideas", note: "Ideas · the vibe these outfits belong to" },
+          { label: "Engagement Photo Color Palette", to: "/engagement-photo-outfits/engagement-photo-color-palette", note: "Outfits · the colors behind every formula" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "fall-engagement-photo-outfits",
+    title: "14 Fall Engagement Photo Outfits for Golden, Cozy Frames",
+    seoTitle: "What to Wear for Fall Pictures: 14 Engagement Outfits",
+    seoDescription:
+      "What to wear for fall pictures — 14 cozy couple outfits in rust, camel and olive that glow against autumn light and foliage.",
+    excerpt:
+      "Fall is the most photogenic season — if you dress for it. 14 cozy couple outfits in rust, camel and olive built for autumn light.",
+    category: "outfits",
+    date: "2026-04-03",
+    featuredImage: IMAGES.outfitsCover,
+    featuredAlt: "Couple in cozy fall engagement outfits walking through autumn light",
+    tags: ["fall outfits", "autumn", "cozy", "layers", "earth tones"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Fall is the most forgiving season for engagement photos — the light is low and warm all afternoon, and the foliage does half the styling for you. What to wear for fall pictures comes down to one idea: mirror the season. Rust, camel, olive, mustard and cream sit beautifully against amber leaves, while texture — cable knits, wool, corduroy, leather — gives the low light something to catch. These 14 cozy couple outfits lean into exactly that, with layering notes because fall sessions run long and the temperature drops fast once the sun goes down.",
+      },
+      { type: "h2", id: "the-fall-palette", text: "The Fall Palette That Works" },
+      {
+        type: "p",
+        text: "The colors that flatter fall foliage are the warm, muted ones already in the landscape: rust, terracotta, camel, olive, mustard, cream and chocolate. Let one of you carry the warm accent (a rust sweater) while the other stays neutral (cream and camel), so you complement the leaves instead of competing with them.",
+      },
+      { type: "h2", id: "fall-outfits-for-her", text: "7 Fall Outfits for Her" },
+      {
+        type: "list",
+        items: [
+          "A rust or terracotta knit + dark jeans + ankle boots.",
+          "A camel coat over a cream dress + knee-high boots.",
+          "A mustard sweater + olive skirt + brown booties.",
+          "A chunky cardigan + fitted jeans + a felt hat.",
+          "A corduroy jacket + turtleneck + straight trousers.",
+          "A plaid scarf (muted) over a solid coat + leather boots.",
+          "A velvet or wool midi dress + tights + heeled booties.",
+        ],
+      },
+      { type: "h2", id: "fall-outfits-for-him", text: "7 Fall Outfits for Him" },
+      {
+        type: "list",
+        items: [
+          "A camel or tan overshirt + dark jeans + leather boots.",
+          "An olive chore coat + cream henley + chinos.",
+          "A rust or maroon crewneck + charcoal trousers.",
+          "A wool peacoat + turtleneck + straight jeans.",
+          "A flannel in muted tones + dark denim + suede boots.",
+          "A brown leather jacket + neutral tee + chinos.",
+          "A cable-knit sweater + olive chinos + clean boots.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "The layering rule",
+        text: "Fall sessions start warm and end cold. Dress in layers you can shed or add — a coat, a scarf, a cardigan — so you're comfortable at minute five and minute fifty. Layers also give the photographer variety without a full outfit change.",
+      },
+      { type: "h2", id: "fall-outfits-faq", text: "Fall Outfit Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What colors are best for fall engagement photos?",
+            a: "Mirror the season: rust, terracotta, camel, olive, mustard and cream. These warm, muted tones sit beautifully against amber foliage. Skip cool blues and bright neons, which fight the warm landscape.",
+          },
+          {
+            q: "Is plaid okay for fall pictures?",
+            a: "Yes, if it's muted and it's one piece, not both of you. A single muted-plaid scarf or shirt reads as autumn; matching loud plaid reads as costume. Keep the scale of the check medium, not tiny.",
+          },
+          {
+            q: "What if it's cold during our fall session?",
+            a: "Layer, and bring hand warmers. A coat or chunky scarf photographs as cozy rather than bulky, and cold hands show in close-up ring shots. Comfort reads on camera — dress for the last hour, not the first.",
+          },
+          {
+            q: "Do boots matter for a fall shoot?",
+            a: "They're the anchor of the outfit. Clean leather or suede boots in brown or tan ground a fall look and handle grass, trails and leaves. Avoid brand-new stiff boots you haven't broken in.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "Engagement Photo Color Palette", to: "/engagement-photo-outfits/engagement-photo-color-palette", note: "Outfits · why earth tones win in fall" },
+          { label: "What to Wear for Outdoor Engagement Photos", to: "/engagement-photo-outfits/what-to-wear-for-outdoor-engagement-photos", note: "Outfits · location-based dressing" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "summer-engagement-photo-outfits",
+    title: "13 Summer Engagement Photo Outfits That Stay Cool & Photogenic",
+    seoTitle: "13 Summer Engagement Photo Outfits for Warm-Weather Shoots",
+    seoDescription:
+      "Summer engagement photo outfits — light dresses, linen and breathable layers that stay cool and photograph beautifully in bright light.",
+    excerpt:
+      "Bright light, warm skin, zero melting. 13 summer engagement photo outfits in breathable fabrics that flatter instead of fighting the sun.",
+    category: "outfits",
+    date: "2026-04-05",
+    featuredImage: IMAGES.hero,
+    featuredAlt: "Couple in light summer outfits in a golden meadow at sunset",
+    tags: ["summer outfits", "linen", "light dresses", "breathable", "warm weather"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Summer engagement photos have two enemies: heat and harsh midday sun. The right outfit solves at least the first one. What works in warm weather is breathable fabric, light color and movement — linen, cotton, chiffon and light knits that catch a breeze instead of trapping heat. These 13 summer engagement photo outfits keep you cool through a golden-hour session, with one rule up front: schedule after 6pm. The best summer outfit in the world can't save a squinting couple under noon sun.",
+      },
+      { type: "h2", id: "summer-fabrics-and-colors", text: "Fabrics & Colors That Beat the Heat" },
+      {
+        type: "p",
+        text: "Choose fabrics that breathe and move: linen, cotton, chiffon, light jersey. Light, airy colors — white, cream, soft blue, blush, sage — reflect heat and flatter sun-kissed skin. Avoid heavy synthetics and dark layers; you'll be wilted by the third location, and it shows in your shoulders.",
+      },
+      { type: "h2", id: "summer-outfits-for-her", text: "7 Summer Outfits for Her" },
+      {
+        type: "list",
+        items: [
+          "A flowy white or blush midi dress + flat sandals.",
+          "A linen set — matching top and shorts or trousers.",
+          "A light sundress + denim jacket for the breeze.",
+          "A chiffon maxi dress that catches movement when you twirl.",
+          "High-waisted linen trousers + a simple tank + gold jewelry.",
+          "A breezy skirt + fitted cotton tee + espadrilles.",
+          "A slip dress + a light open shirt tied at the waist.",
+        ],
+      },
+      { type: "h2", id: "summer-outfits-for-him", text: "6 Summer Outfits for Him" },
+      {
+        type: "list",
+        items: [
+          "A linen shirt (sleeves rolled) + chinos + loafers.",
+          "A light cotton tee + tailored shorts + clean sneakers.",
+          "A short-sleeve camp-collar shirt + light trousers.",
+          "A breathable polo + chinos + boat shoes.",
+          "An unstructured linen blazer over a tee + jeans.",
+          "A henley + light jeans + suede sneakers.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "The sweat-proof plan",
+        text: "Bring blotting papers and a small towel for between frames, and wear light layers you can remove. Shine reads on camera before you feel hot — a quick blot every few locations keeps close-ups fresh.",
+      },
+      { type: "h2", id: "summer-outfits-faq", text: "Summer Outfit Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What fabrics are best for summer engagement photos?",
+            a: "Breathable and light: linen, cotton, chiffon and light jersey. They keep you cool and catch a breeze beautifully on camera. Avoid heavy synthetics that trap heat and show sweat.",
+          },
+          {
+            q: "Is white okay to wear for summer photos?",
+            a: "Yes — white and cream are summer staples and photograph as fresh and airy. Just make sure it's not see-through in bright backlight, and bring a layer for when the sun drops and it cools.",
+          },
+          {
+            q: "What time should a summer engagement session start?",
+            a: "After 6pm, timed to golden hour. Midday summer sun is overhead and harsh — it causes squinting and unflattering shadows no outfit can fix. The last hour of light is cooler and far more flattering.",
+          },
+          {
+            q: "How do we stay cool without ruining the photos?",
+            a: "Stay hydrated, bring blotting papers, and shed layers between shots rather than during them. A small handheld fan between locations keeps you fresh without interrupting the shoot.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "Golden Hour Photography Tips", to: "/engagement-photo-ideas/golden-hour-photography-tips-couples", note: "Tips · timing the light these outfits need" },
+          { label: "16 Coffee Shop Engagement Photo Ideas", to: "/engagement-photo-locations/coffee-shop-engagement-photo-ideas", note: "Locations · the air-conditioned fallback" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "spring-engagement-photo-outfits",
+    title: "12 Spring Engagement Photo Outfits in Soft Pastels & Greens",
+    seoTitle: "12 Spring Engagement Photo Outfits for Garden Sessions",
+    seoDescription:
+      "Spring engagement photo outfits — soft pastels, sage green and light layers that flatter blossoms, gardens and fresh spring light.",
+    excerpt:
+      "Blossoms, fresh grass and soft light. 12 spring engagement photo outfits in pastels and sage that flatter the season's colors.",
+    category: "outfits",
+    date: "2026-04-07",
+    featuredImage: IMAGES.galleryTwirl,
+    featuredAlt: "Couple in soft spring outfits among blossoms in gentle light",
+    tags: ["spring outfits", "pastels", "garden", "light layers", "sage"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Spring is the season of soft color — blossoms, fresh grass and a light that's bright but never harsh — and the outfits that flatter it are soft too. Think sage, blush, powder blue, butter yellow and cream, in light layers you can adjust as the morning warms. These 12 spring engagement photo outfits are built for garden and park sessions, where the goal is to complement the green and pink around you rather than compete with it. One principle carries through all of them: muted pastels over candy brights.",
+      },
+      { type: "h2", id: "the-spring-palette", text: "The Spring Palette That Flatters" },
+      {
+        type: "p",
+        text: "The colors already in a spring landscape — sage green, blush pink, soft white, butter yellow — are your safest picks. Muted pastels sit gently against blossoms; candy-bright pastels fight them. When in doubt, lean one of you toward green or cream and let the other carry the soft accent.",
+      },
+      { type: "h2", id: "spring-outfits-for-her", text: "6 Spring Outfits for Her" },
+      {
+        type: "list",
+        items: [
+          "A blush or sage midi dress + light cardigan.",
+          "A floral print (muted, small-scale) + neutral sandals.",
+          "Cream linen trousers + a powder-blue blouse.",
+          "A white eyelet dress + a denim jacket.",
+          "A pleated pastel skirt + fitted white tee + flats.",
+          "A light knit set + gold jewelry + ballet flats.",
+        ],
+      },
+      { type: "h2", id: "spring-outfits-for-him", text: "6 Spring Outfits for Him" },
+      {
+        type: "list",
+        items: [
+          "A sage or light-olive shirt + tan chinos + loafers.",
+          "A cream or white oxford + light jeans + clean sneakers.",
+          "A lightweight navy blazer + chinos + no tie.",
+          "A soft-blue henley + tapered trousers.",
+          "A linen shirt in pale tones + rolled sleeves + espadrilles.",
+          "A muted check shirt (open) over a plain tee + chinos.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Garden-session note",
+        text: "If you're shooting in a botanical garden, check the colors blooming that week and steer clear of matching them exactly — standing in front of a wall of blush blossoms while wearing blush washes you out. Offset the dominant bloom color by one step.",
+      },
+      { type: "h2", id: "spring-outfits-faq", text: "Spring Outfit Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Are pastels too cliché for spring engagement photos?",
+            a: "Only the candy-bright ones. Muted pastels — sage, blush, powder blue, cream — flatter spring light and the season's colors without reading as costume. The key is softness, not saturation.",
+          },
+          {
+            q: "Is a floral dress okay for a spring shoot?",
+            a: "Yes, if the print is small-scale and muted, and it's the only pattern in the frame. A loud or large floral competes with the blossoms behind you. Let one of you wear it; keep the other solid.",
+          },
+          {
+            q: "What if spring weather turns cold or rainy?",
+            a: "Layer with a light coat or cardigan you can photograph in — trench coats and knit layers actually suit the season. For rain, a shared umbrella makes a lovely frame rather than a cancellation.",
+          },
+          {
+            q: "Do spring outfits work for a garden location?",
+            a: "They're made for it — just offset the dominant bloom color by one step so you don't blend into the backdrop. Sage and cream are safe against almost any flowering garden.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "13 Park & Garden Engagement Photo Ideas", to: "/engagement-photo-locations/park-garden-engagement-photo-ideas", note: "Locations · where these outfits shine" },
+          { label: "Engagement Photo Color Palette", to: "/engagement-photo-outfits/engagement-photo-color-palette", note: "Outfits · the pastels, decoded" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "engagement-photo-color-palette",
+    title: "The Engagement Photo Color Palette: Best Colors That Flatter on Camera",
+    seoTitle: "Best Colors for Engagement Photos: A Couple's Palette Guide",
+    seoDescription:
+      "The best colors for engagement photos — the earth-tone and neutral palettes that flatter every skin tone, plus the colors to avoid.",
+    excerpt:
+      "Color is the first thing a camera judges. The earth-tone and neutral palettes that flatter on camera — and the few colors to always avoid.",
+    category: "outfits",
+    date: "2026-04-09",
+    featuredImage: IMAGES.galleryRing,
+    featuredAlt: "Couple's hands in neutral cream and sage tones with an engagement ring",
+    tags: ["color palette", "earth tones", "neutrals", "what to avoid", "styling"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Color is the first thing a camera judges — before your pose, before the location, before anything. The best colors for engagement photos are soft, muted versions of real colors: the dusty, desaturated tones that read as rich on camera instead of loud. In 400+ sessions, the one styling decision I've never once regretted is a couple in earth tones and neutrals; the regrets are always neon, logos or a bright pattern that pulls the eye away from your faces. This is the palette I hand every couple, split into what works, why it works, and the short list of what to always avoid.",
+      },
+      { type: "h2", id: "why-muted-wins", text: "Why Muted Colors Win on Camera" },
+      {
+        type: "p",
+        text: "Cameras amplify saturation, so a color that looks slightly dusty in person reads as rich and warm in a photo — while a bright color goes harsh and pulls focus. Muted tones also flatter every skin tone and, crucially, they don't date. A neon gallery screams its year; a cream-and-sage gallery could be from any decade.",
+      },
+      { type: "h2", id: "the-earth-tone-palette", text: "The Earth-Tone Palette" },
+      {
+        type: "list",
+        items: [
+          "Cream, oat and warm ivory — the universal base.",
+          "Camel, tan and caramel — read as warmth without trying.",
+          "Sage, olive and muted green — grounded, organic, golden-hour friendly.",
+          "Rust, terracotta and clay — the fall anchors.",
+          "Chocolate and espresso — a soft alternative to black.",
+          "Dusty blue and slate — the best cool option.",
+        ],
+      },
+      { type: "h2", id: "the-70-20-10-rule", text: "The 70/20/10 Coordination Rule" },
+      {
+        type: "p",
+        text: "This is the fastest way to look coordinated without matching: 70% of the frame is a shared neutral base (cream, oat, camel), 20% is one accent color split between you (her rust dress, his olive jacket), and 10% is texture or a small pattern (lace, cable knit, a subtle check). It reads as one couple, two people.",
+      },
+      { type: "h2", id: "colors-to-avoid", text: "Colors & Patterns to Avoid" },
+      {
+        type: "list",
+        items: [
+          "Neon anything — it color-casts onto skin in open shade.",
+          "Large logos and graphic tees — they date a photo faster than anything.",
+          "Tiny tight patterns like micro-checks — they moiré on digital sensors.",
+          "Matching bright colors head-to-toe — reads as a team uniform.",
+          "All-black in a golden-hour field — you become a silhouette before sunset.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "The honest exception",
+        text: "If all-black is genuinely your style, keep it — just add texture (leather, ribbed knit) and let your photographer expose for skin, not fabric. Authentic style beats a palette rule every time.",
+      },
+      { type: "h2", id: "color-palette-faq", text: "Color Palette Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What are the most flattering colors for engagement photos?",
+            a: "Soft, muted earth tones and neutrals: cream, oat, camel, sage, rust, dusty blue. They flatter every skin tone, complement most locations and never date. The common thread is low saturation.",
+          },
+          {
+            q: "Can we wear black to our engagement session?",
+            a: "Yes, with texture. All-black reads elegant in urban settings but can go flat or silhouette-like in a field at golden hour. Add leather, knit or velvet so the black has depth, and tell your photographer.",
+          },
+          {
+            q: "Should our outfits match our wedding colors?",
+            a: "Echo them, don't replicate them. If your wedding palette is sage and cream, wearing dusty blue and oat for the engagement shoot gives you range across both galleries instead of one repeated look.",
+          },
+          {
+            q: "How many colors should be in our photos?",
+            a: "Two or three, max. A shared neutral base plus one accent between you, with texture as the third element. More than three colors and the frame gets busy and the eye loses your faces.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "Best Outfits for Engagement Photos", to: "/engagement-photo-outfits/best-outfits-engagement-photos", note: "Outfits · the stylist's complete guide" },
+          { label: "16 Casual Engagement Photo Outfits", to: "/engagement-photo-outfits/casual-engagement-photo-outfits", note: "Outfits · the palette in practice" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "what-to-wear-for-outdoor-engagement-photos",
+    title: "What to Wear for Outdoor Engagement Photos: A Location-Based Guide",
+    seoTitle: "What to Wear for Outdoor Engagement Photos by Location",
+    seoDescription:
+      "What to wear for outdoor engagement photos — location-based outfit guidance for fields, beaches, gardens and city streets.",
+    excerpt:
+      "The setting chooses the outfit. What to wear for outdoor engagement photos in fields, at the beach, in gardens and on city streets.",
+    category: "outfits",
+    date: "2026-04-11",
+    featuredImage: IMAGES.locationsCover,
+    featuredAlt: "Couple in earth-tone outdoor outfits on a scenic stone bridge",
+    tags: ["outdoor outfits", "location-based", "fields", "beach", "gardens", "shoes"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "The best outdoor engagement outfit is the one that belongs where you're standing — earth tones in a field, soft neutrals at the beach, muted greens in a garden, a little more structure downtown. What to wear for outdoor engagement photos, then, starts with the location, not the closet. This guide matches outfits to the four most common outdoor settings, plus the practical layer every couple forgets: shoes you can actually walk between spots in.",
+      },
+      { type: "h2", id: "outfit-by-location", text: "Match the Outfit to the Location" },
+      {
+        type: "list",
+        items: [
+          "Fields & meadows: earth tones and flowy fabric that catches wind — cream, rust, olive.",
+          "Beach: soft neutrals and light fabric — white, sand, blush; skip the heavy layers.",
+          "Gardens & parks: muted greens and pastels that complement, not match, the foliage.",
+          "Urban streets: a touch more structure — a blazer, a nice jacket, slightly dressed-up casual.",
+          "Creeks & trails: practical first — clothes you can sit, climb and walk in.",
+        ],
+      },
+      { type: "h2", id: "the-shoe-reality-check", text: "The Shoe Reality Check" },
+      {
+        type: "p",
+        text: "Outdoor sessions mean walking — often on grass, gravel, sand or hills — and uncomfortable shoes change the way you stand and move, and it shows. The fix every photographer recommends: wear the shoes you want in the photos for the frames, and keep a broken-in pair of flats or sneakers for walking between spots. Your feet (and your posture) will thank you.",
+      },
+      { type: "h2", id: "dressing-for-the-weather", text: "Dressing for the Weather, Not the Photo" },
+      {
+        type: "p",
+        text: "Check the forecast and dress for the last hour of the session, when you'll be coolest and the light best. Layers are your friend: a coat or cardigan you can shed for frames and reclaim between them. In wind, choose one piece that moves beautifully (a dress hem, a scarf) and let it be the motion in the shot.",
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "The complement, don't compete rule",
+        text: "Your outfit should sit inside the location's palette, not fight it. In a green garden, wear cream or sage — not bright red. At a golden field, wear earth tones — not cool grey. You want to look like you belong in the frame.",
+      },
+      { type: "h2", id: "outdoor-outfits-faq", text: "Outdoor Outfit Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What should we wear for engagement photos in a field?",
+            a: "Earth tones and flowy fabric — cream, rust, olive and camel — that move with the wind and complement tall grass. Avoid busy patterns; the field is already textured, so keep your outfit simple.",
+          },
+          {
+            q: "What do we wear for beach engagement photos?",
+            a: "Soft neutrals and light, airy fabric — white, sand, blush, light blue. Skip heavy layers and dark colors, which read hot and harsh against the water. Go barefoot for some frames.",
+          },
+          {
+            q: "Do we really need two pairs of shoes?",
+            a: "For outdoor sessions, yes. Wear your photo shoes for the frames and walk between spots in broken-in flats or sneakers. Outdoor locations involve more walking than couples expect, and sore feet show in your posture.",
+          },
+          {
+            q: "How formal should outdoor engagement outfits be?",
+            a: "One step below the location's formality. A garden or beach calls for relaxed, breathable pieces; a city street can take a blazer. When in doubt, smart-casual beats over-dressed outdoors.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "17 Outdoor Engagement Photo Locations", to: "/engagement-photo-locations/outdoor-engagement-photo-locations", note: "Locations · the settings this guide dresses" },
+          { label: "The Engagement Photo Color Palette", to: "/engagement-photo-outfits/engagement-photo-color-palette", note: "Outfits · the colors behind every location" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => {
