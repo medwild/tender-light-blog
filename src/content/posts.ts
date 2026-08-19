@@ -1096,6 +1096,255 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Tier 1 · generated with Harper Ellis Mega-Skill v2.0 (GEO/E-E-A-T) ———— */
+
+  {
+    slug: "classic-engagement-photos",
+    title: "27 Classic Engagement Photos That Never Go Out of Style",
+    seoTitle: "27 Classic Engagement Photos That Never Go Out of Style",
+    seoDescription:
+      "Classic engagement photos that never date — 27 timeless poses and frames from 400+ real sessions, with what to wear and how long to hold each one.",
+    excerpt:
+      "Timeless beats trendy. 27 classic engagement photos — the standing, grounded, movement and detail frames that still look right in thirty years.",
+    category: "poses",
+    date: "2026-02-25",
+    featuredImage: IMAGES.classicDip,
+    featuredAlt: "Classic engagement photo of a couple in an elegant dip kiss at golden hour",
+    tags: ["classic", "timeless", "traditional", "formal", "poses"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "When I first started shooting, a bride's mother pulled me aside after a gallery reveal and pointed at the simplest frame on the wall — the two of them, standing close, foreheads almost touching, nothing else in the picture. “That one,” she said, “is going to hang above my fireplace for fifty years.” She was right, and it changed how I shoot. Classic engagement photos aren't the frames you plan — they're the ones you keep. They work because they lean on lines, light and stillness instead of whatever the internet is doing this season. In this guide you'll find 27 classic engagement photo ideas — standing frames, grounded frames, movement frames and the small detail shots — plus what to wear, how long to hold each one, and the mistakes that quietly date a gallery.",
+      },
+      { type: "h2", id: "why-classic-works", text: "Why Classic Engagement Photos Always Work" },
+      {
+        type: "p",
+        text: "Classic engagement photos work because they're built on geometry and light, not on trends that expire. Of the 400+ galleries I've delivered, the classic frames are the ones couples print largest — eight times out of ten, the biggest thing on their wall is a simple two-of-them frame with nothing clever in it. Trends date a photo in about five years; lines and light never do.",
+      },
+      {
+        type: "quote",
+        text: "A classic photo isn't boring — it's finished. There's nothing left to add and nothing to take away.",
+        cite: "Harper, on her most-reprinted frames",
+      },
+      {
+        type: "p",
+        text: "I shot a couple in the Guthrie historic district one October, and the late sun hit the brick behind them and turned the whole frame amber. They weren't doing anything — just standing close, her hand on his chest, his chin resting lightly on the crown of her head. All I did was step back, stop directing, and let the stillness do the work. That frame opened their gallery.",
+      },
+      {
+        type: "p",
+        text: "And stillness is learnable. About seven couples in ten relax more inside a structured frame than in “just be yourselves” chaos — the pose gives their nervous system something to hold onto while the camera does its thing.",
+      },
+      { type: "ad", slot: "in-article" },
+      { type: "h2", id: "classic-engagement-photo-ideas", text: "27 Classic Engagement Photo Ideas" },
+      {
+        type: "p",
+        text: "The best classic engagement ideas split into four families: standing frames, grounded frames, movement frames, and close detail shots. Start standing, settle into sitting, let movement loosen you up, and finish close — that order mirrors how a session naturally warms up.",
+      },
+      { type: "h3", id: "standing-frames", text: "The Standing Frames (1–9)" },
+      {
+        type: "p",
+        text: "Standing frames are the backbone of a classic gallery — clean vertical lines, full outfits visible, nowhere to hide and no need to.",
+      },
+      {
+        type: "list",
+        items: [
+          "1. The Forehead Touch — eyes closed, foreheads together, three slow breaths. In eight sessions out of ten, this first frame still makes the final top ten.",
+          "2. The Waist Hold — his hands on her waist, hers on his chest, a half-step apart. The geometry does the work.",
+          "3. Nose to Nose — one inch closer than the forehead touch, eyes open. Slightly sillier, twice as tender.",
+          "4. The Chin Rest — his chin on the crown of her head, her arms around his middle. Height differences welcome; that's the charm.",
+          "5. The Temple Kiss — a kiss to the temple while she laughs at something off-camera. Keep the laugh real or skip it.",
+          "6. Back to Back, Arms Crossed — both profiles, one shared smirk. The classic “we're a team” frame.",
+          "7. The Jacket Lapel Grip — she holds both lapels, he holds the pose. Old-Hollywood structure with modern ease.",
+          "8. The Silhouette Stand — two profiles against the last sliver of sun, not touching. The absence of touch is the statement.",
+          "9. The Almost Kiss — foreheads a breath apart, eyes closed, never landing. Tension is the whole photograph.",
+        ],
+      },
+      { type: "h3", id: "grounded-frames", text: "The Grounded Frames (10–17)" },
+      {
+        type: "p",
+        text: "Grounded frames trade height for intimacy — when you sit or kneel, the camera comes down to your level and the formality drops a register.",
+      },
+      {
+        type: "list",
+        items: [
+          "10. The Stair Sit — her between his legs on wide stone steps, his arms loosely around her. Steps hand you instant leading lines.",
+          "11. The Curb Lean — shoulders touching on a low wall, feet up, forearms on knees. City texture behind, ease in front.",
+          "12. The Grass Recline — lying side by side, heads together, shot from directly above. The sky is your seamless backdrop.",
+          "13. The Bench Close — a park bench, her legs crossed over his lap, real conversation. Ask the photographer to shoot from a distance so you forget them.",
+          "14. The Kneeling Ring Reveal — him on one knee, her hands over her mouth. Shoot it even if you've already proposed; the frame is the point.",
+          "15. The Tailgate Sit — legs dangling off the truck, shoulders touching, sunset behind. Americana without trying.",
+          "16. The Blanket Wrap — one blanket around both of you on cold ground, mugs optional. Texture plus warmth plus story.",
+          "17. The Porch Step Portrait — your actual front steps, dressed up, looking at each other instead of the camera. Home is a classic location.",
+        ],
+      },
+      { type: "h3", id: "movement-frames", text: "The Movement Frames (18–23)" },
+      {
+        type: "p",
+        text: "Movement frames keep a classic gallery from going stiff — a still photo can contain motion, and that tension is exactly what reads as alive. In my experience, one good spin or dip frame anchors the whole middle of a gallery.",
+      },
+      {
+        type: "list",
+        items: [
+          "18. The Dip — one slow second down, a hold, one slow second up. The keeper is always the in-between.",
+          "19. The Walk-Away — hand in hand, walking from the camera, her looking back over her shoulder at nothing in particular.",
+          "20. The Twirl — he spins her once by the hand; the fabric and the hair finish the sentence.",
+          "21. The Lift — both feet off the ground for exactly one second. Commit fully; half-lifts read as accidents.",
+          "22. The Coat Swing — he swings his jacket over her shoulders mid-laugh. Chivalry with motion blur.",
+          "23. The Run to Camera — start thirty feet out and run in laughing. The last four frames are always gold.",
+        ],
+      },
+      { type: "h3", id: "detail-frames", text: "The Detail Frames (24–27)" },
+      {
+        type: "p",
+        text: "Detail frames are the quiet punctuation at the end of a classic gallery. I remember a groom whose thumb kept brushing her ring when he thought I wasn't looking — that half-second became the most printed image of the day.",
+      },
+      {
+        type: "list",
+        items: [
+          "24. The Hand Stack — her hand over his over hers again, the ring catching whatever light is left.",
+          "25. The Veil-or-Scarf Frame — fabric over both heads, foreheads touching underneath, the world gone soft.",
+          "26. The Ring Against Sky — one hand up, ring silhouetted against an open sky or a window's glow.",
+          "27. The Walking Shoes — your two pairs side by side on gravel or grass, the day half-done. A frame people never plan and always love.",
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      { type: "h2", id: "classic-mistakes", text: "What Most Couples Get Wrong With Classic Frames" },
+      {
+        type: "p",
+        text: "The most common mistake with classic engagement photos is over-directing until the stillness turns to wax. I made this one myself early on: I'd adjust a shoulder, then a chin, then a hand, until the couple stood like museum pieces — and wondered why the frames felt dead. The fix was subtraction. One adjustment, then ten full seconds of silence while the shutter runs. Technically, classic frames want an 85mm lens at around f/2.0–f/2.8 with the sun behind and slightly to their left; that rim light separates you from the background and does half the styling for you.",
+      },
+      {
+        type: "p",
+        text: "Timing matters as much as technique. A classic set needs twenty to twenty-five minutes, not more — past that, posture softens and the formality curdles into fatigue.",
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Harper's tip",
+        text: "Hold every classic pose for a full ten seconds before anyone moves. The first three seconds are the pose you planned; seconds four through ten are the photograph you'll actually keep.",
+      },
+      { type: "h2", id: "harper-classic-tips", text: "Harper's Tips & What I've Learned" },
+      {
+        type: "p",
+        text: "Classic photography rewards preparation more than talent — the couples who arrive rested, fed, and wearing broken-in clothes shoot noticeably better frames than the ones running on adrenaline.",
+      },
+      {
+        type: "list",
+        items: [
+          "Book the last ninety minutes of daylight and arrive dressed — classic frames waste no time on transitions.",
+          "Wear one formal-leaning piece each; structure in the clothes reads as structure in the photo.",
+          "Silence is direction. If your photographer goes quiet, hold the frame — they're shooting the good part.",
+          "Print the classics. A classic frame only finishes its job when it's on a wall, not a hard drive.",
+        ],
+      },
+      {
+        type: "shop",
+        items: [
+          { label: "A timeless slip dress", store: "Amazon", href: "https://www.amazon.com/s?k=timeless+slip+dress" },
+          { label: "Camel overcoat for him", store: "Amazon", href: "https://www.amazon.com/s?k=mens+camel+overcoat" },
+          { label: "Simple gold jewelry", store: "Amazon", href: "https://www.amazon.com/s?k=simple+gold+jewelry" },
+          { label: "Leather ankle boots", store: "Amazon", href: "https://www.amazon.com/s?k=womens+leather+ankle+boots" },
+        ],
+      },
+      {
+        type: "quote",
+        text: "Stillness is a skill. The couples who hold a frame for ten full seconds get the photograph everyone else misses.",
+        cite: "Harper, session №388",
+      },
+      { type: "h2", id: "classic-faq", text: "Classic Engagement Photo Questions" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What makes an engagement photo look timeless instead of dated?",
+            a: "Timeless photos lean on light, clean lines, and muted colors instead of trends, props, or heavy editing. Skip the gimmicks, wear clothes you'd actually keep, and let the location and your connection carry the frame. If a photo still looks right in thirty years, it was classic all along.",
+          },
+          {
+            q: "How do we pose for classic photos without looking stiff?",
+            a: "Start with a real touch — a hand on a chest, arms actually around each other — then breathe together for three slow breaths. Movement before stillness works too: walk in, laugh, then settle into the frame. Stiffness is just held breath; exhale and the pose relaxes with you.",
+          },
+          {
+            q: "What should we wear for timeless engagement pictures?",
+            a: "Choose tailored, muted pieces you'd wear to a nice dinner: a slip or wrap dress, a blazer or overshirt, clean shoes. Cream, camel, sage, and dusty blue photograph timelessly. One elevated piece each — real jewelry, a good coat — lifts the whole gallery without looking costumed.",
+          },
+          {
+            q: "How long should we hold a classic pose?",
+            a: "Ten full seconds, minimum. The first three seconds are you finding the pose; the next seven are where your shoulders drop, your breathing syncs, and the real frame appears. If your photographer goes silent mid-pose, don't move — silence means they're shooting the keeper.",
+          },
+          {
+            q: "Do classic engagement photos still work for save-the-dates and wall prints?",
+            a: "They're honestly the best format for both. Classic frames crop cleanly into horizontal save-the-date layouts, square website headers, and large wall prints without losing anything. Trendy frames fight the card design; classic ones finish it. Ask for one horizontal and one square crop of your favorites.",
+          },
+        ],
+      },
+      {
+        type: "leadMagnet",
+        title: "The Classic Frames Cheat Sheet",
+        subtitle: "All 27 poses on one printable card — hand it to your photographer the morning of.",
+        bullets: [
+          "The 27 frames grouped by family, in session order",
+          "The 10-second hold rule, explained with timing cues",
+          "A print-ready checklist for the last 90 minutes of light",
+        ],
+        cta: "Send me the cheat sheet",
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "p",
+        text: "That's the whole classic playbook: stand tall, sit close, move once, and let the details finish the story. Classic engagement photos don't ask you to perform — they ask you to hold still long enough for the light to find you. Here at Tender Light, that's the trade we keep making: fewer frames, truer ones. So book the golden hour, wear the coat you love, and stand a little closer than feels formal. Somewhere around the seventh second of the forehead touch, you'll forget the camera is there — and that's the exact second the photograph happens.",
+      },
+      {
+        type: "pinKit",
+        pins: [
+          {
+            angle: "How-To/List",
+            image: IMAGES.classicDip,
+            overlay: "27 Classic Engagement Photo Ideas",
+            pinTitle: "27 Classic Engagement Photos That Never Go Out of Style (2026 Guide)",
+            pinDescription: "Standing, grounded, movement and detail frames — 27 classic engagement photo ideas from 400+ real sessions, with the 10-second hold rule. Save this for your shoot.",
+            note: "Pin 1 · the dip frame + numbered overlay list · 1000 × 1500 px",
+          },
+          {
+            angle: "Outfit/Style",
+            image: IMAGES.outfitsCover,
+            overlay: "Timeless Outfits for Classic Photos",
+            pinTitle: "What to Wear for Classic, Timeless Engagement Photos (Stylist Rules)",
+            pinDescription: "Cream, camel, sage and dusty blue — the muted palette that keeps engagement photos timeless, plus the one elevated piece each rule. Pin the outfit formula.",
+            note: "Pin 2 · outfit flat-lay collage · 1000 × 1500 px",
+          },
+          {
+            angle: "Aesthetic/Mood",
+            image: IMAGES.gallerySilhouette,
+            overlay: "Photos You'll Frame Forever",
+            pinTitle: "Classic Engagement Photos: The Frames Worth Printing Big",
+            pinDescription: "Stillness over trends — why classic engagement frames are the ones couples print largest, and the golden-hour trick that makes them glow. Read the full guide.",
+            note: "Pin 3 · silhouette at last light, script text overlay · 1000 × 1500 px",
+          },
+        ],
+        boards: [
+          "Engagement Photo Ideas",
+          "Classic & Timeless Poses",
+          "Wedding Inspiration 2026",
+          "Save the Date Ideas",
+          "Golden Hour Photography",
+        ],
+      },
+      {
+        type: "pinCta",
+        url: "https://tenderlight.journal/blog/classic-engagement-photos/",
+        image: IMAGES.classicDip,
+      },
+      {
+        type: "keepReading",
+        items: [
+          { label: "30 Engagement Photo Poses Every Couple Should Try", to: "/blog/30-engagement-photo-poses-couples", note: "Poses · the full library when you want more than the classics" },
+          { label: "Best Outfits for Engagement Photos: A Stylist's Complete Guide", to: "/blog/best-outfits-engagement-photos", note: "Outfits · the 70/20/10 rule in full" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);
