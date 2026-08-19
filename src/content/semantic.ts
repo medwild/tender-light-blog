@@ -357,12 +357,89 @@ export const CLUSTER_OUTFITS: ClusterSemantic = {
   },
 };
 
-/** Registry — add clusters 5–7 here as their semantic fields arrive. */
+/* ————— Cluster 5 · Save the Date & Proposal ————— */
+export const CLUSTER_SAVETHEDATE: ClusterSemantic = {
+  cluster: "save-the-date-photos",
+  name: "Save the Date & Proposal",
+  primaryKeywords: [
+    "save the date photoshoot ideas",
+    "save the date photo ideas",
+    "save the date poses",
+    "save the date engagement photos",
+    "engagement announcement photos",
+    "surprise proposal ideas",
+    "proposal poses",
+  ],
+  lsi: [
+    "engagement announcement",
+    "newly engaged",
+    "just engaged",
+    "proposal moment",
+    "surprise proposal",
+    "ring reveal",
+    "ring box",
+    "wedding website",
+    "save the date cards",
+    "timeline",
+    "romantic proposal",
+    "public proposal",
+    "private proposal",
+    "hidden photographer",
+    "candid proposal",
+    "proposal location",
+    "proposal setup",
+    "flowers",
+    "signage",
+    "pet proposal",
+    "travel proposal",
+    "sunset proposal",
+    "city proposal",
+    "home proposal",
+  ],
+  linkOverrides: {
+    // announcement vocabulary → the announcement guide
+    "engagement announcement": "/save-the-date-photos/engagement-announcement-photo-ideas",
+    "newly engaged": "/save-the-date-photos/engagement-announcement-photo-ideas",
+    "just engaged": "/save-the-date-photos/engagement-announcement-photo-ideas",
+    // the proposal itself → surprise proposal setups
+    "proposal moment": "/save-the-date-photos/surprise-proposal-ideas",
+    "surprise proposal": "/save-the-date-photos/surprise-proposal-ideas",
+    "romantic proposal": "/save-the-date-photos/surprise-proposal-ideas",
+    "public proposal": "/save-the-date-photos/surprise-proposal-ideas",
+    "hidden photographer": "/save-the-date-photos/surprise-proposal-ideas",
+    "candid proposal": "/save-the-date-photos/surprise-proposal-ideas",
+    // ring details → ring poses & detail shots (poses cluster)
+    "ring reveal": "/engagement-photo-poses/ring-engagement-photo-poses",
+    "ring box": "/engagement-photo-poses/ring-engagement-photo-poses",
+    // the card & website destination → save the date photo ideas
+    "save the date cards": "/save-the-date-photos/save-the-date-photo-ideas",
+    "wedding website": "/save-the-date-photos/save-the-date-photo-ideas",
+    // planning cadence → the full engagement checklist
+    timeline: "/engagement-photo-ideas/engagement-photo-checklist",
+    // the kneel geometry → proposal poses (poses cluster)
+    "proposal setup": "/engagement-photo-poses/proposal-poses",
+    // quiet / destination spots → Oklahoma proposal guides
+    "private proposal": "/oklahoma-wedding-locations/places-to-propose-in-oklahoma",
+    "proposal location": "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma",
+    "travel proposal": "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma",
+    // props & set dressing → unique engagement ideas
+    flowers: "/engagement-photo-ideas/unique-engagement-photo-ideas",
+    signage: "/engagement-photo-ideas/unique-engagement-photo-ideas",
+    "pet proposal": "/engagement-photo-ideas/unique-engagement-photo-ideas",
+    // light & setting → golden hour tips, urban & at-home locations
+    "sunset proposal": "/engagement-photo-ideas/golden-hour-photography-tips-couples",
+    "city proposal": "/engagement-photo-locations/urban-engagement-photo-ideas",
+    "home proposal": "/engagement-photo-locations/at-home-engagement-photo-ideas",
+  },
+};
+
+/** Registry — add clusters 6–7 here as their semantic fields arrive. */
 export const SEMANTIC_FIELDS: Record<string, ClusterSemantic> = {
   [CLUSTER_IDEAS.cluster]: CLUSTER_IDEAS,
   [CLUSTER_POSES.cluster]: CLUSTER_POSES,
   [CLUSTER_LOCATIONS.cluster]: CLUSTER_LOCATIONS,
   [CLUSTER_OUTFITS.cluster]: CLUSTER_OUTFITS,
+  [CLUSTER_SAVETHEDATE.cluster]: CLUSTER_SAVETHEDATE,
 };
 
 export const getSemanticField = (cluster: string): ClusterSemantic | undefined =>
