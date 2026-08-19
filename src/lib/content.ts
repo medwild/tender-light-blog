@@ -10,7 +10,11 @@ import {
   getCategory as _getCategory,
   getPost as _getPost,
   getPostsByCategory,
+  getPostsByHub,
   getRelatedPosts,
+  hubFor,
+  hubPath,
+  postPath,
   readingTime as _readingTime,
   sortedPosts,
 } from "../content/posts";
@@ -25,6 +29,8 @@ export const categories = CATEGORIES;
 export const getPost = _getPost;
 export const getCategory = _getCategory;
 export const postsByCategory = getPostsByCategory;
+export const postsByHub = getPostsByHub;
+export { hubFor, hubPath, postPath };
 export const relatedPosts = getRelatedPosts;
 export const readingTime = _readingTime;
 export const formatDate = _formatDate;

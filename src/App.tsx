@@ -10,7 +10,7 @@ import {
   organizationSchema,
   websiteSchema,
 } from "./lib/seo";
-import { getCategory, getPost } from "./lib/content";
+import { getCategory, getPost, hubFor, postPath } from "./lib/content";
 import { getHub } from "./content/hubs";
 import type { Block } from "./content/types";
 import Header from "./components/layout/Header";
@@ -18,11 +18,12 @@ import Footer from "./components/layout/Footer";
 import HomePage from "./pages/HomePage";
 import BlogIndexPage from "./pages/BlogIndexPage";
 import ArticlePage from "./pages/ArticlePage";
-import CategoryPage from "./pages/CategoryPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import HubPage from "./pages/HubPage";
 import HubIndexPage from "./pages/HubIndexPage";
+import LegalPage from "./pages/LegalPage";
+import AuthorPage from "./pages/AuthorPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 /** Central SEO effect — the SPA mirror of Next.js route-level `generateMetadata`. */
@@ -56,14 +57,14 @@ function useSeo(path: string) {
         return;
       }
 
-      case "post": {
+      case "article": {
         const post = getPost(route.slug);
         if (!post) break;
+        const hub = getHub(hubFor(post.slug));
         const faqBlock = post.blocks.find((b: Block) => b.type === "faq");
         crumbs.push(
-          { name: "The Journal", path: "/blog" },
-          { name: getCategory(post.category)?.name ?? "Guide", path: `/category/${post.category}` },
-          { name: post.title, path: `/blog/${post.slug}` }
+          { name: hub?.name ?? "Guides", path: `/${hubFor(post.slug)}` },
+          { name: post.title, path: postPath(post.slug) }
         );
         schemas.push(
           breadcrumbSchema(crumbs),
@@ -80,23 +81,9 @@ function useSeo(path: string) {
         applySeo({
           title: post.seoTitle,
           description: post.seoDescription,
-          path: `/blog/${post.slug}`,
+          path: postPath(post.slug),
           image: post.featuredImage,
           type: "article",
-          jsonLd: schemas,
-        });
-        return;
-      }
-
-      case "category": {
-        const cat = getCategory(route.slug);
-        if (!cat) break;
-        crumbs.push({ name: cat.name, path: `/category/${cat.slug}` });
-        schemas.push(breadcrumbSchema(crumbs), collectionSchema(cat.name, `/category/${cat.slug}`, cat.longDescription));
-        applySeo({
-          title: `${cat.name} Guides for Engagement Photos | Tender Light`,
-          description: cat.longDescription.slice(0, 155),
-          path: `/category/${cat.slug}`,
           jsonLd: schemas,
         });
         return;
@@ -117,13 +104,13 @@ function useSeo(path: string) {
       case "hub": {
         const hub = getHub(route.slug);
         if (!hub) break;
-        crumbs.push({ name: "Guides", path: "/guides" }, { name: hub.name, path: `/hub/${hub.slug}` });
-        schemas.push(breadcrumbSchema(crumbs), collectionSchema(hub.name, `/hub/${hub.slug}`, hub.lede));
+        crumbs.push({ name: "Guides", path: "/guides" }, { name: hub.name, path: `/${hub.slug}` });
+        schemas.push(breadcrumbSchema(crumbs), collectionSchema(hub.name, `/${hub.slug}`, hub.lede));
         if (hub.faq.length) schemas.push(faqSchema(hub.faq));
         applySeo({
           title: hub.metaTitle,
           description: hub.metaDescription,
-          path: `/hub/${hub.slug}`,
+          path: `/${hub.slug}`,
           jsonLd: schemas,
         });
         return;
@@ -149,6 +136,37 @@ function useSeo(path: string) {
           description:
             "Plan your engagement shoot with Harper: photographer shortlists, poses, outfits and scouted locations. Replies within 48 hours.",
           path: "/contact",
+          jsonLd: schemas,
+        });
+        return;
+
+      case "legal": {
+        const legalTitles = {
+          "privacy-policy": "Privacy Policy",
+          "affiliate-disclosure": "Affiliate Disclosure",
+          "editorial-policy": "Editorial Policy",
+        } as const;
+        const name = legalTitles[route.doc];
+        crumbs.push({ name, path: `/${route.doc}` });
+        schemas.push(breadcrumbSchema(crumbs));
+        applySeo({
+          title: `${name} | Tender Light`,
+          description: `${name} for Tender Light — the engagement photo journal by Harper Ellis.`,
+          path: `/${route.doc}`,
+          noindex: true,
+          jsonLd: schemas,
+        });
+        return;
+      }
+
+      case "author":
+        crumbs.push({ name: "Harper Ellis", path: "/author/harper-ellis" });
+        schemas.push(breadcrumbSchema(crumbs));
+        applySeo({
+          title: "Harper Ellis — Engagement Photo Guides | Tender Light",
+          description:
+            "All engagement photo guides by Harper Ellis: former photographer (400+ sessions, 8 years), founder of Tender Light. Poses, outfits, locations.",
+          path: "/author/harper-ellis",
           jsonLd: schemas,
         });
         return;
@@ -185,17 +203,20 @@ export default function App() {
     case "blog":
       page = <BlogIndexPage page={route.page} />;
       break;
-    case "post":
+    case "article":
       page = <ArticlePage key={route.slug} slug={route.slug} />;
-      break;
-    case "category":
-      page = <CategoryPage key={route.slug} slug={route.slug} />;
       break;
     case "guides":
       page = <HubIndexPage />;
       break;
     case "hub":
       page = <HubPage key={route.slug} slug={route.slug} />;
+      break;
+    case "legal":
+      page = <LegalPage key={route.doc} doc={route.doc} />;
+      break;
+    case "author":
+      page = <AuthorPage key={route.handle} />;
       break;
     case "about":
       page = <AboutPage />;
@@ -228,8 +249,8 @@ export default function App() {
       </main>
       <Footer />
 
-      {/* Floating "back to journal" on deep pages */}
-      {route.name === "post" && (
+      {/* Floating "back to hub" on deep article pages */}
+      {route.name === "article" && (
         <Link
           to="/blog"
           aria-label="Back to the journal"

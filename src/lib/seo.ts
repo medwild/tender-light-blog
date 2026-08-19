@@ -1,4 +1,5 @@
 import { SITE } from "./constants";
+import { postPath } from "../content/posts";
 
 /**
  * SEO manager — the SPA equivalent of Next.js `generateMetadata`.
@@ -12,6 +13,7 @@ export interface SeoInput {
   image?: string;
   type?: "website" | "article";
   jsonLd?: object[];
+  noindex?: boolean; // legal/utility pages — keep out of the index, follow links
 }
 
 function upsertMeta(attr: "name" | "property", key: string, content: string) {
@@ -24,14 +26,14 @@ function upsertMeta(attr: "name" | "property", key: string, content: string) {
   el.setAttribute("content", content);
 }
 
-export function applySeo({ title, description, path, image, type = "website", jsonLd = [] }: SeoInput) {
+export function applySeo({ title, description, path, image, type = "website", jsonLd = [], noindex = false }: SeoInput) {
   // Canonical URLs match the pre-rendered static paths (clean dirs, trailing slash).
   const url = `${SITE.url}${path === "/" ? "/" : path.replace(/\/+$/, "") + "/"}`;
   const img = image ?? "";
 
   document.title = title;
   upsertMeta("name", "description", description);
-  upsertMeta("name", "robots", "index, follow");
+  upsertMeta("name", "robots", noindex ? "noindex, follow" : "index, follow");
 
   upsertMeta("property", "og:site_name", SITE.name);
   upsertMeta("property", "og:title", title);
@@ -114,7 +116,7 @@ export const articleSchema = (post: {
   image: post.image,
   datePublished: post.date,
   dateModified: post.date,
-  mainEntityOfPage: `${SITE.url}/blog/${post.slug}/`,
+  mainEntityOfPage: `${SITE.url}${postPath(post.slug)}/`,
   author: { "@type": "Person", name: post.author.name, jobTitle: post.author.role },
   publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
 });

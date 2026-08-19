@@ -1349,6 +1349,35 @@ export const POSTS: Post[] = [
 
 export const getPost = (slug: string) => POSTS.find((p) => p.slug === slug);
 
+/**
+ * Silo (hub) assignment per article — one post lives in exactly one hub.
+ * Drives the canonical `/{hub}/{slug}/` URLs, breadcrumb trail and the
+ * hub-page spoke lists. Mirrors the Next.js `[hub]/[slug]` segment pair.
+ */
+export const POST_HUB: Record<string, string> = {
+  "30-engagement-photo-poses-couples": "engagement-photo-poses",
+  "classic-engagement-photos": "engagement-photo-poses",
+  "best-outfits-engagement-photos": "engagement-photo-outfits",
+  "top-engagement-photo-locations-oklahoma": "engagement-photo-locations",
+  "engagement-photo-ideas-outside": "engagement-photo-locations",
+  "casual-engagement-photo-ideas": "engagement-photo-ideas",
+  "unique-engagement-pics": "engagement-photo-ideas",
+  "golden-hour-photography-tips-couples": "engagement-photo-ideas",
+  "engagement-photo-checklist": "engagement-photo-ideas",
+  "how-to-feel-natural-in-front-of-camera": "engagement-photo-ideas",
+};
+
+export const hubFor = (slug: string) => POST_HUB[slug] ?? "engagement-photo-ideas";
+
+/** Canonical silo path for an article: `/{hub}/{slug}` (no trailing slash). */
+export const postPath = (slug: string) => `/${hubFor(slug)}/${slug}`;
+
+/** Canonical top-level path for a hub: `/{hubSlug}`. */
+export const hubPath = (hubSlug: string) => `/${hubSlug}`;
+
+export const getPostsByHub = (hubSlug: string) =>
+  POSTS.filter((p) => hubFor(p.slug) === hubSlug);
+
 export const getPostsByCategory = (category: string) =>
   POSTS.filter((p) => p.category === category);
 

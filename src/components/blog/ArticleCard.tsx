@@ -1,6 +1,6 @@
 import { ArrowUpRight, Clock } from "lucide-react";
 import { Link } from "../../lib/router";
-import { formatDate, getCategory, readingTime, type PostLike } from "../../lib/content";
+import { formatDate, getCategory, postPath, readingTime, type PostLike } from "../../lib/content";
 import Reveal from "../ui/Reveal";
 
 /**
@@ -24,7 +24,7 @@ export default function ArticleCard({
     return (
       <Reveal as="article" delay={delay}>
         <Link
-          to={`/blog/${post.slug}`}
+          to={postPath(post.slug)}
           className="group grid gap-6 border-b border-line py-8 transition-colors duration-300 hover:bg-paper sm:grid-cols-[240px_1fr] sm:gap-8"
         >
           <div className="overflow-hidden rounded-xl">
@@ -56,7 +56,7 @@ export default function ArticleCard({
   return (
     <Reveal as="article" delay={delay} className={featured ? "sm:col-span-2" : ""}>
       <Link
-        to={`/blog/${post.slug}`}
+        to={postPath(post.slug)}
         className={`group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-paper transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_-24px_rgba(44,44,44,0.35)] ${
           featured ? "lg:flex-row" : ""
         }`}

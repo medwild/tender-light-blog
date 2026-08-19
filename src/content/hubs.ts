@@ -43,7 +43,7 @@ export const HUBS: Hub[] = [
       "classic-engagement-photos",
       "unique-engagement-pics",
     ],
-    related: ["engagement-photo-poses", "outdoor-engagement-photo-ideas", "what-to-wear-for-engagement-photos"],
+    related: ["engagement-photo-poses", "engagement-photo-locations", "engagement-photo-outfits"],
     faq: [
       {
         q: "How many engagement photo ideas should we plan for one session?",
@@ -77,7 +77,7 @@ export const HUBS: Hub[] = [
       "casual-engagement-photo-ideas",
       "how-to-feel-natural-in-front-of-camera",
     ],
-    related: ["engagement-photo-ideas", "what-to-wear-for-engagement-photos", "save-the-date-photoshoot-ideas"],
+    related: ["engagement-photo-ideas", "engagement-photo-outfits", "save-the-date-photos"],
     faq: [
       {
         q: "What are the easiest engagement photo poses for couples who hate posing?",
@@ -94,7 +94,7 @@ export const HUBS: Hub[] = [
     ],
   },
   {
-    slug: "outdoor-engagement-photo-ideas",
+    slug: "engagement-photo-locations",
     name: "Outdoor Engagement Photo Ideas",
     keyword: "outdoor engagement photo ideas",
     volume: "320/mo",
@@ -110,7 +110,7 @@ export const HUBS: Hub[] = [
       "top-engagement-photo-locations-oklahoma",
       "golden-hour-photography-tips-couples",
     ],
-    related: ["engagement-photo-ideas", "engagement-photo-poses", "what-to-wear-for-engagement-photos"],
+    related: ["engagement-photo-ideas", "engagement-photo-poses", "engagement-photo-outfits"],
     faq: [
       {
         q: "What's the best time of day for outdoor engagement photos?",
@@ -127,7 +127,7 @@ export const HUBS: Hub[] = [
     ],
   },
   {
-    slug: "what-to-wear-for-engagement-photos",
+    slug: "engagement-photo-outfits",
     name: "What to Wear for Engagement Photos",
     keyword: "what to wear for engagement photos",
     volume: "TBD",
@@ -139,7 +139,7 @@ export const HUBS: Hub[] = [
     harperNote: "I've never once regretted a couple in muted tones. I've regretted neon, logos and tiny patterns every single time.",
     accent: "blush",
     spokes: ["best-outfits-engagement-photos", "casual-engagement-photo-ideas"],
-    related: ["engagement-photo-ideas", "engagement-photo-poses", "outdoor-engagement-photo-ideas"],
+    related: ["engagement-photo-ideas", "engagement-photo-poses", "engagement-photo-locations"],
     faq: [
       {
         q: "What colors should we wear for engagement photos?",
@@ -156,7 +156,7 @@ export const HUBS: Hub[] = [
     ],
   },
   {
-    slug: "save-the-date-photoshoot-ideas",
+    slug: "save-the-date-photos",
     name: "Save the Date Photoshoot Ideas",
     keyword: "save the date photoshoot ideas",
     volume: "110/mo",
@@ -168,7 +168,7 @@ export const HUBS: Hub[] = [
     harperNote: "The frames couples choose for save-the-dates are almost always the laughing, mid-motion ones — never the stiff formal pose. Plan for that.",
     accent: "rose",
     spokes: ["casual-engagement-photo-ideas", "classic-engagement-photos"],
-    related: ["engagement-photo-ideas", "engagement-photo-print-ideas", "what-to-wear-for-engagement-photos"],
+    related: ["engagement-photo-ideas", "engagement-photo-prints", "engagement-photo-outfits"],
     faq: [
       {
         q: "Can we use casual engagement photos for save-the-dates?",
@@ -185,7 +185,7 @@ export const HUBS: Hub[] = [
     ],
   },
   {
-    slug: "engagement-photo-print-ideas",
+    slug: "engagement-photo-prints",
     name: "Engagement Photo Print Ideas",
     keyword: "engagement photo print ideas",
     volume: "TBD",
@@ -197,7 +197,7 @@ export const HUBS: Hub[] = [
     harperNote: "Couples reprint the mid-laugh frames far more often than the formal ones. Print what makes you feel something when you walk past it.",
     accent: "gold",
     spokes: ["classic-engagement-photos", "casual-engagement-photo-ideas"],
-    related: ["save-the-date-photoshoot-ideas", "engagement-photo-ideas"],
+    related: ["save-the-date-photos", "engagement-photo-ideas"],
     faq: [
       {
         q: "Which engagement photos are worth printing?",
