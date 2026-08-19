@@ -3090,6 +3090,570 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Hub 3 · Locations cluster ———— */
+
+  {
+    slug: "outdoor-engagement-photo-locations",
+    title: "17 Outdoor Engagement Photo Locations Worth the Drive",
+    seoTitle: "17 Outdoor Engagement Photo Locations Worth the Drive",
+    seoDescription:
+      "Outdoor engagement photo locations that deliver — fields, water, tree lines and overlooks, with the light windows and permit notes for each.",
+    excerpt:
+      "Open fields, water edges, tree lines and overlooks — 17 outdoor engagement photo locations with honest notes on light, crowds and access.",
+    category: "locations",
+    date: "2026-04-01",
+    featuredImage: IMAGES.hero,
+    featuredAlt: "Couple in an open golden meadow — a classic outdoor engagement photo location",
+    tags: ["outdoor", "locations", "nature", "golden hour", "scouting"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "The best outdoor engagement photo locations share three traits: open sky for golden hour, some kind of texture (grass, water, stone, bark) and room to walk between setups. After scouting dozens of spots across the South, these 17 outdoor locations deliver most reliably — organized by terrain, with the light window and access notes for each. Outside solves lighting, variety and cost in one choice, which is why seven of ten couples I've photographed chose an outdoor spot for their session.",
+      },
+      { type: "h2", id: "open-fields-and-prairies", text: "Open Fields & Prairies" },
+      {
+        type: "p",
+        text: "Open grass is the most forgiving outdoor location there is — the sky does the lighting and the horizon does the framing. Tall prairie grass in late summer and early fall is the single most requested backdrop in my archive.",
+      },
+      {
+        type: "list",
+        items: [
+          "Tallgrass prairie preserves — six-foot bluestem, bison on the horizon, unmatched at sunset.",
+          "A private wheat field in June — ask the farmer, offer $20, park on the gravel.",
+          "Wildflower meadows in April–May — color for days, book the last slot before they mow.",
+          "Rolling hills with a lone oak — the classic silhouette spot, saved for last light.",
+        ],
+      },
+      { type: "h2", id: "water-locations", text: "Water: Creeks, Lakes & Docks" },
+      {
+        type: "list",
+        items: [
+          "Limestone creek shallows — sitting-on-rocks frames with natural stone shelves.",
+          "Sailing-point lake shores — boats drifting behind you with zero effort.",
+          "Wooden docks at sunrise — reflections double every frame before the wind picks up.",
+          "Riverbank sandbars in late summer — barefoot frames with a clean horizon.",
+        ],
+      },
+      { type: "h2", id: "tree-lines-and-forest", text: "Tree Lines & Forest Paths" },
+      {
+        type: "list",
+        items: [
+          "Oak corridors with dappled light — the forest's answer to a studio softbox.",
+          "Pecan groves in October — golden leaves and long afternoon shadows.",
+          "Cedar breaks at golden hour — dark green texture that makes cream outfits glow.",
+        ],
+      },
+      { type: "h2", id: "overlooks-and-urban-edges", text: "Overlooks & Urban Edges" },
+      {
+        type: "list",
+        items: [
+          "Hilltop overlooks above a city — skyline bokeh at blue hour.",
+          "Historic stone bridges — limestone turns honey-colored in the last hour.",
+          "Rooftop terraces with a clear western sightline — golden hour above the noise.",
+          "Rail-trail paths — straight leading lines with soft gravel underfoot.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Scout note",
+        text: "Water locations lose their light 30–45 minutes before open fields. If your route has both, shoot the creek mid-session and save the field for the final 20 minutes.",
+      },
+      { type: "h2", id: "outdoor-locations-faq", text: "Outdoor Location Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do we need a permit for outdoor engagement photos?",
+            a: "For a couple and one photographer: almost never. State parks charge per-vehicle entry; city parks may require permits only for tripods or assistants. Always verify the specific spot a week ahead.",
+          },
+          {
+            q: "What's the best time to shoot outdoor locations?",
+            a: "The last 60–90 minutes before sunset for golden hour, or the first hour after sunrise for softer tones and empty spots. Midday overhead sun is the one window to avoid.",
+          },
+          {
+            q: "How far should we travel for a good outdoor location?",
+            a: "Within 45 minutes is the sweet spot — far enough to feel like an escape, close enough that a long drive doesn't drain your energy before the camera comes out.",
+          },
+          {
+            q: "What if our outdoor spot is crowded?",
+            a: "Weekday sessions are nearly always empty. If that's not possible, arrive 15 minutes earlier than planned — the crowd thins fast in the last hour of light.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "10 Best Engagement Photo Locations in Oklahoma", to: "/engagement-photo-locations/top-engagement-photo-locations-oklahoma", note: "Locations · the scouted shortlist" },
+          { label: "18 Outdoor Engagement Photo Poses", to: "/engagement-photo-poses/outdoor-engagement-photo-poses", note: "Poses · what to do once you're there" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "at-home-engagement-photo-ideas",
+    title: "13 At-Home Engagement Photo Ideas for a Cozy, Honest Gallery",
+    seoTitle: "13 At-Home Engagement Photo Ideas for a Cozy Gallery",
+    seoDescription:
+      "At-home engagement photos — the rooms, routines and window-light setups that make a home session feel intimate, not like a house tour.",
+    excerpt:
+      "Your porch, your kitchen, your Sunday routine — 13 at-home engagement photo ideas shot in the softest light you already own.",
+    category: "locations",
+    date: "2026-04-03",
+    featuredImage: IMAGES.casualCafe,
+    featuredAlt: "Couple in a cozy indoor setting by a bright window — at-home engagement photo vibe",
+    tags: ["at home", "indoor", "cozy", "window light", "documentary"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "At-home engagement photos are the frames couples reprint most — because they're the only ones shot where your life actually happens. The worry is that home will look ordinary on camera. It won't, if you shoot the light instead of the rooms: one big window, a warm blanket, the routines you already do. These 13 at-home engagement photo ideas keep a home session intimate and editorial, never like a real-estate tour.",
+      },
+      { type: "h2", id: "the-rooms-that-photograph", text: "The Rooms That Photograph Best" },
+      {
+        type: "list",
+        items: [
+          "The kitchen — cooking together, flour on the counter, morning window light.",
+          "The bed or a window seat — coffee, a shared book, legs tangled under a quilt.",
+          "The front porch or stoop — the “home” frame that ages better than any other.",
+          "A bare wall with one good chair — clean, editorial, all about the two of you.",
+          "The backyard at golden hour — your own private field session.",
+        ],
+      },
+      { type: "h2", id: "window-light-setups", text: "Window-Light Setups" },
+      {
+        type: "p",
+        text: "Window light is the softbox you already own. Face the window, not the room — put the light on your faces and let everything behind you fall into soft shadow. North-facing windows give steady, even light all day; west-facing windows go golden in the late afternoon.",
+      },
+      {
+        type: "list",
+        items: [
+          "Sit on the floor leaning against the wall under the window, her head on his shoulder.",
+          "Forehead touch in the window light, curtains diffusing behind you.",
+          "Him behind her, arms around her waist, both lit from the side.",
+        ],
+      },
+      { type: "h2", id: "the-routine-frames", text: "The Routine Frames" },
+      {
+        type: "list",
+        items: [
+          "Pancakes, badly made — flour in the air is free confetti.",
+          "The Sunday paper: him reading, her stealing the funnies.",
+          "Slow dancing in the kitchen to whatever's on the speaker.",
+          "Getting ready together: him fixing his collar, her laughing at the mirror.",
+          "The quiet one: just sitting close on the couch, not performing anything.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Real talk",
+        text: "You don't need a photogenic apartment — you need one good window and one honest routine. I've shot galleries in dorm rooms that outshine ones in mansions, because the light and the love were the same.",
+      },
+      { type: "h2", id: "at-home-faq", text: "At-Home Session Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Our place is small and cluttered — will it show?",
+            a: "A photographer shoots tight on you and the window light, so most of the room never enters the frame. Clear one corner and one surface, and that's usually all the set you need.",
+          },
+          {
+            q: "Is natural light enough for indoor engagement photos?",
+            a: "Yes — one large window is more than enough. Avoid overhead lamps, which cast harsh shadows; turn them off and let the window do the work.",
+          },
+          {
+            q: "How long does an at-home engagement session take?",
+            a: "About 45–60 minutes. Home sessions move quickly because there's no travel between setups — you just move from room to room as the light shifts.",
+          },
+          {
+            q: "Should we clean the whole house before the shoot?",
+            a: "No — tidy the two or three spots you'll actually use and leave the rest. A lived-in home reads as honest, which is the whole point of shooting there.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "15 Casual Engagement Photo Ideas", to: "/engagement-photo-ideas/casual-engagement-photo-ideas", note: "Ideas · the relaxed vibe these frames share" },
+          { label: "13 Candid Engagement Photo Ideas", to: "/engagement-photo-ideas/candid-engagement-photo-ideas", note: "Ideas · keeping it unposed at home" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "urban-engagement-photo-ideas",
+    title: "15 Urban Engagement Photo Ideas for Downtown & Street Style",
+    seoTitle: "15 Urban Engagement Photo Ideas for Street-Style Couples",
+    seoDescription:
+      "Urban engagement photo ideas — brick alleys, crosswalks, murals and blue-hour neon for a downtown session with real street energy.",
+    excerpt:
+      "Brick, neon, crosswalks and coffee — 15 urban engagement photo ideas that turn a downtown stroll into a street-style gallery.",
+    category: "locations",
+    date: "2026-04-05",
+    featuredImage: IMAGES.gallerySilhouette,
+    featuredAlt: "Couple silhouetted against a city sky at dusk — urban engagement photo mood",
+    tags: ["urban", "downtown", "street style", "murals", "blue hour"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Urban engagement photos bring something a field never can: energy. Brick that turns honey-colored at golden hour, neon that wakes up at blue hour, and a city moving around you while you stay perfectly still. These 15 urban engagement photo ideas are built around the textures downtown gives you for free — and the two light windows that make them glow.",
+      },
+      { type: "h2", id: "golden-hour-urban", text: "Golden-Hour Urban Setups" },
+      {
+        type: "list",
+        items: [
+          "Brick-alley bounce light: walls turn the last sun into a warm reflector.",
+          "Mid-crosswalk conversation, city blurred around you.",
+          "Steps sit — museum or courthouse, one step apart, hands clasped.",
+          "Low-wall lean at golden hour, long shadows doing the drama.",
+          "The fire-escape frame, shot from across the street.",
+        ],
+      },
+      { type: "h2", id: "blue-hour-and-neon", text: "Blue-Hour & Neon Frames" },
+      {
+        type: "p",
+        text: "The 20 minutes after sunset are the city's best-kept secret: the sky goes slate-blue while every sign starts to glow. Urban couples should always tack on a blue-hour block — it's the most distinctive light you'll get all session.",
+      },
+      {
+        type: "list",
+        items: [
+          "Neon-storefront portrait: one colored light source, two silhouettes.",
+          "Lit café window, you framed in the glass from outside.",
+          "String-lit patio or beer garden, warm bulbs against a blue sky.",
+          "Crossing under a glowing marquee, caught mid-stride.",
+        ],
+      },
+      { type: "h2", id: "street-style-details", text: "Street-Style Details" },
+      {
+        type: "list",
+        items: [
+          "A shared coffee on a curb, steam catching the light.",
+          "The mural back — stand in front, not below, and let the color frame you.",
+          "Browsing a record shop or bookstore through the window.",
+          "Hailing a cab you don't need, mid-laugh.",
+          "The escalator descent, shot from two floors up.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Harper's tip",
+        text: "Shoot urban on a weekday. The same corner that's packed with tourists on Saturday is yours alone on a Wednesday — and empty streets are the difference between a street photo and a crowd photo.",
+      },
+      { type: "h2", id: "urban-faq", text: "Urban Session Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do we need permission to shoot downtown?",
+            a: "For a couple and one handheld photographer, public sidewalks are fine almost everywhere. Tripods and commercial crews can need permits — check your city's film office if you're bringing gear.",
+          },
+          {
+            q: "What should we wear for urban engagement photos?",
+            a: "Street style that's actually yours — a good jacket, clean sneakers or boots, one elevated piece each. Urban photos reward personality over formality; a blazer over a tee beats a gown on a sidewalk.",
+          },
+          {
+            q: "Is a city good for camera-shy couples?",
+            a: "Surprisingly, yes — you're two people among hundreds, so nobody's watching. Movement through a crowd also gives shy couples something to do with their attention.",
+          },
+          {
+            q: "What's the best time for urban engagement photos?",
+            a: "The hour before sunset for golden-hour brick light, then stay 20 minutes into blue hour for neon. That two-window combo is the whole urban look.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "12 Night Engagement Photo Ideas", to: "/engagement-photo-ideas/night-engagement-photo-ideas", note: "Ideas · the after-dark half of the city" },
+          { label: "16 Coffee Shop Engagement Photo Ideas", to: "/engagement-photo-locations/coffee-shop-engagement-photo-ideas", note: "Locations · the cozy stop on the stroll" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "park-garden-engagement-photo-ideas",
+    title: "14 Park & Garden Engagement Photo Ideas for Soft, Green Frames",
+    seoTitle: "14 Park & Garden Engagement Photo Ideas (2026)",
+    seoDescription:
+      "Park and garden engagement photo ideas — botanical backdrops, tree-lined paths and the etiquette and timing for a soft green session.",
+    excerpt:
+      "Botanical gardens, tree-lined paths and open lawns — 14 park and garden engagement photo ideas, plus the rules that keep them stress-free.",
+    category: "locations",
+    date: "2026-04-07",
+    featuredImage: IMAGES.outfitsCover,
+    featuredAlt: "Couple walking a sunlit garden path — park engagement photo location",
+    tags: ["park", "garden", "botanical", "green", "paths"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Parks and gardens are the most forgiving engagement photo locations in existence: soft dappled light, endless green texture, paths that give you somewhere to walk and benches that give you somewhere to sit. They're also the easiest to reach — most couples live within twenty minutes of a good one. These 14 park and garden engagement photo ideas cover the setups that flatter, plus the timing and etiquette that keep the session relaxed.",
+      },
+      { type: "h2", id: "garden-setups", text: "The Garden Setups" },
+      {
+        type: "list",
+        items: [
+          "The arched trellis or pergola — frame-within-a-frame, always a keeper.",
+          "Peeking through blooms: soft flowers blurred up front, sharp faces behind.",
+          "A winding gravel path, walking away, canopy overhead.",
+          "The fountain edge: sitting close, water catching light behind you.",
+          "Open lawn at golden hour — blanket, barefoot, big sky.",
+        ],
+      },
+      { type: "h2", id: "tree-lined-frames", text: "Tree-Lined Frames" },
+      {
+        type: "list",
+        items: [
+          "The canopy corridor: a row of oaks framing you down the center.",
+          "Dappled-light portrait in open shade under a live oak.",
+          "Forehead touch against a wide trunk, both of you in soft shadow.",
+          "Fall color frames — pecan and maple in October turn the whole park gold.",
+        ],
+      },
+      { type: "h2", id: "park-etiquette-and-timing", text: "Park Etiquette & Timing" },
+      {
+        type: "p",
+        text: "Most public parks welcome engagement sessions with a handheld camera — but botanical gardens often charge a small photography fee, and both get crowded on weekends. Go weekday, arrive 15 minutes early, and never block a path while you shoot. A little courtesy keeps the session relaxed for you and everyone walking by.",
+      },
+      {
+        type: "list",
+        items: [
+          "Check the garden's photo policy and fee before you book the date.",
+          "Weekday golden hour beats weekend midday, every time.",
+          "Stay off planted beds — the best frames don't need you in the flowers anyway.",
+          "Bring a blanket for lawn sits; damp grass ruins good trousers.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Scout note",
+        text: "Tree shade goes cool and blue late in the day. If your park is heavy canopy, shoot the open lawn last and the tree-lined paths first, while the light is still warm.",
+      },
+      { type: "h2", id: "park-faq", text: "Park & Garden Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do botanical gardens charge for engagement photos?",
+            a: "Many do — a modest per-couple photography fee on top of admission. It's worth it for the curated backdrops, but check the policy and book the slot a week ahead.",
+          },
+          {
+            q: "What season is best for garden engagement photos?",
+            a: "Spring for blooms and fresh green, fall for golden pecans and maples. Summer works if you shoot early or late to avoid harsh midday light; winter gardens offer quiet, moody frames.",
+          },
+          {
+            q: "Can we shoot in a public park without a permit?",
+            a: "Yes, in nearly all public parks with handheld gear. Permits usually apply only to tripods, assistants or commercial styling — verify with your local parks department if unsure.",
+          },
+          {
+            q: "What outfits suit a garden session?",
+            a: "Soft, earthy tones — cream, sage, champagne, dusty blue — that sit inside the green rather than fight it. Flowy fabrics catch the breeze nicely under a canopy.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "21 Engagement Photo Ideas Outside", to: "/engagement-photo-locations/engagement-photo-ideas-outside", note: "Locations · beyond the garden gate" },
+          { label: "Best Outfits for Engagement Photos", to: "/engagement-photo-outfits/best-outfits-engagement-photos", note: "Outfits · the palette these greens want" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "beach-engagement-photo-ideas",
+    title: "12 Beach Engagement Photo Ideas for Sunsets & Shorelines",
+    seoTitle: "12 Beach Engagement Photo Ideas for Sunset Couples",
+    seoDescription:
+      "Beach engagement photo ideas — shoreline walks, sunset silhouettes and the tide, wind and timing tricks that make a coastal session work.",
+    excerpt:
+      "Wet-sand mirrors, sunset silhouettes and wind in her hair — 12 beach engagement photo ideas with the tide timing that saves the shoot.",
+    category: "locations",
+    date: "2026-04-09",
+    featuredImage: IMAGES.locationsCover,
+    featuredAlt: "Couple by the water at golden hour — coastal engagement photo light",
+    tags: ["beach", "sunset", "coastal", "shoreline", "water"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Beach engagement photos live or die on two numbers: the sunset time and the tide chart. Get those right and the beach hands you a wet-sand mirror, a clean horizon and the warmest light of the day — all free. Get them wrong and you're shooting into a high tide with your shoes in the surf. These 12 beach engagement photo ideas cover the setups, plus the timing that makes a coastal session glow instead of struggle.",
+      },
+      { type: "h2", id: "shoreline-setups", text: "The Shoreline Setups" },
+      {
+        type: "list",
+        items: [
+          "The wet-sand walk: barefoot at the water's edge, reflections under every step.",
+          "Backlit sunset silhouette — saved for the last five minutes of light.",
+          "Sitting where the waves almost reach, foreheads touching, surf behind.",
+          "The lift-and-spin in shallow water, dress hem flying.",
+          "Walking away down the beach, hand in hand, horizon on your left.",
+        ],
+      },
+      { type: "h2", id: "dune-and-pier-frames", text: "Dune & Pier Frames" },
+      {
+        type: "list",
+        items: [
+          "Dune-grass portraits — sea oats catching gold, ocean blurred behind.",
+          "A wooden pier at sunset, planks leading straight to the sun.",
+          "Leaning on the pier rail, water glittering below.",
+          "The dune overlook: you two small against a very big sea.",
+        ],
+      },
+      { type: "h2", id: "tide-wind-and-timing", text: "Tide, Wind & Timing" },
+      {
+        type: "p",
+        text: "Check the tide chart before you book: you want a low or falling tide so there's wet sand to walk on and reflect in. An incoming tide shrinks your beach by the minute. Wind is the other factor — it's constant on the coast, so lean into it (hair, hems, laughter) instead of fighting it, and keep one hand on hair for the calm frames.",
+      },
+      {
+        type: "list",
+        items: [
+          "Shoot 60–90 minutes before sunset; the beach glows early because there's no shade.",
+          "Low tide + golden hour = the wet-sand mirror effect.",
+          "Bring a towel and dry sandals for between setups.",
+          "Rinse feet and hems before you get back in the car — future-you will be grateful.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "Harper's tip",
+        text: "The best beach frame isn't the kiss at sunset — it's the walk in the shallows ten minutes earlier, when the sand is a mirror and the light is soft. Everyone books the sunset; shoot the mirror first.",
+      },
+      { type: "h2", id: "beach-faq", text: "Beach Session Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do we need a permit for beach engagement photos?",
+            a: "Public beaches almost never require one for a couple and a handheld photographer. Some state and county beaches charge entry or a small photography fee — check the specific beach's site a week ahead.",
+          },
+          {
+            q: "What should we wear to a beach engagement session?",
+            a: "Flowy, light fabrics in cream, champagne or dusty blue that move with the wind. Go barefoot or bring neutral sandals — and skip anything you'd mind getting a little sandy.",
+          },
+          {
+            q: "Is a cloudy beach day ruined for photos?",
+            a: "No — overcast is a giant softbox, and moody beach skies photograph beautifully. A grey sky actually flatters skin more than harsh midday sun ever will.",
+          },
+          {
+            q: "How long before sunset should a beach session start?",
+            a: "About 75 minutes before. Beaches have no shade, so the light is usable earlier than inland — start on the dunes, move to the sand, and finish with the silhouette at last light.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "Golden Hour Photography Tips for Couples", to: "/engagement-photo-ideas/golden-hour-photography-tips-couples", note: "Tips · timing the beach light" },
+          { label: "18 Outdoor Engagement Photo Poses", to: "/engagement-photo-poses/outdoor-engagement-photo-poses", note: "Poses · movement frames for the shoreline" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "coffee-shop-engagement-photo-ideas",
+    title: "16 Coffee Shop Engagement Photo Ideas for Cozy, Candid Frames",
+    seoTitle: "16 Coffee Shop Engagement Photo Ideas for Cozy Frames",
+    seoDescription:
+      "Coffee shop engagement photo ideas — window light, latte art and candid café moments for a cozy, low-pressure public session.",
+    excerpt:
+      "Your usual table, two coffees, window light — 16 coffee shop engagement photo ideas that turn a café date into a candid gallery.",
+    category: "locations",
+    date: "2026-04-11",
+    featuredImage: IMAGES.casualCafe,
+    featuredAlt: "Couple laughing over coffee at a café window — coffee shop engagement photo",
+    tags: ["coffee shop", "café", "candid", "cozy", "window light"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "A coffee shop might be the most underrated engagement photo location there is: soft window light, warm wood tones, and a setting where you two already know exactly how to act — because you're just on a date. Coffee shop engagement photos work because nothing is performed; you're literally doing the thing you do every week, with better light. These 16 ideas turn a café morning into a candid gallery.",
+      },
+      { type: "h2", id: "the-window-table", text: "The Window Table Frames" },
+      {
+        type: "p",
+        text: "The window seat is the whole café shoot in one spot — glass light on your faces, the street softly behind you. Ask for the corner table; it gives the photographer two angles without moving you.",
+      },
+      {
+        type: "list",
+        items: [
+          "Two coffees, one mid-laugh, shot through the glass from outside.",
+          "Her chin on her hands, him mid-story across the table.",
+          "The shared pastry: one fork, an argument about the last bite.",
+          "Forehead touch over the table, mugs pushed aside.",
+        ],
+      },
+      { type: "h2", id: "the-counter-and-candid-shots", text: "The Counter & Candid Shots" },
+      {
+        type: "list",
+        items: [
+          "Ordering together at the counter, her deciding, him pretending not to care.",
+          "The barista pour, latte art catching the light, both of you watching.",
+          "Walking in with the first coffee of the day, steam rising.",
+          "Him reading the menu out loud, badly.",
+          "The toast: paper cups up, clinked over the table.",
+        ],
+      },
+      { type: "h2", id: "outside-the-shop", text: "Outside the Shop" },
+      {
+        type: "list",
+        items: [
+          "Walking away with to-go cups, hand in hand.",
+          "The curb sit: coffees on the ledge, people-watching.",
+          "Her fixing his collar outside, morning light on the brick.",
+          "The crosswalk with cups, caught mid-stride.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Real talk",
+        text: "Ask the owner first — nearly everyone says yes, and most are flattered. Go mid-morning on a weekday, buy like you mean it, and tip for the table you're about to turn into a set.",
+      },
+      { type: "h2", id: "coffee-shop-faq", text: "Coffee Shop Session Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "Do coffee shops allow engagement photo shoots?",
+            a: "Most independent cafés say yes, especially on quiet weekday mornings. Always ask the owner ahead of time, keep the footprint small, and be a paying customer first.",
+          },
+          {
+            q: "What's the best time for coffee shop engagement photos?",
+            a: "Mid-morning, around 9–10am, when the light through the east windows is soft and the rush has cleared. Weekdays beat weekends for an empty café.",
+          },
+          {
+            q: "What should we wear for café engagement photos?",
+            a: "Cozy, smart-casual layers — a knit sweater, a denim jacket, clean boots. Warm neutrals sit beautifully against wood and brick café interiors.",
+          },
+          {
+            q: "How long does a coffee shop session take?",
+            a: "About 30–45 minutes inside, plus another 15 outside with the to-go cups. It's the perfect low-pressure session — many couples do it as a first shoot before a bigger one.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "15 Casual Engagement Photo Ideas", to: "/engagement-photo-ideas/casual-engagement-photo-ideas", note: "Ideas · the vibe this session belongs to" },
+          { label: "15 Urban Engagement Photo Ideas", to: "/engagement-photo-locations/urban-engagement-photo-ideas", note: "Locations · the stroll after the coffee" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => {
@@ -3108,6 +3672,12 @@ export const POST_HUB: Record<string, string> = {
   "best-outfits-engagement-photos": "engagement-photo-outfits",
   "top-engagement-photo-locations-oklahoma": "engagement-photo-locations",
   "engagement-photo-ideas-outside": "engagement-photo-locations",
+  "outdoor-engagement-photo-locations": "engagement-photo-locations",
+  "at-home-engagement-photo-ideas": "engagement-photo-locations",
+  "urban-engagement-photo-ideas": "engagement-photo-locations",
+  "park-garden-engagement-photo-ideas": "engagement-photo-locations",
+  "beach-engagement-photo-ideas": "engagement-photo-locations",
+  "coffee-shop-engagement-photo-ideas": "engagement-photo-locations",
   "casual-engagement-photo-ideas": "engagement-photo-ideas",
   "unique-engagement-photo-ideas": "engagement-photo-ideas",
   "cute-engagement-photo-ideas": "engagement-photo-ideas",
@@ -3543,6 +4113,78 @@ export const POST_META: Record<string, PostMeta> = {
       { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour tips" },
     ],
     relatedPosts: ["ring-engagement-photo-poses", "romantic-engagement-photo-ideas", "classic-engagement-photos"],
+    monetization: M_ON,
+  },
+  "outdoor-engagement-photo-locations": {
+    primaryKeyword: "outdoor engagement photo locations",
+    secondaryKeywords: ["outdoor engagement pictures", "outside engagement photos", "nature engagement session"],
+    lsiKeywords: ["golden hour", "prairie", "creek", "tree line", "overlook", "permits"],
+    internalLinks: [
+      { url: "/engagement-photo-locations/top-engagement-photo-locations-oklahoma", anchor: "engagement photo locations in Oklahoma" },
+      { url: "/engagement-photo-poses/outdoor-engagement-photo-poses", anchor: "outdoor engagement photo poses" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour photography tips" },
+    ],
+    relatedPosts: ["top-engagement-photo-locations-oklahoma", "engagement-photo-ideas-outside", "outdoor-engagement-photo-poses"],
+    monetization: M_ON,
+  },
+  "at-home-engagement-photo-ideas": {
+    primaryKeyword: "at home engagement photos",
+    secondaryKeywords: ["home engagement session", "indoor engagement photos", "cozy couple pictures"],
+    lsiKeywords: ["window light", "kitchen", "porch", "documentary", "routines"],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+      { url: "/engagement-photo-ideas/candid-engagement-photo-ideas", anchor: "candid engagement photo ideas" },
+      { url: "/engagement-photo-locations/coffee-shop-engagement-photo-ideas", anchor: "coffee shop engagement photo ideas" },
+    ],
+    relatedPosts: ["casual-engagement-photo-ideas", "candid-engagement-photo-ideas", "coffee-shop-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "urban-engagement-photo-ideas": {
+    primaryKeyword: "urban engagement photo ideas",
+    secondaryKeywords: ["downtown engagement photos", "city engagement session", "street style engagement pictures"],
+    lsiKeywords: ["brick", "murals", "blue hour", "neon", "crosswalk", "street style"],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/night-engagement-photo-ideas", anchor: "night engagement photos" },
+      { url: "/engagement-photo-locations/coffee-shop-engagement-photo-ideas", anchor: "coffee shop engagement photo ideas" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+    ],
+    relatedPosts: ["night-engagement-photo-ideas", "coffee-shop-engagement-photo-ideas", "urban-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "park-garden-engagement-photo-ideas": {
+    primaryKeyword: "park engagement photo ideas",
+    secondaryKeywords: ["garden engagement photos", "botanical garden session", "outdoor couple pictures"],
+    lsiKeywords: ["dappled light", "canopy", "trellis", "botanical", "tree-lined path"],
+    internalLinks: [
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+      { url: "/engagement-photo-locations/outdoor-engagement-photo-locations", anchor: "outdoor engagement photo locations" },
+    ],
+    relatedPosts: ["engagement-photo-ideas-outside", "outdoor-engagement-photo-locations", "best-outfits-engagement-photos"],
+    monetization: M_ON,
+  },
+  "beach-engagement-photo-ideas": {
+    primaryKeyword: "beach engagement photo ideas",
+    secondaryKeywords: ["seaside engagement photos", "sunset beach couple pictures", "coastal engagement session"],
+    lsiKeywords: ["tide", "sunset", "wet sand", "dunes", "pier", "silhouette"],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour photography tips" },
+      { url: "/engagement-photo-poses/outdoor-engagement-photo-poses", anchor: "outdoor engagement photo poses" },
+      { url: "/engagement-photo-locations/outdoor-engagement-photo-locations", anchor: "outdoor engagement photo locations" },
+    ],
+    relatedPosts: ["golden-hour-photography-tips-couples", "outdoor-engagement-photo-poses", "engagement-photo-ideas-outside"],
+    monetization: M_ON,
+  },
+  "coffee-shop-engagement-photo-ideas": {
+    primaryKeyword: "coffee shop engagement photo ideas",
+    secondaryKeywords: ["cafe engagement session", "cozy date photos", "casual public location shoot"],
+    lsiKeywords: ["window light", "latte art", "candid", "counter", "to-go cups"],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+      { url: "/engagement-photo-locations/urban-engagement-photo-ideas", anchor: "urban engagement photo ideas" },
+      { url: "/engagement-photo-locations/at-home-engagement-photo-ideas", anchor: "at home engagement photos" },
+    ],
+    relatedPosts: ["casual-engagement-photo-ideas", "urban-engagement-photo-ideas", "at-home-engagement-photo-ideas"],
     monetization: M_ON,
   },
 };
