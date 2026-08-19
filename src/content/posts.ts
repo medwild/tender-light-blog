@@ -4176,6 +4176,423 @@ export const POSTS: Post[] = [
       },
     ],
   },
+
+  /* ———— Hub 5 · Save the Date & Proposal cluster ———— */
+
+  {
+    slug: "save-the-date-photo-ideas",
+    title: "17 Save the Date Photo Ideas That Make the Card",
+    seoTitle: "17 Save the Date Photo Ideas That Make the Card (2026)",
+    seoDescription:
+      "Save the date photo ideas built for print — card-ready frames, negative-space setups and the crops your designer needs.",
+    excerpt:
+      "A save-the-date is a photograph with a job. 17 frames, crops and setups that survive the trip from gallery to cardstock.",
+    category: "ideas",
+    date: "2026-04-02",
+    featuredImage: IMAGES.classicDip,
+    featuredAlt: "Elegant couple frame with open negative space, ideal for a save the date card",
+    tags: ["save the date", "card layout", "negative space", "crops", "print"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "A save-the-date photo has one job the rest of your gallery doesn't: it has to share the frame with your names, your date and a website — and still look like you. The save the date photo ideas that work best are the ones shot with print in mind from the first frame, not the ones cropped down after the fact. In seven of ten card designs I've consulted on, the winning frame was a horizontal, slightly wider shot with quiet space on one side — not the couple's favorite close-up. This guide covers the frames, the crops and the styling choices that make a photograph survive the trip from gallery to cardstock.",
+      },
+      { type: "h2", id: "what-makes-a-frame-card-ready", text: "What Makes a Frame Card-Ready" },
+      {
+        type: "p",
+        text: "Card-ready frames share three traits: horizontal orientation, negative space on one side, and subjects placed off-center. Your designer needs a quiet corner for typography — open sky, a plain wall, soft bokeh. A centered close-up forces text straight over your faces, which is how save-the-dates end up looking like ransom notes.",
+      },
+      {
+        type: "list",
+        items: [
+          "Horizontal 3:2 or 16:9 — never vertical; vertical gets hard-cropped at the edges.",
+          "You placed in the left or right third, not dead center.",
+          "A clean band of space above or beside you at least as tall as your head.",
+          "Contrast between you and the background — a dark suit against pale sky, a light dress against green.",
+          "No important detail at the extreme edges — printers trim 3–5mm unpredictably.",
+        ],
+      },
+      { type: "h2", id: "the-horizontal-frames", text: "The Horizontal Frames" },
+      {
+        type: "list",
+        items: [
+          "Walking away down a path, both of you small in a wide landscape.",
+          "Bench sit with open sky to the right — text lives in the sky.",
+          "The kiss against a plain wall, shot wide enough to breathe.",
+          "Picnic blanket from above, you two offset to one corner.",
+          "Forehead touch on a bridge, river filling the negative space.",
+        ],
+      },
+      { type: "h2", id: "the-concept-frames", text: "The Concept Frames (Text Built In)" },
+      {
+        type: "p",
+        text: "Some couples want the photo to carry the message itself. These setups work — when the handwriting is real and the props don't fight your faces for attention.",
+      },
+      {
+        type: "list",
+        items: [
+          "Chalkboard or kraft paper: your names and date hand-lettered, held between you.",
+          "The calendar frame: circling the wedding date, both of you pointing.",
+          "Vintage postcards or airmail envelopes scattered around a picnic.",
+          "A wooden sign planted in a field — paint it the week before, not the morning of.",
+          "Scrabble tiles spelling SAVE THE DATE on a blanket.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Harper's tip",
+        text: "Shoot the concept frames last, after the classic ones. Concept setups take longer than expected, and you don't want the chalkboard melting in the sun while your best light window closes.",
+      },
+      { type: "h2", id: "crops-for-the-designer", text: "Crops Your Designer Will Thank You For" },
+      {
+        type: "list",
+        items: [
+          "Horizontal 5x7 for standard cards — ask for this crop explicitly.",
+          "Square 1:1 for the wedding website and social announcement.",
+          "Vertical 4:5 for an Instagram teaser of the same frame.",
+          "A 'text-safe' version: the same frame with extra sky on one side.",
+        ],
+      },
+      { type: "h2", id: "save-the-date-photo-faq", text: "Save the Date Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "When should we take our save the date photos?",
+            a: "About 9–12 months before the wedding — or 3–4 months before you mail cards. That leaves room for editing, card design and printing without rushing any of the three.",
+          },
+          {
+            q: "Can we use engagement photos as save the date photos?",
+            a: "Yes, and most couples should. Any frame with negative space and a horizontal crop works. If your gallery lacks one, a 30-minute mini-session focused on card-ready frames costs far less than a full reshoot.",
+          },
+          {
+            q: "Should the save the date photo match our wedding colors?",
+            a: "Loosely. Echoing one or two palette tones makes the card feel connected to the wedding, but a strict match dates the photo if you change your mind later.",
+          },
+          {
+            q: "How many save the date photos do we need?",
+            a: "One strong frame, plus two alternates in different orientations. Your designer will want options for the card, the website and social — three frames covers all three without overshooting.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "14 Save the Date Poses Built for the Card Layout", to: "/save-the-date-photos/save-the-date-poses", note: "Poses · the body language of a good card" },
+          { label: "Engagement Photo Print Ideas", to: "/engagement-photo-prints", note: "Hub · what happens after the card is mailed" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "save-the-date-poses",
+    title: "14 Save the Date Poses Built for the Card Layout",
+    seoTitle: "14 Save the Date Poses Built for the Card Layout",
+    seoDescription:
+      "Save the date poses with built-in negative space — walking, seated and wide frames designed around the typography a card needs.",
+    excerpt:
+      "The best save the date poses leave room for your name. 14 walking, seated and wide frames designed around a card's typography.",
+    category: "ideas",
+    date: "2026-04-04",
+    featuredImage: IMAGES.galleryTwirl,
+    featuredAlt: "Couple with open sky beside them — a save the date pose with negative space",
+    tags: ["save the date poses", "negative space", "card layout", "walking", "wide frames"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "Save the date poses are just engagement poses with a co-star: the empty space where your names will go. The frames that fail on cards fail for one reason — the couple fills every inch, and the typography has nowhere to live. So every pose below is built around negative space: a sky, a wall, a field, a river. Nail the space and the card designs itself.",
+      },
+      { type: "h2", id: "walking-away-poses", text: "The Walking-Away Poses" },
+      {
+        type: "p",
+        text: "Walking frames are the most reliable save the date poses because distance does the design work — you're naturally small in a wide frame, and the landscape supplies the quiet space.",
+      },
+      {
+        type: "list",
+        items: [
+          "Walk away down a path, centered in the bottom third, sky above.",
+          "The glance-back: one of you turns while walking — motion plus space.",
+          "Hand in hand across an open field, photographer far back on a long lens.",
+          "Dock walk: water on one side becomes the text zone.",
+        ],
+      },
+      { type: "h2", id: "seated-poses", text: "The Seated Poses" },
+      {
+        type: "list",
+        items: [
+          "Bench sit, both looking at each other, open sky to the right.",
+          "Tailgate lean with the whole horizon behind you.",
+          "Steps sit low in the frame, architecture rising above — text lives in the stone.",
+          "Picnic blanket from overhead, offset to one corner of the frame.",
+        ],
+      },
+      { type: "h2", id: "wide-standing-poses", text: "The Wide Standing Poses" },
+      {
+        type: "list",
+        items: [
+          "Forehead touch at the far edge of a meadow — you're a third of the frame.",
+          "The dip against a plain wall, shot wide, wall doing the negative space.",
+          "Silhouette on a hilltop, sky filling two-thirds of the frame.",
+          "Standing small beneath a big sky — the classic 'tiny couple, huge world' frame.",
+        ],
+      },
+      { type: "h2", id: "hands-and-ring", text: "Hands & Ring, Card-Sized" },
+      {
+        type: "list",
+        items: [
+          "Interlaced hands low in frame, soft bokeh above — text over the blur.",
+          "Ring to the sky: her hand up against open blue, him blurred beside.",
+          "Hands together over a map or calendar — the date literally in frame.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "gold",
+        title: "The 30% rule",
+        text: "On a 5x7 card, you two should fill no more than 70% of the frame — and stay out of the top-left corner, where most templates place the date. Tell your photographer: 'wide, off-center, sky on one side.' Three instructions, perfect cards.",
+      },
+      { type: "h2", id: "save-the-date-poses-faq", text: "Save the Date Pose Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "What's the single best pose for a save the date card?",
+            a: "Walking away from the camera, small in a wide horizontal frame with open sky above. It's the most forgiving pose for text placement and it reads as 'on our way' — which is the whole message of the card.",
+          },
+          {
+            q: "Vertical or horizontal poses?",
+            a: "Horizontal, always. Standard save-the-date cards are landscape, and vertical frames lose their edges to the crop. If you love a vertical, keep it for the website's square version instead.",
+          },
+          {
+            q: "How do we pose without covering the text area?",
+            a: "Ask the photographer to compose with an empty third — sky, wall or bokeh — and to keep you off the top-left corner. A ten-second instruction at the start of the session covers it.",
+          },
+          {
+            q: "Should we look at the camera in save the date poses?",
+            a: "Either works, but looking at each other or away from camera ages better on a card. A direct-to-lens gaze can read formal; a mid-motion glance reads like a story being told.",
+          },
+        ],
+      },
+      { type: "ad", slot: "end-of-section" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "17 Save the Date Photo Ideas That Make the Card", to: "/save-the-date-photos/save-the-date-photo-ideas", note: "Ideas · the frames these poses fill" },
+          { label: "14 Ring Engagement Photo Poses & Detail Shots", to: "/engagement-photo-poses/ring-engagement-photo-poses", note: "Poses · the ring half of the card story" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "engagement-announcement-photo-ideas",
+    title: "15 Engagement Announcement Photo Ideas for the Big Reveal",
+    seoTitle: "15 Engagement Announcement Photo Ideas (2026)",
+    seoDescription:
+      "Engagement announcement photo ideas — ring reveals, social-first crops and family frames for announcing the news in style.",
+    excerpt:
+      "The news deserves a proper frame. 15 engagement announcement photo ideas — ring reveals, social crops and the family shots that matter.",
+    category: "ideas",
+    date: "2026-04-06",
+    featuredImage: IMAGES.galleryRing,
+    featuredAlt: "Hands with an engagement ring raised in celebration — announcement photo",
+    tags: ["engagement announcement", "ring reveal", "social media", "family", "newly engaged"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "An engagement announcement photo does double duty nobody warns you about: it has to work as an intimate moment AND as a thumbnail. The frames that get shared, saved and screenshot-forever are the ones with one clear subject — the ring, the hug, the hand — against a quiet background. These 15 engagement announcement photo ideas cover the ring reveal, the social-first crops, and the family frames you'll want ten minutes after the yes.",
+      },
+      { type: "h2", id: "the-ring-reveal-frames", text: "The Ring Reveal Frames" },
+      {
+        type: "p",
+        text: "The ring reveal is the most-saved frame of any announcement — and the easiest to get wrong. The mistake is shooting the ring alone; the winner is the ring plus an honest reaction. Aim for the half-second after she first really looks at it.",
+      },
+      {
+        type: "list",
+        items: [
+          "Her hand up by her face, eyes wide at the ring, him blurred behind.",
+          "The two-handed gasp — both hands to her mouth, ring out front.",
+          "Ring over his shoulder: hand forward, his laughing face behind it.",
+          "The slow slide: the ring going on, shot as a sequence not a single frame.",
+          "Ring against the sky at golden hour — backlight makes the stone flare.",
+        ],
+      },
+      { type: "h2", id: "social-first-frames", text: "The Social-First Frames" },
+      {
+        type: "p",
+        text: "Social announcement frames have one extra requirement: they must survive the crop. Instagram squares them, Stories stretch them, thumbnails shrink them. Shoot each moment twice — once wide for the feed, once tight for the Story — and both will land.",
+      },
+      {
+        type: "list",
+        items: [
+          "The hand-on-chest hug, framed wide enough to square-crop either way.",
+          "Her hand on his, ring centered, plain background — thumbnail-proof.",
+          "The jump: mid-air, shoes off the ground, pure news energy.",
+          "'Just engaged' with coffee cups raised — the casual reveal for the low-key couple.",
+          "The walk-away with the ring hand swinging forward toward the light.",
+        ],
+      },
+      { type: "h2", id: "family-and-friends-frames", text: "The Family & Friends Frames" },
+      {
+        type: "list",
+        items: [
+          "The first hug with mom — shoot from the side, nobody looks at the lens.",
+          "Dad's reaction: his face when he sees the ring. The real one.",
+          "The group squeeze: everyone in, someone's elbow in someone's face. Keep it.",
+          "Grandparents' hands over yours — the generational frame nobody plans and everyone cries at.",
+          "The toast: glasses up, mid-laugh, the news just minutes old.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "sage",
+        title: "Real talk",
+        text: "Take the family frames within the hour. The glow is a perishable thing — by hour three everyone's hungry and the magic has a curfew.",
+      },
+      { type: "h2", id: "announcement-faq", text: "Announcement Photo Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "When should we post our engagement announcement photos?",
+            a: "Tell family first, then post — usually within 24–48 hours of the proposal. Waiting longer makes the 'news' feel old, and you'll want the reveal energy while it's fresh.",
+          },
+          {
+            q: "What's the best engagement announcement photo for social media?",
+            a: "One clear subject against a quiet background: the ring on her hand, the hug, or the two of you mid-laugh. If the thumbnail still reads at a glance, it'll perform.",
+          },
+          {
+            q: "Do we need a photographer for announcement photos?",
+            a: "For the proposal itself, a hidden photographer is worth it if the budget allows. For the announcement set after, a phone in portrait mode with good window light gets you 90% of the way.",
+          },
+          {
+            q: "How many announcement photos should we post?",
+            a: "One hero frame in the feed, plus a carousel of two or three supporting moments. Resist the dump of fifteen — a tight set reads confident, and saves the rest for the people who matter.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "13 Surprise Proposal Ideas (and How to Photograph Them)", to: "/save-the-date-photos/surprise-proposal-ideas", note: "Ideas · where this story starts" },
+          { label: "17 Save the Date Photo Ideas", to: "/save-the-date-photos/save-the-date-photo-ideas", note: "Ideas · the card that follows the post" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "surprise-proposal-ideas",
+    title: "13 Surprise Proposal Ideas (and How to Get Them on Camera)",
+    seoTitle: "13 Surprise Proposal Ideas + How to Photograph Them",
+    seoDescription:
+      "Surprise proposal ideas that actually stay secret — plus the photographer angles, scouting checklist and signal plan that catch the moment.",
+    excerpt:
+      "A surprise proposal is a heist with a ring. 13 setups that keep the secret — and the camera plan that catches the kneel.",
+    category: "ideas",
+    date: "2026-04-08",
+    featuredImage: IMAGES.hero,
+    featuredAlt: "Golden hour meadow at sunset — a classic surprise proposal setting",
+    tags: ["surprise proposal", "hidden photographer", "scouting", "the kneel", "secret"],
+    author: harper,
+    blocks: [
+      {
+        type: "p",
+        text: "A surprise proposal is really two operations running at once: the secret, and the photograph. The ideas below keep the first one safe — because a surprise that leaks is just a scheduled appointment — but every one of them is also written from the photographer's side, because the moment you can't repeat is the moment you can't afford to miss. After 40+ proposals photographed, I can tell you the setups that deliver both are the ones with a scouted kneel point, a light source you've checked at the right hour, and a shooter who's been there before you have.",
+      },
+      { type: "h2", id: "setups-that-keep-the-secret", text: "Setups That Keep the Secret" },
+      {
+        type: "p",
+        text: "The best cover for a proposal is an event she already believes in — a photoshoot, a hike, a dinner. 'Let's get photos taken' is the single most effective alibi in the business, and it hands the photographer a legitimate reason to be holding a camera.",
+      },
+      {
+        type: "list",
+        items: [
+          "The fake engagement shoot: book a 'couple's photos' session — you're already dressed for it.",
+          "The golden-hour hike to the overlook you've 'wanted to see.'",
+          "A picnic at the park where you had your first date.",
+          "The scenic detour on a road trip — 'let's stop here, the light's nice.'",
+          "Dessert on the rooftop she mentioned once, three months ago. (You were taking notes.)",
+        ],
+      },
+      { type: "h2", id: "travel-and-landmark-proposals", text: "Travel & Landmark Proposals" },
+      {
+        type: "list",
+        items: [
+          "Sunrise at the overlook — nobody's awake, the secret stays, the light is empty and gold.",
+          "The quiet corner of a famous landmark, shot long-lens from across the plaza.",
+          "The beach walk at low tide — footprints in the sand, no witnesses but the photographer.",
+          "A boat proposal at blue hour, the city glowing behind the water.",
+        ],
+      },
+      { type: "h2", id: "at-home-and-intimate", text: "At-Home & Intimate Proposals" },
+      {
+        type: "list",
+        items: [
+          "The string-light living room: hang them while she's out, propose under them.",
+          "Breakfast in bed, ring under the cloche — the slowest, softest reveal there is.",
+          "The photo-wall reveal: a gallery of your two years, ending with an empty frame and a question.",
+          "The dog delivers it: ring on the collar, the good boy does the asking.",
+        ],
+      },
+      { type: "h2", id: "the-photographers-checklist", text: "The Photographer's Checklist (Don't Miss the Kneel)" },
+      {
+        type: "p",
+        text: "The kneel lasts four seconds. Everything on this list exists to make sure the camera is already where it needs to be when those four seconds start.",
+      },
+      {
+        type: "list",
+        items: [
+          "Scout the kneel point together with the photographer, at the same hour as the proposal.",
+          "Check the light direction at that exact hour — backlit beats frontlit for the reaction.",
+          "Agree on a signal to begin ('look at that bird' works as well as anything).",
+          "Shooter upwind, 30+ feet away, long lens — the surprise stays a surprise.",
+          "Two bodies if possible: one tight on her reaction, one wide on the kneel.",
+          "Keep shooting for one full minute after the yes — the aftermath out-photographs the kneel.",
+        ],
+      },
+      {
+        type: "callout",
+        tone: "rose",
+        title: "Harper's tip",
+        text: "Rehearse the kneel once, alone, at the spot. Which knee, which pocket, how the box opens toward the camera side of her left hand. The couples who rehearse look calm; the ones who don't look like they're proposing to the pavement.",
+      },
+      { type: "h2", id: "surprise-proposal-faq", text: "Surprise Proposal Questions, Answered" },
+      {
+        type: "faq",
+        items: [
+          {
+            q: "How do we hire a hidden photographer without her finding out?",
+            a: "Book under your name only, communicate by email or a separate number, and meet the photographer at the location beforehand — never together. Most proposal photographers have done this dozens of times and will help you keep the cover.",
+          },
+          {
+            q: "What's the best time of day for a surprise proposal?",
+            a: "Golden hour — the last hour before sunset — for outdoor proposals. You get the best light, and 'let's catch the sunset' is a believable reason to be there with a camera.",
+          },
+          {
+            q: "How far away should the photographer be?",
+            a: "About 30–50 feet with a 70–200mm lens. Close enough for sharp frames, far enough that conversation stays private and the surprise stays intact.",
+          },
+          {
+            q: "What if it rains on the proposal day?",
+            a: "Have a covered backup scouted — a porch, a pavilion, a café window. Umbrella proposals photograph beautifully, and 'the day it poured' becomes part of the story instead of ruining it.",
+          },
+        ],
+      },
+      { type: "ad", slot: "in-article" },
+      {
+        type: "keepReading",
+        items: [
+          { label: "12 Proposal Poses for the Moment & After", to: "/engagement-photo-poses/proposal-poses", note: "Poses · the four seconds, planned" },
+          { label: "15 Engagement Announcement Photo Ideas", to: "/save-the-date-photos/engagement-announcement-photo-ideas", note: "Ideas · what to post after the yes" },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getPost = (slug: string) => {
@@ -4200,6 +4617,10 @@ export const POST_HUB: Record<string, string> = {
   "park-garden-engagement-photo-ideas": "engagement-photo-locations",
   "beach-engagement-photo-ideas": "engagement-photo-locations",
   "coffee-shop-engagement-photo-ideas": "engagement-photo-locations",
+  "save-the-date-photo-ideas": "save-the-date-photos",
+  "save-the-date-poses": "save-the-date-photos",
+  "engagement-announcement-photo-ideas": "save-the-date-photos",
+  "surprise-proposal-ideas": "save-the-date-photos",
   "casual-engagement-photo-ideas": "engagement-photo-ideas",
   "unique-engagement-photo-ideas": "engagement-photo-ideas",
   "cute-engagement-photo-ideas": "engagement-photo-ideas",
@@ -4707,6 +5128,126 @@ export const POST_META: Record<string, PostMeta> = {
       { url: "/engagement-photo-locations/at-home-engagement-photo-ideas", anchor: "at home engagement photos" },
     ],
     relatedPosts: ["casual-engagement-photo-ideas", "urban-engagement-photo-ideas", "at-home-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "casual-engagement-photo-outfits": {
+    primaryKeyword: "casual engagement photo outfits",
+    secondaryKeywords: ["casual engagement session outfits", "relaxed couple outfits", "jeans engagement photos"],
+    lsiKeywords: ["denim", "knits", "sneakers", "layers", "70/20/10 rule"],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+      { url: "/engagement-photo-outfits/engagement-photo-color-palette", anchor: "best colors for engagement photos" },
+    ],
+    relatedPosts: ["casual-engagement-photo-ideas", "best-outfits-engagement-photos", "engagement-photo-color-palette"],
+    monetization: M_ON,
+  },
+  "fall-engagement-photo-outfits": {
+    primaryKeyword: "what to wear for fall pictures",
+    secondaryKeywords: ["fall engagement photo outfits", "autumn photoshoot clothes", "cozy couple outfits"],
+    lsiKeywords: ["camel coats", "chunky knits", "rust", "olive", "texture"],
+    internalLinks: [
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+      { url: "/engagement-photo-outfits/engagement-photo-color-palette", anchor: "engagement photo color palette" },
+      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
+    ],
+    relatedPosts: ["best-outfits-engagement-photos", "engagement-photo-color-palette", "engagement-photo-ideas-outside"],
+    monetization: M_ON,
+  },
+  "summer-engagement-photo-outfits": {
+    primaryKeyword: "summer engagement photo outfits",
+    secondaryKeywords: ["summer photoshoot outfit ideas", "warm weather engagement clothes", "light dresses"],
+    lsiKeywords: ["linen", "breathable", "slip dresses", "after-6pm", "sweat-proof"],
+    internalLinks: [
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour photography tips" },
+      { url: "/engagement-photo-locations/beach-engagement-photo-ideas", anchor: "beach engagement photo ideas" },
+    ],
+    relatedPosts: ["best-outfits-engagement-photos", "golden-hour-photography-tips-couples", "beach-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "spring-engagement-photo-outfits": {
+    primaryKeyword: "spring engagement photo outfits",
+    secondaryKeywords: ["spring photoshoot clothes", "pastel engagement outfits", "garden session outfits"],
+    lsiKeywords: ["pastels", "florals", "layers", "garden", "rain plan"],
+    internalLinks: [
+      { url: "/engagement-photo-locations/park-garden-engagement-photo-ideas", anchor: "park engagement photo ideas" },
+      { url: "/engagement-photo-outfits/engagement-photo-color-palette", anchor: "engagement photo color palette" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+    ],
+    relatedPosts: ["park-garden-engagement-photo-ideas", "engagement-photo-color-palette", "best-outfits-engagement-photos"],
+    monetization: M_ON,
+  },
+  "engagement-photo-color-palette": {
+    primaryKeyword: "best colors for engagement photos",
+    secondaryKeywords: ["engagement photo color palette", "neutral couple outfits", "earth tone photoshoot clothes"],
+    lsiKeywords: ["cream", "terracotta", "sage", "dusty blue", "neutrals", "70/20/10 rule"],
+    internalLinks: [
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+      { url: "/engagement-photo-outfits/casual-engagement-photo-outfits", anchor: "casual engagement photo outfits" },
+      { url: "/engagement-photo-outfits/fall-engagement-photo-outfits", anchor: "what to wear for fall pictures" },
+    ],
+    relatedPosts: ["best-outfits-engagement-photos", "casual-engagement-photo-outfits", "fall-engagement-photo-outfits"],
+    monetization: M_ON,
+  },
+  "what-to-wear-for-outdoor-engagement-photos": {
+    primaryKeyword: "what to wear for outdoor engagement photos",
+    secondaryKeywords: ["outdoor session outfits", "park engagement outfit ideas", "location-based clothing guide"],
+    lsiKeywords: ["terrain", "walking shoes", "wind", "layers", "location-first styling"],
+    internalLinks: [
+      { url: "/engagement-photo-locations/outdoor-engagement-photo-locations", anchor: "outdoor engagement photo locations" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "what to wear for engagement photos" },
+      { url: "/engagement-photo-ideas/engagement-photo-checklist", anchor: "engagement photo checklist" },
+    ],
+    relatedPosts: ["outdoor-engagement-photo-locations", "best-outfits-engagement-photos", "engagement-photo-checklist"],
+    monetization: M_ON,
+  },
+  "save-the-date-photo-ideas": {
+    primaryKeyword: "save the date photo ideas",
+    secondaryKeywords: ["save the date photoshoot ideas", "save the date engagement photos", "announcement shoot"],
+    lsiKeywords: ["negative space", "horizontal crop", "card layout", "typography", "5x7"],
+    internalLinks: [
+      { url: "/save-the-date-photos/save-the-date-poses", anchor: "save the date poses" },
+      { url: "/engagement-photo-prints", anchor: "engagement photo print ideas" },
+      { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photos" },
+    ],
+    relatedPosts: ["save-the-date-poses", "engagement-announcement-photo-ideas", "casual-engagement-photo-ideas"],
+    monetization: M_ON,
+  },
+  "save-the-date-poses": {
+    primaryKeyword: "save the date poses",
+    secondaryKeywords: ["save the date picture poses", "announcement poses", "engagement announcement photos"],
+    lsiKeywords: ["negative space", "walking away", "wide frames", "off-center", "card crop"],
+    internalLinks: [
+      { url: "/save-the-date-photos/save-the-date-photo-ideas", anchor: "save the date photo ideas" },
+      { url: "/engagement-photo-poses/ring-engagement-photo-poses", anchor: "ring engagement photo poses" },
+      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
+    ],
+    relatedPosts: ["save-the-date-photo-ideas", "ring-engagement-photo-poses", "classic-engagement-photos"],
+    monetization: M_ON,
+  },
+  "engagement-announcement-photo-ideas": {
+    primaryKeyword: "engagement announcement photo ideas",
+    secondaryKeywords: ["engaged pictures", "engagement reveal photos", "newly engaged photos"],
+    lsiKeywords: ["ring reveal", "social crop", "family frames", "thumbnail", "first hug"],
+    internalLinks: [
+      { url: "/save-the-date-photos/surprise-proposal-ideas", anchor: "surprise proposal ideas" },
+      { url: "/save-the-date-photos/save-the-date-photo-ideas", anchor: "save the date photo ideas" },
+      { url: "/engagement-photo-poses/ring-engagement-photo-poses", anchor: "ring engagement photo poses" },
+    ],
+    relatedPosts: ["surprise-proposal-ideas", "save-the-date-photo-ideas", "ring-engagement-photo-poses"],
+    monetization: M_ON,
+  },
+  "surprise-proposal-ideas": {
+    primaryKeyword: "surprise proposal ideas",
+    secondaryKeywords: ["surprise marriage proposal ideas", "unique proposals", "romantic proposal setups"],
+    lsiKeywords: ["hidden photographer", "the kneel", "scouting", "long lens", "golden hour"],
+    internalLinks: [
+      { url: "/engagement-photo-poses/proposal-poses", anchor: "proposal poses" },
+      { url: "/save-the-date-photos/engagement-announcement-photo-ideas", anchor: "engagement announcement photo ideas" },
+      { url: "/engagement-photo-ideas/golden-hour-photography-tips-couples", anchor: "golden hour photography tips" },
+    ],
+    relatedPosts: ["proposal-poses", "engagement-announcement-photo-ideas", "romantic-engagement-photo-ideas"],
     monetization: M_ON,
   },
 };
