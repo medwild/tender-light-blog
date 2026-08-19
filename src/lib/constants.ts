@@ -9,7 +9,7 @@ export const SITE = {
   script: "photographs worth keeping",
   url: "https://tenderlight.journal",
   description:
-    "Engagement photo ideas & poses for 2026 — couple poses, outfit guides, golden-hour tips and the best fiancé photo locations.",
+    "Engagement photo ideas, poses & inspiration for couples — six hubs: poses, outfits, locations, save-the-dates and prints, from 400+ real sessions.",
   email: "hello@tenderlight.studio",
   instagram: "@tenderlight.journal",
   location: "Austin, TX",

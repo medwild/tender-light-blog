@@ -157,7 +157,7 @@ export const HUBS: Hub[] = [
   },
   {
     slug: "save-the-date-photos",
-    name: "Save the Date Photoshoot Ideas",
+    name: "Save the Date & Proposal",
     keyword: "save the date photoshoot ideas",
     volume: "110/mo",
     kd: "14",
@@ -186,7 +186,7 @@ export const HUBS: Hub[] = [
   },
   {
     slug: "engagement-photo-prints",
-    name: "Engagement Photo Print Ideas",
+    name: "Prints, Gifts & Display",
     keyword: "engagement photo print ideas",
     volume: "TBD",
     kd: "TBD",

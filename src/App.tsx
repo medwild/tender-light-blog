@@ -36,8 +36,9 @@ function useSeo(path: string) {
     switch (route.name) {
       case "home":
         applySeo({
-          title: "Tender Light — Engagement Photo Poses & Ideas (2026)",
-          description: SITE.description,
+          title: "Engagement Photo Ideas, Poses & Inspiration | Tender Light",
+          description:
+            "Engagement photo ideas, poses & inspiration for couples — six hubs: poses, outfits, locations, save-the-dates and prints, from 400+ real sessions.",
           path: "/",
           type: "website",
           jsonLd: [organizationSchema(), websiteSchema()],
