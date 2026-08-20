@@ -5,6 +5,7 @@ import { getHub, HUBS } from "../content/hubs";
 import { getSemanticField, resolveTermLink } from "../content/semantic";
 import AuthorBox from "../components/blog/AuthorBox";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
+import HubLinkBanner from "../components/blog/HubLinkBanner";
 import CommentSection from "../components/blog/CommentSection";
 import PostBody from "../components/blog/PostBody";
 import RelatedPosts from "../components/blog/RelatedPosts";
@@ -108,6 +109,10 @@ export default function ArticlePage({ slug }: { slug: string }) {
             <TableOfContents items={toc} />
           </aside>
           <div className="lg:col-span-8">
+            {/* §14 rule: one link to the article's own hub, in the first third. */}
+            {hub && (
+              <HubLinkBanner hub={hub} index={Math.max(0, HUBS.findIndex((h) => h.slug === hub.slug))} />
+            )}
             <PostBody blocks={post.blocks} monetization={post.monetization} />
 
             {/* Tags */}

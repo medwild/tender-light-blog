@@ -23,7 +23,14 @@ export default function AuthorBox({ author }: { author: Author }) {
         )}
         <div>
           <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-gold-deep">Written by</p>
-          <h3 className="mt-1.5 font-display text-2xl font-bold">{author.name}</h3>
+          <h3 className="mt-1.5 font-display text-2xl font-bold">
+            <Link
+              to={`/author/${author.handle}`}
+              className="link-draw transition-colors duration-300 hover:text-rose-deep"
+            >
+              {author.name}
+            </Link>
+          </h3>
           <p className="flex items-center gap-1.5 text-sm font-medium text-rose-deep">
             <Camera className="h-4 w-4" aria-hidden /> {author.role}
           </p>

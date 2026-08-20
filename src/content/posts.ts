@@ -5715,9 +5715,10 @@ export const POST_META: Record<string, PostMeta> = {
     ],
     citations: [],
     internalLinks: [
-      { url: "/engagement-photo-ideas/unique-engagement-photo-ideas", anchor: "unique engagement photo ideas" },
-      { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
-      { url: "/engagement-photo-poses/30-engagement-photo-poses-couples", anchor: "engagement photo poses" },
+      { url: "/engagement-photo-poses/natural-engagement-photo-poses", anchor: "natural engagement photo poses" },
+      { url: "/engagement-photo-outfits/casual-engagement-photo-outfits", anchor: "casual engagement photo outfits" },
+      { url: "/engagement-photo-locations/at-home-engagement-photo-ideas", anchor: "at home engagement photos" },
+      { url: "/engagement-photo-prints/mini-photo-print-ideas", anchor: "mini photo print ideas" },
     ],
     relatedPosts: ["unique-engagement-photo-ideas", "engagement-photo-ideas-outside", "best-outfits-engagement-photos"],
     monetization: { adsense: true, affiliate: true, leadMagnet: true },
