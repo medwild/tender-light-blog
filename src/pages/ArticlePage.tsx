@@ -8,6 +8,7 @@ import Breadcrumbs from "../components/seo/Breadcrumbs";
 import HubLinkBanner from "../components/blog/HubLinkBanner";
 import CitationBlock from "../components/blog/CitationBlock";
 import CommentSection from "../components/blog/CommentSection";
+import PinterestBoard from "../components/blog/PinterestBoard";
 import PostBody from "../components/blog/PostBody";
 import RelatedPosts from "../components/blog/RelatedPosts";
 import ShareButtons from "../components/blog/ShareButtons";
@@ -190,6 +191,11 @@ export default function ArticlePage({ slug }: { slug: string }) {
             <AuthorBox author={post.author} />
             <CommentSection />
           </div>
+        </div>
+
+        {/* Pinterest production kit (§20) — full width */}
+        <div className="mx-auto max-w-6xl">
+          <PinterestBoard pins={post.pinImages ?? []} shareUrl={`https://tenderlight.journal${postPath(post.slug)}/`} />
         </div>
 
         {/* Related — full width */}

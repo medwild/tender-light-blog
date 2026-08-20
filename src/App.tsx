@@ -100,8 +100,16 @@ function useSeo(path: string) {
           description: post.seoDescription,
           path: postPath(post.slug),
           image: post.featuredImage,
+          imageWidth: 1200,
+          imageHeight: 630,
           type: "article",
           jsonLd: schemas,
+          article: {
+            published: post.date,
+            modified: post.dateModified ?? post.date,
+            author: post.author.name,
+            authorUrl: `https://tenderlight.journal/author/${post.author.handle ?? "harper-ellis"}/`,
+          },
         });
         return;
       }

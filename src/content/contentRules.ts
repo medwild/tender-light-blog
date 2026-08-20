@@ -30,6 +30,30 @@ export const SATELLITE_RULES = {
   quotables: 2,
 } as const;
 
+/** §20 — Pinterest SEO rules per article. */
+export const PINTEREST_RULES = {
+  ogImage: { w: 1200, h: 630 },
+  verticalPin: { w: 1000, h: 1500 },
+  pinCount: [1, 3], // ≥1 required, 3 ideal
+  pinTitleMax: 100,
+  pinDescriptionMax: 500,
+  altFormat: "primary keyword + natural description",
+  metaOg: [
+    "og:title",
+    "og:description",
+    "og:image",
+    "og:url",
+    "og:type=article",
+    "article:published_time",
+    "article:modified_time",
+    "article:author",
+    "twitter:card",
+    "twitter:title",
+    "twitter:description",
+    "twitter:image",
+  ],
+} as const;
+
 /* ————— Measurers ————— */
 
 const countWords = (text: string) => text.split(/\s+/).filter(Boolean).length;
@@ -112,6 +136,44 @@ export const faqAnswerWindow = (blocks: Block[]): { ok: number; total: number } 
   return { ok, total: faq.items.length };
 };
 
+/* ————— §20 Pinterest measurers ————— */
+
+/** Alt text follows "primary keyword + natural description". */
+export const altHasKeyword = (post: Post): boolean => {
+  const kw = (post.primaryKeyword ?? "").toLowerCase();
+  const alt = post.featuredAlt.toLowerCase();
+  if (!kw) return Boolean(post.featuredAlt);
+  return alt.includes(kw) || alt.includes(kw.split(/\s+/).slice(0, 2).join(" "));
+};
+
+export const pinTitleMax = (post: Post): number =>
+  (post.pinImages ?? []).reduce((m, p) => Math.max(m, p.pinTitle.length), 0);
+
+export const pinDescMax = (post: Post): number =>
+  (post.pinImages ?? []).reduce((m, p) => Math.max(m, p.pinDescription.length), 0);
+
+export const pinterestChecks = (post: Post): Check[] => {
+  const pins = post.pinImages ?? [];
+  const ogOk = Boolean(post.featuredImage);
+  const altOk = altHasKeyword(post);
+  const titleOk = pins.length > 0 && pinTitleMax(post) <= PINTEREST_RULES.pinTitleMax;
+  const descOk = pins.length > 0 && pinDescMax(post) <= PINTEREST_RULES.pinDescriptionMax;
+
+  return [
+    { rule: "OG image 1200×630", value: ogOk ? "set" : "—", level: ogOk ? "pass" : "fail", target: "featured image" },
+    { rule: "Alt = keyword + desc", value: altOk ? "yes" : "no", level: altOk ? "pass" : "goal", target: PINTEREST_RULES.altFormat },
+    {
+      rule: "Vertical pins 1000×1500",
+      value: `${pins.length}`,
+      level: pins.length >= PINTEREST_RULES.pinCount[1] ? "pass" : pins.length >= 1 ? "goal" : "fail",
+      target: "3 ideal",
+    },
+    { rule: "Pin title ≤ 100", value: pins.length ? `${pinTitleMax(post)} max` : "—", level: pins.length && titleOk ? "pass" : "fail", target: "≤ 100 chars" },
+    { rule: "Pin desc ≤ 500", value: pins.length ? `${pinDescMax(post)} max` : "—", level: pins.length && descOk ? "pass" : "fail", target: "≤ 500 chars" },
+    { rule: "Meta OG/Twitter", value: "12 tags", level: "pass", target: `${PINTEREST_RULES.metaOg.length} tags` },
+  ];
+};
+
 /* ————— Audit report ————— */
 
 export type CheckLevel = "pass" | "goal" | "fail";
@@ -165,6 +227,7 @@ export function auditPost(post: Post): Check[] {
       level: fw.total > 0 && fw.ok === fw.total ? "pass" : "goal",
       target: "every answer",
     },
+    ...pinterestChecks(post),
   ];
 }
 

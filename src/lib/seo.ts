@@ -11,9 +11,13 @@ export interface SeoInput {
   description: string; // keep ≤ 155 chars
   path: string; // e.g. "/blog/some-slug"
   image?: string;
+  imageWidth?: number; // OG image dims (1200×630) — helps Pinterest Rich Pins
+  imageHeight?: number;
   type?: "website" | "article";
   jsonLd?: object[];
   noindex?: boolean; // legal/utility pages — keep out of the index, follow links
+  /** Article-only meta (§20 Pinterest/Rich Pins): published/modified/author. */
+  article?: { published: string; modified?: string; author: string; authorUrl?: string };
 }
 
 function upsertMeta(attr: "name" | "property", key: string, content: string) {
@@ -26,7 +30,7 @@ function upsertMeta(attr: "name" | "property", key: string, content: string) {
   el.setAttribute("content", content);
 }
 
-export function applySeo({ title, description, path, image, type = "website", jsonLd = [], noindex = false }: SeoInput) {
+export function applySeo({ title, description, path, image, imageWidth, imageHeight, type = "website", jsonLd = [], noindex = false, article }: SeoInput) {
   // Canonical URLs match the pre-rendered static paths (clean dirs, trailing slash).
   const url = `${SITE.url}${path === "/" ? "/" : path.replace(/\/+$/, "") + "/"}`;
   const img = image ?? "";
@@ -40,7 +44,19 @@ export function applySeo({ title, description, path, image, type = "website", js
   upsertMeta("property", "og:description", description);
   upsertMeta("property", "og:type", type);
   upsertMeta("property", "og:url", url);
-  if (img) upsertMeta("property", "og:image", img);
+  if (img) {
+    upsertMeta("property", "og:image", img);
+    if (imageWidth) upsertMeta("property", "og:image:width", String(imageWidth));
+    if (imageHeight) upsertMeta("property", "og:image:height", String(imageHeight));
+    upsertMeta("property", "og:image:alt", title);
+  }
+
+  // Article meta (§20 — Pinterest Rich Pins + social graph freshness)
+  if (type === "article" && article) {
+    upsertMeta("property", "article:published_time", article.published);
+    if (article.modified) upsertMeta("property", "article:modified_time", article.modified);
+    upsertMeta("property", "article:author", article.authorUrl ?? article.author);
+  }
 
   upsertMeta("name", "twitter:card", img ? "summary_large_image" : "summary");
   upsertMeta("name", "twitter:title", title);
