@@ -68,6 +68,17 @@ export interface Monetization {
   leadMagnet: boolean;
 }
 
+/**
+ * External source for a verifiable claim (§16 — Citations & Trust Signals).
+ * Rules: never invent sources, never cite direct competitors, only verifiable
+ * facts. Experience-based advice stays in Harper's voice (callouts), never here.
+ */
+export interface Citation {
+  title: string;
+  url: string;
+  claim: string;
+}
+
 export interface Post {
   slug: string;
   title: string;
@@ -91,7 +102,7 @@ export interface Post {
   lsiKeywords?: string[];
   searchIntent?: "informational" | "commercial" | "navigational";
   pinImages?: PinImage[];
-  citations?: string[];
+  citations?: (string | Citation)[];
   internalLinks?: { url: string; anchor: string }[];
   relatedPosts?: string[]; // explicit override; falls back to same-category
   monetization?: Monetization;
