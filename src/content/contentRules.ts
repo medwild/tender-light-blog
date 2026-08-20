@@ -1,5 +1,6 @@
 import type { Block, Post } from "./types";
 import type { Hub } from "./hubs";
+import { adSlotCoverage, affiliateCoverage, CANONICAL_AD_SLOTS, hasLeadMagnet } from "./monetization";
 
 /**
  * §18 — Content rules per page type. The single source of truth the
@@ -228,6 +229,32 @@ export function auditPost(post: Post): Check[] {
       target: "every answer",
     },
     ...pinterestChecks(post),
+    ...monetizationChecks(post),
+  ];
+}
+
+/* ————— §21 Monetization checks ————— */
+
+export function monetizationChecks(post: Post): Check[] {
+  const ads = adSlotCoverage(post.blocks);
+  const aff = affiliateCoverage(post.blocks);
+  const lead = hasLeadMagnet(post.blocks);
+  const hasShop = post.blocks.some((b) => b.type === "shop");
+
+  return [
+    {
+      rule: "AdSense slots",
+      value: `${ads.size}/5`,
+      level: ads.size >= 3 ? "pass" : ads.size > 0 ? "goal" : "fail",
+      target: "3+ of 5",
+    },
+    {
+      rule: "Affiliate section",
+      value: aff.size > 0 ? `${aff.size} named` : hasShop ? "unnamed" : "—",
+      level: aff.size > 0 ? "pass" : hasShop ? "goal" : "fail",
+      target: "named §21 section",
+    },
+    { rule: "Lead magnet", value: lead ? "present" : "—", level: lead ? "pass" : "goal", target: "≥ 1" },
   ];
 }
 

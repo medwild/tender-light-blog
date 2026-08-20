@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Aperture, ArrowRight, Check, ListChecks, MapPin, Scale, ShoppingBag, Sparkles, Sun } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import type { Block, Monetization } from "../../content/types";
+import { adSlotLabel, affiliateSectionLabel, CANONICAL_AD_SLOTS, LEAD_MAGNETS, normalizeAdSlot } from "../../content/monetization";
 import { Link } from "../../lib/router";
 import Reveal from "../ui/Reveal";
 import FaqSection from "./FaqSection";
@@ -202,7 +204,7 @@ export default function PostBody({
                   <div className="text-center">
                     <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-faint">Advertisement</p>
                     <p className="mt-2 text-xs text-ink-faint">
-                      {block.slot === "in-article" ? "In-article ad slot" : "End-of-section ad slot"} · wired for AdSense
+                      <span className="font-semibold text-gold-deep">{adSlotLabel(block.slot)}</span> · AdSense slot {CANONICAL_AD_SLOTS.indexOf(normalizeAdSlot(block.slot)) + 1}/5
                     </p>
                   </div>
                 </aside>
@@ -213,8 +215,13 @@ export default function PostBody({
               <Reveal key={i}>
                 <div className="rounded-xl border border-line bg-paper p-6">
                   <p className="flex items-center gap-2 font-display text-lg font-bold text-ink">
-                    <ShoppingBag className="h-5 w-5 text-gold-deep" aria-hidden /> Shop the look
+                    <ShoppingBag className="h-5 w-5 text-gold-deep" aria-hidden /> {block.title ?? affiliateSectionLabel(block.section)}
                   </p>
+                  {block.section && (
+                    <p className="mt-0.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-gold-deep/70">
+                      Affiliate · {affiliateSectionLabel(block.section)}
+                    </p>
+                  )}
                   <ul className="mt-4 flex flex-wrap gap-2.5">
                     {block.items.map((item) => (
                       <li key={item.label}>
@@ -286,12 +293,22 @@ export default function PostBody({
                 </div>
               </Reveal>
             );
-          case "leadMagnet":
+          case "leadMagnet": {
+            // §21 — resolve from the registry, then let inline fields override.
+            const registered = block.productId ? LEAD_MAGNETS[block.productId] : undefined;
             return (
               <Reveal key={i}>
-                <LeadMagnetCard title={block.title} subtitle={block.subtitle} bullets={block.bullets} cta={block.cta} />
+                <LeadMagnetCard
+                  icon={registered?.icon}
+                  accent={registered?.accent}
+                  title={block.title ?? registered?.title ?? "Free download"}
+                  subtitle={block.subtitle ?? registered?.subtitle ?? ""}
+                  bullets={block.bullets ?? registered?.bullets ?? []}
+                  cta={block.cta ?? registered?.cta ?? "Send it to me"}
+                />
               </Reveal>
             );
+          }
           case "pinCta":
             return (
               <Reveal key={i}>
@@ -366,11 +383,15 @@ function renderInline(text: string) {
  * Local demo state; swap the handler for your email provider later.
  */
 function LeadMagnetCard({
+  icon: Icon,
+  accent,
   title,
   subtitle,
   bullets,
   cta,
 }: {
+  icon?: LucideIcon;
+  accent?: "rose" | "gold" | "sage";
   title: string;
   subtitle: string;
   bullets: string[];
@@ -398,7 +419,14 @@ function LeadMagnetCard({
       <span className="absolute right-5 top-5 rotate-6 rounded-full bg-gold px-3.5 py-1.5 font-script text-lg text-ink shadow-md">
         free download
       </span>
-      <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-deep">The lead magnet</p>
+      <div className="flex items-center gap-2.5">
+        {Icon && (
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-gold/25 text-gold-deep">
+            <Icon className="h-5 w-5" aria-hidden />
+          </span>
+        )}
+        <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-gold-deep">The lead magnet{accent ? ` · ${accent}` : ""}</p>
+      </div>
       <h3 className="mt-2 max-w-md font-display text-2xl font-bold leading-snug text-ink">{title}</h3>
       <p className="mt-2 max-w-md text-[15px] leading-relaxed text-ink-soft">{subtitle}</p>
       <ul className="mt-4 max-w-md space-y-2">

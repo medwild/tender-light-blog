@@ -686,6 +686,7 @@ export const POSTS: Post[] = [
           "Bring one meaningful prop (a coffee cup, your dog, a book) to make the session feel personal.",
         ],
       },
+      { type: "ad", slot: "after-intro" },
       { type: "h2", id: "why-choose-casual", text: "Why Choose a Casual Engagement Session?" },
       {
         type: "p",
@@ -714,7 +715,7 @@ export const POSTS: Post[] = [
         title: "Real talk",
         text: "Nobody looks natural being told to “just relax” by a stranger with a camera. That's exactly why every idea in this guide is an action, not an instruction — you can't be stiff while you're busy laughing at his terrible joke or reaching for the last fry.",
       },
-      { type: "ad", slot: "in-article" },
+      { type: "ad", slot: "after-first-h2" },
       { type: "h2", id: "what-to-wear", text: "What to Wear: Casual Engagement Outfit Ideas" },
       {
         type: "p",
@@ -753,6 +754,8 @@ export const POSTS: Post[] = [
       },
       {
         type: "shop",
+        section: "outfits",
+        title: "Shop the casual look",
         items: [
           { label: "Neutral wrap dress", store: "Amazon", href: "https://www.amazon.com/s?k=neutral+wrap+dress" },
           { label: "Flowy midi skirt", store: "Amazon", href: "https://www.amazon.com/s?k=flowy+midi+skirt" },
@@ -761,7 +764,7 @@ export const POSTS: Post[] = [
           { label: "Clean minimal sneakers", store: "Amazon", href: "https://www.amazon.com/s?k=mens+minimal+white+sneakers" },
         ],
       },
-      { type: "ad", slot: "end-of-section" },
+      { type: "ad", slot: "mid-article" },
       { type: "h2", id: "low-key-locations", text: "5 Best Locations for Low-Key Engagement Photos" },
       {
         type: "p",
@@ -864,6 +867,7 @@ export const POSTS: Post[] = [
       },
       {
         type: "leadMagnet",
+        productId: "pose-cheat-sheet",
         title: "Free: The Relaxed-Pose Cheat Sheet",
         subtitle:
           "All 10 action prompts from this guide, plus the outfit 70/20/10 rule — on one printable page to hand your photographer (or tuck in your back pocket).",
@@ -913,6 +917,7 @@ export const POSTS: Post[] = [
           "Couple Photography Poses",
         ],
       },
+      { type: "ad", slot: "before-faq" },
       {
         type: "p",
         text: "If I could redo my first fifty casual sessions, I'd spend less time arranging people and more time waiting — the good frames arrive about ninety seconds after a couple stops performing. That's what I'd do differently, and it's the single thing I'm telling you now. So here's the whole playbook: coordinate — don't match — your outfits, pick places that are already yours, and trade frozen poses for little actions you can actually do.",
@@ -926,6 +931,7 @@ export const POSTS: Post[] = [
         url: "https://tenderlight.journal/blog/casual-engagement-photo-ideas/",
         image: IMAGES.casualCafe,
       },
+      { type: "ad", slot: "end-of-article" },
       {
         type: "keepReading",
         items: [

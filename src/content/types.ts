@@ -12,6 +12,34 @@ export interface Category {
   accent: "rose" | "gold" | "sage" | "blush";
 }
 
+/** §21 — the five canonical AdSense placements, in reading order.
+ *  `"in-article"` / `"end-of-section"` are kept as legacy aliases (normalized
+ *  via `normalizeAdSlot`) so pre-§21 content keeps compiling and counting. */
+export type AdSlotName =
+  | "after-intro"
+  | "after-first-h2"
+  | "mid-article"
+  | "before-faq"
+  | "end-of-article"
+  | "in-article" // legacy → mid-article
+  | "end-of-section"; // legacy → before-faq
+
+/** §21 — named affiliate sections (outfits, location gear, props, prints, display, gifts). */
+export type AffiliateSectionName =
+  | "outfits"
+  | "location-accessories"
+  | "props"
+  | "prints"
+  | "display"
+  | "gifts";
+
+/** §21 — the four lead magnets in the registry. */
+export type LeadMagnetId =
+  | "engagement-shoot-checklist"
+  | "pose-cheat-sheet"
+  | "outfit-planning-guide"
+  | "pinterest-board-template";
+
 export type Block =
   | { type: "p"; text: string }
   | { type: "h2"; id: string; text: string }
@@ -25,10 +53,10 @@ export type Block =
   | { type: "keyTakeaways"; items: string[] }
   /** GEO §19 — comparison table for featured snippets (Casual vs Formal, etc.). */
   | { type: "table"; caption: string; headers: string[]; rows: string[][] }
-  /** Reserved AdSense slot — labeled placeholder until ad units are wired. */
-  | { type: "ad"; slot: "in-article" | "end-of-section" }
-  /** Affiliate-ready product links (rel="sponsored"). */
-  | { type: "shop"; items: { label: string; store: string; href: string }[] }
+  /** Reserved AdSense slot — labeled placeholder until ad units are wired. §21. */
+  | { type: "ad"; slot: AdSlotName }
+  /** Affiliate-ready product links (rel="sponsored"). §21 — `section` names the placement. */
+  | { type: "shop"; section?: AffiliateSectionName; title?: string; items: { label: string; store: string; href: string }[] }
   /** Pinterest production kit (STEP 2 spec): 3 angle variants + boards. */
   | {
       type: "pinKit";
@@ -44,8 +72,9 @@ export type Block =
     }
   /** "Pin this guide" call to action. */
   | { type: "pinCta"; url: string; image: string }
-  /** [LEAD MAGNET] — free-download opt-in (cheat sheet / PDF guide). */
-  | { type: "leadMagnet"; title: string; subtitle: string; bullets: string[]; cta: string }
+  /** [LEAD MAGNET] — free-download opt-in. §21: `productId` pulls from the LEAD_MAGNETS
+   *  registry; inline fields override it when both are present. */
+  | { type: "leadMagnet"; productId?: LeadMagnetId; title?: string; subtitle?: string; bullets?: string[]; cta?: string }
   /** Editorial internal links. */
   | { type: "keepReading"; items: { label: string; to: string; note: string }[] };
 
