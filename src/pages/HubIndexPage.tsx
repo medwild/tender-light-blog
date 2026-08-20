@@ -15,10 +15,24 @@ function kdTone(kd: number) {
   return { label: "long game", bar: "bg-rose-deep", width: 80 };
 }
 
+/** A single launch-stat readout (value over label). */
+function Stat({ label, value }: { label: string; value: string }) {
+  return (
+    <span className="flex flex-col">
+      <span className="font-display text-xl font-bold leading-none text-ink">{value}</span>
+      <span className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-faint">{label}</span>
+    </span>
+  );
+}
+
 /** The publishing ledger — every priority keyword, grouped by phase. */
 function PublishingLedger() {
   const [phase, setPhase] = useState<1 | 2 | 3>(1);
   const rows = keywordsByPhase(phase);
+  const totalVolume = rows.reduce((s, k) => s + k.volume, 0);
+  const avgKd = rows.length ? Math.round(rows.reduce((s, k) => s + k.kd, 0) / rows.length) : 0;
+  // Phase 1 quick wins are all pre-rendered + in the sitemap as of launch.
+  const allLive = phase === 1;
   return (
     <section className="mt-16" aria-labelledby="ledger-heading">
       <Reveal>
@@ -56,6 +70,20 @@ function PublishingLedger() {
         </div>
       </Reveal>
 
+      <Reveal delay={130} className="mt-6">
+        <div className="flex flex-wrap items-center gap-x-7 gap-y-3 rounded-xl border border-line bg-paper px-6 py-4">
+          <Stat label="pages" value={`${rows.length}`} />
+          <Stat label="combined volume" value={`${totalVolume.toLocaleString()}/mo`} />
+          <Stat label="avg KD" value={`${avgKd}`} />
+          {allLive && (
+            <span className="ml-auto inline-flex items-center gap-2 rounded-full bg-sage/25 px-4 py-1.5 text-[12px] font-bold uppercase tracking-[0.1em] text-sage-deep">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-sage-deep" aria-hidden />
+              all {rows.length} published · pre-rendered + sitemap
+            </span>
+          )}
+        </div>
+      </Reveal>
+
       <Reveal delay={160} className="mt-7">
         <div className="overflow-hidden rounded-xl border border-line bg-paper">
           <ul className="divide-y divide-line">
@@ -67,7 +95,8 @@ function PublishingLedger() {
                     to={k.path}
                     className="group grid gap-3 px-6 py-4.5 transition-colors hover:bg-cream sm:grid-cols-[1.6fr_110px_1fr_110px] sm:items-center sm:gap-6"
                   >
-                    <span className="font-display text-[1.05rem] font-bold text-ink transition-colors group-hover:text-rose-deep">
+                    <span className="flex items-center gap-2.5 font-display text-[1.05rem] font-bold text-ink transition-colors group-hover:text-rose-deep">
+                      {allLive && <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-sage-deep" title="Published — pre-rendered + sitemap" aria-hidden />}
                       {k.keyword}
                     </span>
                     <span className="text-[13px] font-semibold text-ink-soft">

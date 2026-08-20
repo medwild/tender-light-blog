@@ -26,8 +26,11 @@ export const KEYWORD_MAP: KeywordTarget[] = [
   { path: "/engagement-photo-ideas/classic-engagement-photo-ideas", keyword: "classic engagement photos", volume: 110, kd: 1, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/candid-engagement-photo-ideas", keyword: "candid engagement photos", volume: 90, kd: 0, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-poses/proposal-poses", keyword: "proposal poses", volume: 110, kd: 1, intent: "Informational", phase: 1 },
+  { path: "/engagement-photo-poses/natural-engagement-photo-poses", keyword: "natural engagement photo poses", volume: 260, kd: 4, intent: "Informational", phase: 1 },
+  { path: "/engagement-photo-poses/ring-engagement-photo-poses", keyword: "ring engagement photo poses", volume: 140, kd: 3, intent: "Informational", phase: 1 },
   { path: "/save-the-date-photos/save-the-date-poses", keyword: "save the date poses", volume: 90, kd: 7, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-locations/at-home-engagement-photo-ideas", keyword: "at home engagement photos", volume: 40, kd: 0, intent: "Informational", phase: 1 },
+  { path: "/engagement-photo-outfits/casual-engagement-photo-outfits", keyword: "casual engagement photo outfits", volume: 210, kd: 6, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-outfits/fall-engagement-photo-outfits", keyword: "what to wear for fall pictures", volume: 90, kd: 0, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-outfits/summer-engagement-photo-outfits", keyword: "summer photoshoot outfit ideas", volume: 50, kd: 0, intent: "Informational", phase: 1 },
 
