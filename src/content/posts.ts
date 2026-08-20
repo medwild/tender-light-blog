@@ -451,10 +451,32 @@ export const POSTS: Post[] = [
         type: "p",
         text: "Golden hour gets blamed for a lot of mediocre photos — because it's treated as a filter instead of a schedule. It lasts about sixty usable minutes, the light moves the whole time, and the best frames happen in a fifteen-minute window most couples spend walking from the parking lot. Here's how to actually use it.",
       },
+      {
+        type: "keyTakeaways",
+        items: [
+          "Golden hour is a schedule, not a filter — the last 60–90 minutes before sunset.",
+          "Arrive 15 minutes early; the best frames happen in a narrow 15-minute window.",
+          "Backlit (sun behind you) gives glowing hair and soft faces; frontlit is sharper but risks squinting.",
+          "Close your eyes and open them on a count of three to avoid the squint.",
+          "A grey sky is not bad light — it's a giant softbox, so shoot anyway.",
+        ],
+      },
       { type: "h2", id: "what-golden-hour-is", text: "What Golden Hour Actually Is" },
       {
         type: "p",
         text: "The last hour before sunset (and first hour after sunrise), when the sun sits low enough to turn warm and soft. Shadows stretch, skin glows, and backgrounds fall off into a creamy blur. Sunrise golden hour is softer and emptier; sunset is warmer and more dramatic. For engagement photos, sunset wins unless you hate early alarms.",
+      },
+      {
+        type: "table",
+        caption: "Golden Hour vs Midday Light",
+        headers: ["", "Golden Hour", "Midday Sun"],
+        rows: [
+          ["Light quality", "Warm, soft, directional", "Harsh, overhead, white"],
+          ["Shadows", "Long and flattering", "Short, dark under eyes/chin"],
+          ["Skin", "Glows, evens out", "Blown highlights, squinting"],
+          ["Backgrounds", "Creamy bokeh, rim light", "Flat, busy, distracting"],
+          ["Best use", "Nearly every engagement frame", "Open shade only, or avoid"],
+        ],
       },
       { type: "h2", id: "timing-your-session", text: "Timing Your Session" },
       {
@@ -654,6 +676,16 @@ export const POSTS: Post[] = [
         type: "p",
         text: "When I shot a session in Zilker Park last October, the couple showed up in jeans and a slightly-too-big denim jacket, already laughing about a parking ticket. Twenty minutes in, she did this thing where she tucked her hair back and snorted at something he said — and it's the frame they've since printed twice. Not the stiff, posed one. The snort. That's the whole promise of a casual engagement photoshoot: no gown, no pressure, no two-hour pose marathon — just the two of you, doing the things you already do, photographed a little more beautifully. Here you'll find 15 ideas across outfits, locations and relaxed engagement poses, plus the small decisions (yes, including jeans) that make simple engagement pictures look intentional instead of accidental.",
       },
+      {
+        type: "keyTakeaways",
+        items: [
+          "Choose comfortable outfits that reflect your everyday style — jeans, knits and clean sneakers all photograph beautifully.",
+          "Pick a location where you naturally spend time together, not a borrowed backdrop.",
+          "Use movement — walking, twirling, a task for your hands — to avoid stiff poses.",
+          "Shoot near golden hour for the softest, most flattering light.",
+          "Bring one meaningful prop (a coffee cup, your dog, a book) to make the session feel personal.",
+        ],
+      },
       { type: "h2", id: "why-choose-casual", text: "Why Choose a Casual Engagement Session?" },
       {
         type: "p",
@@ -662,6 +694,19 @@ export const POSTS: Post[] = [
       {
         type: "p",
         text: "The best engagement photos don't look posed — they look like someone caught you being in love. That's the whole trick, and it's why every idea below is built around an action instead of a position.",
+      },
+      {
+        type: "table",
+        caption: "Casual vs Formal Engagement Photos",
+        headers: ["", "Casual Session", "Formal Session"],
+        rows: [
+          ["Outfits", "Jeans, knits, sneakers — your everyday style", "Dress, suit, styled looks"],
+          ["Vibe", "Relaxed, candid, in-motion", "Polished, timeless, held poses"],
+          ["Best for", "Save-the-dates, wedding website, socials", "Framed prints, parents' gifts, album"],
+          ["Location", "Coffee shop, home, park, your street", "Historic architecture, gardens, studio"],
+          ["Session length", "45–60 minutes", "60–90+ minutes"],
+          ["Feel in 20 years", "“That's so us”", "“We looked incredible”"],
+        ],
       },
       {
         type: "callout",
@@ -4775,6 +4820,16 @@ export const POSTS: Post[] = [
         type: "p",
         text: "Displaying engagement photos well comes down to one rule: lead with one strong frame and let the rest support it. A single oversized hero print above the sofa reads as intentional; twenty same-size frames reads as clutter. Here are sixteen display ideas organized by how much wall you're willing to give the session — from one big statement to a full gallery wall.",
       },
+      {
+        type: "keyTakeaways",
+        items: [
+          "Lead with one oversized hero print; let smaller frames support it.",
+          "Group by size in odd numbers (3 or 5) to stay curated, not cluttered.",
+          "Choose matte or lustre finishes — they flatter golden-hour light and resist glare.",
+          "Mix one close frame with one wide frame so the display has depth.",
+          "Print the candid, mid-laugh frames — they're the ones you'll love walking past.",
+        ],
+      },
       { type: "h2", id: "the-single-hero-print", text: "The Single Hero Print" },
       {
         type: "list",
@@ -4783,6 +4838,18 @@ export const POSTS: Post[] = [
           "A 20x30 over the bed, at eye level when you're standing.",
           "A canvas wrap of your favorite landscape frame for the entry.",
           "A framed 16x20 in the hallway where you'll see it daily.",
+        ],
+      },
+      {
+        type: "table",
+        caption: "Matte vs Glossy Prints",
+        headers: ["", "Matte / Lustre", "Glossy"],
+        rows: [
+          ["Glare under home lighting", "Minimal — reads clean on a wall", "High — reflects lamps and windows"],
+          ["Golden-hour tones", "Soft, true to the edit", "Can look over-saturated"],
+          ["Fingerprints & smudges", "Resist well", "Show easily"],
+          ["Framed behind glass", "Ideal (no double-reflection)", "Amplifies glare"],
+          ["Best for", "Hero prints, gallery walls, albums", "Small unframed prints only"],
         ],
       },
       { type: "h2", id: "gallery-ledge-and-shelf", text: "Gallery Ledge & Shelf Displays" },

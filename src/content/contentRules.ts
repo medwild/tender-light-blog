@@ -90,6 +90,28 @@ export const answerFirstScore = (blocks: Block[]): { ok: number; total: number }
 export const internalLinkCount = (post: Post): number =>
   (post.internalLinks?.length ?? 0) + (post.relatedPosts?.length ?? 0) + 1; // +1 = guaranteed hub banner
 
+/* ————— GEO / AI-SEO measurers (§19) ————— */
+
+/** Key Takeaways block: present? how many bullets? */
+export const keyTakeaways = (blocks: Block[]): { present: boolean; bullets: number } => {
+  const kt = blocks.find((b) => b.type === "keyTakeaways");
+  return kt && kt.type === "keyTakeaways" ? { present: true, bullets: kt.items.length } : { present: false, bullets: 0 };
+};
+
+/** Comparison tables (featured-snippet fuel). */
+export const tableCount = (blocks: Block[]): number => blocks.filter((b) => b.type === "table").length;
+
+/** Share of FAQ answers in the 40–70 word extractable window. */
+export const faqAnswerWindow = (blocks: Block[]): { ok: number; total: number } => {
+  const faq = blocks.find((b) => b.type === "faq");
+  if (!faq || faq.type !== "faq") return { ok: 0, total: 0 };
+  const ok = faq.items.filter((i) => {
+    const w = countWords(i.a);
+    return w >= 40 && w <= 70;
+  }).length;
+  return { ok, total: faq.items.length };
+};
+
 /* ————— Audit report ————— */
 
 export type CheckLevel = "pass" | "goal" | "fail";
@@ -112,6 +134,9 @@ export function auditPost(post: Post): Check[] {
   const quotables = quotableCount(post.blocks);
   const af = answerFirstScore(post.blocks);
   const links = internalLinkCount(post);
+  const kt = keyTakeaways(post.blocks);
+  const tables = tableCount(post.blocks);
+  const fw = faqAnswerWindow(post.blocks);
 
   return [
     { rule: "Word count", value: `${wc}`, level: range(wc, SATELLITE_RULES.wordCount, true), target: "1,200–1,800" },
@@ -126,6 +151,19 @@ export function auditPost(post: Post): Check[] {
       value: `${af.ok}/${af.total}`,
       level: af.total > 0 && af.ok === af.total ? "pass" : "goal",
       target: "every H2",
+    },
+    {
+      rule: "Key Takeaways",
+      value: kt.present ? `${kt.bullets} bullets` : "—",
+      level: kt.present && kt.bullets >= 3 && kt.bullets <= 5 ? "pass" : "goal",
+      target: "3–5 bullets",
+    },
+    { rule: "Comparison tables", value: `${tables}`, level: tables > 0 ? "pass" : "goal", target: "≥ 1" },
+    {
+      rule: "FAQ 40–70w answers",
+      value: fw.total > 0 ? `${fw.ok}/${fw.total}` : "—",
+      level: fw.total > 0 && fw.ok === fw.total ? "pass" : "goal",
+      target: "every answer",
     },
   ];
 }

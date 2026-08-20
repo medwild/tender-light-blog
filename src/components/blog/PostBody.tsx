@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Aperture, ArrowRight, Check, MapPin, ShoppingBag, Sparkles, Sun } from "lucide-react";
+import { Aperture, ArrowRight, Check, ListChecks, MapPin, Scale, ShoppingBag, Sparkles, Sun } from "lucide-react";
 import type { Block, Monetization } from "../../content/types";
 import { Link } from "../../lib/router";
 import Reveal from "../ui/Reveal";
@@ -125,6 +125,70 @@ export default function PostBody({
             return (
               <Reveal key={i}>
                 <FaqSection items={block.items} />
+              </Reveal>
+            );
+          case "keyTakeaways":
+            return (
+              <Reveal key={i}>
+                <div className="overflow-hidden rounded-xl border border-sage/60 bg-sage/10">
+                  <div className="flex items-center gap-2.5 border-b border-sage/40 bg-sage/15 px-6 py-4">
+                    <ListChecks className="h-5 w-5 text-sage-deep" aria-hidden />
+                    <p className="font-display text-lg font-bold text-sage-deep">Key Takeaways</p>
+                  </div>
+                  <ol className="space-y-3 px-6 py-5">
+                    {block.items.map((item, idx) => (
+                      <li key={idx} className="flex gap-3.5">
+                        <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-sage-deep text-[11px] font-bold text-cream">
+                          {idx + 1}
+                        </span>
+                        <p className="text-[15px] leading-relaxed text-ink">{item}</p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </Reveal>
+            );
+          case "table":
+            return (
+              <Reveal key={i}>
+                <div className="overflow-hidden rounded-xl border border-line bg-paper">
+                  <div className="overflow-x-auto">
+                    <table className="w-full min-w-[560px] border-collapse text-left text-[14px]">
+                      <caption className="border-b border-line bg-cream px-6 py-3.5 text-left font-display text-base font-bold text-ink">
+                        <span className="mr-2 inline-block text-gold-deep">
+                          <Scale className="inline h-[18px] w-[18px]" aria-hidden />
+                        </span>
+                        {block.caption}
+                      </caption>
+                      <thead>
+                        <tr className="border-b-2 border-gold-deep/60 bg-gold/15">
+                          {block.headers.map((h) => (
+                            <th key={h} scope="col" className="px-6 py-3.5 font-display text-[13px] font-bold uppercase tracking-[0.08em] text-gold-deep">
+                              {h}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {block.rows.map((row, ri) => (
+                          <tr key={ri} className={`border-b border-line/70 ${ri % 2 === 1 ? "bg-cream/60" : ""}`}>
+                            {row.map((cell, ci) =>
+                              ci === 0 ? (
+                                <th key={ci} scope="row" className="px-6 py-3.5 font-semibold text-ink">
+                                  {cell}
+                                </th>
+                              ) : (
+                                <td key={ci} className="px-6 py-3.5 leading-relaxed text-ink-soft">
+                                  {cell}
+                                </td>
+                              )
+                            )}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </Reveal>
             );
           case "ad":

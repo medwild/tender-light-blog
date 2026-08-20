@@ -21,6 +21,10 @@ export type Block =
   | { type: "quote"; text: string; cite?: string }
   | { type: "gallery"; images: { src: string; alt: string }[] }
   | { type: "faq"; items: { q: string; a: string }[] }
+  /** GEO §19 — "Key Takeaways": 3–5 extractable bullets near the top. */
+  | { type: "keyTakeaways"; items: string[] }
+  /** GEO §19 — comparison table for featured snippets (Casual vs Formal, etc.). */
+  | { type: "table"; caption: string; headers: string[]; rows: string[][] }
   /** Reserved AdSense slot — labeled placeholder until ad units are wired. */
   | { type: "ad"; slot: "in-article" | "end-of-section" }
   /** Affiliate-ready product links (rel="sponsored"). */

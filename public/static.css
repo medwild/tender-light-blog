@@ -166,3 +166,37 @@ h1 em, h2 em { font-style: italic; color: var(--rose-deep); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* ——— GEO blocks (§19): Key Takeaways & comparison tables ——— */
+.key-takeaways {
+  border: 1px solid color-mix(in srgb, var(--sage-deep) 55%, transparent);
+  background: color-mix(in srgb, var(--sage-deep) 9%, var(--paper));
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 28px 0;
+}
+.key-takeaways .kt-title { font-family: "Playfair Display", Georgia, serif; font-size: 1.2rem; color: var(--sage-deep); margin: 0 0 12px; }
+.key-takeaways ul { margin: 0; padding-left: 0; list-style: none; }
+.key-takeaways li { position: relative; padding-left: 26px; margin-bottom: 9px; font-size: 14.5px; line-height: 1.6; color: var(--ink); }
+.key-takeaways li::before {
+  content: ""; position: absolute; left: 0; top: 6px; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--sage-deep);
+}
+.key-takeaways li::after {
+  content: "✓"; position: absolute; left: 3.5px; top: 2.5px; color: var(--cream); font-size: 11px; font-weight: 700;
+}
+.compare-table { width: 100%; border-collapse: collapse; margin: 28px 0; font-size: 14px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--paper); }
+.compare-table caption {
+  font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 1.05rem; text-align: left;
+  padding: 14px 20px; background: var(--cream); border-bottom: 1px solid var(--line); color: var(--ink);
+}
+.compare-table th, .compare-table td { padding: 12px 20px; text-align: left; vertical-align: top; }
+.compare-table thead th {
+  background: color-mix(in srgb, var(--gold) 18%, var(--paper));
+  color: var(--gold-deep); font-family: "Playfair Display", Georgia, serif;
+  font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 2px solid color-mix(in srgb, var(--gold-deep) 60%, transparent);
+}
+.compare-table tbody th[scope="row"] { font-weight: 600; color: var(--ink); }
+.compare-table tbody td { color: var(--ink-soft); line-height: 1.6; }
+.compare-table tbody tr { border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.compare-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--cream) 60%, var(--paper)); }
