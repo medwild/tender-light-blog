@@ -13,6 +13,7 @@ import PinterestBoard from "../components/blog/PinterestBoard";
 import PostBody from "../components/blog/PostBody";
 import RelatedPosts from "../components/blog/RelatedPosts";
 import ShareButtons from "../components/blog/ShareButtons";
+import ShopRail from "../components/blog/ShopRail";
 import TableOfContents from "../components/blog/TableOfContents";
 import Reveal from "../components/ui/Reveal";
 import NotFoundPage from "./NotFoundPage";
@@ -88,6 +89,9 @@ export default function ArticlePage({ slug }: { slug: string }) {
             />
           </figure>
         </Reveal>
+
+        {/* Phase 4 · affiliate shop rail (registry-backed) */}
+        <ShopRail slug={post.slug} />
 
         {/* Mobile "in this guide" */}
         <details className="mx-auto mt-10 max-w-3xl rounded-xl border border-line bg-paper px-5 py-4 lg:hidden">

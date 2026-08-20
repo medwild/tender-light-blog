@@ -1,5 +1,6 @@
 import { IMAGES } from "../lib/constants";
 import type { Category, Post } from "./types";
+import { ARTICLE_PINS } from "./monetization";
 
 /* ————————————————————— Categories ————————————————————— */
 
@@ -6424,11 +6425,19 @@ const DEFAULT_META: PostMeta = {
 };
 
 /** Merge §3 frontmatter into a post object (cluster is derived via POST_HUB). */
-export const withMeta = (p: Post): Post => ({
-  ...p,
-  ...(POST_META[p.slug] ?? DEFAULT_META),
-  cluster: hubFor(p.slug),
-} as Post & { cluster: string });
+export const withMeta = (p: Post): Post => {
+  const merged = {
+    ...p,
+    ...(POST_META[p.slug] ?? DEFAULT_META),
+    cluster: hubFor(p.slug),
+  } as Post & { cluster: string };
+  // Phase 4: cluster articles whose frontmatter carries no pins receive the
+  // monetization-registry kits (gift / display / keepsake angles).
+  if (!merged.pinImages?.length && ARTICLE_PINS[p.slug]) {
+    merged.pinImages = ARTICLE_PINS[p.slug];
+  }
+  return merged;
+};
 
 /** Canonical silo path for an article: `/{hub}/{slug}` (no trailing slash). */
 export const postPath = (slug: string) => `/${hubFor(slug)}/${slug}`;

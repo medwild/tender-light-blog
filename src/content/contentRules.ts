@@ -1,6 +1,6 @@
 import type { Block, Post } from "./types";
 import type { Hub } from "./hubs";
-import { adSlotCoverage, affiliateCoverage, CANONICAL_AD_SLOTS, hasLeadMagnet } from "./monetization";
+import { adSlotCoverage, affiliateCoverage, ARTICLE_SHOPS, CANONICAL_AD_SLOTS, hasLeadMagnet } from "./monetization";
 
 /**
  * §18 — Content rules per page type. The single source of truth the
@@ -237,9 +237,11 @@ export function auditPost(post: Post): Check[] {
 
 export function monetizationChecks(post: Post): Check[] {
   const ads = adSlotCoverage(post.blocks);
-  const aff = affiliateCoverage(post.blocks);
+  const aff = affiliateCoverage(post.blocks, post.slug);
   const lead = hasLeadMagnet(post.blocks);
-  const hasShop = post.blocks.some((b) => b.type === "shop");
+  const hasShop =
+    post.blocks.some((b) => b.type === "shop") ||
+    (ARTICLE_SHOPS[post.slug]?.length ?? 0) > 0;
 
   return [
     {
