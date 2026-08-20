@@ -33,6 +33,7 @@ import AuthorPage from "./pages/AuthorPage";
 import LocationsPillarPage from "./pages/LocationsPillarPage";
 import SaveTheDatePillarPage from "./pages/SaveTheDatePillarPage";
 import PrintsPillarPage from "./pages/PrintsPillarPage";
+import OutfitsPillarPage from "./pages/OutfitsPillarPage";
 import OklahomaPillarPage from "./pages/OklahomaPillarPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
@@ -264,6 +265,8 @@ export default function App() {
           <PrintsPillarPage key={route.slug} />
         ) : route.slug === "oklahoma-wedding-locations" ? (
           <OklahomaPillarPage key={route.slug} />
+        ) : route.slug === "engagement-photo-outfits" ? (
+          <OutfitsPillarPage key={route.slug} />
         ) : (
           <HubPage key={route.slug} slug={route.slug} />
         );
