@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Compass } from "lucide-react";
+import { ChevronDown, Compass } from "lucide-react";
 import { Link } from "../lib/router";
 import { HUBS, HUB_ACCENTS } from "../content/hubs";
 import { PHASE_LABELS, keywordsByPhase, INTENT_OWNERSHIP } from "../content/keywords";
 import { auditHub, auditPost, verdict, collectText, linkedUrls } from "../content/contentRules";
+import { runFinalChecklist, type FinalStatus } from "../content/finalChecklist";
 import { postPath, sortedPosts } from "../lib/content";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import Reveal from "../components/ui/Reveal";
@@ -317,6 +318,128 @@ function IntentOwnershipDesk() {
   );
 }
 
+/** §24 — Final checklist desk: the whole QA battery, measured live. */
+function FinalChecklistDesk() {
+  const { sections, tally } = runFinalChecklist();
+  const [open, setOpen] = useState<string | null>("seo");
+  const total = tally.pass + tally.goal + tally.fail + tally.design;
+  const solid = tally.pass + tally.design;
+  const pct = Math.round((solid / total) * 100);
+
+  const meta: Record<FinalStatus, { label: string; bg: string; text: string }> = {
+    pass: { label: "measured pass", bg: "bg-sage-deep", text: "text-sage-deep" },
+    goal: { label: "in progress", bg: "bg-gold", text: "text-gold-deep" },
+    fail: { label: "violates", bg: "bg-rose-deep", text: "text-rose-deep" },
+    design: { label: "by architecture", bg: "bg-ink-soft", text: "text-ink-faint" },
+  };
+
+  return (
+    <section aria-labelledby="finalchecklist-heading" className="mt-16">
+      <Reveal className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p className="font-script text-3xl text-rose-deep">the final word</p>
+          <h2 id="finalchecklist-heading" className="mt-1 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            Final Checklist <span className="text-ink-faint">· §24, all {total} checks</span>
+          </h2>
+        </div>
+        <p className="font-mono text-[12px] text-ink-faint">
+          <span className="font-semibold text-ink">{solid}/{total}</span> solid ·{" "}
+          <span className="text-gold-deep">{tally.goal} in progress</span> ·{" "}
+          <span className="text-rose-deep">{tally.fail} failing</span>
+        </p>
+      </Reveal>
+
+      {/* Global verdict bar */}
+      <Reveal className="mb-6">
+        <div className="overflow-hidden rounded-xl border border-line bg-paper">
+          <div className="flex items-center justify-between gap-4 px-5 py-4">
+            <span className="flex items-center gap-2.5 font-display text-lg font-bold">
+              <span className={`h-3 w-3 rounded-full ${tally.fail === 0 ? "bg-sage-deep" : "bg-rose-deep"}`} aria-hidden />
+              {tally.fail === 0 ? "Ship-ready" : `${tally.fail} item${tally.fail > 1 ? "s" : ""} need attention`}
+            </span>
+            <span className="font-mono text-[13px] font-semibold text-ink-soft">{pct}%</span>
+          </div>
+          <div className="h-2 w-full bg-cream" role="img" aria-label={`${pct}% of checklist solid`}>
+            <div className="flex h-full">
+              <div className="h-full bg-sage-deep transition-all duration-700" style={{ width: `${(tally.pass / total) * 100}%` }} />
+              <div className="h-full bg-ink-soft transition-all duration-700" style={{ width: `${(tally.design / total) * 100}%` }} />
+              <div className="h-full bg-gold transition-all duration-700" style={{ width: `${(tally.goal / total) * 100}%` }} />
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-1.5 px-5 py-3 text-[11.5px] text-ink-faint">
+            {(Object.keys(meta) as FinalStatus[]).map((k) => (
+              <span key={k} className="flex items-center gap-1.5">
+                <span className={`h-2 w-2 rounded-full ${meta[k].bg}`} aria-hidden /> {tally[k]} {meta[k].label}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Reveal>
+
+      {/* Per-section accordions */}
+      <div className="space-y-4">
+        {sections.map((sec, si) => {
+          const secSolid = sec.items.filter((i) => i.status === "pass" || i.status === "design").length;
+          const secPct = Math.round((secSolid / sec.items.length) * 100);
+          const expanded = open === sec.id;
+          return (
+            <Reveal key={sec.id} delay={si * 60}>
+              <div className="overflow-hidden rounded-xl border border-line bg-paper">
+                <button
+                  type="button"
+                  onClick={() => setOpen(expanded ? null : sec.id)}
+                  aria-expanded={expanded}
+                  className="group flex w-full items-center gap-5 px-5 py-4 text-left transition-colors duration-300 hover:bg-cream/60"
+                >
+                  <span className="font-script text-3xl text-ink-faint transition-colors duration-300 group-hover:text-rose-deep">
+                    {String(si + 1).padStart(2, "0")}
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block font-display text-lg font-bold text-ink">{sec.title}</span>
+                    <span className="mt-1.5 block h-1 w-40 overflow-hidden rounded-full bg-cream" aria-hidden>
+                      <span
+                        className={`block h-full rounded-full transition-all duration-700 ${secPct === 100 ? "bg-sage-deep" : secPct >= 80 ? "bg-gold" : "bg-rose-deep"}`}
+                        style={{ width: `${secPct}%` }}
+                      />
+                    </span>
+                  </span>
+                  <span className="shrink-0 text-right">
+                    <span className="block font-mono text-[13px] font-semibold text-ink-soft">{secSolid}/{sec.items.length}</span>
+                    <span className="block text-[10.5px] uppercase tracking-[0.12em] text-ink-faint">solid</span>
+                  </span>
+                  <ChevronDown className={`h-5 w-5 shrink-0 text-ink-faint transition-transform duration-300 ${expanded ? "rotate-180 text-rose-deep" : ""}`} aria-hidden />
+                </button>
+                <div className={`grid transition-[grid-template-rows] duration-400 ease-out ${expanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+                  <div className="overflow-hidden">
+                    <ul className="grid gap-x-8 gap-y-2.5 bg-cream/50 px-6 py-4 sm:grid-cols-2">
+                      {sec.items.map((it) => (
+                        <li key={it.id} className="flex items-start gap-2.5">
+                          <span className={`mt-1 h-2 w-2 shrink-0 rounded-full ${meta[it.status].bg}`} aria-hidden />
+                          <span className="min-w-0">
+                            <span className="block text-[13.5px] font-semibold leading-snug text-ink">{it.label}</span>
+                            <span className="mt-0.5 block text-[11.5px] leading-relaxed text-ink-faint">{it.evidence}</span>
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          );
+        })}
+      </div>
+
+      <p className="mt-3 text-[12px] text-ink-faint">
+        <span className="font-semibold text-sage-deep">pass</span> = measured &amp; met ·{" "}
+        <span className="font-semibold text-ink-faint">by architecture</span> = guaranteed by a generator, verified at build ·{" "}
+        <span className="font-semibold text-gold-deep">in progress</span> = editorial work remaining ·{" "}
+        <span className="font-semibold text-rose-deep">violates</span> = must fix.
+      </p>
+    </section>
+  );
+}
+
 export default function HubIndexPage() {
   return (
     <div className="pt-28 md:pt-36">
@@ -378,6 +501,8 @@ export default function HubIndexPage() {
         <ComplianceDesk />
 
         <IntentOwnershipDesk />
+
+        <FinalChecklistDesk />
 
         <Reveal className="pb-24 pt-12">
           <div className="rounded-xl border border-line bg-ink p-8 text-cream sm:p-10">
