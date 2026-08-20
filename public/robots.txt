@@ -2,6 +2,6 @@
 User-agent: *
 Allow: /
 
-# Sitemap (hash-routed SPA: canonical pages listed; in the Next.js build this
-# file is generated dynamically by src/app/robots.ts)
+# Sitemap — clean silo URLs, every page pre-rendered as static HTML.
+# In the Next.js build this file is generated dynamically by src/app/robots.ts
 Sitemap: https://tenderlight.journal/sitemap.xml

@@ -6,6 +6,7 @@ import { getSemanticField, resolveTermLink } from "../content/semantic";
 import AuthorBox from "../components/blog/AuthorBox";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import HubLinkBanner from "../components/blog/HubLinkBanner";
+import InternalLinks from "../components/seo/InternalLinks";
 import CitationBlock from "../components/blog/CitationBlock";
 import CommentSection from "../components/blog/CommentSection";
 import PinterestBoard from "../components/blog/PinterestBoard";
@@ -169,19 +170,10 @@ export default function ArticlePage({ slug }: { slug: string }) {
               </Reveal>
             ) : null}
 
-            {/* Editorial internal links (frontmatter) */}
+            {/* Editorial internal links (§14) */}
             {post.internalLinks?.length ? (
-              <Reveal className="mt-6 rounded-xl border border-line bg-paper p-5">
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-faint">Keep exploring</p>
-                <ul className="mt-2.5 space-y-1.5">
-                  {post.internalLinks.map((l) => (
-                    <li key={l.url}>
-                      <Link to={l.url} className="link-draw text-sm font-medium text-rose-deep">
-                        {l.anchor} →
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+              <Reveal className="mt-6">
+                <InternalLinks links={post.internalLinks} />
               </Reveal>
             ) : null}
 

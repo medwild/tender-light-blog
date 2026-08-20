@@ -94,6 +94,12 @@ export interface PinImage {
   pinDescription: string; // ≤ 500 chars, keyword-rich + soft CTA
 }
 
+/** §14 — contextual internal link: keyword-rich anchor → silo URL. */
+export interface InternalLink {
+  url: string;
+  anchor: string;
+}
+
 /** Per-article monetization switches (gate ad / affiliate / lead-magnet blocks). */
 export interface Monetization {
   adsense: boolean;
@@ -137,7 +143,7 @@ export interface Post {
   searchIntent?: "informational" | "commercial" | "navigational";
   pinImages?: PinImage[];
   citations?: (string | Citation)[];
-  internalLinks?: { url: string; anchor: string }[];
+  internalLinks?: InternalLink[];
   relatedPosts?: string[]; // explicit override; falls back to same-category
   monetization?: Monetization;
 }

@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Aperture, ArrowRight, Check, ListChecks, MapPin, Scale, ShoppingBag, Sparkles, Sun } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { Block, Monetization } from "../../content/types";
-import { adSlotLabel, affiliateSectionLabel, CANONICAL_AD_SLOTS, LEAD_MAGNETS, normalizeAdSlot } from "../../content/monetization";
+import { affiliateSectionLabel, LEAD_MAGNETS } from "../../content/monetization";
+import AdPlacement from "./AdPlacement";
 import { Link } from "../../lib/router";
 import Reveal from "../ui/Reveal";
 import FaqSection from "./FaqSection";
@@ -196,18 +197,7 @@ export default function PostBody({
           case "ad":
             return (
               <Reveal key={i}>
-                {/* Reserved AdSense slot — swap this aside for the ad unit when approved. */}
-                <aside
-                  aria-label="Advertisement placeholder"
-                  className="grid place-items-center rounded-xl border border-dashed border-line bg-paper/70 px-6 py-10"
-                >
-                  <div className="text-center">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-ink-faint">Advertisement</p>
-                    <p className="mt-2 text-xs text-ink-faint">
-                      <span className="font-semibold text-gold-deep">{adSlotLabel(block.slot)}</span> · AdSense slot {CANONICAL_AD_SLOTS.indexOf(normalizeAdSlot(block.slot)) + 1}/5
-                    </p>
-                  </div>
-                </aside>
+                <AdPlacement slot={block.slot} />
               </Reveal>
             );
           case "shop":
