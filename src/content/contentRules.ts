@@ -1,6 +1,8 @@
 import type { Block, Post } from "./types";
 import type { Hub } from "./hubs";
 import { adSlotCoverage, affiliateCoverage, ARTICLE_SHOPS, CANONICAL_AD_SLOTS, hasLeadMagnet } from "./monetization";
+import { INTENT_OWNERSHIP } from "./keywords";
+import { postPath } from "./posts";
 
 /**
  * §18 — Content rules per page type. The single source of truth the
@@ -230,6 +232,25 @@ export function auditPost(post: Post): Check[] {
     },
     ...pinterestChecks(post),
     ...monetizationChecks(post),
+    ...cannibalizationChecks(post),
+  ];
+}
+
+/** §23 — one check per owned intent the article touches. */
+export function cannibalizationChecks(post: Post): Check[] {
+  const violations = cannibalizationAudit(post);
+  const text = collectText(post);
+  const touched = Object.keys(INTENT_OWNERSHIP).filter(
+    (i) => normalizeUrl(INTENT_OWNERSHIP[i]) !== normalizeUrl(postPath(post.slug)) && text.includes(i)
+  );
+  if (touched.length === 0) return [];
+  return [
+    {
+      rule: "Intent ownership (§23)",
+      value: violations.length === 0 ? `${touched.length} owned-elsewhere, all linked` : `${violations.length} unlinked`,
+      level: violations.length === 0 ? "pass" : "fail",
+      target: violations.length === 0 ? "link to owner" : violations.map((v) => v.intent).join(", "),
+    },
   ];
 }
 
@@ -259,6 +280,69 @@ export function monetizationChecks(post: Post): Check[] {
     { rule: "Lead magnet", value: lead ? "present" : "—", level: lead ? "pass" : "goal", target: "≥ 1" },
   ];
 }
+
+/* ————— §23 Anti-cannibalization audit ————— */
+
+/** All human-readable text of a post (body + title), lowercased, for keyword matching. */
+export const collectText = (post: Post): string => {
+  const parts: string[] = [post.title, post.seoTitle, post.excerpt];
+  for (const b of post.blocks) {
+    switch (b.type) {
+      case "p":
+      case "callout":
+      case "quote":
+      case "h2":
+      case "h3":
+        parts.push(b.text);
+        break;
+      case "list":
+        parts.push(...b.items);
+        break;
+      case "faq":
+        for (const i of b.items) parts.push(i.q, i.a);
+        break;
+      case "keyTakeaways":
+        parts.push(...b.items);
+        break;
+      default:
+        break;
+    }
+  }
+  return parts.join(" \n ").toLowerCase();
+};
+
+/** Every internal URL a post already points to (frontmatter + keepReading + related slugs). */
+export const linkedUrls = (post: Post): Set<string> => {
+  const urls = new Set<string>();
+  for (const l of post.internalLinks ?? []) urls.add(normalizeUrl(l.url));
+  for (const b of post.blocks) if (b.type === "keepReading") for (const it of b.items) urls.add(normalizeUrl(it.to));
+  for (const slug of post.relatedPosts ?? []) urls.add(normalizeUrl(postPath(slug)));
+  return urls;
+};
+
+const normalizeUrl = (u: string) => u.replace(/\/+$/, "").replace(/^https?:\/\/[^/]+/, "");
+
+export interface CannibalizationViolation {
+  intent: string;
+  owner: string;
+}
+
+/** True when `post` mentions an intent it does not own, without linking to the owner. */
+export const cannibalizationAudit = (post: Post): CannibalizationViolation[] => {
+  const text = collectText(post);
+  const links = linkedUrls(post);
+  const own = normalizeUrl(postPath(post.slug));
+  const violations: CannibalizationViolation[] = [];
+
+  for (const [intent, owner] of Object.entries(INTENT_OWNERSHIP)) {
+    const ownerNorm = normalizeUrl(owner);
+    if (ownerNorm === own) continue; // this page owns the intent — no violation possible
+    if (!text.includes(intent.toLowerCase())) continue; // intent never mentioned — nothing to police
+    if (links.has(ownerNorm)) continue; // mentioned AND linked to the owner — compliant
+    violations.push({ intent, owner: ownerNorm });
+  }
+  return violations;
+};
 
 export function auditHub(hub: Hub): Check[] {
   const faq = hub.faq.length;

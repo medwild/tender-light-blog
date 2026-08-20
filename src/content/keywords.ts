@@ -58,3 +58,30 @@ export const keywordsByPhase = (phase: 1 | 2 | 3) => KEYWORD_MAP.filter((k) => k
 
 /** Look up the targeting for a given canonical path. */
 export const keywordsFor = (path: string) => KEYWORD_MAP.find((k) => k.path === path);
+
+/**
+ * §23 — Anti-cannibalization: intent ownership map.
+ *
+ * Each intent has exactly ONE owner page. The rule: when a secondary article
+ * *mentions* an intent owned elsewhere, it must link to the owner page —
+ * never attempt to rank for that intent itself. `cannibalizationAudit`
+ * (contentRules.ts) enforces this against every article's body + internalLinks.
+ */
+export const INTENT_OWNERSHIP: Record<string, string> = {
+  "engagement photo ideas": "/engagement-photo-ideas",
+  "engagement photo poses": "/engagement-photo-poses",
+  "casual engagement photos": "/engagement-photo-ideas/casual-engagement-photo-ideas",
+  "casual engagement photo outfits": "/engagement-photo-outfits/casual-engagement-photo-outfits",
+  "outdoor engagement photo ideas": "/engagement-photo-locations/outdoor-engagement-photo-locations",
+  "outdoor engagement photo poses": "/engagement-photo-poses/outdoor-engagement-photo-poses",
+  "ring engagement photo poses": "/engagement-photo-poses/ring-engagement-photo-poses",
+  "proposal poses": "/engagement-photo-poses/proposal-poses",
+  "surprise proposal ideas": "/save-the-date-photos/surprise-proposal-ideas",
+  "save the date poses": "/save-the-date-photos/save-the-date-poses",
+  "locket photo prints": "/engagement-photo-prints/locket-photo-print-guide",
+  "photo booth strip": "/engagement-photo-prints/photo-booth-strip-ideas",
+  "mini photo prints": "/engagement-photo-prints/mini-photo-print-ideas",
+};
+
+/** Owner path for an intent, or undefined when the intent is unowned. */
+export const ownerOf = (intent: string) => INTENT_OWNERSHIP[intent.toLowerCase().trim()];

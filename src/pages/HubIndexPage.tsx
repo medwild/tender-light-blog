@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Compass } from "lucide-react";
 import { Link } from "../lib/router";
 import { HUBS, HUB_ACCENTS } from "../content/hubs";
-import { PHASE_LABELS, keywordsByPhase } from "../content/keywords";
-import { auditHub, auditPost, verdict } from "../content/contentRules";
+import { PHASE_LABELS, keywordsByPhase, INTENT_OWNERSHIP } from "../content/keywords";
+import { auditHub, auditPost, verdict, collectText, linkedUrls } from "../content/contentRules";
 import { postPath, sortedPosts } from "../lib/content";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import Reveal from "../components/ui/Reveal";
@@ -225,6 +225,98 @@ function ComplianceDesk() {
   );
 }
 
+/** §23 — Intent ownership map: who ranks for what, and who must link (not compete). */
+function IntentOwnershipDesk() {
+  const posts = sortedPosts();
+  const rows = Object.entries(INTENT_OWNERSHIP).map(([intent, owner]) => {
+    const ownerNorm = owner.replace(/\/+$/, "");
+    const mentions = posts
+      .filter((p) => postPath(p.slug).replace(/\/+$/, "") !== ownerNorm && collectText(p).includes(intent))
+      .map((p) => ({
+        slug: p.slug,
+        title: p.title,
+        path: postPath(p.slug),
+        linked: linkedUrls(p).has(ownerNorm),
+      }));
+    const ownerPost = posts.find((p) => postPath(p.slug).replace(/\/+$/, "") === ownerNorm);
+    const unlinked = mentions.filter((m) => !m.linked).length;
+    return { intent, owner, ownerTitle: ownerPost?.title ?? owner, mentions, unlinked };
+  });
+
+  const totalUnlinked = rows.reduce((s, r) => s + r.unlinked, 0);
+
+  return (
+    <section aria-labelledby="ownership-heading" className="mt-16">
+      <Reveal className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p className="font-script text-3xl text-rose-deep">one intent, one owner</p>
+          <h2 id="ownership-heading" className="mt-1 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            Intent Ownership <span className="text-ink-faint">· §23 anti-cannibalization</span>
+          </h2>
+        </div>
+        <p className="font-mono text-[12px] text-ink-faint">
+          {totalUnlinked === 0 ? (
+            <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-sage-deep" aria-hidden />no cannibalization detected</span>
+          ) : (
+            <span className="flex items-center gap-1.5"><span className="h-2 w-2 animate-pulse rounded-full bg-rose-deep" aria-hidden />{totalUnlinked} unlinked mention{totalUnlinked > 1 ? "s" : ""}</span>
+          )}
+        </p>
+      </Reveal>
+
+      <Reveal className="overflow-hidden rounded-xl border border-line bg-ink">
+        <ul>
+          {rows.map((r) => (
+            <li key={r.intent} className="border-b border-cream/10 px-4 py-4 last:border-0 sm:px-6">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                <div className="min-w-0">
+                  <p className="font-display text-[15px] font-semibold text-cream">“{r.intent}”</p>
+                  <Link to={r.owner} className="link-draw mt-0.5 inline-block text-[12.5px] text-gold">
+                    owned by → {r.owner}
+                  </Link>
+                </div>
+                <span
+                  className={`w-fit shrink-0 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.1em] ${
+                    r.mentions.length === 0
+                      ? "bg-cream/10 text-cream/50"
+                      : r.unlinked > 0
+                        ? "bg-rose-deep/25 text-rose"
+                        : "bg-sage-deep/25 text-sage"
+                  }`}
+                >
+                  {r.mentions.length === 0
+                    ? "not mentioned elsewhere"
+                    : r.unlinked > 0
+                      ? `${r.unlinked} mention${r.unlinked > 1 ? "s" : ""} missing link`
+                      : `${r.mentions.length} mention${r.mentions.length > 1 ? "s" : ""}, all linked`}
+                </span>
+              </div>
+              {r.mentions.length > 0 && (
+                <ul className="mt-3 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
+                  {r.mentions.map((m) => (
+                    <li key={m.slug} className="flex items-center justify-between gap-3 text-[12.5px]">
+                      <Link to={m.path} className="link-draw truncate text-cream/60 hover:text-cream">
+                        {m.title}
+                      </Link>
+                      <span className={`shrink-0 font-mono text-[11px] ${m.linked ? "text-sage" : "text-rose"}`}>
+                        {m.linked ? "links ✓" : "add link"}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+      <p className="mt-3 max-w-3xl text-[12px] leading-relaxed text-ink-faint">
+        Rule: when an article mentions an intent owned by another page, it must link to that page — never try to rank
+        for the intent itself. Mentions flagged <span className="font-semibold text-rose-deep">red</span> need an
+        internal link added to the owner.
+      </p>
+    </section>
+  );
+}
+
 export default function HubIndexPage() {
   return (
     <div className="pt-28 md:pt-36">
@@ -284,6 +376,8 @@ export default function HubIndexPage() {
         <PublishingLedger />
 
         <ComplianceDesk />
+
+        <IntentOwnershipDesk />
 
         <Reveal className="pb-24 pt-12">
           <div className="rounded-xl border border-line bg-ink p-8 text-cream sm:p-10">
