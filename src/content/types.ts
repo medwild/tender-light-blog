@@ -76,7 +76,8 @@ export interface Monetization {
 export interface Citation {
   title: string;
   url: string;
-  claim: string;
+  /** The verifiable claim this source supports. */
+  claim?: string;
 }
 
 export interface Post {

@@ -90,6 +90,22 @@ export default function ContactPage() {
               Weekend golden-hour slots go first. If you have a date in mind, send it — holding a date costs nothing.
             </p>
           </Reveal>
+          <Reveal delay={380} className="rounded-xl border border-gold/40 bg-gold/10 p-6">
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gold-deep">Not a couple? No problem.</p>
+            <p className="mt-2.5 font-display text-lg font-bold text-ink">Collaborations, press &amp; partnerships</p>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              Wedding brands, publications, podcasters and fellow photographers — I'm open to
+              guest features, expert quotes, venue partnerships and honest product collaborations.
+              Sponsored content is rare and always clearly labeled (see the{" "}
+              <Link to="/editorial-policy" className="link-draw font-semibold text-gold-deep">editorial policy</Link>).
+            </p>
+            <a
+              href={`mailto:${SITE.email}?subject=Collaboration%20%2F%20Press`}
+              className="mt-3 inline-block text-sm font-semibold text-gold-deep transition-colors hover:text-ink"
+            >
+              → pitch@tenderlight.studio
+            </a>
+          </Reveal>
         </div>
 
         {/* Form column */}

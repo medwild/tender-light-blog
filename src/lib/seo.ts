@@ -107,6 +107,44 @@ export const personSchema = () => ({
   sameAs: [PINTEREST_URL],
 });
 
+/** About page — AboutPage + Person + Organization (E-E-A-T). */
+export const aboutSchema = () => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${SITE.url}/about/#page`,
+      url: `${SITE.url}/about/`,
+      name: `About ${SITE.name}`,
+      description:
+        "The story of Tender Light and its founder Harper Ellis — 8 years and 400+ engagement sessions behind the lens.",
+      isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url },
+      about: [{ "@id": `${SITE.url}/#organization` }, { "@id": `${SITE.url}/author/harper-ellis/#person` }],
+      mainEntity: { "@id": `${SITE.url}/author/harper-ellis/#person` },
+    },
+    organizationSchema(),
+    personSchema(),
+  ],
+});
+
+/** Contact page — ContactPage + Organization. */
+export const contactSchema = () => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "@id": `${SITE.url}/contact/#page`,
+      url: `${SITE.url}/contact/`,
+      name: "Book a Session or Collaborate | Tender Light",
+      description:
+        "Plan your engagement shoot with Harper Ellis — photographer shortlists, collaborations, press and partnerships.",
+      isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url },
+      mainEntity: { "@id": `${SITE.url}/#organization` },
+    },
+    organizationSchema(),
+  ],
+});
+
 /** Author page — ProfilePage wrapping the Person entity. */
 export const authorPageSchema = () => ({
   "@context": "https://schema.org",

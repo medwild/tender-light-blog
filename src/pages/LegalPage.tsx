@@ -45,7 +45,7 @@ const DOCS: Record<
         h: "How affiliate links work",
         p: [
           "Some product links on Tender Light (outfit pieces, photo prints, presets) are affiliate links. If you click one and make a purchase, we may earn a small commission at no extra cost to you. The price you pay is exactly the same.",
-          "These links are marked with rel=\"sponsored\" in the code, and product round-ups are labeled where affiliate links are present.",
+          "These links are marked with rel=\"sponsored\" in the code, and product round-ups are labeled where affiliate links are present. This disclosure complies with the FTC's endorsement guides and the AdSense/affiliate program terms we participate in.",
         ],
       },
       {
@@ -73,6 +73,19 @@ const DOCS: Record<
         h: "How advice is grounded",
         p: [
           "Pose direction, outfit guidance and location notes come from real sessions, not stock theory. Where a number is cited (e.g. \"in 8 of 10 sessions…\"), it reflects observed experience, and we say so rather than presenting it as independent research.",
+          "Factual claims about places, permits, fees or seasons are linked to an official source in the article's Sources & Further Reading block. If a fact can't be verified, we present it as opinion or omit it.",
+        ],
+      },
+      {
+        h: "How we use images",
+        p: [
+          "Photographs on this site are either Harper's own session work, used with the couple's written permission, or clearly-labeled stock/AI placeholders standing in until original photography is swapped in. We never present a staged or AI image as a real couple's session.",
+        ],
+      },
+      {
+        h: "Updates & corrections",
+        p: [
+          "Guides are reviewed and re-dated as conditions change (fees, light, venue rules). Material changes are noted with an updated date at the top of the article.",
           "We correct errors promptly. If you spot something that's wrong or out of date, email " + SITE.email + " and we'll fix it and note the change.",
         ],
       },

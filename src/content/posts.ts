@@ -5581,7 +5581,7 @@ export const hubFor = (slug: string) => POST_HUB[slug] ?? "engagement-photo-idea
  * keyword targeting, Pinterest pin assets, internal links, related-post
  * overrides and monetization switches. Merged into posts by `withMeta`.
  */
-import type { Monetization, PinImage } from "./types";
+import type { Citation, Monetization, PinImage } from "./types";
 
 const M_ON: Monetization = { adsense: true, affiliate: true, leadMagnet: false };
 
@@ -5592,7 +5592,7 @@ interface PostMeta {
   lsiKeywords: string[];
   searchIntent?: "informational" | "commercial" | "navigational";
   pinImages?: PinImage[];
-  citations?: string[];
+  citations?: (string | Citation)[];
   internalLinks?: { url: string; anchor: string }[];
   relatedPosts?: string[];
   monetization: Monetization;
@@ -5752,7 +5752,9 @@ export const POST_META: Record<string, PostMeta> = {
       pin(IMAGES.gallerySilhouette, "Sunset Engagement Photo Tips", "Backlit vs frontlit, and what to do when the sky goes grey. Pin this light guide."),
       pin(IMAGES.galleryTwirl, "Best Light for Engagement Photos", "The 60 minutes that make or break your gallery — and how to use them."),
     ],
-    citations: [],
+    citations: [
+      { title: "Golden hour (photography) — Wikipedia", url: "https://en.wikipedia.org/wiki/Golden_hour_(photography)", claim: "Golden hour occurs shortly after sunrise and shortly before sunset, when daylight is softer and warmer than when the sun is high." },
+    ],
     internalLinks: [
       { url: "/engagement-photo-locations/engagement-photo-ideas-outside", anchor: "outdoor engagement photo ideas" },
       { url: "/engagement-photo-locations/top-engagement-photo-locations-oklahoma", anchor: "Oklahoma engagement locations" },
@@ -6259,9 +6261,9 @@ export const POST_META: Record<string, PostMeta> = {
     secondaryKeywords: ["oklahoma proposal spots", "where to propose in oklahoma", "romantic oklahoma proposals"],
     lsiKeywords: ["scissortail park", "guthrie", "tallgrass prairie", "wichita mountains", "golden hour"],
     citations: [
-      "Scissortail Park — hours, spaces & event rules: scissortailpark.org",
-      "Myriad Botanical Gardens — Crystal Bridge & rentals: myriadgardens.org",
-      "Oklahoma travel & state parks: travelok.com",
+      { title: "Scissortail Park — hours, spaces & event rules", url: "https://scissortailpark.org", claim: "Scissortail Park's bookable spaces and hours are managed by the park's official events team." },
+      { title: "Myriad Botanical Gardens — Crystal Bridge & rentals", url: "https://myriadgardens.org", claim: "The Crystal Bridge and garden event spaces are available for private rental through the Gardens." },
+      { title: "Oklahoma travel & state parks", url: "https://travelok.com", claim: "Official state resource for Oklahoma parks, recreation areas and travel regions." },
     ],
     internalLinks: [
       { url: "/oklahoma-wedding-locations/places-to-propose-in-oklahoma", anchor: "places to propose in Oklahoma" },
@@ -6275,7 +6277,9 @@ export const POST_META: Record<string, PostMeta> = {
     primaryKeyword: "places to propose in Oklahoma",
     secondaryKeywords: ["quiet proposal spots oklahoma", "private places to propose", "oklahoma proposal ideas"],
     lsiKeywords: ["sunrise", "lake dock", "osage hills", "creekside", "privacy"],
-    citations: ["Oklahoma state parks & recreation: travelok.com"],
+    citations: [
+      { title: "Oklahoma state parks & recreation", url: "https://travelok.com", claim: "Official state resource for Oklahoma parks and recreation areas." },
+    ],
     internalLinks: [
       { url: "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma", anchor: "best places to propose in Oklahoma" },
       { url: "/engagement-photo-poses/proposal-poses", anchor: "proposal poses" },
@@ -6289,8 +6293,8 @@ export const POST_META: Record<string, PostMeta> = {
     secondaryKeywords: ["oklahoma small wedding", "intimate wedding venues oklahoma", "backyard wedding oklahoma"],
     lsiKeywords: ["garden ceremony", "guthrie", "ranch wedding", "park permit", "cost ranges"],
     citations: [
-      "Oklahoma travel, venues & regions: travelok.com",
-      "Scissortail Park bookable spaces: scissortailpark.org",
+      { title: "Oklahoma travel, venues & regions", url: "https://travelok.com", claim: "Official state resource for Oklahoma destinations, venues and regions." },
+      { title: "Scissortail Park bookable spaces", url: "https://scissortailpark.org", claim: "Scissortail Park offers bookable event spaces for gatherings of various sizes." },
     ],
     internalLinks: [
       { url: "/oklahoma-wedding-locations/cheap-wedding-venues-okc", anchor: "cheap wedding venues OKC" },
@@ -6305,8 +6309,8 @@ export const POST_META: Record<string, PostMeta> = {
     secondaryKeywords: ["budget wedding oklahoma city", "affordable okc wedding venues", "okc wedding on a budget"],
     lsiKeywords: ["park permit", "weekday", "scissortail", "bricktown", "under $1,000"],
     citations: [
-      "Oklahoma City Parks & Recreation permits: okc.gov",
-      "Scissortail Park spaces: scissortailpark.org",
+      { title: "Oklahoma City Parks & Recreation permits", url: "https://www.okc.gov", claim: "The City of Oklahoma City issues park-use permits for ceremonies and events in public parks." },
+      { title: "Scissortail Park spaces", url: "https://scissortailpark.org", claim: "Scissortail Park publishes its space rental and permit requirements on its official site." },
     ],
     internalLinks: [
       { url: "/oklahoma-wedding-locations/small-wedding-venues-oklahoma", anchor: "small wedding venues Oklahoma" },
@@ -6321,9 +6325,9 @@ export const POST_META: Record<string, PostMeta> = {
     secondaryKeywords: ["oklahoma elopement", "elope oklahoma", "oklahoma courthouse wedding"],
     lsiKeywords: ["marriage license", "waiting period", "officiant", "wichita mountains", "timeline"],
     citations: [
-      "Oklahoma marriage license & state services: ok.gov",
-      "Wichita Mountains Wildlife Refuge: fws.gov/refuge/wichita-mountains",
-      "Oklahoma state parks: travelok.com",
+      { title: "Oklahoma marriage license & state services", url: "https://www.ok.gov", claim: "Oklahoma marriage license requirements and issuing offices are set by state and county clerks." },
+      { title: "Wichita Mountains Wildlife Refuge", url: "https://www.fws.gov/refuge/wichita-mountains", claim: "The Wichita Mountains Wildlife Refuge is a public refuge with specific visitor and permit rules." },
+      { title: "Oklahoma state parks", url: "https://travelok.com", claim: "Official state resource for Oklahoma state parks and recreation." },
     ],
     internalLinks: [
       { url: "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma", anchor: "best places to propose in Oklahoma" },

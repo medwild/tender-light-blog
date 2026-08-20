@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import { Link, parseRoute, usePathRoute } from "./lib/router";
 import { SITE } from "./lib/constants";
 import {
+  aboutSchema,
   applySeo,
   articleSchema,
   authorPageSchema,
   breadcrumbSchema,
   collectionSchema,
+  contactSchema,
   faqSchema,
   organizationSchema,
   personSchema,
@@ -148,7 +150,7 @@ function useSeo(path: string) {
 
       case "about":
         crumbs.push({ name: "About Harper", path: "/about" });
-        schemas.push(breadcrumbSchema(crumbs));
+        schemas.push(breadcrumbSchema(crumbs), aboutSchema());
         applySeo({
           title: "About Harper Ellis — Engagement Photo Blogger | Tender Light",
           description:
@@ -160,7 +162,7 @@ function useSeo(path: string) {
 
       case "contact":
         crumbs.push({ name: "Contact", path: "/contact" });
-        schemas.push(breadcrumbSchema(crumbs));
+        schemas.push(breadcrumbSchema(crumbs), contactSchema());
         applySeo({
           title: "Book an Engagement Photo Session | Tender Light",
           description:

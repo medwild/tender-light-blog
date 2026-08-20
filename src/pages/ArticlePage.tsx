@@ -6,6 +6,7 @@ import { getSemanticField, resolveTermLink } from "../content/semantic";
 import AuthorBox from "../components/blog/AuthorBox";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import HubLinkBanner from "../components/blog/HubLinkBanner";
+import CitationBlock from "../components/blog/CitationBlock";
 import CommentSection from "../components/blog/CommentSection";
 import PostBody from "../components/blog/PostBody";
 import RelatedPosts from "../components/blog/RelatedPosts";
@@ -183,15 +184,8 @@ export default function ArticlePage({ slug }: { slug: string }) {
               </Reveal>
             ) : null}
 
-            {/* Citations / sources (E-E-A-T) */}
-            {post.citations?.length ? (
-              <Reveal className="mt-6">
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-ink-faint">Sources</p>
-                <ul className="mt-2 space-y-1 text-[13px] text-ink-soft">
-                  {post.citations.map((c) => <li key={c}>• {c}</li>)}
-                </ul>
-              </Reveal>
-            ) : null}
+            {/* Citations / sources (E-E-A-T §16) */}
+            {post.citations?.length ? <CitationBlock citations={post.citations} /> : null}
 
             <AuthorBox author={post.author} />
             <CommentSection />

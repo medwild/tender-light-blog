@@ -1,6 +1,7 @@
-import { Aperture, Heart, Sun, Waves } from "lucide-react";
+import { Aperture, ArrowRight, Heart, Sun, Waves } from "lucide-react";
 import { IMAGES, SITE } from "../lib/constants";
 import { Link } from "../lib/router";
+import { HUBS } from "../content/hubs";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import NewsletterForm from "../components/ui/NewsletterForm";
 import Reveal from "../components/ui/Reveal";
@@ -74,6 +75,12 @@ export default function AboutPage() {
                 “good at photos” to get them.
               </p>
               <p>
+                <em className="font-display italic text-ink">The mission is simple:</em> take the stress out of
+                the season between the ring and the aisle. Every guide on this site exists so you
+                show up to your shoot relaxed, prepared and looking like yourselves — because the
+                best engagement photos are the ones where you forgot the camera was there.
+              </p>
+              <p>
                 Tender Light started in {SITE.founded} with my sister's engagement photos. She kept
                 apologizing for being “awkward,” and I kept thinking: <em className="font-display italic text-ink">it's not you — nobody
                 told you what to do.</em> This journal is that telling, written down: every pose I
@@ -123,6 +130,47 @@ export default function AboutPage() {
             ))}
           </ul>
         </div>
+      </section>
+
+      {/* Explore the hubs */}
+      <section className="mx-auto max-w-7xl px-5 pt-20 sm:px-8 md:pt-24" aria-labelledby="about-hubs-heading">
+        <Reveal className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="font-script text-3xl text-rose-deep">where to start</p>
+            <h2 id="about-hubs-heading" className="mt-1 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+              Explore the <em className="italic text-rose-deep">topic hubs</em>
+            </h2>
+          </div>
+          <p className="max-w-md text-[15px] leading-relaxed text-ink-soft">
+            Every guide on Tender Light lives in one hub. Pick the shelf that matches where you
+            are in planning — the rest will follow.
+          </p>
+        </Reveal>
+        <ul className="mt-8 divide-y divide-line border-y border-line">
+          {HUBS.map((hub, i) => (
+            <Reveal as="li" key={hub.slug} delay={i * 60}>
+              <Link
+                to={`/${hub.slug}`}
+                className="group flex items-center justify-between gap-4 py-5 transition-colors duration-300 hover:bg-cream sm:px-4"
+              >
+                <span className="flex items-baseline gap-5">
+                  <span className="font-script text-2xl text-ink-faint transition-colors duration-300 group-hover:text-rose-deep">
+                    0{i + 1}
+                  </span>
+                  <span>
+                    <span className="block font-display text-xl font-bold transition-transform duration-300 group-hover:translate-x-1.5">
+                      {hub.name}
+                    </span>
+                    <span className="mt-0.5 block max-w-xl text-[13.5px] text-ink-faint">
+                      {hub.keyword} · {hub.volume}{hub.kd !== "TBD" ? ` · KD ${hub.kd}` : ""}
+                    </span>
+                  </span>
+                </span>
+                <ArrowRight className="h-5 w-5 shrink-0 text-gold-deep transition-all duration-300 group-hover:translate-x-1.5 group-hover:text-rose-deep" aria-hidden />
+              </Link>
+            </Reveal>
+          ))}
+        </ul>
       </section>
 
       {/* In the bag + newsletter */}
