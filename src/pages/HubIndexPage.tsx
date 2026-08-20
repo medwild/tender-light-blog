@@ -3,6 +3,8 @@ import { Compass } from "lucide-react";
 import { Link } from "../lib/router";
 import { HUBS, HUB_ACCENTS } from "../content/hubs";
 import { PHASE_LABELS, keywordsByPhase } from "../content/keywords";
+import { auditHub, auditPost, verdict } from "../content/contentRules";
+import { postPath, sortedPosts } from "../lib/content";
 import Breadcrumbs from "../components/seo/Breadcrumbs";
 import Reveal from "../components/ui/Reveal";
 
@@ -96,6 +98,104 @@ function PublishingLedger() {
 }
 
 /** Topical map — the "start here" page that orients readers across all hubs. */
+/** §18 — Content Compliance desk: every page audited against the rules, live. */
+function ComplianceDesk() {
+  const [open, setOpen] = useState<string | null>(null);
+  const hubRows = HUBS.map((h) => ({ slug: h.slug, name: h.name, checks: auditHub(h), path: `/${h.slug}` }));
+  const postRows = sortedPosts().map((p) => ({ slug: p.slug, name: p.title, checks: auditPost(p), path: postPath(p.slug) }));
+  const all = [...hubRows, ...postRows];
+  const tally = {
+    pass: all.filter((r) => verdict(r.checks) === "pass").length,
+    goals: all.filter((r) => verdict(r.checks) === "goals").length,
+    fail: all.filter((r) => verdict(r.checks) === "fail").length,
+  };
+
+  const dot: Record<string, string> = {
+    pass: "bg-sage-deep",
+    goal: "bg-gold",
+    fail: "bg-rose-deep",
+  };
+
+  const Row = ({ row, kind }: { row: (typeof all)[number]; kind: string }) => {
+    const v = verdict(row.checks);
+    const expanded = open === row.slug;
+    return (
+      <li>
+        <button
+          type="button"
+          onClick={() => setOpen(expanded ? null : row.slug)}
+          aria-expanded={expanded}
+          className="group grid w-full grid-cols-[auto_1fr_auto] items-center gap-4 border-b border-cream/10 px-4 py-3.5 text-left transition-colors duration-300 hover:bg-cream/[0.06] sm:gap-6"
+        >
+          <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${v === "pass" ? dot.pass : v === "goals" ? dot.goal : dot.fail} ${v !== "pass" ? "animate-pulse" : ""}`} aria-hidden />
+          <span className="min-w-0">
+            <span className="block truncate font-display text-[15px] font-semibold text-cream/90 transition-colors group-hover:text-cream">
+              {row.name}
+            </span>
+            <span className="text-[11px] uppercase tracking-[0.14em] text-cream/40">
+              {kind} · {row.checks.filter((c) => c.level === "pass").length}/{row.checks.length} rules pass
+            </span>
+          </span>
+          <span className="flex shrink-0 items-center gap-1.5">
+            {row.checks.map((c) => (
+              <span key={c.rule} title={`${c.rule}: ${c.value} (target ${c.target})`} className={`h-1.5 w-4 rounded-full ${dot[c.level]}`} aria-hidden />
+            ))}
+          </span>
+        </button>
+        <div className={`grid transition-[grid-template-rows] duration-400 ease-out ${expanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+          <div className="overflow-hidden">
+            <ul className="grid gap-x-8 gap-y-1.5 bg-cream/[0.04] px-6 py-4 sm:grid-cols-2">
+              {row.checks.map((c) => (
+                <li key={c.rule} className="flex items-center justify-between gap-3 text-[12.5px]">
+                  <span className="flex items-center gap-2 text-cream/60">
+                    <span className={`h-1.5 w-1.5 rounded-full ${dot[c.level]}`} aria-hidden /> {c.rule}
+                  </span>
+                  <span className={`font-mono text-[11.5px] ${c.level === "pass" ? "text-sage" : c.level === "goal" ? "text-gold" : "text-rose"}`}>
+                    {c.value} <span className="text-cream/35">/ {c.target}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </li>
+    );
+  };
+
+  return (
+    <section aria-labelledby="compliance-heading" className="mt-16">
+      <Reveal className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p className="font-script text-3xl text-gold-deep">the quality desk</p>
+          <h2 id="compliance-heading" className="mt-1 font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            Content Compliance <span className="text-ink-faint">· §18 rules, measured live</span>
+          </h2>
+        </div>
+        <p className="flex items-center gap-4 font-mono text-[12px] text-ink-faint">
+          <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-sage-deep" aria-hidden />{tally.pass} pass</span>
+          <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-gold" aria-hidden />{tally.goals} goals</span>
+          <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-rose-deep" aria-hidden />{tally.fail} fail</span>
+        </p>
+      </Reveal>
+      <Reveal className="overflow-hidden rounded-xl border border-line bg-ink">
+        <p className="border-b border-cream/10 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-gold">
+          Pillar hubs — {hubRows.length} pages
+        </p>
+        <ul>{hubRows.map((r) => <Row key={r.slug} row={r} kind="hub" />)}</ul>
+        <p className="border-y border-cream/10 bg-cream/[0.03] px-4 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-rose">
+          Satellite articles — {postRows.length} pages
+        </p>
+        <ul>{postRows.map((r) => <Row key={r.slug} row={r} kind="article" />)}</ul>
+      </Reveal>
+      <p className="mt-3 text-[12px] text-ink-faint">
+        Dots: <span className="font-semibold text-sage-deep">green = rule met</span> ·{" "}
+        <span className="font-semibold text-gold-deep">gold = editorial goal in progress</span> ·{" "}
+        <span className="font-semibold text-rose-deep">red = structural fail</span>. Click any row for the full checklist.
+      </p>
+    </section>
+  );
+}
+
 export default function HubIndexPage() {
   return (
     <div className="pt-28 md:pt-36">
@@ -153,6 +253,8 @@ export default function HubIndexPage() {
         </ol>
 
         <PublishingLedger />
+
+        <ComplianceDesk />
 
         <Reveal className="pb-24 pt-12">
           <div className="rounded-xl border border-line bg-ink p-8 text-cream sm:p-10">

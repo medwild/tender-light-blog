@@ -80,6 +80,14 @@ export const HUBS: Hub[] = [
         q: "Should our engagement photo ideas match our wedding theme?",
         a: "Echo it, don't replicate it. If your wedding is sage-and-cream, a dusty-blue engagement palette gives you range across both galleries instead of one repeated look.",
       },
+      {
+        q: "Can we combine several engagement photo ideas in one session?",
+        a: "Yes — two or three ideas that share a mood work beautifully together (say, a casual coffee walk plus a golden-hour field). Ideas from clashing moods in one hour tend to make the gallery feel scattered.",
+      },
+      {
+        q: "Do engagement photo ideas work for save-the-dates too?",
+        a: "Most do. Ask your photographer for horizontal crops of your favorite frames and you'll have save-the-date, wedding-website and announcement imagery from a single session.",
+      },
     ],
   },
   {
@@ -183,6 +191,14 @@ export const HUBS: Hub[] = [
       {
         q: "Do we need permits for outdoor engagement photos?",
         a: "For a couple and one photographer, almost never. Tripods, assistants or commercial styling can trigger permits in city parks, and state parks charge per-vehicle entry. Verify the specific spot a week ahead.",
+      },
+      {
+        q: "How do we choose between a park, a beach and a city location?",
+        a: "Match the location to your everyday life — a couple that hikes will look most at home on a trail, a city couple on a brick street. The setting should feel like yours, not borrowed.",
+      },
+      {
+        q: "What's a good backup if our first-choice location falls through?",
+        a: "Keep a same-vibe alternative within 20 minutes: if the garden is crowded, a tree-lined park reads similarly; if the beach is windy, a sheltered lakefront works. A photographer will have these scouted already.",
       },
     ],
   },
@@ -289,6 +305,10 @@ export const HUBS: Hub[] = [
       {
         q: "How do we plan a surprise proposal with a hidden photographer?",
         a: "Scout the spot together with the photographer beforehand, agree on a signal to begin, and position the shooter upwind with a long lens. Plan the kneel point, the light direction and the one-minute aftermath — that's where the best frames live.",
+      },
+      {
+        q: "Should our save the date photos be formal or fun?",
+        a: "Either — but keep them readable at card size. A clean, uncluttered frame with a clear focal point works better than a busy scene, whether it's romantic or playful.",
       },
     ],
   },
