@@ -69,13 +69,58 @@ export function applySeo({ title, description, path, image, type = "website", js
 
 /* ————— Schema builders (mirror lib/seo schema helpers in a Next build) ————— */
 
+export const LOGO_URL = `${SITE.url}/logo.svg`;
+export const PINTEREST_URL = "https://www.pinterest.com/tenderlight";
+export const AUTHOR_URL = `${SITE.url}/author/harper-ellis/`;
+
 export const organizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${SITE.url}/#organization`,
   name: SITE.name,
   url: SITE.url,
   email: SITE.email,
   description: SITE.description,
+  logo: { "@type": "ImageObject", url: LOGO_URL },
+  sameAs: [PINTEREST_URL],
+});
+
+/** Harper Ellis — the founder Person node (homepage + author page). */
+export const personSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${SITE.url}/author/harper-ellis/#person`,
+  name: "Harper Ellis",
+  url: AUTHOR_URL,
+  image: "https://image.qwenlm.ai/generated-images/94d5152d-699e-4c50-9659-b0089283422f/_result.png",
+  jobTitle: "Engagement Photography Blogger",
+  worksFor: { "@type": "Organization", "@id": `${SITE.url}/#organization`, name: SITE.name },
+  knowsAbout: [
+    "engagement photos",
+    "engagement photo poses",
+    "engagement photo outfits",
+    "engagement photo locations",
+    "save the date photos",
+    "proposal photography",
+    "candid couple photography",
+  ],
+  sameAs: [PINTEREST_URL],
+});
+
+/** Author page — ProfilePage wrapping the Person entity. */
+export const authorPageSchema = () => ({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": `${SITE.url}/author/harper-ellis/#profile`,
+      url: AUTHOR_URL,
+      name: "Harper Ellis — Founder & Engagement Photo Editor",
+      isPartOf: { "@type": "WebSite", name: SITE.name, url: SITE.url },
+      mainEntity: { "@id": `${SITE.url}/author/harper-ellis/#person` },
+    },
+    personSchema(),
+  ],
 });
 
 export const websiteSchema = () => ({
@@ -105,20 +150,35 @@ export const articleSchema = (post: {
   title: string;
   slug: string;
   date: string;
+  dateModified?: string;
   image: string;
   description: string;
-  author: { name: string; role: string };
+  author: { name: string; role: string; handle?: string };
+  keywords?: string[];
+  articleSection?: string;
 }) => ({
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": "BlogPosting",
   headline: post.title,
   description: post.description,
-  image: post.image,
-  datePublished: post.date,
-  dateModified: post.date,
+  url: `${SITE.url}${postPath(post.slug)}/`,
   mainEntityOfPage: `${SITE.url}${postPath(post.slug)}/`,
-  author: { "@type": "Person", name: post.author.name, jobTitle: post.author.role },
-  publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+  datePublished: post.date,
+  dateModified: post.dateModified ?? post.date,
+  image: { "@type": "ImageObject", url: post.image },
+  keywords: (post.keywords ?? []).join(", "),
+  articleSection: post.articleSection ?? "Engagement Photos",
+  author:
+    post.author.handle === "harper-ellis"
+      ? { "@id": `${SITE.url}/author/harper-ellis/#person` }
+      : { "@type": "Person", name: post.author.name, jobTitle: post.author.role },
+  publisher: {
+    "@type": "Organization",
+    "@id": `${SITE.url}/#organization`,
+    name: SITE.name,
+    url: SITE.url,
+    logo: { "@type": "ImageObject", url: LOGO_URL },
+  },
 });
 
 export const faqSchema = (items: { q: string; a: string }[]) => ({

@@ -51,15 +51,40 @@
     />
     <link rel="stylesheet" href="/static.css" />
 
-    <!-- Structured data: Organization + WebSite (static for crawlers) -->
+    <!-- Structured  Organization + WebSite + Person (static for crawlers) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Organization",
+        "@id": "https://tenderlight.journal/#organization",
         "name": "Tender Light",
         "url": "https://tenderlight.journal",
         "email": "hello@tenderlight.studio",
-        "description": "Engagement photo ideas, poses & inspiration for couples — six hubs: poses, outfits, locations, save-the-dates and prints, from 400+ real sessions."
+        "description": "Engagement photo ideas, poses & inspiration for couples — six hubs: poses, outfits, locations, save-the-dates and prints, from 400+ real sessions.",
+        "logo": { "@type": "ImageObject", "url": "https://tenderlight.journal/logo.svg" },
+        "sameAs": ["https://www.pinterest.com/tenderlight"]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://tenderlight.journal/author/harper-ellis/#person",
+        "name": "Harper Ellis",
+        "url": "https://tenderlight.journal/author/harper-ellis/",
+        "image": "https://image.qwenlm.ai/generated-images/94d5152d-699e-4c50-9659-b0089283422f/_result.png",
+        "jobTitle": "Engagement Photography Blogger",
+        "worksFor": { "@type": "Organization", "@id": "https://tenderlight.journal/#organization", "name": "Tender Light" },
+        "knowsAbout": [
+          "engagement photos",
+          "engagement photo poses",
+          "engagement photo outfits",
+          "engagement photo locations",
+          "save the date photos",
+          "proposal photography",
+          "candid couple photography"
+        ],
+        "sameAs": ["https://www.pinterest.com/tenderlight"]
       }
     </script>
     <script type="application/ld+json">

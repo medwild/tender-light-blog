@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="56" fill="#FAF7F2" stroke="#C9A961" stroke-width="3"/>
+  <circle cx="60" cy="60" r="40" fill="none" stroke="#2C2C2C" stroke-width="2" opacity="0.85"/>
+  <!-- aperture blades -->
+  <g stroke="#2C2C2C" stroke-width="2" fill="none" opacity="0.85">
+    <path d="M60 20 L74 46"/>
+    <path d="M94.6 40 L66 48"/>
+    <path d="M94.6 80 L80 54"/>
+    <path d="M60 100 L46 74"/>
+    <path d="M25.4 80 L54 72"/>
+    <path d="M25.4 40 L40 66"/>
+  </g>
+  <circle cx="60" cy="60" r="17" fill="#E8B4BC"/>
+  <circle cx="60" cy="60" r="7" fill="#9D5A67"/>
+  <text x="60" y="112" text-anchor="middle" font-family="Georgia, 'Playfair Display', serif" font-style="italic" font-size="15" fill="#2C2C2C">Tender Light</text>
+</svg>

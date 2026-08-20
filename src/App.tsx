@@ -4,10 +4,12 @@ import { SITE } from "./lib/constants";
 import {
   applySeo,
   articleSchema,
+  authorPageSchema,
   breadcrumbSchema,
   collectionSchema,
   faqSchema,
   organizationSchema,
+  personSchema,
   websiteSchema,
 } from "./lib/seo";
 import { getCategory, getPost, hubFor, postPath } from "./lib/content";
@@ -47,7 +49,7 @@ function useSeo(path: string) {
             "Engagement photo ideas, poses & inspiration for couples — six hubs: poses, outfits, locations, save-the-dates and prints, from 400+ real sessions.",
           path: "/",
           type: "website",
-          jsonLd: [organizationSchema(), websiteSchema()],
+          jsonLd: [organizationSchema(), websiteSchema(), personSchema()],
         });
         return;
 
@@ -79,7 +81,13 @@ function useSeo(path: string) {
             title: post.title,
             slug: post.slug,
             date: post.date,
+            dateModified: post.dateModified,
             image: post.featuredImage,
+            keywords: [
+              ...(post.primaryKeyword ? [post.primaryKeyword] : []),
+              ...(post.secondaryKeywords ?? []),
+            ],
+            articleSection: hub?.name,
             description: post.seoDescription,
             author: post.author,
           })
@@ -183,7 +191,7 @@ function useSeo(path: string) {
 
       case "author":
         crumbs.push({ name: "Harper Ellis", path: "/author/harper-ellis" });
-        schemas.push(breadcrumbSchema(crumbs));
+        schemas.push(breadcrumbSchema(crumbs), authorPageSchema());
         applySeo({
           title: "Harper Ellis — Engagement Photo Guides | Tender Light",
           description:
