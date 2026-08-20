@@ -132,6 +132,18 @@ its own answer-first content (never thin), and cross-links to sibling hubs.
 To add a hub: push an object into `HUBS`, then create the matching
 `public/hub/<slug>/index.html` and add the URL to `public/sitemap.xml`.
 
+## Source de vérité SEO
+
+`ARCHITECTURE.md` est le contrat : topical map (7 hubs), structure par couche,
+frontmatter, matrice Schema.org et la *validation gate* à suivre avant toute
+nouvelle page. Les invariants §25 (intention + mot-clé + cluster + liens +
+schéma, zéro page hors carte, zéro thin content) sont mesurés en direct par le
+desk « Intégrité topologique » sur `/guides`.
+
+La couche MDX de migration (Next.js SSG) vit dans `src/content/mdx/` :
+`_SCHEMA.md` (règles de conversion), `_template.mdx` (frontmatter vierge) et un
+exemplaire converti par cluster Phase 1.
+
 ## Adding a new article
 
 1. Push a new object into `POSTS` in `src/content/posts.ts`: `slug`, `title`,

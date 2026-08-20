@@ -234,7 +234,37 @@ export function runFinalChecklist(): { sections: FinalSection[]; tally: Record<F
     ],
   };
 
-  const sections = [seo, schema, linking, content, pin];
+  /* ————— §25 Topical integrity (hard invariants) ————— */
+  const clusterOk = posts.filter((p) => Boolean(p.cluster)).length;
+  const intentOk = posts.filter((p) => Boolean(p.searchIntent)).length;
+  const pkOk = posts.filter((p) => Boolean(p.primaryKeyword)).length;
+  const linksOk = posts.filter((p) => (p.internalLinks?.length ?? 0) > 0).length;
+  const schemaOk = posts.filter((p) => faqCount(p.blocks) > 0 && Boolean(p.seoTitle)).length;
+  const notThin = posts.filter((p) => blockWords(p.blocks) >= 600).length;
+
+  const postSlugs = new Set(posts.map((p) => p.slug));
+  const hubSlugs = new Set(HUBS.map((h) => h.slug));
+  const danglingSpokes = HUBS.flatMap((h) => h.spokes.filter((s) => !postSlugs.has(s)));
+  const emptyHubs = HUBS.filter((h) => h.spokes.length === 0);
+  const spokeToHub = posts.filter((p) => HUBS.some((h) => h.spokes.includes(p.slug))).length;
+
+  const integrity: FinalSection = {
+    id: "integrity",
+    title: "Intégrité topologique · §25",
+    items: [
+      { id: "i-cluster", label: "Chaque page appartient à un cluster", status: clusterOk === N ? "pass" : "fail", evidence: `${count(clusterOk, N)} pages avec cluster` },
+      { id: "i-intent", label: "Chaque page a une intention claire", status: intentOk === N ? "pass" : "fail", evidence: `${count(intentOk, N)} pages avec searchIntent` },
+      { id: "i-keyword", label: "Chaque page a un mot-clé principal", status: pkOk === N ? "pass" : "fail", evidence: `${count(pkOk, N)} pages avec primaryKeyword` },
+      { id: "i-links", label: "Chaque page a des liens internes", status: linksOk === N ? "pass" : "fail", evidence: `${count(linksOk, N)} pages avec internalLinks` },
+      { id: "i-schema", label: "Chaque page a un schéma valide (FAQPage + silo URL)", status: schemaOk === N ? "pass" : "fail", evidence: `${count(schemaOk, N)} pages avec FAQ + seoTitle` },
+      { id: "i-thin", label: "Zéro thin content (≥ 600 mots)", status: notThin === N ? "pass" : "fail", evidence: `${count(notThin, N)} articles ≥ 600 mots` },
+      { id: "i-map", label: "Aucune page hors topical map", status: danglingSpokes.length === 0 && emptyHubs.length === 0 && clusterOk === N ? "pass" : "fail", evidence: danglingSpokes.length || emptyHubs.length ? `${danglingSpokes.length} spokes dangling, ${emptyHubs.length} hubs vides` : "topical map fermée — 0 page hors carte" },
+      { id: "i-spokes", label: "Chaque article est listé comme spoke d'un hub", status: ratioStatus(spokeToHub, N, 0.9, 0.7), evidence: `${count(spokeToHub, N)} articles spoke d'au moins un hub` },
+      { id: "i-gate", label: "Nouvelle page = intention + mot-clé + cluster + liens + schéma", status: "design", evidence: "invariants mesurés ci-dessus, recalculés à chaque rendu" },
+    ],
+  };
+
+  const sections = [seo, schema, linking, content, pin, integrity];
   const tally: Record<FinalStatus, number> = { pass: 0, goal: 0, fail: 0, design: 0 };
   for (const s of sections) for (const it of s.items) tally[it.status] += 1;
 
