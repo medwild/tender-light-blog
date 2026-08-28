@@ -1,0 +1,60 @@
+---
+# ——— Identité (obligatoire) ———
+id: ""                    # = slug
+title: ""                 # H1, keyword en tête, ≤ 60 c pour le meta
+slug: ""
+cluster: ""               # un des 7 hubs — JAMAIS vide (§25)
+pillar: false
+
+# ——— Ciblage (obligatoire) ———
+primaryKeyword: ""
+secondaryKeywords: []
+lsiKeywords: []
+searchIntent: "informational"   # informational | commercial | navigational
+
+# ——— Meta (obligatoire) ———
+metaTitle: ""             # ≤ 60 caractères
+metaDescription: ""       # 150–160 caractères
+canonical: ""             # https://tenderlight.journal/{cluster}/{slug}/
+author: "harper-ellis"
+datePublished: ""
+dateModified: ""
+
+# ——— Visuels (obligatoire) ———
+featuredImage: ""
+featuredImageAlt: ""      # primary keyword + description naturelle
+pinImages:                # 3 × 1000×1500
+  - image: ""
+    pinTitle: ""          # ≤ 100 c
+    pinDescription: ""    # ≤ 500 c
+
+# ——— Contenu (obligatoire) ———
+faq: []                   # 4–6 questions, réponses 40–70 mots
+citations: []             # faits vérifiables uniquement (sources officielles)
+internalLinks: []         # 3–6 liens, ancres descriptives
+relatedPosts: []          # même cluster prioritaire
+monetization:
+  adsense: true
+  affiliate: false
+  leadMagnet: false
+---
+
+{/* INTRO — 100–150 mots, answer-first, primary keyword dans la première phrase. */}
+
+## [Premier H2 — keyword-rich]
+
+{/* Réponse directe en ≤ 25 mots, puis développement. 2–4 phrases par paragraphe. */}
+
+{/* [AD_PLACEMENT] — slot after-first-h2 */}
+
+## [H2 suivant]
+
+> [Phrase citable — autonome, attribuable à Harper, sans contexte nécessaire.]
+
+## FAQ
+
+<FAQ items={frontmatter.faq} />
+
+{/* CORPS ≥ 600 mots · ≥ 2 phrases citables · ≥ 1 "Harper's tip" ·
+    tableau comparatif si pertinent · [AD_PLACEMENT] avant la FAQ et en fin.
+    Voir ../_SCHEMA.md pour la correspondance blocs → composants MDX. */}
