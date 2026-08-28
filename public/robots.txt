@@ -1,0 +1,10 @@
+# Tender Light — engagement photo journal
+User-agent: *
+Allow: /
+Disallow: /assets/
+
+# Pinterest Rich Pins crawler
+User-agent: Pinterestbot
+Allow: /
+
+Sitemap: https://tenderlight.journal/sitemap.xml

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tenderlight.journal/</loc><priority>1.0</priority></url>
+  <url><loc>https://tenderlight.journal/guides/</loc><priority>0.9</priority></url>
+  <url><loc>https://tenderlight.journal/about/</loc><priority>0.5</priority></url>
+  <url><loc>https://tenderlight.journal/contact/</loc><priority>0.5</priority></url>
+
+  <!-- Hubs -->
+  <url><loc>https://tenderlight.journal/engagement-photo-ideas/</loc><priority>0.9</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-poses/</loc><priority>0.9</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-outfits/</loc><priority>0.9</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-locations/</loc><priority>0.9</priority></url>
+  <url><loc>https://tenderlight.journal/save-the-date-photos/</loc><priority>0.9</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-prints/</loc><priority>0.9</priority></url>
+
+  <!-- Ideas -->
+  <url><loc>https://tenderlight.journal/engagement-photo-ideas/holiday-engagement-photos/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-ideas/casual-engagement-photo-ideas/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-ideas/classic-engagement-photos/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-ideas/black-and-white-engagement-photos/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-ideas/unique-engagement-photo-ideas/</loc><priority>0.8</priority></url>
+
+  <!-- Poses -->
+  <url><loc>https://tenderlight.journal/engagement-photo-poses/how-to-smile-naturally-in-photos/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-poses/camera-shy-engagement-poses/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-poses/scenario-based-engagement-poses/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-poses/ring-engagement-photo-poses/</loc><priority>0.8</priority></url>
+
+  <!-- Outfits -->
+  <url><loc>https://tenderlight.journal/engagement-photo-outfits/best-outfits-engagement-photos/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-outfits/fall-engagement-photo-outfits/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-outfits/casual-engagement-photo-outfits/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-outfits/engagement-photo-color-palette/</loc><priority>0.8</priority></url>
+
+  <!-- Locations -->
+  <url><loc>https://tenderlight.journal/engagement-photo-locations/indoor-engagement-photos/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-locations/outdoor-engagement-photo-locations/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-locations/urban-engagement-photo-ideas/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-locations/at-home-engagement-photo-ideas/</loc><priority>0.8</priority></url>
+
+  <!-- Save the Date -->
+  <url><loc>https://tenderlight.journal/save-the-date-photos/save-the-date-photo-ideas/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/save-the-date-photos/proposal-poses/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/save-the-date-photos/surprise-proposal-ideas/</loc><priority>0.8</priority></url>
+
+  <!-- Prints -->
+  <url><loc>https://tenderlight.journal/engagement-photo-prints/engagement-photo-albums/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-prints/glossy-or-matte-prints/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-prints/mini-photo-print-ideas/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-prints/photo-print-sizes-guide/</loc><priority>0.8</priority></url>
+  <url><loc>https://tenderlight.journal/engagement-photo-prints/locket-photo-print-guide/</loc><priority>0.8</priority></url>
+</urlset>
