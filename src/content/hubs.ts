@@ -94,4 +94,21 @@ export const HUBS: Hub[] = [
   },
 ];
 
-export const getHub = (slug: string) => HUBS.find((h) => h.slug === slug);
+/** Wedding Day Logistics — restored pillar hub (photo & logistics of the day itself). */
+export const WEDDING_DAY_HUB: Hub = {
+  slug: "wedding-day-logistics", name: "Wedding Day Logistics", keyword: "wedding day checklist",
+  volume: "2,500/mo cum.", kd: "11–26",
+  metaTitle: "Wedding Day Checklist: The Photo & Logistics Timeline",
+  metaDescription: "A wedding day checklist built by a photographer: the photo timeline, family formals list, display and QR setup, delegation and vendor handoff.",
+  lede: "The layer most wedding checklists skip: the photo timeline, the family formals list, the displays, the tech and the delegation that decide how your day actually looks in the album.",
+  harperNote: "You don't remember a wedding day. You remember the photographs of it — and those are a logistics problem before they're an art problem.",
+  accent: "blush",
+  spokes: ["wedding-photo-checklist"],
+  related: ["save-the-date-photos", "engagement-photo-prints", "engagement-photo-ideas"],
+  faq: [
+    { q: "Who should run the family formals?", a: "One named person with the written list — the MC or a gregarious relative. The photographer shoots; the list-runner wrangles. Splitting those two roles keeps formals under twenty minutes." },
+    { q: "Is the golden-hour portrait block worth it?", a: "Yes — protect 60–90 minutes around golden hour like the ceremony itself. It produces the images you'll frame, and guests won't notice the gap." },
+  ],
+};
+
+export const getHub = (slug: string) => HUBS.find((h) => h.slug === slug) ?? (slug === WEDDING_DAY_HUB.slug ? WEDDING_DAY_HUB : undefined);
