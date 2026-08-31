@@ -30,9 +30,9 @@ export const ALBUMS_POSTS: Post[] = [
     author: harper,
     primaryKeyword: "engagement photo albums",
     cluster: "engagement-photo-prints",
-    relatedPosts: ["scrapbook-vs-photo-album", "glossy-or-matte-prints", "photo-print-sizes-guide"],
+    relatedPosts: ["polaroid-style-prints", "glossy-or-matte-prints", "photo-print-sizes-guide"],
     internalLinks: [
-      { url: "/engagement-photo-prints/scrapbook-vs-photo-album", anchor: "scrapbook vs photo album" },
+      { url: "/engagement-photo-prints/polaroid-style-prints", anchor: "polaroid style prints" },
       { url: "/engagement-photo-prints/glossy-or-matte-prints", anchor: "glossy or matte prints" },
       { url: "/engagement-photo-prints/photo-print-sizes-guide", anchor: "photo print sizes guide" },
       { url: "/engagement-photo-prints/locket-photo-print-guide", anchor: "locket photo print guide" },
@@ -144,7 +144,7 @@ export const ALBUMS_POSTS: Post[] = [
       { type: "p", text: "It's a year later, and the book lives on the coffee table where it belongs. The grandmother flips it open without asking, settles into the chair, and works her way through thirty frames slowly, out loud. She gets to the last page — the wide one, the light, the two of you — and she starts again at the beginning. That's the whole point. An album isn't finished when it's ordered. It's finished when it's opened." },
 
       { type: "keepReading", items: [
-        { label: "Scrapbook vs Photo Album", to: "/engagement-photo-prints/scrapbook-vs-photo-album", note: "The interactive project vs the finished object" },
+        { label: "Polaroid-Style Prints", to: "/engagement-photo-prints/polaroid-style-prints", note: "The interactive project vs the finished object" },
         { label: "Glossy or Matte Prints", to: "/engagement-photo-prints/glossy-or-matte-prints", note: "The finish your album pages want" },
         { label: "Photo Print Sizes Guide", to: "/engagement-photo-prints/photo-print-sizes-guide", note: "The sizes inside the album, matched to the wall" },
       ]},

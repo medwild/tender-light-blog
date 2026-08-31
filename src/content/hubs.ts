@@ -10,7 +10,7 @@ export const HUBS: Hub[] = [
     lede: "The best engagement photo ideas share one thing: they look like you on a good day, not like a catalogue. Start with a mood, then let the pose, outfit and location follow.",
     harperNote: "Couples who pick a mood first and poses second end up with a gallery that feels like one story.",
     accent: "rose",
-    spokes: ["holiday-engagement-photos", "casual-engagement-photo-ideas", "classic-engagement-photos", "black-and-white-engagement-photos", "unique-engagement-photo-ideas"],
+    spokes: ["holiday-engagement-photos", "casual-engagement-photo-ideas", "classic-engagement-photos", "black-and-white-engagement-photos", "unique-engagement-photo-ideas", "winter-engagement-photo-ideas", "pet-engagement-photos"],
     related: ["engagement-photo-poses", "engagement-photo-outfits", "engagement-photo-locations"],
     faq: [
       { q: "How many engagement photo ideas should we actually use?", a: "Pick 8–12 starting points for a 60–90 minute session. Each idea produces several keeper frames once you add movement, so a short list beats a long one that turns the shoot into a checklist." },
@@ -85,7 +85,7 @@ export const HUBS: Hub[] = [
     lede: "Your engagement session deserves more than a camera roll. Print the frames you actually live with — a hero print for the wall, mid-size pairings for a ledge, small candids for shelves.",
     harperNote: "Couples reprint the mid-laugh frames far more often than the formal ones. Print what makes you feel something.",
     accent: "gold",
-    spokes: ["engagement-photo-albums", "glossy-or-matte-prints", "mini-photo-print-ideas", "photo-print-sizes-guide", "locket-photo-print-guide"],
+    spokes: ["engagement-photo-albums", "glossy-or-matte-prints", "mini-photo-print-ideas", "photo-print-sizes-guide", "locket-photo-print-guide", "polaroid-style-prints", "photo-flip-book-ideas", "border-prints", "true-digital-prints"],
     related: ["save-the-date-photos", "engagement-photo-ideas"],
     faq: [
       { q: "Which engagement photos are worth printing?", a: "Print the frames you feel something looking at — usually the candid, mid-laugh ones, plus one strong formal. A good mix is one hero print, two mid-size, and a few small candids." },
@@ -112,3 +112,8 @@ export const WEDDING_DAY_HUB: Hub = {
 };
 
 export const getHub = (slug: string) => HUBS.find((h) => h.slug === slug) ?? (slug === WEDDING_DAY_HUB.slug ? WEDDING_DAY_HUB : undefined);
+
+/* The 7th silo (handoff §3): wired into the topical map once its pillar post
+   (wedding-photo-checklist) joined the catalog. HUBS drives
+   generateStaticParams, the sitemap and the /guides map. */
+HUBS.push(WEDDING_DAY_HUB);

@@ -33,7 +33,7 @@ export const HOLIDAY_POSTS: Post[] = [
     relatedPosts: ["winter-engagement-photo-ideas", "classic-engagement-photos", "black-and-white-engagement-photos"],
     internalLinks: [
       { url: "/engagement-photo-ideas/winter-engagement-photo-ideas", anchor: "winter engagement photo ideas" },
-      { url: "/engagement-photo-ideas/romantic-engagement-photo-ideas", anchor: "romantic engagement photo ideas" },
+      { url: "/engagement-photo-ideas/unique-engagement-photo-ideas", anchor: "unique engagement photo ideas" },
       { url: "/engagement-photo-ideas/classic-engagement-photos", anchor: "classic engagement photos" },
       { url: "/engagement-photo-ideas/black-and-white-engagement-photos", anchor: "black and white engagement photos" },
     ],

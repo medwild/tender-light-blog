@@ -51,6 +51,15 @@ import { INDOOR_POSTS } from "./indoorArticle";
 import { HOLIDAY_POSTS } from "./holidayArticle";
 import { ALBUMS_POSTS } from "./albumsArticle";
 
+/* ————— Restored drafts wired into the catalog (handoff §4 "restauré") ————— */
+import { WINTER_POSTS } from "./winterArticle";
+import { PET_POSTS } from "./petArticle";
+import { POLAROID_POSTS } from "./polaroidArticle";
+import { FLIP_BOOK_POSTS } from "./flipBookArticle";
+import { BORDER_POSTS } from "./borderArticle";
+import { TRUE_DIGITAL_POSTS } from "./trueDigitalArticle";
+import { WEDDING_CHECKLIST_POSTS } from "./weddingChecklistArticle";
+
 /* ————— Representative spokes for the remaining hubs ————— */
 const SPOKES: Post[] = [
   art({
@@ -392,7 +401,11 @@ const SPOKES: Post[] = [
   }),
 ];
 
-const ALL: Post[] = [...SPOKES, ...INDOOR_POSTS, ...HOLIDAY_POSTS, ...ALBUMS_POSTS];
+const ALL: Post[] = [
+  ...SPOKES, ...INDOOR_POSTS, ...HOLIDAY_POSTS, ...ALBUMS_POSTS,
+  ...WINTER_POSTS, ...PET_POSTS, ...POLAROID_POSTS, ...FLIP_BOOK_POSTS,
+  ...BORDER_POSTS, ...TRUE_DIGITAL_POSTS, ...WEDDING_CHECKLIST_POSTS,
+];
 
 /* ————— keepReading post-processing pass (avoids TDZ on ALL) ————— */
 for (const post of ALL) {

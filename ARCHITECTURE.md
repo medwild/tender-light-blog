@@ -13,14 +13,14 @@
 ```
 /                                   homepage        Organization + WebSite + Person
 /guides/                            topical map     (noindex-worthy? non — index, c'est le plan du site)
-/{hub}/                             6 pillars       CollectionPage + ItemList + BreadcrumbList + FAQPage
+/{hub}/                             7 pillars       CollectionPage + ItemList + BreadcrumbList + FAQPage
 /{hub}/{slug}/                      satellites      BlogPosting + FAQPage + BreadcrumbList + ImageObject
 /about/ /contact/                   E-E-A-T         AboutPage / ContactPage
 /privacy-policy/ /affiliate-disclosure/ /editorial-policy/   légales (noindex)
 /sitemap.xml  /robots.txt           générés depuis le modèle (app/sitemap.ts, app/robots.ts)
 ```
 
-Les 6 hubs (topical map — **toute nouvelle page doit appartenir à l'un d'eux**) :
+Les 7 hubs (topical map — **toute nouvelle page doit appartenir à l'un d'eux**) :
 
 | Hub | Mot-clé | Vol / KD | Articles |
 |---|---|---|---|
@@ -30,6 +30,7 @@ Les 6 hubs (topical map — **toute nouvelle page doit appartenir à l'un d'eux*
 | `/engagement-photo-outfits/` | what to wear for engagement photos | TBD | best-outfits, casual, fall, summer, spring, color-palette, outdoor |
 | `/save-the-date-photos/` | save the date photoshoot ideas | 110 / 14 | photo-ideas, poses, announcement, surprise-proposal |
 | `/engagement-photo-prints/` | engagement photo print ideas | TBD | locket, photo-booth-strip, display, mini, polaroid, flip-book |
+| `/wedding-day-logistics/` | wedding day checklist | 2,500 / 11–26 | wedding-photo-checklist (pilier 47 items) |
 
 ## 2. Structure de fichiers par couche
 
