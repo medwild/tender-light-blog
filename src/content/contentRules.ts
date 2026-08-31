@@ -1,5 +1,4 @@
-import type { Block, Post } from "./types";
-import type { Hub } from "./hubs";
+import type { Block, Hub, Post } from "./types";
 import { adSlotCoverage, affiliateCoverage, ARTICLE_SHOPS, CANONICAL_AD_SLOTS, hasLeadMagnet } from "./monetization";
 import { INTENT_OWNERSHIP } from "./keywords";
 import { postPath } from "./posts";

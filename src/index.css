@@ -2,9 +2,9 @@
 
 /* ————— Tender Light design tokens ————— */
 @theme {
-  --font-display: "Playfair Display", "Georgia", serif;
-  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --font-script: "Dancing Script", cursive;
+  --font-display: var(--font-playfair), "Playfair Display", "Georgia", serif;
+  --font-body: var(--font-inter), "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-script: var(--font-dancing), "Dancing Script", cursive;
 
   --color-cream: #faf7f2;
   --color-paper: #fefefe;

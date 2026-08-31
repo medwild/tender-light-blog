@@ -1,5 +1,7 @@
-import { Component, useEffect, useRef, useState, type ElementType, type FormEvent, type ReactNode } from "react";
-import { Aperture, Check, ChevronRight } from "lucide-react";
+"use client";
+
+import { useEffect, useRef, useState, type ElementType, type FormEvent, type ReactNode } from "react";
+import { Check, ChevronRight } from "lucide-react";
 import { Link } from "../lib/router";
 
 /** Scroll-reveal wrapper — honors prefers-reduced-motion via CSS. */
@@ -82,7 +84,7 @@ export function NewsletterForm({ dark = false }: { dark?: boolean }) {
 
 export interface Crumb { name: string; path: string; }
 
-/** Visual breadcrumb trail (BreadcrumbList JSON-LD emitted by the route SEO effect). */
+/** Visual breadcrumb trail (BreadcrumbList JSON-LD is emitted by the route). */
 export function Breadcrumbs({ items }: { items: Crumb[] }) {
   return (
     <nav aria-label="Breadcrumb">
@@ -101,39 +103,4 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
       </ol>
     </nav>
   );
-}
-
-interface EBProps { children: ReactNode; }
-interface EBState { error: Error | null; }
-
-/** Error boundary: a render crash shows a styled diagnostic, never a blank page. */
-export class ErrorBoundary extends Component<EBProps, EBState> {
-  state: EBState = { error: null };
-  static getDerivedStateFromError(error: Error): EBState { return { error }; }
-  componentDidCatch(error: Error, info: React.ErrorInfo) { console.error("[tender-light] render error:", error, info); }
-
-  render() {
-    if (this.state.error) {
-      return (
-        <div className="mx-auto max-w-xl px-6 py-28 text-center">
-          <Aperture className="mx-auto h-10 w-10 text-rose-deep" aria-hidden />
-          <h1 className="mt-5 font-display text-4xl font-bold text-ink">This frame didn't develop</h1>
-          <p className="mt-4 leading-relaxed text-ink-soft">
-            Something went wrong while rendering the journal. A reload usually fixes it.
-          </p>
-          <pre className="mt-6 overflow-auto rounded-lg border border-line bg-cream px-4 py-3 text-left text-xs text-rose-deep">
-            {this.state.error.message}
-          </pre>
-          <button
-            type="button"
-            onClick={() => window.location.reload()}
-            className="mt-7 rounded-full bg-ink px-7 py-3 text-sm font-semibold text-cream transition-all duration-300 hover:-translate-y-0.5 hover:bg-rose-deep"
-          >
-            Reload the journal
-          </button>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
 }

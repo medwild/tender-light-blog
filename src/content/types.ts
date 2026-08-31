@@ -4,8 +4,27 @@ export interface TocItem { id: string; text: string; depth: 2 | 3; }
 export interface Citation { title: string; url: string; claim?: string; }
 export interface PinImage { image: string; pinTitle: string; pinDescription: string; overlayText?: string; }
 export interface InternalLink { url: string; anchor: string; }
-export type AdSlotName = "after-first-h2" | "mid-article" | "before-faq";
-export type AffiliateSectionName = "outfits" | "prints" | "display" | "gifts";
+export type AdSlotName =
+  | "after-intro"
+  | "after-first-h2"
+  | "mid-article"
+  | "before-faq"
+  | "end-of-article"
+  /* legacy aliases — mapped onto the canonical five by normalizeAdSlot() */
+  | "in-article"
+  | "end-of-section";
+export type AffiliateSectionName =
+  | "outfits"
+  | "location-accessories"
+  | "props"
+  | "prints"
+  | "display"
+  | "gifts";
+export type LeadMagnetId =
+  | "engagement-shoot-checklist"
+  | "pose-cheat-sheet"
+  | "outfit-planning-guide"
+  | "pinterest-board-template";
 export interface Monetization { adsense: boolean; affiliate: boolean; leadMagnet: boolean; }
 
 export type Block =
@@ -33,6 +52,7 @@ export interface Post {
   category: CategorySlug; date: string; dateModified?: string;
   featuredImage: string; featuredAlt: string; tags: string[];
   author: Author; primaryKeyword?: string; cluster?: string;
+  lsiKeywords?: string[]; searchIntent?: string;
   relatedPosts?: string[]; internalLinks?: InternalLink[];
   monetization?: Monetization; pinImages?: PinImage[];
   blocks: Block[];
