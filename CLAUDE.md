@@ -32,7 +32,7 @@ No test runner or linter is configured.
 This repo is mostly a content/SEO machine. The layer map in `ARCHITECTURE.md` is the contract — read it before adding pages.
 
 - `src/content/posts.ts` — `POSTS` (article bodies as typed blocks), `POST_HUB` (cluster assignment, derived — never hand-declared), `POST_META` (frontmatter: keywords, intent, internal links, citations, pins, monetization). Large articles are split into their own files (`*Article.ts`) and imported here.
-- `src/content/hubs.ts` — 6 hubs (topical map): ideas, poses, locations, outfits, save-the-date, prints. Hubs target ONE primary keyword each.
+- `src/content/hubs.ts` — 7 hubs (topical map): ideas, poses, locations, outfits, save-the-date, prints, wedding-day-logistics. Hubs target ONE primary keyword each.
 - `src/content/semantic.ts` — LSI vocabulary per cluster + `linkOverrides` (entity-level internal maillage).
 - `src/content/keywords.ts` — keyword map (3 phases) + intent ownership (§23 anti-cannibalization).
 - `src/lib/seo.ts` — all JSON-LD generators (Article, FAQPage, BreadcrumbList, CollectionPage, ItemList, Organization, WebSite, Person). Pure builders consumed by `generateMetadata`/`JsonLd`. `faq` blocks auto-emit FAQPage schema.

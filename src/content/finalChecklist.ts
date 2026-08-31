@@ -124,7 +124,7 @@ export function runFinalChecklist(): { sections: FinalSection[]; tally: Record<F
     id: "seo",
     title: "SEO technique",
     items: [
-      { id: "static", label: "Toutes les pages générées en statique", status: "design", evidence: "shadow-SSG : 1 page HTML pré-rendue par URL dans public/" },
+      { id: "static", label: "Toutes les pages générées en statique", status: "design", evidence: "export Next : 1 page HTML pré-rendue par URL dans out/" },
       { id: "nojs", label: "Contenu visible sans JS", status: "design", evidence: "chaque page statique embarque le contenu complet + JSON-LD" },
       { id: "urls", label: "URLs propres et cohérentes", status: "pass", evidence: "silos /{hub}/{slug} — aucun hash-routing résiduel" },
       { id: "canonical", label: "Canonical sur chaque page indexable", status: "design", evidence: "applySeo() + <link rel=canonical> sur chaque page statique" },
