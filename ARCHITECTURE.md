@@ -13,15 +13,14 @@
 ```
 /                                   homepage        Organization + WebSite + Person
 /guides/                            topical map     (noindex-worthy? non — index, c'est le plan du site)
-/{hub}/                             7 pillars       CollectionPage + ItemList + BreadcrumbList + FAQPage
-/{hub}/{slug}/                      ~50 satellites  BlogPosting + FAQPage + BreadcrumbList + ImageObject
-/author/harper-ellis/               author          ProfilePage + Person
+/{hub}/                             6 pillars       CollectionPage + ItemList + BreadcrumbList + FAQPage
+/{hub}/{slug}/                      satellites      BlogPosting + FAQPage + BreadcrumbList + ImageObject
 /about/ /contact/                   E-E-A-T         AboutPage / ContactPage
 /privacy-policy/ /affiliate-disclosure/ /editorial-policy/   légales (noindex)
-/sitemap.xml  /robots.txt           générés statiques
+/sitemap.xml  /robots.txt           générés depuis le modèle (app/sitemap.ts, app/robots.ts)
 ```
 
-Les 7 hubs (topical map — **toute nouvelle page doit appartenir à l'un d'eux**) :
+Les 6 hubs (topical map — **toute nouvelle page doit appartenir à l'un d'eux**) :
 
 | Hub | Mot-clé | Vol / KD | Articles |
 |---|---|---|---|
@@ -31,7 +30,6 @@ Les 7 hubs (topical map — **toute nouvelle page doit appartenir à l'un d'eux*
 | `/engagement-photo-outfits/` | what to wear for engagement photos | TBD | best-outfits, casual, fall, summer, spring, color-palette, outdoor |
 | `/save-the-date-photos/` | save the date photoshoot ideas | 110 / 14 | photo-ideas, poses, announcement, surprise-proposal |
 | `/engagement-photo-prints/` | engagement photo print ideas | TBD | locket, photo-booth-strip, display, mini, polaroid, flip-book |
-| `/oklahoma-wedding-locations/` | Oklahoma wedding and proposal locations | local | best-places-propose, quiet-places, small-venues, cheap-venues-okc, elope |
 
 ## 2. Structure de fichiers par couche
 
@@ -43,10 +41,10 @@ Les 7 hubs (topical map — **toute nouvelle page doit appartenir à l'un d'eux*
 | **Keywords** | `src/content/keywords.ts` | KEYWORD_MAP (3 phases) + INTENT_OWNERSHIP (§23) |
 | **Monétisation** | `src/content/monetization.ts` | 5 slots AdSense, 6 sections affiliation, 4 lead magnets, kits Phase 4 |
 | **Règles** | `src/content/contentRules.ts` · `finalChecklist.ts` | audit §18/§20/§21/§23/§24/§25 |
-| **SEO** | `src/lib/seo.ts` | applySeo + tous les générateurs JSON-LD |
-| **Routage** | `src/lib/router.tsx` | URLs silo + redirections 301 des anciens slugs |
-| **Statique** | `public/{hub}/{slug}/index.html` | HTML pré-rendu crawlable (miroir 1:1 des routes SPA) |
-| **MDX (migration)** | `src/content/mdx/` | placeholders frontmatter Phase 1 — contrat de portage Next.js |
+| **SEO** | `src/lib/seo.ts` | builders JSON-LD purs (consommés par `generateMetadata` + `JsonLd`) |
+| **Routage** | `src/app/` (App Router, `output:"export"`) · `src/lib/router.tsx` | arbre de fichiers + `Link` (`to` → next/link) ; `generateStaticParams` + `dynamicParams=false` |
+| **Sortie statique** | `out/` (généré par `next build`) | HTML pré-rendu crawlable par route + `sitemap.xml` + `robots.txt` + `404.html` |
+| **MDX (migration)** | `src/content/mdx/` | placeholders frontmatter Phase 1 — contrat de contenu Phase 2 |
 
 ## 3. Frontmatter (contrat §3)
 
@@ -81,8 +79,9 @@ déclaré à la main, ce qui rend impossible une page hors carte.
    décision éditoriale explicite (nouveau spoke vs nouveau hub), jamais de page isolée.
 2. Vérifier l'ownership (§23) : si le mot-clé est possédé par une autre page,
    on fait un lien vers elle — on ne crée pas la page.
-3. Créer l'entrée dans `POSTS` + `POST_HUB` + `POST_META` (frontmatter complet).
+3. Créer l'entrée dans `POSTS` (avec `cluster` = slug du hub) + `POST_HUB` +
+   `POST_META` (frontmatter complet).
 4. Ajouter le spoke au hub dans `hubs.ts`.
-5. Créer la page statique `public/{hub}/{slug}/index.html` (copier un article
-   du même cluster, remplacer head + corps) et l'URL dans `public/sitemap.xml`.
+5. Rien d'autre : `next build` pré-rend `out/{hub}/{slug}/index.html`, régénère
+   `sitemap.xml` — plus aucun miroir ni sitemap à maintenir à la main.
 6. Le desk `/guides` doit rester vert : invariants §25 + règles §18.

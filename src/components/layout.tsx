@@ -1,6 +1,9 @@
+"use client";
+
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Aperture, Instagram, Mail, MapPin, Menu, X } from "lucide-react";
-import { Link, usePathRoute } from "../lib/router";
+import { Link, normalizePath } from "../lib/router";
 import { HUBS } from "../lib/content";
 import { SITE } from "../lib/constants";
 import { NewsletterForm } from "./ui";
@@ -15,7 +18,7 @@ const NAV = [
 ];
 
 export function Header() {
-  const path = usePathRoute();
+  const path = normalizePath(usePathname() ?? "/");
   const [scrolled, setScrolled] = useState(false);
   const [progress, setProgress] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
