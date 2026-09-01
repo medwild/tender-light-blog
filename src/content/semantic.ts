@@ -417,7 +417,7 @@ export const CLUSTER_SAVETHEDATE: ClusterSemantic = {
     // planning cadence → the full engagement checklist
     timeline: "/engagement-photo-ideas/engagement-photo-checklist",
     // the kneel geometry → proposal poses (poses cluster)
-    "proposal setup": "/engagement-photo-poses/proposal-poses",
+    "proposal setup": "/save-the-date-photos/proposal-poses",
     // quiet / destination spots → the proposal-ideas owner
     "private proposal": "/save-the-date-photos/surprise-proposal-ideas",
     "proposal location": "/save-the-date-photos/surprise-proposal-ideas",

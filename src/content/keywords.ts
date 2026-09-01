@@ -25,8 +25,9 @@ export const KEYWORD_MAP: KeywordTarget[] = [
   { path: "/engagement-photo-ideas/fun-engagement-photo-ideas", keyword: "fun engagement photo ideas", volume: 170, kd: 7, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/classic-engagement-photos", keyword: "classic engagement photos", volume: 110, kd: 1, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/candid-engagement-photo-ideas", keyword: "candid engagement photos", volume: 90, kd: 0, intent: "Informational", phase: 1 },
-  { path: "/engagement-photo-poses/proposal-poses", keyword: "proposal poses", volume: 110, kd: 1, intent: "Informational", phase: 1 },
+  { path: "/save-the-date-photos/proposal-poses", keyword: "proposal poses", volume: 110, kd: 1, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-poses/natural-engagement-photo-poses", keyword: "natural engagement photo poses", volume: 260, kd: 4, intent: "Informational", phase: 1 },
+  { path: "/engagement-photo-poses/outdoor-engagement-photo-poses", keyword: "outdoor engagement photo poses", volume: 170, kd: 5, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-poses/ring-engagement-photo-poses", keyword: "ring engagement photo poses", volume: 140, kd: 3, intent: "Informational", phase: 1 },
   { path: "/save-the-date-photos/save-the-date-poses", keyword: "save the date poses", volume: 90, kd: 7, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-locations/at-home-engagement-photo-ideas", keyword: "at home engagement photos", volume: 40, kd: 0, intent: "Informational", phase: 1 },
@@ -73,13 +74,12 @@ export const INTENT_OWNERSHIP: Record<string, string> = {
   "casual engagement photo outfits": "/engagement-photo-outfits/casual-engagement-photo-outfits",
   "outdoor engagement photo ideas": "/engagement-photo-locations/outdoor-engagement-photo-locations",
   "ring engagement photo poses": "/engagement-photo-poses/ring-engagement-photo-poses",
-  // NOTE: "outdoor engagement photo poses" and "save the date poses" were listed
-  // as owned intents pointing at un-built slugs — an unsatisfiable §23 trap.
-  // Restored when those spokes are actually wired.
+  "outdoor engagement photo poses": "/engagement-photo-poses/outdoor-engagement-photo-poses",
+  "save the date poses": "/save-the-date-photos/save-the-date-poses",
   "proposal poses": "/save-the-date-photos/proposal-poses",
   "surprise proposal ideas": "/save-the-date-photos/surprise-proposal-ideas",
   "locket photo prints": "/engagement-photo-prints/locket-photo-print-guide",
-  "photo booth strip": "/engagement-photo-prints/photo-booth-strip-ideas", // owner lands in the next CREATE batch
+  "photo booth strip": "/engagement-photo-prints/photo-booth-strip-ideas", // wired in 9558080
   "mini photo prints": "/engagement-photo-prints/mini-photo-print-ideas",
 };
 

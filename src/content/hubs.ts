@@ -25,7 +25,7 @@ export const HUBS: Hub[] = [
     lede: "A great engagement pose is just a starting position — the photos you love are the two seconds after it settles. The most flattering poses give your hands a job.",
     harperNote: "I never say 'look natural.' I give a task — fix his collar, whisper a bad joke — and natural happens on its own.",
     accent: "gold",
-    spokes: ["how-to-smile-naturally-in-photos", "camera-shy-engagement-poses", "natural-engagement-photo-poses", "scenario-based-engagement-poses", "ring-engagement-photo-poses"],
+    spokes: ["how-to-smile-naturally-in-photos", "camera-shy-engagement-poses", "natural-engagement-photo-poses", "outdoor-engagement-photo-poses", "scenario-based-engagement-poses", "ring-engagement-photo-poses"],
     related: ["engagement-photo-ideas", "engagement-photo-outfits", "save-the-date-photos"],
     faq: [
       { q: "How do we pose for engagement photos without looking awkward?", a: "Start every pose from a task, not a statue — fix his collar, share a whisper, walk toward a landmark. Poses built on a small action settle into natural frames within seconds." },
@@ -70,7 +70,7 @@ export const HUBS: Hub[] = [
     lede: "A save-the-date is a photograph with a job: it carries your names, your date and your venue without feeling crowded. The best frames leave room for your name.",
     harperNote: "The best save the date photo isn't the best photo of you — it's the best photo of you with room for your name.",
     accent: "blush",
-    spokes: ["save-the-date-photo-ideas", "proposal-poses", "surprise-proposal-ideas"],
+    spokes: ["save-the-date-photo-ideas", "save-the-date-poses", "proposal-poses", "surprise-proposal-ideas"],
     related: ["engagement-photo-poses", "engagement-photo-prints", "engagement-photo-ideas"],
     faq: [
       { q: "What makes a pose work for a save the date card?", a: "Negative space. A card needs room for names, date and venue, so the best poses leave clean sky, wall or field beside you. Ask your photographer to shoot wide with breathing room." },

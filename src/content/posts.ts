@@ -74,6 +74,8 @@ import { FIRST_LOOK_POSTS } from "./firstLookArticle";
 import { BEACH_POSTS } from "./beachArticle";
 import { NATURAL_POSES_POSTS } from "./naturalPosesArticle";
 import { PHOTO_BOOTH_POSTS } from "./photoBoothArticle";
+import { OUTDOOR_POSES_POSTS } from "./outdoorPosesArticle";
+import { SAVE_THE_DATE_POSES_POSTS } from "./saveTheDatePosesArticle";
 
 /* ————— Representative spokes for the remaining hubs ————— */
 const SPOKES: Post[] = [
@@ -95,7 +97,7 @@ const SPOKES: Post[] = [
     links: [{ url: "/engagement-photo-ideas", anchor: "all engagement photo ideas" }],
     pins: [
       { image: IMAGES.casualCafe, overlayText: "Real Life, One Step Nicer", pinTitle: "15 Casual Engagement Photo Ideas That Feel Like You", pinDescription: "Jeans, coffee, golden hour — casual photos built from things you already do, so your faces relax into themselves. 15 ideas for couples who never want to hold a pose. Save this for your session." },
-      { image: IMAGES.hero, overlayText: "Give Your Hands a Job", pinTitle: "The Casual Engagement Photo Formula That Always Works", pinDescription: "A cup, a leash, a jacket — casual engagement photos work when your hands have something to do and your clothes are one step nicer than everyday. The formula behind my favorite galleries. Pin it." },
+      { image: IMAGES.hero, overlayText: "Give Your Hands a Job", pinTitle: "The Casual Engagement Photo Formula: Give Your Hands a Job", pinDescription: "A cup, a leash, a jacket — casual engagement photos work when your hands have something to do and your clothes are one step nicer than everyday. The formula behind my favorite galleries. Pin it." },
       { image: IMAGES.galleryLaugh, overlayText: "Plan the Activity, Not the Outfit", pinTitle: "Casual Engagement Photos: Prompts That Feel Like Play", pinDescription: "Race to the bench, recreate the first-date walk, whisper the worst joke. Casual prompts that pull attention off the lens and put your real faces in the frame. 15 ideas worth saving." },
     ],
     shop: { section: "outfits", items: [
@@ -649,7 +651,7 @@ const ALL: Post[] = [
   ...COZY_POSTS, ...RUSTIC_POSTS, ...MOUNTAIN_POSTS, ...EDITING_POSTS,
   ...SPRING_SUMMER_POSTS, ...WINTER_OUTFITS_POSTS,
   ...FIRST_LOOK_POSTS, ...BEACH_POSTS, ...NATURAL_POSES_POSTS,
-  ...PHOTO_BOOTH_POSTS,
+  ...PHOTO_BOOTH_POSTS, ...OUTDOOR_POSES_POSTS, ...SAVE_THE_DATE_POSES_POSTS,
 ];
 
 /* ————— keepReading post-processing pass (avoids TDZ on ALL) ————— */

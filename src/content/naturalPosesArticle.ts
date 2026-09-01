@@ -39,6 +39,7 @@ export const NATURAL_POSES_POSTS: Post[] = [
       { url: "/engagement-photo-poses/how-to-smile-naturally-in-photos", anchor: "the smile problem" },
       { url: "/engagement-photo-poses/scenario-based-engagement-poses", anchor: "story-driven sets" },
       { url: "/engagement-photo-poses/ring-engagement-photo-poses", anchor: "the ring close-up" },
+      { url: "/engagement-photo-poses/outdoor-engagement-photo-poses", anchor: "sun, wind and walls" },
     ],
     monetization: M,
     pinImages: [
