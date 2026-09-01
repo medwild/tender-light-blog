@@ -32,6 +32,7 @@ export const PET_POSTS: Post[] = [
     cluster: "engagement-photo-ideas",
     relatedPosts: ["casual-engagement-photo-ideas", "scenario-based-engagement-poses", "how-to-smile-naturally-in-photos"],
     internalLinks: [
+      { url: "/engagement-photo-ideas", anchor: "engagement photo ideas" },
       { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photo ideas" },
       { url: "/engagement-photo-poses/scenario-based-engagement-poses", anchor: "scenario-based engagement poses" },
       { url: "/engagement-photo-poses/how-to-smile-naturally-in-photos", anchor: "how to smile naturally in photos" },

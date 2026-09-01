@@ -1,5 +1,5 @@
 import { IMAGES } from "../lib/constants";
-import type { Author, Block, CategorySlug, InternalLink, Post } from "./types";
+import type { AffiliateSectionName, Author, Block, CategorySlug, InternalLink, PinImage, Post } from "./types";
 
 const harper: Author = {
   handle: "harper-ellis",
@@ -20,6 +20,8 @@ interface ArtSpec {
   sections: { id: string; text: string; body: string; list?: string[] }[];
   faq: [string, string][];
   related?: string[]; links?: InternalLink[];
+  pins?: PinImage[];
+  shop?: { section: AffiliateSectionName; items: { label: string; store: string; href: string }[] };
 }
 
 const art = (s: ArtSpec): Post => {
@@ -34,6 +36,7 @@ const art = (s: ArtSpec): Post => {
     if (i === 0) blocks.push({ type: "ad", slot: "after-first-h2" });
   });
   blocks.push({ type: "faq", items: s.faq.map(([q, a]) => ({ q, a })) });
+  if (s.shop) blocks.push({ type: "shop", section: s.shop.section, items: s.shop.items });
   return {
     slug: s.slug, title: s.title,
     seoTitle: s.seoTitle ?? s.title,
@@ -41,7 +44,7 @@ const art = (s: ArtSpec): Post => {
     excerpt: s.excerpt, category: s.category, date: s.date,
     featuredImage: s.featuredImage, featuredAlt: s.featuredAlt, tags: s.tags,
     author: harper, primaryKeyword: s.primaryKeyword, cluster: s.hub,
-    relatedPosts: s.related, internalLinks: s.links, monetization: M,
+    relatedPosts: s.related, internalLinks: s.links, monetization: M, pinImages: s.pins,
     blocks,
   };
 };
@@ -88,6 +91,17 @@ const SPOKES: Post[] = [
     faq: [["Are jeans okay for engagement photos?", "Yes — dark or mid wash, straight leg, no loud distressing. Pair with a knit or a blazer and clean shoes and jeans read effortless, not lazy."],
       ["How do we keep casual photos from looking sloppy?", "Intentional details: one elevated piece each, a coordinated palette, and a location with good light. Casual means relaxed, not unplanned."]],
     related: ["classic-engagement-photos", "unique-engagement-photo-ideas"],
+    links: [{ url: "/engagement-photo-ideas", anchor: "all engagement photo ideas" }],
+    pins: [
+      { image: IMAGES.casualCafe, overlayText: "Real Life, One Step Nicer", pinTitle: "15 Casual Engagement Photo Ideas That Feel Like You", pinDescription: "Jeans, coffee, golden hour — casual photos built from things you already do, so your faces relax into themselves. 15 ideas for couples who never want to hold a pose. Save this for your session." },
+      { image: IMAGES.hero, overlayText: "Give Your Hands a Job", pinTitle: "The Casual Engagement Photo Formula That Always Works", pinDescription: "A cup, a leash, a jacket — casual engagement photos work when your hands have something to do and your clothes are one step nicer than everyday. The formula behind my favorite galleries. Pin it." },
+      { image: IMAGES.galleryLaugh, overlayText: "Plan the Activity, Not the Outfit", pinTitle: "Casual Engagement Photos: Prompts That Feel Like Play", pinDescription: "Race to the bench, recreate the first-date walk, whisper the worst joke. Casual prompts that pull attention off the lens and put your real faces in the frame. 15 ideas worth saving." },
+    ],
+    shop: { section: "outfits", items: [
+      { label: "Dark-wash straight-leg denim (the casual anchor)", store: "Amazon", href: "#" },
+      { label: "Cream chunky-knit sweater", store: "Etsy", href: "#" },
+      { label: "Clean white leather sneakers", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -105,6 +119,16 @@ const SPOKES: Post[] = [
     faq: [["What makes an engagement photo timeless?", "Soft light, balanced composition, and authentic emotion. Trends date; those three things don't. A photo built on them holds up for thirty years."],
       ["Are classic photos the same as formal?", "No. Formal can be stiff; classic is elegant but natural. Classic is about the light and the moment, not about holding a rigid pose."]],
     related: ["black-and-white-engagement-photos", "casual-engagement-photo-ideas"],
+    pins: [
+      { image: IMAGES.classicDip, overlayText: "Light. Balance. Truth.", pinTitle: "Classic Engagement Photos: 15 Timeless Ideas That Never Date", pinDescription: "The test of a classic photo: will it look dated in thirty years? Soft light, balanced composition, real emotion — 15 timeless engagement ideas that pass it every time. Save for your shoot." },
+      { image: IMAGES.gallerySilhouette, overlayText: "Never a Stiff Pose", pinTitle: "What Makes an Engagement Photo Timeless", pinDescription: "Trends date; three things don't — soft light, balanced composition and authentic emotion. The classic pose list: forehead touches, walking hand in hand, a bench and golden hour. Pin this." },
+      { image: IMAGES.hero, overlayText: "Golden Hour or Window", pinTitle: "15 Classic Engagement Poses That Look Good in 2056", pinDescription: "Courthouse steps, a clean wall, an open field at the last hour — the classic frames that read as heirlooms, not trends. The 15 poses I'd choose if I could only shoot once. Save them." },
+    ],
+    shop: { section: "outfits", items: [
+      { label: "Camel wool overcoat (the classic layer)", store: "Etsy", href: "#" },
+      { label: "Ivory silk blouse", store: "Amazon", href: "#" },
+      { label: "Suede ankle boots", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -120,6 +144,17 @@ const SPOKES: Post[] = [
     ],
     faq: [["Why do my black and white photos look flat?", "Because the light was flat. Monochrome needs strong directional light and real shadows. Shoot into hard side-light and expose for the highlights."]],
     related: ["classic-engagement-photos"],
+    links: [{ url: "/engagement-photo-ideas", anchor: "more engagement photo ideas" }],
+    pins: [
+      { image: IMAGES.gallerySilhouette, overlayText: "Contrast Is a Light Decision", pinTitle: "15 Black and White Engagement Photo Ideas With Real Contrast", pinDescription: "Most black and white photos are color photos with the color turned off. Real monochrome is built in camera — hard side-light, deep shadow, lines that read without color. 15 ideas that actually convert. Save." },
+      { image: IMAGES.classicDip, overlayText: "Shoot Into the Light", pinTitle: "Why Your Black and White Photos Look Flat (and the Fix)", pinDescription: "Because the light was flat. Monochrome needs direction — side-light, window light, silhouettes against an open sky. The lighting rules behind black and white that has real depth. Pin this." },
+      { image: IMAGES.hero, overlayText: "Line and Tone Alone", pinTitle: "Black and White Engagement Photos: The Silhouette Guide", pinDescription: "Silhouettes against sunset, shadow play through blinds, a single window in a dark room — the 15 monochrome frames that make couples print two copies. Save for your session." },
+    ],
+    shop: { section: "prints", items: [
+      { label: "Archival matte paper (50 sheets)", store: "Amazon", href: "#" },
+      { label: "Black frame set for gallery walls", store: "Etsy", href: "#" },
+      { label: "Fine-art printing service credit", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -136,6 +171,17 @@ const SPOKES: Post[] = [
     ],
     faq: [["Do unique engagement photos look cheesy?", "Only when the prop is decor instead of action. A thermos, a letter or a dog never reads cheesy because you interact with it — the frame is a moment, not a prop shot."]],
     related: ["casual-engagement-photo-ideas"],
+    links: [{ url: "/engagement-photo-ideas", anchor: "the full engagement photo ideas hub" }],
+    pins: [
+      { image: IMAGES.galleryTwirl, overlayText: "Your Song. Your Spot.", pinTitle: "19 Unique Engagement Photo Ideas That Are Actually Yours", pinDescription: "Unique doesn't mean strange — it means true. Your terrible inside jokes, the record shop, the first-date route. 19 ideas for a gallery nobody else on Pinterest could copy. Save these." },
+      { image: IMAGES.casualCafe, overlayText: "Props Start Moments", pinTitle: "The Prop Rule That Keeps Engagement Photos From Looking Cheesy", pinDescription: "A prop should start a moment, not decorate one. The vinyl of your song, the dog on a long lead, a letter read aloud — if it doesn't give your hands a job, leave it in the car. Pin the rule." },
+      { image: IMAGES.galleryLaugh, overlayText: "Your Life Beats Any Board", pinTitle: "How to Make Engagement Photos Nobody Else Has", pinDescription: "Replay the first date, same order, same booth, same terrible opening line. The familiarity is what makes the frame yours. 19 ways to build a session from your actual life. Save for your shoot." },
+    ],
+    shop: { section: "props", items: [
+      { label: "Custom song lyric print (framed vinyl sleeve)", store: "Etsy", href: "#" },
+      { label: "Handwritten letter paper set", store: "Etsy", href: "#" },
+      { label: "Six-foot photo lead for pet shoots", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -152,6 +198,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["Why do my photos look forced when I smile?", "A commanded smile tightens the jaw and doesn't reach the eyes. Trigger a real one with a prompt — a bad joke or a ridiculous nickname — and shoot the reaction, not the pose."]],
     related: ["camera-shy-engagement-poses", "scenario-based-engagement-poses"],
+    pins: [
+      { image: IMAGES.galleryLaugh, overlayText: "Trigger It, Don't Command It", pinTitle: "How to Smile Naturally in Photos: 15 Prompts That Work", pinDescription: "A commanded smile never reaches the eyes. The real one is a by-product — built with a 10-minute warm-up and triggered by prompts like the worst joke you know. Save these 15 prompts for your engagement session." },
+      { image: IMAGES.posesCover, overlayText: "The 10-Minute Warm-Up", pinTitle: "The Warm-Up That Fixes More Smile Photos Than Any Camera", pinDescription: "Tight jaw, raised shoulders — that's where a fake smile starts. Four slow breaths, a shoulder roll, three silly faces, and the face follows. The warm-up every couple should do before frame one. Pin it." },
+      { image: IMAGES.hero, overlayText: "Shoot the Reaction", pinTitle: "Smile Prompts Photographers Actually Use", pinDescription: "Ridiculous nicknames deadpan, forehead touches, whispered bad jokes — the prompts that pull attention off the lens and put a real smile on the face. Steal them for your own session. Save for later." },
+    ],
+    shop: { section: "props", items: [
+      { label: "Printable prompt-card deck (30 smile triggers)", store: "Etsy", href: "#" },
+      { label: "Mirrorless camera beginner kit", store: "Amazon", href: "#" },
+      { label: "Tripod with Bluetooth remote for self-timed sets", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -167,6 +223,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["What if I hate my smile?", "You almost certainly don't hate your smile — you hate the posed version. The candid laugh is a different face entirely, and it's the one people love."]],
     related: ["how-to-smile-naturally-in-photos"],
+    pins: [
+      { image: IMAGES.posesCover, overlayText: "Poses With No Eye Contact", pinTitle: "Camera-Shy Engagement Poses for Couples Who Hate Posing", pinDescription: "You don't need to learn to pose — you need poses that never ask you to perform. Forehead touches, walking away, eyes closed. 9 camera-shy poses that point your attention anywhere but the lens. Save this." },
+      { image: IMAGES.galleryLaugh, overlayText: "Movement Beats Stillness", pinTitle: "The Pose Plan for People Who Hate Being Photographed", pinDescription: "Stillness makes camera-shy couples freeze; motion sets them free. Walk, turn, sway — the frame assembles itself. The exact poses I give the most camera-aware couples on my checklist. Pin before your shoot." },
+      { image: IMAGES.casualCafe, overlayText: "Eyes Somewhere Honest", pinTitle: "9 Engagement Poses That Make You Forget the Camera", pinDescription: "Closed eyes, linked hands, a look at each other instead of the lens — poses designed for people who cringe at being photographed. The candid frames take care of themselves. Save for your session." },
+    ],
+    shop: { section: "props", items: [
+      { label: "Pose prompt cards for camera-shy couples", store: "Etsy", href: "#" },
+      { label: "Comfortable walking sneakers (photo-day pair)", store: "Amazon", href: "#" },
+      { label: "Long Bluetooth shutter remote", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -182,6 +248,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["How do scenarios produce better photos than poses?", "A pose asks you to hold still and be photographed, which reads as performance. A scenario gives your mind a job, so the in-between moments — the real ones — happen while you're busy."]],
     related: ["how-to-smile-naturally-in-photos"],
+    pins: [
+      { image: IMAGES.hero, overlayText: "Give a Scene, Not a Shape", pinTitle: "Scenario-Based Engagement Poses: Actions That Forget the Camera", pinDescription: "The stiffest photos come from holding a shape. The alive ones come from a tiny scene — walk to that tree arguing about dinner — and photographing what happens inside it. 12 scenarios worth saving." },
+      { image: IMAGES.galleryLaugh, overlayText: "Shoot the In-Between", pinTitle: "The Direction Method Behind Every Candid Couple Photo", pinDescription: "A scenario occupies the mind so the body stops performing. Direct the action, then shoot the frames between the instructions — that's where the keepers live. Pin this for your engagement session." },
+      { image: IMAGES.casualCafe, overlayText: "A Destination Beats a Pose", pinTitle: "12 Engagement Photo Scenarios That Produce Candids on Their Own", pinDescription: "Fix her collar like you're late. Show me the ring like you can't believe it's there. Twelve tiny scenes, each with the spoken direction that makes it land. Steal them for your own shoot. Save." },
+    ],
+    shop: { section: "props", items: [
+      { label: "Scenario prompt deck for couples", store: "Etsy", href: "#" },
+      { label: "Film camera for self-run announcement sets", store: "Amazon", href: "#" },
+      { label: "Compact tripod for two-person shoots", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -197,6 +273,17 @@ const SPOKES: Post[] = [
     ],
     faq: [["How do we keep the ring in focus?", "Bring the box to chest height, toward the camera, and focus on the stone, not the finger. Keep the hands relaxed — a tense grip and a raised ring are the two most common reasons the ring comes out soft."]],
     related: ["proposal-poses"],
+    links: [{ url: "/engagement-photo-poses", anchor: "the full pose hub" }],
+    pins: [
+      { image: IMAGES.galleryRing, overlayText: "Pinpoint Light = Sparkle", pinTitle: "Ring Engagement Photo Poses: 15 Ways to Make the Ring the Star", pinDescription: "A blurry ring shot is one of three fixable problems: diffuse light, focus on the finger, tense hands. The fix list that turns the ring frame into a keeper — 15 poses that do the sparkle for you. Save." },
+      { image: IMAGES.hero, overlayText: "Focus on the Stone", pinTitle: "Why Your Ring Photos Are Blurry (and the 3 Fixes)", pinDescription: "Not the camera — the light. A ring needs a pinpoint source, focus on the stone instead of the finger, and hands shaken out. The three fixes behind every sharp ring photo I've shot. Pin before your session." },
+      { image: IMAGES.classicDip, overlayText: "Relaxed Hands Read Better", pinTitle: "How to Photograph the Ring So It Actually Sparkles", pinDescription: "Chest height, toward the lens, eyes on the stone. 15 ring poses with the light and hand setup that makes the ring the star of the frame. The detail shot every engagement gallery earns. Save this." },
+    ],
+    shop: { section: "props", items: [
+      { label: "Ring dish & display stand for detail shots", store: "Etsy", href: "#" },
+      { label: "Macro lens attachment for ring close-ups", store: "Amazon", href: "#" },
+      { label: "Velvet ring box (photo-day prop)", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -213,6 +300,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["Should we wear the same color?", "Coordinate, don't match. Share a neutral base and one accent color between you, then add texture. Matching reads like a uniform; coordinating reads like a life together."]],
     related: ["casual-engagement-photo-outfits", "engagement-photo-color-palette"],
+    pins: [
+      { image: IMAGES.outfitsCover, overlayText: "Coordinate, Don't Match", pinTitle: "Best Outfits for Engagement Photos: A Stylist's Guide", pinDescription: "Outfit questions outnumber pose questions three to one — because the outfit is decided before you arrive. Colors that flatter on camera, pieces that date a photo, and the share-a-neutral formula. Save this." },
+      { image: IMAGES.casualCafe, overlayText: "Dusty In Person, Rich on Camera", pinTitle: "The Camera-Friendly Colors That Flatter Every Couple", pinDescription: "Cream, oat, sage, camel, champagne — softened versions of real colors photograph rich and never look like a uniform. The exact palette list a stylist gives couples. Pin before you pack the bag." },
+      { image: IMAGES.hero, overlayText: "Skip Neon, Logos, Tiny Prints", pinTitle: "What NOT to Wear to Your Engagement Photos", pinDescription: "Neon color-casts onto skin. Tiny tight patterns moiré on the sensor. Logos date the frame in ten years. The avoid-list that solves half the outfit problem before you leave home. Save it." },
+    ],
+    shop: { section: "outfits", items: [
+      { label: "Sage knit sweater (the camera-flattering base)", store: "Etsy", href: "#" },
+      { label: "Champagne silk camisole", store: "Amazon", href: "#" },
+      { label: "Oat linen overshirt", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -229,6 +326,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["Can we wear flannel?", "Yes — one flannel, worn as a layer, not head-to-toe. Paired with a solid knit and denim it reads autumn without reading costume."]],
     related: ["best-outfits-engagement-photos"],
+    pins: [
+      { image: IMAGES.outfitsCover, overlayText: "No Orange on Orange", pinTitle: "What to Wear for Fall Pictures: Fall Engagement Photo Outfits", pinDescription: "The fall mistake is matching the leaves — rust on rust until you disappear into the foliage. Deep green, cream and burgundy against the gold is the formula. The no-orange rule worth saving before October." },
+      { image: IMAGES.galleryTwirl, overlayText: "Texture Catches Low Light", pinTitle: "The Fall Outfit Formula Photographers Live By", pinDescription: "October light is low and raking — flat cotton vanishes in it. Corduroy, chunky knit, flannel, leather: the textures that give a fall photo depth. One accent, not head-to-toe. Pin this." },
+      { image: IMAGES.casualCafe, overlayText: "A Blanket Is a Prop and Warmth", pinTitle: "Fall Engagement Photo Colors That Stand Out Against Gold Leaves", pinDescription: "Denim as the neutral anchor, deep green and burgundy as the accents, one flannel layer each. The color list that makes a couple pop instead of blend. Save for your fall session." },
+    ],
+    shop: { section: "outfits", items: [
+      { label: "Burgundy flannel overshirt", store: "Amazon", href: "#" },
+      { label: "Chunky cream knit throw (prop + warmth)", store: "Etsy", href: "#" },
+      { label: "Leather ankle boots for field shoots", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -244,6 +351,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["Are jeans okay for engagement photos?", "Yes — dark or mid wash, straight leg, no loud distressing. Pair with a knit or a blazer and clean shoes and jeans read effortless, not lazy."]],
     related: ["best-outfits-engagement-photos"],
+    pins: [
+      { image: IMAGES.casualCafe, overlayText: "One Step Nicer Than Everyday", pinTitle: "Casual Engagement Photo Outfits That Still Look Intentional", pinDescription: "Casual isn't what you grabbed on the way out the door — it's your everyday clothes with one elevated piece each. Dark jeans, good knit, clean shoes. The formula that reads effortless, not lazy. Save it." },
+      { image: IMAGES.hero, overlayText: "Scuffed Sneakers Read Sloppy", pinTitle: "The Jeans-and-Knit Formula for Engagement Photos", pinDescription: "Dark or mid wash, straight leg, no loud distressing — plus a blazer or knit and clean shoes, and jeans photograph as intentional. The casual outfit rules from 400+ sessions. Pin before shoot day." },
+      { image: IMAGES.galleryLaugh, overlayText: "Coordinated, Not Costumed", pinTitle: "How to Dress Casual but Look on Purpose in Engagement Photos", pinDescription: "The difference between lazy and intentional is one elevated piece and a shared palette. A coffee-date outfit list for couples who hate dressing up. Save for your session." },
+    ],
+    shop: { section: "outfits", items: [
+      { label: "Mid-wash straight-leg jeans", store: "Amazon", href: "#" },
+      { label: "Navy blazer (the elevated piece)", store: "Amazon", href: "#" },
+      { label: "Minimalist white leather sneakers", store: "Etsy", href: "#" },
+    ]},
   }),
 
   art({
@@ -259,6 +376,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["What colors should we wear for engagement photos?", "Soft, muted tones flatter every skin tone and photograph warmly: cream, oat, camel, sage, dusty blue, terracotta. Avoid neon, big logos and tiny tight patterns, which moiré on digital sensors."]],
     related: ["best-outfits-engagement-photos"],
+    pins: [
+      { image: IMAGES.galleryTwirl, overlayText: "One Family of Color", pinTitle: "The Engagement Photo Color Palette That Flatters Every Couple", pinDescription: "You don't match; you share a family of color. A neutral base, one accent split between you, texture instead of pattern — the palette rules that make two people look like one photograph. Save this." },
+      { image: IMAGES.outfitsCover, overlayText: "Soft Flatters. Neon Casts.", pinTitle: "The Exact Colors That Photograph Warm on Every Skin Tone", pinDescription: "Cream, oat, camel, sage, dusty blue, terracotta — muted tones read rich on camera and never fight the light. The palette to build your two outfits from. Pin before you shop." },
+      { image: IMAGES.casualCafe, overlayText: "Texture, Not Pattern", pinTitle: "Build Your Engagement Photo Palette in 3 Decisions", pinDescription: "Pick a neutral base, split one accent between the two of you, add texture instead of pattern. Three decisions that end the outfit argument. Save the formula for your session." },
+    ],
+    shop: { section: "outfits", items: [
+      { label: "Terracotta wrap dress", store: "Etsy", href: "#" },
+      { label: "Dusty-blue linen shirt", store: "Amazon", href: "#" },
+      { label: "Cable-knit cream cardigan", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -274,6 +401,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["What's the best outdoor location for engagement photos?", "The one with good light at your hour. A field at golden hour beats a pretty garden at noon. Scout by the direction and quality of the light, then fit the scenery around it."]],
     related: ["indoor-engagement-photos"],
+    pins: [
+      { image: IMAGES.locationsCover, overlayText: "Scout by Light, Not Scenery", pinTitle: "17 Outdoor Engagement Photo Locations That Do Half the Work", pinDescription: "A location earns its spot when it gives you space to move, a clean background and light you can stand in. Fields, tree lines, brick, sky — 17 picks chosen by the light at your hour. Save this." },
+      { image: IMAGES.galleryTwirl, overlayText: "The Same Field Is Two Locations", pinTitle: "How to Choose an Engagement Photo Spot by the Light", pinDescription: "Noon and golden hour turn one field into two different locations. Walk your spot the day before at the hour you'll shoot and check three things — direction, background, parking. Pin before you book." },
+      { image: IMAGES.hero, overlayText: "Water Reflects. Brick Warms.", pinTitle: "The Outdoor Location Cheat Sheet for Engagement Photos", pinDescription: "Fields want movement, water wants reflection, brick wants lean-and-laugh. Each setting has a pose language — match it and the location poses you. The 17-spot guide worth saving." },
+    ],
+    shop: { section: "location-accessories", items: [
+      { label: "Foldable ground blanket for field shoots", store: "Etsy", href: "#" },
+      { label: "Reflector disc (3-in-1, golden hour)", store: "Amazon", href: "#" },
+      { label: "Flat-field shoes for the walk-in", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -289,6 +426,17 @@ const SPOKES: Post[] = [
     ],
     faq: [["Do we need a permit for urban engagement photos?", "For a couple and a handheld camera on public sidewalks, usually no. Tripods and commercial styling can trigger permits in some districts — check the specific block."]],
     related: ["indoor-engagement-photos"],
+    links: [{ url: "/engagement-photo-ideas", anchor: "engagement photo ideas" }, { url: "/engagement-photo-locations", anchor: "all location guides" }],
+    pins: [
+      { image: IMAGES.locationsCover, overlayText: "The City Is Already Lit", pinTitle: "Urban Engagement Photo Ideas: Brick, Neon & City Light", pinDescription: "Brick bounces warm light in the last hour; neon glows after dark; a stairwell frames you like a stage. Treat the street as a set and the light as a collaborator — 12 urban ideas worth pinning." },
+      { image: IMAGES.gallerySilhouette, overlayText: "Shoot at Dusk", pinTitle: "How to Use Neon and City Light in Engagement Photos", pinDescription: "The urban session is won between dusk and full dark — neon reads, traffic softens, the street becomes a set you don't have to rent. The timing plan behind every great city frame. Save it." },
+      { image: IMAGES.casualCafe, overlayText: "Alleys Are Studios", pinTitle: "12 City Engagement Photo Spots Hiding in Plain Sight", pinDescription: "Fire escapes, loading docks, one good stairwell — the unglamorous city spots that out-photograph the landmark. Find the set before the crowd does. Pin for your downtown shoot." },
+    ],
+    shop: { section: "location-accessories", items: [
+      { label: "Compact mirrorless for street shoots", store: "Amazon", href: "#" },
+      { label: "Warm string lights for the rooftop backdrop", store: "Etsy", href: "#" },
+      { label: "Broken-in walking shoes for city blocks", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -304,6 +452,17 @@ const SPOKES: Post[] = [
     ],
     faq: [["Is our home too small for engagement photos?", "No. Small spaces force tight, intimate crops, which read as honest. Window light and a few honest props do more than square footage ever will."]],
     related: ["indoor-engagement-photos"],
+    links: [{ url: "/engagement-photo-ideas", anchor: "engagement photo ideas" }],
+    pins: [
+      { image: IMAGES.indoor, overlayText: "Your Light Is Enough", pinTitle: "13 At-Home Engagement Photo Ideas in Your Own Light", pinDescription: "The coffee you actually drink, the couch you actually sit on, the light through your actual window. At-home sessions photograph the life, not a staged version of it. 13 ideas worth saving." },
+      { image: IMAGES.casualCafe, overlayText: "Window Light Does the Work", pinTitle: "How to Take Beautiful Engagement Photos at Home", pinDescription: "One big window, a made-but-lived-in bed, morning coffee on the counter — small spaces force tight crops that read as honest. The at-home setup list. Pin before you book anyone." },
+      { image: IMAGES.galleryLaugh, overlayText: "The Lived-In Look Is the Point", pinTitle: "At-Home Engagement Shots That Beat Any Studio", pinDescription: "The record player, the kitchen dance, reading shoulder to shoulder. Your home is the most honest location you'll ever photograph — here's the 13-frame plan. Save for a rainy session day." },
+    ],
+    shop: { section: "location-accessories", items: [
+      { label: "Sheer curtain panel for soft window light", store: "Amazon", href: "#" },
+      { label: "Warm Edison bulb string set", store: "Etsy", href: "#" },
+      { label: "Bookshelf styling set (the lived-in layer)", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -319,6 +478,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["When should we shoot save the date photos?", "As soon as you're engaged and have a date and venue — the cards mail six to eight months out, and you want the photo session done at least two months before that."]],
     related: ["proposal-poses"],
+    pins: [
+      { image: IMAGES.galleryTwirl, overlayText: "The Type Lives in the Empty Third", pinTitle: "Save the Date Photo Ideas With Room for Your Name", pinDescription: "A save the date is a photograph with a job — it has to carry your names, date and venue without crowding. Shoot with the empty space in mind: open sky, clean wall, breathing room. 12 ideas to save." },
+      { image: IMAGES.hero, overlayText: "Wide Shots Win", pinTitle: "How to Shoot Save the Date Photos That Actually Work on Cards", pinDescription: "Most save-the-date photos die in the crop because nobody left room for the text. The fix is shot list side: wide frames, one clean third, space where the type will sit. Pin this before your shoot." },
+      { image: IMAGES.classicDip, overlayText: "Mail-Ready on Frame One", pinTitle: "Save the Date Timing: When to Shoot and When to Mail", pinDescription: "Engaged, date set, venue set — that's the green light. Cards mail six to eight months out; the session happens two months before that. The calendar behind every save the date that lands. Save it." },
+    ],
+    shop: { section: "gifts", items: [
+      { label: "Save-the-date card template bundle", store: "Etsy", href: "#" },
+      { label: "Portrait-orientation tripod mount for phone shooters", store: "Amazon", href: "#" },
+      { label: "Custom stamp for the mailing", store: "Etsy", href: "#" },
+    ]},
   }),
 
   art({
@@ -334,6 +503,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["Can we capture a proposal without a photographer?", "Yes — a hidden tripod with a ten-second timer and a remote, or a propped phone recording video with the best frame pulled after, both work well. Set everything before the moment, then just have it."]],
     related: ["ring-engagement-photo-poses", "save-the-date-photo-ideas"],
+    pins: [
+      { image: IMAGES.classicDip, overlayText: "Ten Seconds You Can't Restage", pinTitle: "Proposal Poses: 15 Ways to Capture the Moment", pinDescription: "The proposal lasts ten seconds and there's no second take. Three archetypes — the surprise, the hidden-shooter reveal, the re-enactment — each with its own camera plan and 15 poses that fit. Save this." },
+      { image: IMAGES.gallerySilhouette, overlayText: "Re-enact Once, Not Ten Times", pinTitle: "How to Pose for Proposal Photos Without Ruining the Moment", pinDescription: "Decide who captures it before you pick the spot. A hidden photographer keeps the surprise and the clean frames; a ten-minute re-enactment catches the shaking hands. The plan worth pinning." },
+      { image: IMAGES.hero, overlayText: "The Camera Plan Comes First", pinTitle: "The One Decision That Saves Your Proposal Photos", pinDescription: "Who is capturing it? That answer chooses the pose list. Candid-surprise poses, reveal poses, the post-yes embrace — 15 ways to make the ten seconds survive on film. Save for the plan." },
+    ],
+    shop: { section: "props", items: [
+      { label: "Bluetooth remote for hidden-timer setups", store: "Amazon", href: "#" },
+      { label: "Compact tripod for the hidden tripod plan", store: "Amazon", href: "#" },
+      { label: "4K video rig for pull-the-best-frame insurance", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -349,6 +528,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["How far away should a hidden photographer stand?", "Fifty meters or more with a long lens is the sweet spot: close enough for a clean frame, far enough to stay invisible. The couple never performs because they never know they're seen."]],
     related: ["proposal-poses"],
+    pins: [
+      { image: IMAGES.gallerySilhouette, overlayText: "Stay Invisible", pinTitle: "Surprise Proposal Ideas That Keep the Secret (and Get the Shot)", pinDescription: "A surprise proposal has one rule an engagement session never does: the subject can't know the camera is there. Long lens, hidden shooter, setup before the moment — the invisible plan. Save it." },
+      { image: IMAGES.hero, overlayText: "Fifty Meters and a Long Lens", pinTitle: "How Photographers Hide in Plain Sight for Proposals", pinDescription: "The candid survives on distance and glass. Scout the spot the day before, place the shooter, rehearse nothing with the person being proposed to. The logistics behind a surprise that photographs. Pin this." },
+      { image: IMAGES.classicDip, overlayText: "Set It Before the Moment", pinTitle: "The Surprise Proposal Camera Plan Nobody Gives You", pinDescription: "Tripod placement, timer, the one trusted friend on lookout, the backup phone video. Everything decided and in place before the knees hit the ground. Save the checklist for the planner." },
+    ],
+    shop: { section: "props", items: [
+      { label: "Telephoto lens for hidden-shooter distance", store: "Amazon", href: "#" },
+      { label: "Silent tripod head", store: "Amazon", href: "#" },
+      { label: "Decoy picnic set for the scouting cover story", store: "Etsy", href: "#" },
+    ]},
   }),
 
   art({
@@ -364,6 +553,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["Do matte photos fade faster than glossy?", "Not inherently — fading is about archival ink and paper, not the sheen. Matte papers are just more forgiving of micro-scratches and dust, so they look fresh longer in busy rooms."]],
     related: ["mini-photo-print-ideas", "photo-print-sizes-guide"],
+    pins: [
+      { image: IMAGES.classicDip, overlayText: "Let the Room Decide", pinTitle: "Glossy or Matte Prints: Which Finish Fits Your Light", pinDescription: "The finish question gets answered by preference when it should be answered by light. Bright walls: matte. Dim shelves: glossy. Black and white: matte or lustre. The decision rule for prints that live in real rooms. Save." },
+      { image: IMAGES.galleryLaugh, overlayText: "Matte Kills Glare. Glossy Adds Depth.", pinTitle: "How to Pick a Print Finish by Where It Will Hang", pinDescription: "Walk the print's future wall before the lab. The same portrait wins under lamp light and loses to a sunny hallway — it's not the photo, it's the sheen. The finish guide worth pinning." },
+      { image: IMAGES.hero, overlayText: "Lustre Is the Quiet Third Answer", pinTitle: "Glossy vs Matte vs Lustre: The Print Finish Guide for Couples", pinDescription: "Every album order asks the finish question. Here's what each sheen does under daylight, window light and warm lamps — and why black and white wants matte. Save before you hit order." },
+    ],
+    shop: { section: "prints", items: [
+      { label: "Archival lustre print credit (lab voucher)", store: "Amazon", href: "#" },
+      { label: "Anti-glare frames for bright hallways", store: "Etsy", href: "#" },
+      { label: "Microfiber print-cleaning kit", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -379,6 +578,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["What size are mini photo prints?", "Usually 2×3 wallet size up to 4×6. Anything hand-length counts as a mini — small enough to give away generously, which is the whole point of ordering them."]],
     related: ["glossy-or-matte-prints", "engagement-photo-albums"],
+    pins: [
+      { image: IMAGES.galleryLaugh, overlayText: "Order Double", pinTitle: "Mini Photo Print Ideas: 15 Ways to Use Small Prints Big", pinDescription: "Wallet prints for grandparents, fridge magnets for your own kitchen, gift tags and escort cards — one session can supply the favors, the gifts and the fridge for the whole wedding. 15 uses to save." },
+      { image: IMAGES.galleryRing, overlayText: "The Size People Actually Keep", pinTitle: "What to Do With 2×3 Wallet Prints (15 Ideas)", pinDescription: "Mini prints are cheap enough to order generously and small enough to give away — pockets, lockets, gift wrap tags, the inside of a frame. The most versatile order from any session. Pin it." },
+      { image: IMAGES.hero, overlayText: "Matte for What's Handled", pinTitle: "The Wedding Favors Hack Hiding in Your Photo Order", pinDescription: "A stack of minis becomes escort cards, thank-you enclosures and grandparent gifts before the wedding. One extra line item, a hundred smiles. The favor plan worth pinning." },
+    ],
+    shop: { section: "prints", items: [
+      { label: "Wallet print multipack (100)", store: "Amazon", href: "#" },
+      { label: "Mini photo magnet backing sheets", store: "Etsy", href: "#" },
+      { label: "Mini photo gift-tag string and seals", store: "Etsy", href: "#" },
+    ]},
   }),
 
   art({
@@ -394,6 +603,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["What's the most versatile print size?", "The 8×10 fits the most common frames, which makes it the easiest gift. But if your file is full-frame 2:3, the 8×12 gives the same presence with zero crop."]],
     related: ["glossy-or-matte-prints", "engagement-photo-albums"],
+    pins: [
+      { image: IMAGES.galleryRing, overlayText: "Size to the Distance", pinTitle: "Photo Print Sizes Guide: 16 Sizes & Where Each Belongs", pinDescription: "Every size chart lists dimensions; none tell you what to do with the numbers. The viewing-distance rule, the 2:3 crop trap, and the frames that actually exist — 16 sizes, each with its place. Save." },
+      { image: IMAGES.hero, overlayText: "Beware the 2:3 Crop Trap", pinTitle: "What Print Size to Choose for Every Wall, Desk and Console", pinDescription: "One to two feet: 4×6 and 5×7. Two to four: 8×10 to 11×14. Across a room: 24×36 and up. The distance rule that makes every print feel right in its room. Pin before you order." },
+      { image: IMAGES.classicDip, overlayText: "Let the Frame Exist First", pinTitle: "The Print Size Decision Nobody Explains to Couples", pinDescription: "Don't pick a size and hunt for a frame — pick the frame that exists at your size, then fit the print to it. The backwards rule that saves a 2:3 crop and a weekend. Save this." },
+    ],
+    shop: { section: "prints", items: [
+      { label: "8×10 frame set (the universal size)", store: "Etsy", href: "#" },
+      { label: "Gallery wall template & level kit", store: "Amazon", href: "#" },
+      { label: "Archival mat board for framing", store: "Amazon", href: "#" },
+    ]},
   }),
 
   art({
@@ -409,6 +628,16 @@ const SPOKES: Post[] = [
     ],
     faq: [["What DPI do locket prints need?", "300 DPI at the final printed size, exported as a high-resolution file. A locket is the one print where a low-res file shows immediately, because there's nowhere for the blur to hide."]],
     related: ["mini-photo-print-ideas", "engagement-photo-albums"],
+    pins: [
+      { image: IMAGES.galleryRing, overlayText: "One Face. Eyes Up Top.", pinTitle: "The Locket Photo Print Guide: Print for the Smallest Frame", pinDescription: "A locket print is the smallest photo you'll order and the one handled most. The rules: crop tight on one face, 300 DPI at final size, matte to resist fingerprints. Forty years of sharp depends on all three. Save." },
+      { image: IMAGES.hero, overlayText: "Nowhere for Blur to Hide", pinTitle: "How to Print a Photo for a Locket Without Wasting a Dollar", pinDescription: "The crop, the DPI and the finish decide whether a thumbnail-size print holds up or smudges by month two. The three-step locket guide — with the export settings. Pin before you order." },
+      { image: IMAGES.classicDip, overlayText: "Matte Survives the Fingerprint", pinTitle: "Locket Prints: The Crop, DPI and Finish Rules", pinDescription: "Group photos shrink to a blur in a locket — one face, two at most, eyes in the upper third. The tiny-print guide for the keepsake that outlives the wedding. Save for the gift-givers." },
+    ],
+    shop: { section: "prints", items: [
+      { label: "Locket-safe micro-crop print service", store: "Etsy", href: "#" },
+      { label: "Precision craft scissors for tiny crops", store: "Amazon", href: "#" },
+      { label: "Heirloom locket (engraving available)", store: "Etsy", href: "#" },
+    ]},
   }),
 ];
 

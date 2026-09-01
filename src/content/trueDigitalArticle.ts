@@ -10,7 +10,7 @@ const harper: Author = {
   instagram: "@tenderlight.journal",
 };
 
-const M = { adsense: true, affiliate: false, leadMagnet: true };
+const M = { adsense: true, affiliate: true, leadMagnet: true };
 
 export const TRUE_DIGITAL_POSTS: Post[] = [
   {
@@ -130,6 +130,11 @@ export const TRUE_DIGITAL_POSTS: Post[] = [
       ]},
 
       { type: "leadMagnet", title: "The Ratio Cheat Card", subtitle: "Your file's ratio, the print ladder that matches it, and the crop traps to avoid — on one card for your next print order.", bullets: ["The 2:3 and 3:4 print ladders", "The crop traps (8×10, square, panoramic)", "The ratio-first decision method"], cta: "Get the Ratio Cheat Card" },
+      { type: "shop", section: "prints", items: [
+        { label: "Calibrated 24\" photo monitor for crop-checking", store: "Amazon", href: "#" },
+        { label: "Archival fine-art print service credit", store: "Etsy", href: "#" },
+        { label: "Print-ladder sizing ruler (wallet to wall)", store: "Amazon", href: "#" },
+      ]},
 
       { type: "p", text: "It's the next print order, and she types the sizes without thinking: 8×12, 12×18, 16×24. The ratio she learned in two seconds, carried into every order after. When the prints arrive, nothing is cropped, because nothing needed to be. That's the whole point. A ratio isn't a technical detail. It's the difference between the photo you shot and the photo you get." },
 
