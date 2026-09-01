@@ -23,7 +23,7 @@ export const KEYWORD_MAP: KeywordTarget[] = [
   { path: "/engagement-photo-ideas/unique-engagement-photo-ideas", keyword: "unique engagement pics", volume: 210, kd: 1, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/cute-engagement-photo-ideas", keyword: "cute engagement picture ideas", volume: 140, kd: 5, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/fun-engagement-photo-ideas", keyword: "fun engagement photo ideas", volume: 170, kd: 7, intent: "Informational", phase: 1 },
-  { path: "/engagement-photo-ideas/classic-engagement-photo-ideas", keyword: "classic engagement photos", volume: 110, kd: 1, intent: "Informational", phase: 1 },
+  { path: "/engagement-photo-ideas/classic-engagement-photos", keyword: "classic engagement photos", volume: 110, kd: 1, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/candid-engagement-photo-ideas", keyword: "candid engagement photos", volume: 90, kd: 0, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-poses/proposal-poses", keyword: "proposal poses", volume: 110, kd: 1, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-poses/natural-engagement-photo-poses", keyword: "natural engagement photo poses", volume: 260, kd: 4, intent: "Informational", phase: 1 },
@@ -44,8 +44,7 @@ export const KEYWORD_MAP: KeywordTarget[] = [
   { path: "/engagement-photo-prints/locket-photo-print-guide", keyword: "locket photo prints", volume: 3600, kd: 12, intent: "Commercial", phase: 3 },
   { path: "/engagement-photo-prints/photo-booth-strip-ideas", keyword: "photo booth strip", volume: 1300, kd: 24, intent: "Commercial", phase: 3 },
   { path: "/engagement-photo-prints/mini-photo-print-ideas", keyword: "mini photo prints", volume: 1300, kd: 28, intent: "Commercial", phase: 3 },
-  { path: "/engagement-photo-prints/polaroid-style-engagement-prints", keyword: "polaroid prints", volume: 1600, kd: 17, intent: "Commercial", phase: 3 },
-  { path: "/engagement-photo-prints/engagement-photo-display-ideas", keyword: "wedding picture display ideas", volume: 170, kd: 24, intent: "Commercial", phase: 3 },
+  { path: "/engagement-photo-prints/polaroid-style-prints", keyword: "polaroid prints", volume: 1600, kd: 17, intent: "Commercial", phase: 3 },
 ];
 
 export const PHASE_LABELS: Record<1 | 2 | 3, string> = {

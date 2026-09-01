@@ -184,16 +184,6 @@ export const ARTICLE_SHOPS: Record<string, AffiliateKit[]> = {
       ],
     },
   ],
-  "engagement-photo-display-ideas": [
-    {
-      section: "display",
-      items: [
-        { label: "24x36 oversized frame", store: "Amazon", href: "https://www.amazon.com/s?k=24x36+picture+frame+black" },
-        { label: "Floating gallery ledge", store: "Amazon", href: "https://www.amazon.com/s?k=floating+picture+ledge+shelf" },
-        { label: "Gallery wall frame set", store: "Amazon", href: "https://www.amazon.com/s?k=gallery+wall+frame+set" },
-      ],
-    },
-  ],
   "mini-photo-print-ideas": [
     {
       section: "prints",
@@ -204,7 +194,7 @@ export const ARTICLE_SHOPS: Record<string, AffiliateKit[]> = {
       ],
     },
   ],
-  "polaroid-style-engagement-prints": [
+  "polaroid-style-prints": [
     {
       section: "gifts",
       items: [
@@ -272,26 +262,6 @@ export const ARTICLE_PINS: Record<string, PinImage[]> = {
         "The exact strip layout plus 12 poses that fill it with real laughs. Print them at home or order matte strips. Save this for your session day.",
     },
   ],
-  "engagement-photo-display-ideas": [
-    {
-      image: IMAGES.classicDip,
-      pinTitle: "16 Ways to Display Engagement Photos (No Clutter)",
-      pinDescription:
-        "Gallery walls, ledges, oversized hero prints — the layouts that make your session feel collected, not cluttered. Includes the odd-number rule. Pin for your wall.",
-    },
-    {
-      image: IMAGES.hero,
-      pinTitle: "The Gallery Wall Rule Interior Designers Swear By",
-      pinDescription:
-        "One hero print, two mid-size, three small — arranged in odds. The engagement photo display formula that always looks intentional. Tap for 16 layouts.",
-    },
-    {
-      image: IMAGES.posesCover,
-      pinTitle: "Matte vs Glossy: Which Print Finish Wins?",
-      pinDescription:
-        "Why matte and lustre flatter golden-hour light — and where glossy still earns its place. The print-finish decision, settled. Save before you order.",
-    },
-  ],
   "mini-photo-print-ideas": [
     {
       image: IMAGES.galleryTwirl,
@@ -312,7 +282,7 @@ export const ARTICLE_PINS: Record<string, PinImage[]> = {
         "Wallet prints are the best value in photo printing — here's every way to use them, from escort cards to grandparents' purses. Pin the list.",
     },
   ],
-  "polaroid-style-engagement-prints": [
+  "polaroid-style-prints": [
     {
       image: IMAGES.about,
       pinTitle: "10 Polaroid-Style Print Ideas for a Retro Feel",

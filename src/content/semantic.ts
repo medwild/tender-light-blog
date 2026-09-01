@@ -9,8 +9,8 @@
  *                 URL, which powers the on-page "topical field" chips and any
  *                 future automated internal-link suggestions (maillage).
  *
- * Clusters 2–7 (Poses, Locations, Outfits, Save the Date, Prints, Oklahoma)
- * plug into SEMANTIC_FIELDS as their term lists are supplied.
+ * Clusters 2–7 (Poses, Locations, Outfits, Save the Date, Prints, Wedding Day
+ * Logistics) plug into SEMANTIC_FIELDS as their term lists are supplied.
  */
 
 export interface ClusterSemantic {
@@ -90,7 +90,7 @@ export const CLUSTER_IDEAS: ClusterSemantic = {
     "romantic vibe": "/engagement-photo-ideas/romantic-engagement-photo-ideas",
     props: "/engagement-photo-ideas/unique-engagement-photo-ideas",
     "vintage style": "/engagement-photo-ideas/vintage-engagement-photo-ideas",
-    "classic style": "/engagement-photo-ideas/classic-engagement-photo-ideas",
+    "classic style": "/engagement-photo-ideas/classic-engagement-photos",
     "moody style": "/engagement-photo-ideas/night-engagement-photo-ideas",
     "light and airy style": "/engagement-photo-ideas/elegant-engagement-photo-ideas",
   },
@@ -248,7 +248,7 @@ export const CLUSTER_LOCATIONS: ClusterSemantic = {
     restaurant: "/engagement-photo-locations/urban-engagement-photo-ideas",
     "coffee shop": "/engagement-photo-locations/coffee-shop-engagement-photo-ideas",
     brewery: "/engagement-photo-locations/coffee-shop-engagement-photo-ideas",
-    mountain: "/oklahoma-wedding-locations/how-to-elope-in-oklahoma",
+    mountain: "/engagement-photo-locations/mountain-engagement-photos",
     rooftop: "/engagement-photo-ideas/night-engagement-photo-ideas",
     staircase: "/engagement-photo-ideas/elegant-engagement-photo-ideas",
     "open shade": "/engagement-photo-ideas/golden-hour-photography-tips-couples",
@@ -258,7 +258,7 @@ export const CLUSTER_LOCATIONS: ClusterSemantic = {
     crowds: "/engagement-photo-ideas/golden-hour-photography-tips-couples",
     "blue hour": "/engagement-photo-ideas/night-engagement-photo-ideas",
     "weather backup": "/engagement-photo-ideas/engagement-photo-checklist",
-    permits: "/engagement-photo-locations/top-engagement-photo-locations-oklahoma",
+    permits: "/engagement-photo-locations/outdoor-engagement-photo-locations",
     "meaningful location": "/engagement-photo-ideas/unique-engagement-photo-ideas",
     "first date location": "/engagement-photo-ideas/unique-engagement-photo-ideas",
     "proposal location": "/save-the-date-photos/surprise-proposal-ideas",
@@ -418,10 +418,10 @@ export const CLUSTER_SAVETHEDATE: ClusterSemantic = {
     timeline: "/engagement-photo-ideas/engagement-photo-checklist",
     // the kneel geometry → proposal poses (poses cluster)
     "proposal setup": "/engagement-photo-poses/proposal-poses",
-    // quiet / destination spots → Oklahoma proposal guides
-    "private proposal": "/oklahoma-wedding-locations/places-to-propose-in-oklahoma",
-    "proposal location": "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma",
-    "travel proposal": "/oklahoma-wedding-locations/best-places-to-propose-in-oklahoma",
+    // quiet / destination spots → the proposal-ideas owner
+    "private proposal": "/save-the-date-photos/surprise-proposal-ideas",
+    "proposal location": "/save-the-date-photos/surprise-proposal-ideas",
+    "travel proposal": "/save-the-date-photos/surprise-proposal-ideas",
     // props & set dressing → unique engagement ideas
     flowers: "/engagement-photo-ideas/unique-engagement-photo-ideas",
     signage: "/engagement-photo-ideas/unique-engagement-photo-ideas",
