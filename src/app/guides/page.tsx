@@ -6,7 +6,7 @@ import JsonLd from "../../components/JsonLd";
 export const metadata: Metadata = {
   title: "Engagement Photo Guides — Start Here | Tender Light",
   description:
-    "The engagement photo topical map: six hubs covering ideas, poses, outfits, locations, save-the-dates and prints.",
+    "The engagement photo topical map: seven hubs covering ideas, poses, outfits, locations, save-the-dates, prints and wedding-day logistics.",
   alternates: { canonical: "/guides/" },
 };
 
@@ -23,7 +23,7 @@ export default function Page() {
           collectionSchema(
             "Engagement Photo Guides",
             "/guides",
-            "Six topic hubs covering ideas, poses, outfits, locations, save-the-dates and prints.",
+            "Seven topic hubs covering ideas, poses, outfits, locations, save-the-dates, prints and wedding-day logistics.",
           ),
         ]}
       />

@@ -32,7 +32,7 @@ export const KEYWORD_MAP: KeywordTarget[] = [
   { path: "/engagement-photo-locations/at-home-engagement-photo-ideas", keyword: "at home engagement photos", volume: 40, kd: 0, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-outfits/casual-engagement-photo-outfits", keyword: "casual engagement photo outfits", volume: 210, kd: 6, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-outfits/fall-engagement-photo-outfits", keyword: "what to wear for fall pictures", volume: 90, kd: 0, intent: "Informational", phase: 1 },
-  { path: "/engagement-photo-outfits/summer-engagement-photo-outfits", keyword: "summer photoshoot outfit ideas", volume: 50, kd: 0, intent: "Informational", phase: 1 },
+  { path: "/engagement-photo-outfits/spring-summer-engagement-outfits", keyword: "summer photoshoot outfit ideas", volume: 50, kd: 0, intent: "Informational", phase: 1 },
 
   /* ———— Phase 2 · Pillars ———— */
   { path: "/engagement-photo-ideas", keyword: "engagement photo ideas", volume: 3600, kd: 11, intent: "Informational", phase: 2 },
@@ -72,13 +72,14 @@ export const INTENT_OWNERSHIP: Record<string, string> = {
   "casual engagement photos": "/engagement-photo-ideas/casual-engagement-photo-ideas",
   "casual engagement photo outfits": "/engagement-photo-outfits/casual-engagement-photo-outfits",
   "outdoor engagement photo ideas": "/engagement-photo-locations/outdoor-engagement-photo-locations",
-  "outdoor engagement photo poses": "/engagement-photo-poses/outdoor-engagement-photo-poses",
   "ring engagement photo poses": "/engagement-photo-poses/ring-engagement-photo-poses",
-  "proposal poses": "/engagement-photo-poses/proposal-poses",
+  // NOTE: "outdoor engagement photo poses" and "save the date poses" were listed
+  // as owned intents pointing at un-built slugs — an unsatisfiable §23 trap.
+  // Restored when those spokes are actually wired.
+  "proposal poses": "/save-the-date-photos/proposal-poses",
   "surprise proposal ideas": "/save-the-date-photos/surprise-proposal-ideas",
-  "save the date poses": "/save-the-date-photos/save-the-date-poses",
   "locket photo prints": "/engagement-photo-prints/locket-photo-print-guide",
-  "photo booth strip": "/engagement-photo-prints/photo-booth-strip-ideas",
+  "photo booth strip": "/engagement-photo-prints/photo-booth-strip-ideas", // owner lands in the next CREATE batch
   "mini photo prints": "/engagement-photo-prints/mini-photo-print-ideas",
 };
 

@@ -10,7 +10,7 @@ const harper: Author = {
   instagram: "@tenderlight.journal",
 };
 
-const M = { adsense: true, affiliate: false, leadMagnet: true };
+const M = { adsense: true, affiliate: true, leadMagnet: true };
 
 export const WEDDING_CHECKLIST_POSTS: Post[] = [
   {
@@ -111,12 +111,18 @@ export const WEDDING_CHECKLIST_POSTS: Post[] = [
 
       { type: "h2", id: "what-couples-get-wrong", text: "What Most Couples Get Wrong" },
       { type: "p", text: "The most common miss is the unowned timeline: the couple assumes the photographer knows what to capture, and the photographer assumes the couple will say. Nobody's wrong, and the moments leak. The second is formals that run long because nobody wrangled them; a formals list with no runner takes an hour and eats the golden-hour block. The third is the displays and QR codes that never go up, because 'someone' was supposed to do it and 'someone' was dancing. And the last is photographing the day's end without a plan: the send-off happens once, in a crowd, on a count nobody rehearsed. Assign, cap, set up early, and rehearse the one-shot moments. That's the whole discipline." },
+      { type: "gallery", images: [
+        { src: IMAGES.galleryRing, alt: "wedding day checklist detail, rings on the timeline card beside the shot list" },
+        { src: IMAGES.galleryLaugh, alt: "wedding day checklist in action, the conductor checking the golden-hour block against the clock" },
+        { src: IMAGES.casualCafe, alt: "wedding day displays set by three, the engagement board and QR cards at the entrance" },
+      ]},
       { type: "ad", slot: "before-faq" },
 
       { type: "h2", id: "harpers-tips-logistics", text: "Harper's Tips & What I've Learned" },
       { type: "p", text: "Print the timeline and the formals list on paper and hand one to the conductor, one to the formals-runner, and one to the photographer. A phone list gets buried in notifications; a paper card lives in a hand. The day runs on paper." },
       { type: "p", text: "The moments that matter most are the ones nobody is posing for. Assign the photographer to the reactions — the parent wiping a tear, the friend who flew in, the grandmother laughing — because those are the frames that end up above the mantel, and they only happen once." },
       { type: "quote", text: "A wedding day is a logistics problem before it's an art problem. Solve the first and the second takes care of itself.", cite: "Harper, from 400+ sessions" },
+      { type: "quote", text: "The grandmother doesn't wait for the golden-hour block. A complete album is a list that reached her first.", cite: "Harper" },
       { type: "p", text: "The couples whose albums feel complete aren't the ones with the fanciest weddings. They're the ones where one person held the list, the formals ran short, and the displays went up at three. Completeness isn't luck. It's the forty-seven details, assigned." },
 
       { type: "faq", items: [
@@ -129,6 +135,11 @@ export const WEDDING_CHECKLIST_POSTS: Post[] = [
       ]},
 
       { type: "leadMagnet", title: "The Wedding Photo Timeline Card", subtitle: "All 47 details on one printable card — the timeline, the formals list, the 3 p.m. setup, and the delegation — so one person can conduct the day.", bullets: ["The 47 details, grouped and assignable", "The family formals list template", "The 3 p.m. display-and-QR setup list"], cta: "Get the Wedding Photo Timeline Card" },
+      { type: "shop", section: "display", items: [
+        { label: "Tabletop QR card holders (set of 20)", store: "Etsy", href: "#" },
+        { label: "Wedding day signage — hashtag & formals board", store: "Etsy", href: "#" },
+        { label: "Instant camera + film for the guest station", store: "Amazon", href: "#" },
+      ]},
 
       { type: "p", text: "It's the end of the night, and the conductor folds the paper card, creased soft from a day in her hand. The grandmother is in the album. The first dance is in the album. The cake cutting, the send-off, the friend who flew in — all of it, because one person held the list and the day bent around it. That's the whole secret. A wedding day doesn't photograph itself. It gets photographed by whoever owns the list." },
 
