@@ -85,7 +85,7 @@ export const HUBS: Hub[] = [
     lede: "Your engagement session deserves more than a camera roll. Print the frames you actually live with — a hero print for the wall, mid-size pairings for a ledge, small candids for shelves.",
     harperNote: "Couples reprint the mid-laugh frames far more often than the formal ones. Print what makes you feel something.",
     accent: "gold",
-    spokes: ["engagement-photo-albums", "glossy-or-matte-prints", "mini-photo-print-ideas", "photo-print-sizes-guide", "locket-photo-print-guide", "polaroid-style-prints", "photo-flip-book-ideas", "border-prints", "true-digital-prints", "engagement-photo-editing"],
+    spokes: ["engagement-photo-albums", "glossy-or-matte-prints", "mini-photo-print-ideas", "polaroid-style-prints", "photo-booth-strip-ideas", "photo-print-sizes-guide", "locket-photo-print-guide", "photo-flip-book-ideas", "border-prints", "true-digital-prints", "engagement-photo-editing"],
     related: ["save-the-date-photos", "engagement-photo-ideas"],
     faq: [
       { q: "Which engagement photos are worth printing?", a: "Print the frames you feel something looking at — usually the candid, mid-laugh ones, plus one strong formal. A good mix is one hero print, two mid-size, and a few small candids." },

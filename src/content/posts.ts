@@ -73,6 +73,7 @@ import { WINTER_OUTFITS_POSTS } from "./winterOutfitsArticle";
 import { FIRST_LOOK_POSTS } from "./firstLookArticle";
 import { BEACH_POSTS } from "./beachArticle";
 import { NATURAL_POSES_POSTS } from "./naturalPosesArticle";
+import { PHOTO_BOOTH_POSTS } from "./photoBoothArticle";
 
 /* ————— Representative spokes for the remaining hubs ————— */
 const SPOKES: Post[] = [
@@ -648,6 +649,7 @@ const ALL: Post[] = [
   ...COZY_POSTS, ...RUSTIC_POSTS, ...MOUNTAIN_POSTS, ...EDITING_POSTS,
   ...SPRING_SUMMER_POSTS, ...WINTER_OUTFITS_POSTS,
   ...FIRST_LOOK_POSTS, ...BEACH_POSTS, ...NATURAL_POSES_POSTS,
+  ...PHOTO_BOOTH_POSTS,
 ];
 
 /* ————— keepReading post-processing pass (avoids TDZ on ALL) ————— */
