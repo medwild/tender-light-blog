@@ -25,7 +25,7 @@ export const HUBS: Hub[] = [
     lede: "A great engagement pose is just a starting position — the photos you love are the two seconds after it settles. The most flattering poses give your hands a job.",
     harperNote: "I never say 'look natural.' I give a task — fix his collar, whisper a bad joke — and natural happens on its own.",
     accent: "gold",
-    spokes: ["how-to-smile-naturally-in-photos", "camera-shy-engagement-poses", "scenario-based-engagement-poses", "ring-engagement-photo-poses"],
+    spokes: ["how-to-smile-naturally-in-photos", "camera-shy-engagement-poses", "natural-engagement-photo-poses", "scenario-based-engagement-poses", "ring-engagement-photo-poses"],
     related: ["engagement-photo-ideas", "engagement-photo-outfits", "save-the-date-photos"],
     faq: [
       { q: "How do we pose for engagement photos without looking awkward?", a: "Start every pose from a task, not a statue — fix his collar, share a whisper, walk toward a landmark. Poses built on a small action settle into natural frames within seconds." },
@@ -55,7 +55,7 @@ export const HUBS: Hub[] = [
     lede: "The best engagement photo locations aren't the prettiest spots — they're the spots with good light at the hour you're shooting. Scout by light first, scenery second.",
     harperNote: "I've driven past a dozen 'pretty' spots to shoot at an ugly wall with perfect bounce light. The wall wins.",
     accent: "sage",
-    spokes: ["indoor-engagement-photos", "outdoor-engagement-photo-locations", "urban-engagement-photo-ideas", "at-home-engagement-photo-ideas", "mountain-engagement-photos"],
+    spokes: ["indoor-engagement-photos", "outdoor-engagement-photo-locations", "urban-engagement-photo-ideas", "at-home-engagement-photo-ideas", "mountain-engagement-photos", "beach-engagement-photo-ideas"],
     related: ["engagement-photo-ideas", "engagement-photo-poses", "engagement-photo-outfits"],
     faq: [
       { q: "How far in advance should we scout an engagement location?", a: "Walk it the day before, at the same hour as your session. You're checking light direction, crowds and parking — the three things that sink outdoor shoots." },
@@ -103,7 +103,7 @@ export const WEDDING_DAY_HUB: Hub = {
   lede: "The layer most wedding checklists skip: the photo timeline, the family formals list, the displays, the tech and the delegation that decide how your day actually looks in the album.",
   harperNote: "You don't remember a wedding day. You remember the photographs of it — and those are a logistics problem before they're an art problem.",
   accent: "blush",
-  spokes: ["wedding-photo-checklist"],
+  spokes: ["wedding-photo-checklist", "first-look-photos"],
   related: ["save-the-date-photos", "engagement-photo-prints", "engagement-photo-ideas"],
   faq: [
     { q: "Who should run the family formals?", a: "One named person with the written list — the MC or a gregarious relative. The photographer shoots; the list-runner wrangles. Splitting those two roles keeps formals under twenty minutes." },
