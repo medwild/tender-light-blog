@@ -32,9 +32,11 @@ export const WINTER_POSTS: Post[] = [
     cluster: "engagement-photo-ideas",
     relatedPosts: ["black-and-white-engagement-photos", "casual-engagement-photo-ideas", "best-outfits-engagement-photos"],
     internalLinks: [
+      { url: "/engagement-photo-ideas", anchor: "all engagement photo ideas" },
       { url: "/engagement-photo-ideas/black-and-white-engagement-photos", anchor: "black and white engagement photos" },
       { url: "/engagement-photo-ideas/casual-engagement-photo-ideas", anchor: "casual engagement photo ideas" },
       { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "best outfits for engagement photos" },
+      { url: "/engagement-photo-outfits/winter-engagement-outfits", anchor: "how to layer for it (the outfits)" },
       { url: "/engagement-photo-locations/outdoor-engagement-photo-locations", anchor: "outdoor engagement photo locations" },
     ],
     monetization: M,

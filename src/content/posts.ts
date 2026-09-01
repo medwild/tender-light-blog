@@ -60,6 +60,14 @@ import { BORDER_POSTS } from "./borderArticle";
 import { TRUE_DIGITAL_POSTS } from "./trueDigitalArticle";
 import { WEDDING_CHECKLIST_POSTS } from "./weddingChecklistArticle";
 
+/* ————— §4 CREATE backlog ————— */
+import { COZY_POSTS } from "./cozyArticle";
+import { RUSTIC_POSTS } from "./rusticArticle";
+import { MOUNTAIN_POSTS } from "./mountainArticle";
+import { EDITING_POSTS } from "./editingArticle";
+import { SPRING_SUMMER_POSTS } from "./springSummerArticle";
+import { WINTER_OUTFITS_POSTS } from "./winterOutfitsArticle";
+
 /* ————— Representative spokes for the remaining hubs ————— */
 const SPOKES: Post[] = [
   art({
@@ -405,6 +413,8 @@ const ALL: Post[] = [
   ...SPOKES, ...INDOOR_POSTS, ...HOLIDAY_POSTS, ...ALBUMS_POSTS,
   ...WINTER_POSTS, ...PET_POSTS, ...POLAROID_POSTS, ...FLIP_BOOK_POSTS,
   ...BORDER_POSTS, ...TRUE_DIGITAL_POSTS, ...WEDDING_CHECKLIST_POSTS,
+  ...COZY_POSTS, ...RUSTIC_POSTS, ...MOUNTAIN_POSTS, ...EDITING_POSTS,
+  ...SPRING_SUMMER_POSTS, ...WINTER_OUTFITS_POSTS,
 ];
 
 /* ————— keepReading post-processing pass (avoids TDZ on ALL) ————— */

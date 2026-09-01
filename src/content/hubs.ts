@@ -10,7 +10,7 @@ export const HUBS: Hub[] = [
     lede: "The best engagement photo ideas share one thing: they look like you on a good day, not like a catalogue. Start with a mood, then let the pose, outfit and location follow.",
     harperNote: "Couples who pick a mood first and poses second end up with a gallery that feels like one story.",
     accent: "rose",
-    spokes: ["holiday-engagement-photos", "casual-engagement-photo-ideas", "classic-engagement-photos", "black-and-white-engagement-photos", "unique-engagement-photo-ideas", "winter-engagement-photo-ideas", "pet-engagement-photos"],
+    spokes: ["holiday-engagement-photos", "casual-engagement-photo-ideas", "classic-engagement-photos", "black-and-white-engagement-photos", "unique-engagement-photo-ideas", "winter-engagement-photo-ideas", "pet-engagement-photos", "cozy-engagement-photos", "rustic-engagement-photos"],
     related: ["engagement-photo-poses", "engagement-photo-outfits", "engagement-photo-locations"],
     faq: [
       { q: "How many engagement photo ideas should we actually use?", a: "Pick 8–12 starting points for a 60–90 minute session. Each idea produces several keeper frames once you add movement, so a short list beats a long one that turns the shoot into a checklist." },
@@ -40,7 +40,7 @@ export const HUBS: Hub[] = [
     lede: "Engagement outfits live or die on one word: intentional. The goal is clothes you could wear on a good Saturday — chosen on purpose, in fabrics and tones that love the camera.",
     harperNote: "The couples who look best coordinated one palette and then forgot about their clothes entirely.",
     accent: "rose",
-    spokes: ["best-outfits-engagement-photos", "fall-engagement-photo-outfits", "casual-engagement-photo-outfits", "engagement-photo-color-palette"],
+    spokes: ["best-outfits-engagement-photos", "fall-engagement-photo-outfits", "casual-engagement-photo-outfits", "engagement-photo-color-palette", "spring-summer-engagement-outfits", "winter-engagement-outfits"],
     related: ["engagement-photo-ideas", "engagement-photo-poses", "engagement-photo-locations"],
     faq: [
       { q: "What colors should we wear for engagement photos?", a: "Soft, muted tones flatter every skin tone and photograph warmly: cream, oat, camel, sage, dusty blue, terracotta. Avoid neon, big logos and tiny tight patterns, which moiré on digital sensors." },
@@ -55,7 +55,7 @@ export const HUBS: Hub[] = [
     lede: "The best engagement photo locations aren't the prettiest spots — they're the spots with good light at the hour you're shooting. Scout by light first, scenery second.",
     harperNote: "I've driven past a dozen 'pretty' spots to shoot at an ugly wall with perfect bounce light. The wall wins.",
     accent: "sage",
-    spokes: ["indoor-engagement-photos", "outdoor-engagement-photo-locations", "urban-engagement-photo-ideas", "at-home-engagement-photo-ideas"],
+    spokes: ["indoor-engagement-photos", "outdoor-engagement-photo-locations", "urban-engagement-photo-ideas", "at-home-engagement-photo-ideas", "mountain-engagement-photos"],
     related: ["engagement-photo-ideas", "engagement-photo-poses", "engagement-photo-outfits"],
     faq: [
       { q: "How far in advance should we scout an engagement location?", a: "Walk it the day before, at the same hour as your session. You're checking light direction, crowds and parking — the three things that sink outdoor shoots." },
@@ -85,7 +85,7 @@ export const HUBS: Hub[] = [
     lede: "Your engagement session deserves more than a camera roll. Print the frames you actually live with — a hero print for the wall, mid-size pairings for a ledge, small candids for shelves.",
     harperNote: "Couples reprint the mid-laugh frames far more often than the formal ones. Print what makes you feel something.",
     accent: "gold",
-    spokes: ["engagement-photo-albums", "glossy-or-matte-prints", "mini-photo-print-ideas", "photo-print-sizes-guide", "locket-photo-print-guide", "polaroid-style-prints", "photo-flip-book-ideas", "border-prints", "true-digital-prints"],
+    spokes: ["engagement-photo-albums", "glossy-or-matte-prints", "mini-photo-print-ideas", "photo-print-sizes-guide", "locket-photo-print-guide", "polaroid-style-prints", "photo-flip-book-ideas", "border-prints", "true-digital-prints", "engagement-photo-editing"],
     related: ["save-the-date-photos", "engagement-photo-ideas"],
     faq: [
       { q: "Which engagement photos are worth printing?", a: "Print the frames you feel something looking at — usually the candid, mid-laugh ones, plus one strong formal. A good mix is one hero print, two mid-size, and a few small candids." },

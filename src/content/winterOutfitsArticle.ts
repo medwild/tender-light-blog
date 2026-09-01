@@ -1,0 +1,118 @@
+import { IMAGES } from "../lib/constants";
+import type { Author, Post } from "./types";
+
+const harper: Author = {
+  handle: "harper-ellis",
+  name: "Harper Ellis",
+  role: "Founder & Engagement Photo Editor",
+  bio: "Harper spent 8 years behind the lens shooting 400+ engagement sessions across the US before trading her camera for a keyboard. Based in Austin and married to her high school sweetheart, she writes the warm, practical guides every couple deserves.",
+  avatar: IMAGES.about,
+  instagram: "@tenderlight.journal",
+};
+
+const M = { adsense: true, affiliate: true, leadMagnet: true };
+
+export const WINTER_OUTFITS_POSTS: Post[] = [
+  {
+    slug: "winter-engagement-outfits",
+    title: "Winter Engagement Outfits: 8 Layering Rules That Photograph Warm",
+    seoTitle: "Winter Engagement Outfits: 8 Layering Rules for Warm Photos",
+    seoDescription:
+      "Winter engagement outfits built on layers that flatter in cold light — fabric, fit and color rules that keep you warm and look effortless, never bulky.",
+    excerpt:
+      "Dressing for a winter shoot is a different problem than dressing for a shoot. The clothes have to keep you warm enough to stop shivering and still photograph like you meant it — not like you lost a fight with a coat closet. These eight layering rules solve both at once, in cold light, without the bulk.",
+    category: "outfits",
+    date: "2026-11-10",
+    dateModified: "2026-11-10",
+    featuredImage: IMAGES.outfitsCover,
+    featuredAlt: "winter engagement outfits couple in a wool coat chunky knit scarf and camel tones in cold light",
+    tags: ["winter", "outfits", "layers", "knit", "wool", "cold weather", "earth tones"],
+    author: harper,
+    primaryKeyword: "winter engagement outfits",
+    cluster: "engagement-photo-outfits",
+    relatedPosts: ["fall-engagement-photo-outfits", "best-outfits-engagement-photos", "engagement-photo-color-palette", "casual-engagement-photo-outfits"],
+    internalLinks: [
+      { url: "/engagement-photo-ideas/winter-engagement-photo-ideas", anchor: "winter locations, light and timing" },
+      { url: "/engagement-photo-outfits/fall-engagement-photo-outfits", anchor: "the fall version of this palette" },
+      { url: "/engagement-photo-outfits/engagement-photo-color-palette", anchor: "a shared color palette" },
+      { url: "/engagement-photo-outfits/best-outfits-engagement-photos", anchor: "the core outfit rules" },
+    ],
+    monetization: M,
+    pinImages: [
+      { image: IMAGES.outfitsCover, overlayText: "Warm, Never Bulky", pinTitle: "Winter Engagement Outfits: 8 Layering Rules for Warm Photos", pinDescription: "Winter outfits have to do two jobs: keep you warm and flatter you in cold light. Eight layering rules that solve both without the bulk. Save these." },
+      { image: IMAGES.galleryRing, overlayText: "Texture Does the Warmth", pinTitle: "The Layering System That Photographs Warm", pinDescription: "Base, mid, outer — a wool coat over a chunky knit beats a puffer every time. Here's the winter layering system for couples. Save it." },
+      { image: IMAGES.classicDip, overlayText: "Color in Cold Light", pinTitle: "The Winter Palette That Reads Warm on Camera", pinDescription: "Cream, camel, charcoal and burgundy hold up in cold, flat light. Here's how to dress a two-person winter palette. Save the color list." },
+    ],
+    blocks: [
+      { type: "p", text: "There's a moment in every winter session when I can tell whether a couple dressed for the shoot or just dressed warm. One pair stands there in a black ski jacket, visibly miserable, the coat swallowing them; the other is in a camel wool overcoat over a cream knit, scarf loosely looped, and they look like the season looks on its good days. The difference was never about staying warm — both were warm. It was about layering so the warmth still photographs as intention instead of as survival. A winter engagement outfit is a design problem with a hard constraint: keep two people comfortable in the cold without turning them into lumps. This page is purely about the clothes that solve it. Where to shoot and how the winter light behaves is the companion article — here we're only dressing the two of you, warm and well." },
+      { type: "keyTakeaways", items: [
+        "Dress in a three-layer system: warm base, textural mid, tailored outer.",
+        "A wool coat over a chunky knit beats a puffer on camera every single time.",
+        "Texture on the body — knit, wool, corduroy — is what makes a winter frame feel warm.",
+        "Choose color for cold light: cream, camel, charcoal, burgundy, forest.",
+      ]},
+      { type: "h2", id: "warm-and-photogenic", text: "The Two-Job Problem of a Winter Outfit" },
+      { type: "p", text: "Most clothes only have to do one thing: look right. A winter engagement outfit has to do two — keep you warm enough that your face relaxes and your hands stop shaking, and still read as styled in flat, cold light. When only one job is solved it shows. Over-dress the warmth and you get a black puffer that photographs as bulk and a couple shivering inside a coat they can't remove on camera. Over-dress the look and you get a thin dress and blue lips. The fix is a system of layers you can photograph and, between takes, shed or seal. Warmth is the constraint; the craft is hiding it inside good fabric and a clean silhouette. Everything below is about the clothes that pull this off — where to go and what light to shoot in is a separate decision entirely." },
+      { type: "ad", slot: "after-first-h2" },
+      { type: "h2", id: "the-layer-system", text: "The Three-Layer System (Base, Mid, Outer)" },
+      { type: "p", text: "Treat a winter outfit the way a hiker treats a cold day: three distinct jobs stacked. The base layer manages warmth and moisture against the skin. The mid layer carries the texture the camera actually sees. The outer layer gives you a tailored, weather-worthy frame you can shrug off between shots. Get those three right and you can stay warm in a way that still looks deliberate. The common failure is a single giant coat doing all three jobs at once — it works on the drive over and it flattens every photograph." },
+      { type: "table", caption: "The winter layering system, by layer", headers: ["Layer", "Job", "What to choose", "What to avoid"], rows: [
+        ["Base", "Warmth + wicking", "Merino wool or thermal knit", "Cotton (holds cold sweat)"],
+        ["Mid", "Texture the camera sees", "Chunky knit, flannel, corduroy", "Thin, flat, slick fabric"],
+        ["Outer", "Tailored warmth, removable", "Wool overcoat, long cardigan", "Glossy black puffer, logo parka"],
+      ]},
+      { type: "h2", id: "the-8-rules", text: "The 8 Rules" },
+      { type: "p", text: "Eight clothing decisions that carry a couple through a cold shoot looking warm on purpose. Each one is about the garment, not the location." },
+      { type: "h3", id: "skip-cotton-base", text: "1. A Wool Base Layer, Not Cotton" },
+      { type: "p", text: "Cotton feels fine in a shop and turns cold and clammy the moment you sweat under a coat. Merino wool or a proper thermal knit keeps you warm even damp and adds almost no bulk. It's the layer nobody sees, which is exactly why it decides whether the visible layers look relaxed or stiff. Start there." },
+      { type: "h3", id: "chunky-mid", text: "2. A Chunky Knit as Your Mid Layer" },
+      { type: "p", text: "The mid layer is the one the camera actually reads, so give it texture. A heavy cable or a soft rib catches cold, flat light and throws tiny shadows across the frame, so a still person looks rich rather than washed-out. A man in a wool sweater over a collared shirt, a woman in a thick knit, both do the warmth job and the visual job at once." },
+      { type: "h3", id: "wool-overcoat", text: "3. A Wool Coat, Not a Puffer" },
+      { type: "p", text: "A wool overcoat in camel, charcoal or cream gives a winter session its entire tailored silhouette; a black puffer gives it a lump. Both are warm. The coat looks considered and sheds easily for the frames you want, while the puffer has to stay on to look functional and swallows a figure the moment it's open. If you must survive genuinely cold weather, keep the puffer for the walk and stand in it only off-camera." },
+      { type: "h3", id: "knit-dress-tights", text: "4. A Knit Dress Over Opaque Tights" },
+      { type: "p", text: "For a woman who wants a dress in winter, the move is a sweater or knit dress with heavy opaque tights underneath and tall boots over them. It photographs as a dress but wears like a layering system. A woven summer dress with bare legs is the one combination that guarantees a shivering, arms-crossed couple — the knit-with-tights is its warm answer." },
+      { type: "h3", id: "the-framing-scarf", text: "5. A Scarf That Frames the Face" },
+      { type: "p", text: "The scarf is the most useful accessory in a winter frame: it adds warmth to the neck, brings a soft layer of color up near the face, and gives nervous hands something to hold. Loop it loosely so it frames the jaw rather than swallowing it, and choose it in one of your two or three shared palette tones so it reads as styling, not as leaving the house." },
+      { type: "h3", id: "photographable-gloves", text: "6. Gloves You Can Actually Photograph In" },
+      { type: "p", text: "Bulky ski mitts erase the hands and the ring in every close frame, and nobody wants their engagement shots to be two black blobs. Choose thin leather or wool gloves that keep hands warm but read as hands — and plan to remove them for the ring shots and the held-face frames. A pocket hand-warmer in your coat covers the moments the gloves come off." },
+      { type: "h3", id: "boots-warm-feet", text: "7. Real Boots for Cold Ground" },
+      { type: "p", text: "Cold seeps up from the feet, and a couple with numb toes stands stiff and rushes the session. Leather or suede boots with grip and a warm sock keep you steady and comfortable on frozen ground, and they finish the silhouette better than dress shoes never could. The rule is simple: warm from the ground up, because everything from the knees down reads as cold on camera the moment your feet are." },
+      { type: "h3", id: "color-for-cold-light", text: "8. Color Chosen for Cold Light" },
+      { type: "p", text: "Winter light is flat and cool, which drains thin, muddy color and rewards warm, deep tones. Cream and camel glow against bare branches; charcoal anchors; burgundy, forest and rust bring richness the light won't kill. Build the two of you inside two or three of those shared tones so you read as a couple, and set the whole thing against the season's bare backdrop. A pure-black-and-white scheme looks stark and flat up here, and a washed-out neutral disappears in the glare." },
+      { type: "gallery", images: [
+        { src: IMAGES.gallerySilhouette, alt: "winter engagement outfits couple in camel and cream wool layers against bare branches" },
+        { src: IMAGES.galleryLaugh, alt: "winter engagement outfits chunky cable-knit sweater and loosely looped scarf in cold light" },
+        { src: IMAGES.classicDip, alt: "winter engagement outfits burgundy and forest tones warming a flat grey winter frame" },
+      ]},
+      { type: "ad", slot: "mid-article" },
+      { type: "h2", id: "the-what-not-to-wear", text: "What Most Couples Get Wrong" },
+      { type: "p", text: "They treat warmth and photos as a trade and pick a giant black coat, then wonder why the session looks like survival. They wear a thin dress with bare legs and spend the shoot hugging themselves. They rely on cotton thermals that turn damp and cold under a wool layer. They put on logo-branded outerwear that reads as 'borrowed from the ski resort.' And they forget the extremities entirely — cold hands, cold feet — and end up with the ring photo they skipped and a couple who can't wait to be done. None of these are style failures. They're layering failures. Fix the base, choose a coat with a shape, and mind the hands and feet, and the same couple photographs warm and unhurried." },
+      { type: "quote", text: "You can always tell the couple that dressed for the weather from the couple that dressed through it. The second one's teeth are chattering in the good frames.", cite: "Harper, from 400+ sessions" },
+      { type: "ad", slot: "before-faq" },
+      { type: "h2", id: "harpers-tips-winter-outfits", text: "Harper's Tips & What I've Learned" },
+      { type: "p", text: "Bring a 'between' coat and a 'photograph' coat. The heavy parka gets you warm in the car and on the walk; the wool overcoat goes on for the frames. Couples who try to do both in one garment either freeze or look bulky. Two coats, worn at the right moments, is the single easiest way to be warm and look like you meant to." },
+      { type: "p", text: "And here's what I'd change: I stopped pushing pure neutrals on cold days after seeing them vanish in glare. Give me camel against bare branches, or a burgundy scarf in a cream coat, and suddenly the frame has a heartbeat. Warmth is the requirement; a little saturated color is what makes it look like your choice instead of your jacket." },
+      { type: "quote", text: "A winter outfit is only finished when she can stand there a full minute without shivering. Comfort reads on camera before any color does.", cite: "Harper" },
+      { type: "faq", items: [
+        { q: "What should we wear for winter engagement photos?", a: "A three-layer system, photographed and shed between takes: a warm wool or thermal base, a chunky knit mid layer the camera can read as texture, and a tailored wool overcoat over both. Dress for warmth and for cold light at once. Choose deep, warm tones — camel, cream, charcoal, burgundy — and never rely on a single bulky black coat, which flattens the whole frame." },
+        { q: "Can we wear a dress to winter engagement photos?", a: "Yes — as a knit or sweater dress with heavy opaque tights underneath and tall boots over them. A woven dress with bare legs guarantees a shivering, arms-crossed couple in cold light. The knit-with-tights look photographs as a dress but wears like a warm layering system, so she stays comfortable long enough for the faces to relax, and comfort is what makes a winter frame look effortless." },
+        { q: "Should we wear a puffer jacket for winter engagement photos?", a: "Not in the frames. A wool overcoat in camel, charcoal or cream gives a tailored silhouette and sheds easily between shots; a black puffer reads as bulk and a couple still putting up with the cold. If it's genuinely freezing, keep the puffer for the drive and the walk, then step out of it for the photograph. Two coats, worn at the right time, solve warmth and the look together." },
+        { q: "What colors look warm in winter photos?", a: "Cold light is flat and cool, which rewards deep, warm color. Cream and camel glow against bare branches; burgundy, forest and rust bring richness that light won't wash out; charcoal anchors the pair. Keep both of you inside two or three shared tones so you read as a couple, and skip a pure black-and-white scheme, which looks stark and drains detail in bright glare." },
+        { q: "How do we stay warm without looking bulky?", a: "Stack purposeful layers instead of one giant coat. A thin merino base adds warmth without bulk, a chunky knit gives the camera something to see, and a well-cut overcoat frames the whole thing. Add a loosely looped scarf and thin leather gloves so hands and neck stay warm. Remove the outer coat for the frames you most care about — the layers underneath are already styled." },
+        { q: "Do gloves and boots matter for winter engagement photos?", a: "They decide whether you look relaxed or rushed. Cold hands hide the ring and stiffen every close frame; cold feet have you standing poorly and hurrying to finish. Choose thin leather or wool gloves that read as real hands, and sturdy warm boots with grip. Both keep you comfortable enough to settle into a shot, and a settled couple always beats a well-dressed, shivering one." },
+      ]},
+      { type: "leadMagnet", title: "The Winter Layering Card", subtitle: "The base-mid-outer system, the warm-toned palette, and the hands-and-feet plan — one card before you dress.", bullets: ["The three-layer build for warm, non-bulky frames", "Cold-light color palette for two people", "The between-coat vs photo-coat plan"], cta: "Get the Winter Layering Card" },
+      { type: "shop", section: "outfits", items: [
+        { label: "Merino wool base layer", store: "Outdoor / clothing", href: "#" },
+        { label: "Chunky cable-knit sweater", store: "Clothing", href: "#" },
+        { label: "Wool overcoat (camel or charcoal)", store: "Clothing", href: "#" },
+      ]},
+      { type: "p", text: "A Tuesday in January, the light flat and grey over a bare field, and neither of them shivering once. Her cream knit under a camel coat, scarf looped loose to catch the little color there was, his hands warm in thin gloves until he pulled them off to show the ring. They'd almost gone out in a single black coat each; glad they didn't. The pictures look like the season dressed two people on purpose — warm, unhurried, and completely theirs. That's the outfit doing its whole job." },
+      { type: "keepReading", items: [
+        { label: "Winter Engagement Photo Ideas", to: "/engagement-photo-ideas/winter-engagement-photo-ideas", note: "The locations, light and timing — the shoot, not the wardrobe" },
+        { label: "Fall Engagement Photo Outfits", to: "/engagement-photo-outfits/fall-engagement-photo-outfits", note: "The layering to steal this palette from" },
+        { label: "Engagement Photo Color Palette", to: "/engagement-photo-outfits/engagement-photo-color-palette", note: "Building the two of you into shared tones" },
+      ]},
+    ],
+  },
+];
