@@ -168,7 +168,7 @@ Colonnes : slug · hub · primary keyword · vol/mois (connu ou est.) · angle �
 1. **Nouveaux spokes ideas** (le hub sous-performe en volume : 9 spokes mais des requêtes à 90-210/mo non couvertes) : `candid-` (90), `fun-` (170), `cute-` (140) d'abord — vérifier KEYWORD_MAP phase 1 + INTENT_OWNERSHIP avant chaque CREATE (gate §6). Ensuite night/vintage/elegant/park-garden/coffee-shop selon volume.
 2. **Les 2 orphelines hors-ideas** : `engagement-announcement-photo-ideas` (save-the-date) et `engagement-photo-checklist` (wedding-day-logistics, spoke naturel du pilier checklist) ; `golden-hour-engagement-photos` en 3e position.
 3. **Entités semantic.ts sans page** : `couple-engagement-poses` (cible de linkOverride non construite) — absorber dans le hub poses ou créer le spoke.
-4. **Décision owner** : `.claude/` (skills) et `.idx/` (config IDE) → committer ou `.gitignore`.
+4. ~~**Décision owner**~~ — **fait `4e0ce6c` (2026-09-02)** : skills `.claude/skills/` committées ; `.idx/` (contient un token API en clair — ne jamais committer) et `.claude/settings.local.json` gitignorés ; scratch harness (`src/_verify.ts`, `.verifytmp/`) supprimé + gitignoré.
 5. **30-60 j post-indexation** : audit performance (Search Console) → densifier les hubs sous-performants.
 
 Rappel pipeline d'inscription (3 edits) : `src/content/<nom>Article.ts` (frontmatter sur l'objet Post) → import + spread dans `ALL` (posts.ts) → slug dans les `spokes` du hub (hubs.ts). La 4e ligne (KEYWORD_MAP + INTENT_OWNERSHIP si nouveau propriétaire d'intention) est ce qui déclenche le §23.
