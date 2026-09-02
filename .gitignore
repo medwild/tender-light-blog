@@ -5,3 +5,11 @@ dist/
 build/
 *.log
 *.tsbuildinfo
+
+# Editor/environment + personal Claude config
+.idx/
+.claude/settings.local.json
+
+# Verify harness scratch
+src/_verify.ts
+.verifytmp/
