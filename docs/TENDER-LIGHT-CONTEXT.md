@@ -162,10 +162,10 @@ Colonnes : slug · hub · primary keyword · vol/mois (connu ou est.) · angle �
 
 ## 10. Backlog & prochaines étapes
 
-**Situation au 2026-09-01 (soir)** : 44 articles, 55 URLs au sitemap, audit site-wide **0 problème / 44** (FAILs §23, liens cassés, bans persona, B1/B2), typecheck + build verts. Derniers livrés : `photo-booth-strip-ideas` (`9558080`) et les deux owners §23 parkés `outdoor-engagement-photo-poses` + `save-the-date-poses` (`c863105`, avec correction de la dérive de path `proposal-poses` et dé-puffy du pinTitle casual-ideas).
+**Situation au 2026-09-03** : 45 articles, 56 URLs au sitemap, audit site-wide **0 problème** (FAILs §23, liens cassés, bans persona, B1/B2), typecheck + build verts. Dernier livré : `candid-engagement-photo-ideas` (12 moments à setup, 2111 mots, hub ideas — gate §6 déjà en place : ligne KEYWORD_MAP phase 1 + linkOverrides semantic.ts préexistants). Précédents : `photo-booth-strip-ideas` (`9558080`) et les deux owners §23 parkés `outdoor-engagement-photo-poses` + `save-the-date-poses` (`c863105`).
 
 **Plan d'action — prochaine session (par priorité) :**
-1. **Nouveaux spokes ideas** (le hub sous-performe en volume : 9 spokes mais des requêtes à 90-210/mo non couvertes) : `candid-` (90), `fun-` (170), `cute-` (140) d'abord — vérifier KEYWORD_MAP phase 1 + INTENT_OWNERSHIP avant chaque CREATE (gate §6). Ensuite night/vintage/elegant/park-garden/coffee-shop selon volume.
+1. **Nouveaux spokes ideas** (le hub sous-performe en volume : 10 spokes mais des requêtes à 90-210/mo non couvertes) : ~~`candid-` (90)~~ **livré 2026-09-03** → `fun-` (170), `cute-` (140) d'abord — vérifier KEYWORD_MAP phase 1 + INTENT_OWNERSHIP avant chaque CREATE (gate §6). Ensuite night/vintage/elegant/park-garden/coffee-shop selon volume.
 2. **Les 2 orphelines hors-ideas** : `engagement-announcement-photo-ideas` (save-the-date) et `engagement-photo-checklist` (wedding-day-logistics, spoke naturel du pilier checklist) ; `golden-hour-engagement-photos` en 3e position.
 3. **Entités semantic.ts sans page** : `couple-engagement-poses` (cible de linkOverride non construite) — absorber dans le hub poses ou créer le spoke.
 4. ~~**Décision owner**~~ — **fait `4e0ce6c` (2026-09-02)** : skills `.claude/skills/` committées ; `.idx/` (contient un token API en clair — ne jamais committer) et `.claude/settings.local.json` gitignorés ; scratch harness (`src/_verify.ts`, `.verifytmp/`) supprimé + gitignoré.
