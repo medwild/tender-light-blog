@@ -10,7 +10,7 @@ export const HUBS: Hub[] = [
     lede: "The best engagement photo ideas share one thing: they look like you on a good day, not like a catalogue. Start with a mood, then let the pose, outfit and location follow.",
     harperNote: "Couples who pick a mood first and poses second end up with a gallery that feels like one story.",
     accent: "rose",
-    spokes: ["holiday-engagement-photos", "casual-engagement-photo-ideas", "candid-engagement-photo-ideas", "classic-engagement-photos", "black-and-white-engagement-photos", "unique-engagement-photo-ideas", "winter-engagement-photo-ideas", "pet-engagement-photos", "cozy-engagement-photos", "rustic-engagement-photos"],
+    spokes: ["holiday-engagement-photos", "casual-engagement-photo-ideas", "candid-engagement-photo-ideas", "fun-engagement-photo-ideas", "classic-engagement-photos", "black-and-white-engagement-photos", "unique-engagement-photo-ideas", "winter-engagement-photo-ideas", "pet-engagement-photos", "cozy-engagement-photos", "rustic-engagement-photos"],
     related: ["engagement-photo-poses", "engagement-photo-outfits", "engagement-photo-locations"],
     faq: [
       { q: "How many engagement photo ideas should we actually use?", a: "Pick 8–12 starting points for a 60–90 minute session. Each idea produces several keeper frames once you add movement, so a short list beats a long one that turns the shoot into a checklist." },
