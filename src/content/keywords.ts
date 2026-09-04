@@ -25,6 +25,7 @@ export const KEYWORD_MAP: KeywordTarget[] = [
   { path: "/engagement-photo-ideas/fun-engagement-photo-ideas", keyword: "fun engagement photo ideas", volume: 170, kd: 7, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/night-engagement-photo-ideas", keyword: "night engagement photos", volume: 0, kd: 0, intent: "Informational", phase: 1 }, // volume à valider — spoke livré §10, source de volume non renseignée
   { path: "/engagement-photo-ideas/vintage-engagement-photo-ideas", keyword: "vintage engagement photos", volume: 0, kd: 0, intent: "Informational", phase: 1 }, // volume à valider — spoke livré §10, source de volume non renseignée
+  { path: "/engagement-photo-ideas/elegant-engagement-photo-ideas", keyword: "elegant engagement photos", volume: 0, kd: 0, intent: "Informational", phase: 1 }, // volume à valider — spoke livré §10, source de volume non renseignée
   { path: "/engagement-photo-ideas/classic-engagement-photos", keyword: "classic engagement photos", volume: 110, kd: 1, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/candid-engagement-photo-ideas", keyword: "candid engagement photos", volume: 90, kd: 0, intent: "Informational", phase: 1 },
   { path: "/save-the-date-photos/proposal-poses", keyword: "proposal poses", volume: 110, kd: 1, intent: "Informational", phase: 1 },
