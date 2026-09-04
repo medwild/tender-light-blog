@@ -55,7 +55,7 @@ export const HUBS: Hub[] = [
     lede: "The best engagement photo locations aren't the prettiest spots — they're the spots with good light at the hour you're shooting. Scout by light first, scenery second.",
     harperNote: "I've driven past a dozen 'pretty' spots to shoot at an ugly wall with perfect bounce light. The wall wins.",
     accent: "sage",
-    spokes: ["indoor-engagement-photos", "outdoor-engagement-photo-locations", "urban-engagement-photo-ideas", "at-home-engagement-photo-ideas", "mountain-engagement-photos", "beach-engagement-photo-ideas"],
+    spokes: ["indoor-engagement-photos", "outdoor-engagement-photo-locations", "urban-engagement-photo-ideas", "at-home-engagement-photo-ideas", "park-garden-engagement-photo-ideas", "mountain-engagement-photos", "beach-engagement-photo-ideas"],
     related: ["engagement-photo-ideas", "engagement-photo-poses", "engagement-photo-outfits"],
     faq: [
       { q: "How far in advance should we scout an engagement location?", a: "Walk it the day before, at the same hour as your session. You're checking light direction, crowds and parking — the three things that sink outdoor shoots." },
