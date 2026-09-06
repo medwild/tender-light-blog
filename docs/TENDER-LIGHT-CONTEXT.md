@@ -166,7 +166,7 @@ Colonnes : slug · hub · primary keyword · vol/mois (connu ou est.) · angle �
 
 **Plan d'action — prochaine session (par priorité) :**
 1. **IDÉES + LOCATIONS + romantic + announcement + checklist livrés** : candid, fun, cute, night, vintage, elegant, **romantic** + park-garden, coffee-shop + `engagement-announcement-photo-ideas` (owner §23) + `engagement-photo-checklist` (hub ideas), sitemap 66. Overrides romantic-*, announcement/newly/just, ET timeline/weather-backup tous atterris.
-2. **Hors-ideas restant** : `golden-hour-engagement-photos` (override `golden hour` déjà câblé) — une seule orpheline hors-ideas encore à livrer.
+2. **Hors-ideas restant** : `golden-hour-photography-tips-couples` (hub ideas — slug **exact vérifié dans `semantic.ts`**, PAS `golden-hour-engagement-photos` ; 7 overrides orphelines y pointent déjà : `golden hour`, `open shade`, `sunset`, `sunrise`, `crowds`, `backlit pose`, `sunset proposal`). Angle page-lumière, démarqué de `outdoor-engagement-photo-poses` qui garde `golden hour pose`. — une seule orpheline hors-ideas encore à livrer.
 3. **Entités semantic.ts sans page** : `couple-engagement-poses` (cible de linkOverride non construite) — absorber dans le hub poses ou créer le spoke.
 4. ~~**Décision owner**~~ — **fait `4e0ce6c` (2026-09-02)** : skills `.claude/skills/` committées ; `.idx/` (contient un token API en clair — ne jamais committer) et `.claude/settings.local.json` gitignorés ; scratch harness (`src/_verify.ts`, `.verifytmp/`) supprimé + gitignoré.
 5. **30-60 j post-indexation** : audit performance (Search Console) → densifier les hubs sous-performants.
