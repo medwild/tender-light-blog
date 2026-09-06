@@ -85,6 +85,7 @@ import { ELEGANT_POSTS } from "./elegantArticle";
 import { PARK_POSTS } from "./parkGardenArticle";
 import { COFFEE_POSTS } from "./coffeeShopArticle";
 import { ROMANTIC_POSTS } from "./romanticArticle";
+import { ANNOUNCEMENT_POSTS } from "./engagementAnnouncementArticle";
 
 /* ————— Representative spokes for the remaining hubs ————— */
 const SPOKES: Post[] = [
@@ -661,7 +662,7 @@ const ALL: Post[] = [
   ...SPRING_SUMMER_POSTS, ...WINTER_OUTFITS_POSTS,
   ...FIRST_LOOK_POSTS, ...BEACH_POSTS, ...NATURAL_POSES_POSTS,
   ...PHOTO_BOOTH_POSTS, ...OUTDOOR_POSES_POSTS, ...SAVE_THE_DATE_POSES_POSTS,
-  ...CANDID_POSTS, ...FUN_POSTS, ...CUTE_POSTS, ...NIGHT_POSTS, ...VINTAGE_POSTS, ...ELEGANT_POSTS, ...PARK_POSTS, ...COFFEE_POSTS, ...ROMANTIC_POSTS,
+  ...CANDID_POSTS, ...FUN_POSTS, ...CUTE_POSTS, ...NIGHT_POSTS, ...VINTAGE_POSTS, ...ELEGANT_POSTS, ...PARK_POSTS, ...COFFEE_POSTS, ...ROMANTIC_POSTS, ...ANNOUNCEMENT_POSTS,
 ];
 
 /* ————— keepReading post-processing pass (avoids TDZ on ALL) ————— */

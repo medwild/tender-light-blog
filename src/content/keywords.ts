@@ -28,6 +28,7 @@ export const KEYWORD_MAP: KeywordTarget[] = [
   { path: "/engagement-photo-locations/park-garden-engagement-photo-ideas", keyword: "park engagement photos", volume: 0, kd: 0, intent: "Informational", phase: 1 }, // volume à valider — spoke livré §10, source de volume non renseignée
   { path: "/engagement-photo-locations/coffee-shop-engagement-photo-ideas", keyword: "coffee shop engagement photos", volume: 0, kd: 0, intent: "Informational", phase: 1 }, // volume à valider — spoke livré §10, source de volume non renseignée
   { path: "/engagement-photo-ideas/romantic-engagement-photo-ideas", keyword: "romantic engagement photos", volume: 0, kd: 0, intent: "Informational", phase: 1 }, // volume à valider — spoke livré §10, linkOverrides romantic poses/vibe/cheek kiss déjà câblés vers ce slug
+  { path: "/save-the-date-photos/engagement-announcement-photo-ideas", keyword: "engagement announcement photos", volume: 0, kd: 0, intent: "Informational", phase: 1 }, // volume à valider — spoke §10, owner §23 ; overrides announcement/newly-engaged/just-engaged pointent ici
   { path: "/engagement-photo-ideas/elegant-engagement-photo-ideas", keyword: "elegant engagement photos", volume: 0, kd: 0, intent: "Informational", phase: 1 }, // volume à valider — spoke livré §10, source de volume non renseignée
   { path: "/engagement-photo-ideas/classic-engagement-photos", keyword: "classic engagement photos", volume: 110, kd: 1, intent: "Informational", phase: 1 },
   { path: "/engagement-photo-ideas/candid-engagement-photo-ideas", keyword: "candid engagement photos", volume: 90, kd: 0, intent: "Informational", phase: 1 },
@@ -87,6 +88,7 @@ export const INTENT_OWNERSHIP: Record<string, string> = {
   "locket photo prints": "/engagement-photo-prints/locket-photo-print-guide",
   "photo booth strip": "/engagement-photo-prints/photo-booth-strip-ideas", // wired in 9558080
   "mini photo prints": "/engagement-photo-prints/mini-photo-print-ideas",
+  "engagement announcement photos": "/save-the-date-photos/engagement-announcement-photo-ideas", // wired — save-the-date spoke ; 3 semantic overrides (engagement announcement / newly engaged / just engaged) pointent ici
 };
 
 /** Owner path for an intent, or undefined when the intent is unowned. */

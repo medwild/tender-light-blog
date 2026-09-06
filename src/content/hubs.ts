@@ -70,7 +70,7 @@ export const HUBS: Hub[] = [
     lede: "A save-the-date is a photograph with a job: it carries your names, your date and your venue without feeling crowded. The best frames leave room for your name.",
     harperNote: "The best save the date photo isn't the best photo of you — it's the best photo of you with room for your name.",
     accent: "blush",
-    spokes: ["save-the-date-photo-ideas", "save-the-date-poses", "proposal-poses", "surprise-proposal-ideas"],
+    spokes: ["save-the-date-photo-ideas", "save-the-date-poses", "proposal-poses", "surprise-proposal-ideas", "engagement-announcement-photo-ideas"],
     related: ["engagement-photo-poses", "engagement-photo-prints", "engagement-photo-ideas"],
     faq: [
       { q: "What makes a pose work for a save the date card?", a: "Negative space. A card needs room for names, date and venue, so the best poses leave clean sky, wall or field beside you. Ask your photographer to shoot wide with breathing room." },
